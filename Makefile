@@ -1,8 +1,8 @@
 ##
 ## EPITECH PROJECT, 2018
-## my_ftp makefile
+## my_irc makefile
 ## File description:
-## Makefile for my_ftp
+## Makefile for my_irc client & server
 ##
 
 CC      	= gcc
@@ -11,49 +11,48 @@ DOXYGEN		= doxygen
 
 RM      	= rm -f
 
-CFLAGS		+= -Wall -Werror -Wextra
+CFLAGS		+= -Wall -Werror -Wextra -coverage
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for my_ftp => client
-FTP_SRCS	= client.c
+CLIENT_SRCS	= client.c
 
-FTPSRC		= $(addprefix miftp/, $(FTP_SRCS))
+CLIENTSRC	= $(addprefix client/, $(FTP_SRCS))
 
-FTPOBJS		:= $(FTPSRC:.c=.o)
+CLIENTOBJS	:= $(FTPSRC:.c=.o)
 
 ## Sources and rules for server
-SERVER_SRCS	= helpers_log.c \
+SERVER_SRCS	= logs_helpers.c \
 		server_init.c \
 		server_main.c \
 		server_decls.c \
-		server_commands0.c \
-		server_methodsparser.c
+		rfc_cmds0.c
 
-SERVERSRC	= $(addprefix forkserver/, $(SERVER_SRCS))
+SERVERSRC	= $(addprefix server/, $(SERVER_SRCS))
 
 SERVEROBJS	:= $(SERVERSRC:.c=.o)
 
 #Binaries names
-MYFTP    	= myftp
+CLIENT    	= client
 
 SERVER		= server
 
 
-all:		$(MYFTP) $(SERVER)
+all:		$(CLIENT) $(SERVER)
 
-$(MYFTP):	$(FTPOBJS)
-		$(CC) $(CFLAGS) $(FTPOBJS) -o $(MYFTP)
+$(CLIENT):	$(CLIENTTOBJS)
+		$(CC) $(CFLAGS) $(FTPOBJS) -o $(CLIENT)
 
 $(SERVER):	$(SERVEROBJS)
 		$(CC) $(CFLAGS) $(SERVEROBJS) -o $(SERVER)
 
 clean:
-		$(RM) $(FTPOBJS)
+		$(RM) $(CLIENTOBJS)
 		$(RM) $(SERVEROBJS)
 
 fclean: 	clean
-		$(RM) $(MYFTP)
+		$(RM) $(CLIENT)
 		$(RM) $(SERVER)
 
 re:		fclean all
@@ -61,4 +60,4 @@ re:		fclean all
 doc:
 		$(DOXYGEN) bonus/Doxyfile
 
-.PHONY: all clean fclean re doc server my_ftp
+.PHONY: all clean fclean re doc server client
