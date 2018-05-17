@@ -3,3 +3,5 @@ irc
 *.o
 *test
 *.txt
+a.out
+*/a.out
