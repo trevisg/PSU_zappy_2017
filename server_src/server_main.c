@@ -17,10 +17,10 @@
 */
 void sig_handler(int signo)
 {
-  if (signo == SIGINT) {
-	  printf("\nReceived SIGINT\n\tSee u !..\n");
-	  exit(0);
-  }
+	if (signo == SIGINT) {
+		printf("\nReceived SIGINT\n\tSee u !..\n");
+		exit(0);
+	}
 }
 
 /** Match all methods in G_CMDS for a given req command string
@@ -57,10 +57,12 @@ static int	get_methods(char *req, int clifd)
 static int	initco(t_serv *all, char **args, int *connected)
 {
 	int rt = 84;
-	struct sockaddr *cliaddr = (struct sockaddr *) &all->addr;
+	struct sockaddr_in addr;
+	socklen_t addr_size = sizeof(struct sockaddr_in);
+	struct sockaddr *cliaddr = (struct sockaddr *)&addr;
 	char *okco = "Someone connect to me!\n";
 
-	all->conn_sock = accept(all->listen_sock, cliaddr, &all->addrlen);
+	all->conn_sock = accept(all->listen_sock, cliaddr, &addr_size);
 	if (all->conn_sock == -1) {
 		perror("initco: accept");
 	} else if (!(rt = set_clifd(all->conn_sock, all->epollfd, &all->ev))) {
@@ -80,14 +82,18 @@ static int 	evhandler(t_serv *all, int newfd)
 	struct sockaddr_in addr;
 	socklen_t addr_size = sizeof(struct sockaddr_in);
 	int res = getpeername(newfd, (struct sockaddr *)&addr, &addr_size);
-	if (res == -1) { perror("getpeername ! :"); }
 
-	sprintf(all->host, "%s", inet_ntoa(addr.sin_addr));
-	sprintf(all->service, "%d", ntohs(addr.sin_port));
-	if (all->nread && logthisevent('c', all)) {
-		return (get_methods(all->buf, newfd));
+	if (res == -1) {
+		perror("getpeername ! :");
+
 	} else {
-		logthisevent('d', all);
+		sprintf(all->host, "%s", inet_ntoa(addr.sin_addr));
+		sprintf(all->service, "%d", ntohs(addr.sin_port));
+		if (all->nread && logthisevent('c', all)) {
+			return (get_methods(all->buf, newfd));
+		} else {
+			logthisevent('d', all);
+		}
 	}
 	return (0);
 }
