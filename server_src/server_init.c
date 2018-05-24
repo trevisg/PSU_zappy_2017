@@ -65,6 +65,7 @@ int	set_epoll(t_serv *all)
 	int rt = 0;
 
 	all->epollfd = epoll_create(10);
+	memset(&all->ev, 0, sizeof(all->ev));
 	if (all->epollfd == -1) {
 		perror("set_epoll: epoll_create1");
 		rt = 84;
