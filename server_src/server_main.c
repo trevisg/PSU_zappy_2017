@@ -67,15 +67,13 @@ static int	initco(t_serv *all, char **args, int *connected)
 	socklen_t addr_size = sizeof(struct sockaddr_in);
 	struct sockaddr *cliaddr = (struct sockaddr *)&addr;
 	char *okco = "Someone connect to me!\n";
-	char *comsg = "001 :Welcome <username>!";
-	char *banneer = "BrokenIRC Network Ltd";
+
 
 	all->conn_sock = accept(all->listen_sock, cliaddr, &addr_size);
 	if (all->conn_sock == -1) {
 		perror("initco: accept");
 	} else if (!(rt = set_clifd(all->conn_sock, all->epollfd, &all->ev))) {
 		fprintf(stdout, "\n%s: %s\n", args[0], okco);
-		dprintf(all->conn_sock, "%s %s\r\n", comsg, banneer);
 		*(connected) += 1;
 	}
 	return (rt);

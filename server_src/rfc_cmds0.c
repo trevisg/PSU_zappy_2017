@@ -18,8 +18,10 @@ int	join(const char **channame, int clifd)
 
 int     nick(const char **nickname, int clifd)
 {
+	char *banneer = " || Welcome to BrokenIRC Network || ";
 	if (clifd)
 	printf("NICK [%s] joining the BrokenIRC server\r\n", nickname[1]);
+	dprintf(clifd, "001 :Welcome %s %s\r\n", nickname[1], banneer);
 	return (0);
 }
 
