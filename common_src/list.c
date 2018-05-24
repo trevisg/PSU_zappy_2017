@@ -71,6 +71,16 @@ void print_me_back(t_list *liste)
         }
 }
 
+void clean_me(t_list *head)
+{
+        while (head) {
+                free(head->data);
+                t_list *next = head->next;
+                free(head);
+                head = next;
+        }
+}
+
 int main(void)
 {
         t_list *foo = NULL;
@@ -81,5 +91,6 @@ int main(void)
         }
         print_me_right(foo);
         print_me_back(foo);
+        clean_me(foo);
         return (0);
 }
