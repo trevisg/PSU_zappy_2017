@@ -5,6 +5,9 @@
 ** my_ftp server header file
 */
 
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+
 #ifndef SERVER_H_
 #define	SERVER_H_
 
@@ -28,22 +31,25 @@
 /** This good old ... u know */
 #define MAXCHAN 1000
 /** Idem, see join() function */
-#define MAXCHANNAME 110
+#define MAXCHANNAME 200
 /** Dummy client prompted connection banneer */
 #define BIRC "(BrokenIRC 0.0.42) - Service ready for new user."
 /** For windows compactbility, added carriage return here */
 #define RESP_FMT "%d %s\r\n"
 /** Dummy hack to remove newline char from cmd buffer see ```man strcspn()```*/
-#define RM_NL(a) a[strcspn(a, "\n")] = 0;
+#define RM_NL(a) a[strcspn(a, "\r")] = 0;
 
 /** See @file server_src/rfc_cmds0.c */
-int join(const char *channame, int clifd);
+int join(const char **channame, int clifd);
+int nick(const char **nickname, int clifd);
+int ping(const char **nope, int clifd);
+int user(const char **usercmd, int clifd);
 
 /** See @file server_src/server_decls.c */
 /** Main EPITECH MyFTP Protocol (RFC959 Extract)
 * methods function pointer
 */
-typedef int (*cmds)(const char *, int);
+typedef int (*cmds)(const char **, int);
 /** The object prototype mapping the methods name */
 extern const char *G_PROTOS[REF_NB];
 /** The global pointer */
@@ -100,6 +106,12 @@ typedef struct				s_serv {
 	struct sockaddr_storage addr;
 }					t_serv;
 
+typedef struct			s_client {
+	int			clifd;
+	char			*nick;
+	char			*channel;
+}				t_client;
+
 /** See server_src/inits.c */
 int	set_sockfd(t_serv *all);
 int	set_epoll(t_serv *all);
@@ -111,3 +123,5 @@ int	logthisevent(const char etype, t_serv *all);
 int	initlogs(const char **paths, t_log *ptr);
 
 #endif /* !SERVER_H_ */
+
+#endif /* _GNU_SOURCE */

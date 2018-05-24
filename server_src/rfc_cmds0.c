@@ -6,39 +6,35 @@
 */
 
 #include <unistd.h>
+#include <stdlib.h>
 #include "../include/server.h"
 
-int	join(const char *channame, int clifd)
+int	join(const char **channame, int clifd)
 {
-	static char chans[MAXCHAN][MAXCHANNAME];
-	int chanselect = 0;
-	int cnt = 0;
-
-	for (chanselect = 0; chanselect <= MAXCHAN; ++chanselect) {
-		if (!strcmp(channame, chans[chanselect])) {
-			printf("chans ? %s ", chans[chanselect]);
-			break;
-		} else if (strlen(chans[chanselect]) > 2) {
-			sprintf(chans[chanselect], "%s", channame);
-			cnt += 1;
-		}
-	}
-	chanselect = cnt ? cnt : chanselect;
-	sprintf(chans[chanselect], "%s", channame);
-	dprintf(clifd, "Welcome to %s channel\r\n", chans[chanselect]);
+	char *resp2 = ":127.0.0.1 <[RPL_TOPIC][1]> <username>! #foobar :foobi";
+	dprintf(clifd, ":<username> %s %s %s\r\n", "JOIN", channame[1], resp2);
 	return (0);
 }
 
-int	part(const char *channame, int clifd)
+int     nick(const char **nickname, int clifd)
 {
-	static char chans[MAXCHAN][MAXCHANNAME];
-	static int chanselect;
+	if (clifd)
+	printf("NICK [%s] joining the BrokenIRC server\r\n", nickname[1]);
+	return (0);
+}
 
-	chanselect += 1;
-	if (printf("is valid channel name\n") || chanselect) {
-		sprintf(chans[chanselect], "Welcome to %s\n", channame);
-		printf("\n%s", chans[chanselect]);
-		dprintf(clifd, "%s\r\n", chans[chanselect]);
-	}
+
+int     ping(const char **nope, int clifd)
+{
+	if (nope || !nope)
+	dprintf(clifd, "PONG\r\n");
+	printf("PONG\r\n");
+	return (0);
+}
+
+int     user(const char **usercmd, int clifd)
+{
+	if (clifd)
+	printf("USER [%s] cmd received\n", usercmd[4]);
 	return (0);
 }

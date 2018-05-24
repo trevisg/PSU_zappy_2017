@@ -30,16 +30,22 @@ void sig_handler(int signo)
 static int	get_methods(char *req, int clifd)
 {
 	int index = 0;
-	char *arg = NULL;
+	char *str, *arg = NULL;
+	const char **args = malloc(10);
+	int i = 0;
 
 	RM_NL(req);
-	arg = strdup(req);
+	str = strdup(req);
 	for (index = 0; G_PROTOS[index] != NULL; ++index) {
-		if ((strstr(req, G_PROTOS[index]))) {
-			arg = strtok(arg, " ");
-			arg = strtok(NULL, " ");
+		if ((strcasestr(req, G_PROTOS[index]))) {
+			arg = strtok(str, " ");
+			while (arg) {
+				args[i] = strdup(arg);
+				arg = strtok(NULL, " ");
+				i++;
+			}
 			if (G_CMDS[index] != NULL) {
-				index = G_CMDS[index](arg, clifd);
+				index = G_CMDS[index](args, clifd);
 			}
 			break;
 		}
@@ -61,13 +67,15 @@ static int	initco(t_serv *all, char **args, int *connected)
 	socklen_t addr_size = sizeof(struct sockaddr_in);
 	struct sockaddr *cliaddr = (struct sockaddr *)&addr;
 	char *okco = "Someone connect to me!\n";
+	char *comsg = "001 :Welcome <username>!";
+	char *banneer = "BrokenIRC Network Ltd";
 
 	all->conn_sock = accept(all->listen_sock, cliaddr, &addr_size);
 	if (all->conn_sock == -1) {
 		perror("initco: accept");
 	} else if (!(rt = set_clifd(all->conn_sock, all->epollfd, &all->ev))) {
-		fprintf(stdout, "%s: %s", args[0], okco);
-		dprintf(all->conn_sock, "%d %s\n", 220, BIRC);
+		fprintf(stdout, "\n%s: %s\n", args[0], okco);
+		dprintf(all->conn_sock, "%s %s\r\n", comsg, banneer);
 		*(connected) += 1;
 	}
 	return (rt);
@@ -117,7 +125,7 @@ static int	getactiveclients(t_serv *all, char **args)
 			initco(all, args, &connected);
 		} else {
 			all->nread = read(clifd, all->buf, BUF_SIZE);
-			RM_NL(all->buf);
+			// RM_NL(all->buf);
 			evhandler(all, clifd);
 		}
 	}

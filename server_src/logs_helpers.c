@@ -18,11 +18,12 @@
 int	logthisevent(const char etype, t_serv *all)
 {
 	char usr[BUF_SIZE];
-	char *c_fmt = "IN: [%zd bytes] FROM: [%s]\nDATA: [%s]\n";
+	char *c_fmt = " => IN: [%zd bytes] FROM: [%s] DATA: [%s]\n";
 	char *d_fmt = "USER: [%s] disconnect\n";
-	char *def_fmt = "Type:%cSize:%zd : user %s DATA: [%s]\n";
+	char *def_fmt = "Type:%c Size:%zd DATA: [%s]\n";
 
 	memset(usr, 0, BUF_SIZE);
+	RM_NL(all->buf);
 	sprintf(usr, "%s:%s", all->host, all->service);
 	switch (etype) {
 		case 'c':
@@ -32,7 +33,7 @@ int	logthisevent(const char etype, t_serv *all)
 		fprintf(stdout, d_fmt, usr);
 		break;
 		default:
-		fprintf(stdout, def_fmt, etype, all->nread, usr, all->buf);
+		fprintf(stdout, def_fmt, etype, all->nread, all->buf);
 	}
 	return (1);
 }

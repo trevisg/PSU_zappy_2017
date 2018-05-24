@@ -9,13 +9,13 @@
 #include "../include/server.h"
 
 const char *G_PROTOS[REF_NB] = {
-	"/join", "/nick", "/list", "/server",
-	"/part", "/users", "/names",
-	"/accept_file", "/msg a b", "/msg a b c",
+	"join", "nick", "ping", "user", "list", "server",
+	"part", "users", "names",
+	"accept_file", "msg",
 	NULL
 };
 
 const cmds G_CMDS[REF_NB] = {
-	join,
+	join, nick, ping, user,
 	NULL
 };
