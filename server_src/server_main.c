@@ -80,13 +80,10 @@ static int 	evhandler(t_serv *all, int newfd)
 	struct sockaddr_in addr;
 	socklen_t addr_size = sizeof(struct sockaddr_in);
 	int res = getpeername(newfd, (struct sockaddr *)&addr, &addr_size);
+	if (res == -1) { perror("getpeername ! :"); }
+
 	sprintf(all->host, "%s", inet_ntoa(addr.sin_addr));
 	sprintf(all->service, "%d", ntohs(addr.sin_port));
-	if (res == -1) {
-		perror("getpeername ! :");
-	}
-	printf("clieip & port : %s%s\n", all->host, all->service);
-	RM_NL(all->buf);
 	if (all->nread && logthisevent('c', all)) {
 		return (get_methods(all->buf, newfd));
 	} else {
@@ -114,6 +111,7 @@ static int	getactiveclients(t_serv *all, char **args)
 			initco(all, args, &connected);
 		} else {
 			all->nread = read(clifd, all->buf, BUF_SIZE);
+			RM_NL(all->buf);
 			evhandler(all, clifd);
 		}
 	}
