@@ -8,34 +8,24 @@
 #include <unistd.h>
 #include "../include/server.h"
 
-static int isnewchannel(const char *req, char chans[1000][110])
-{
-	int i = 0;
-
-	if (strlen(req)) {
-		for (i = 0; chans[i]; i++) {
-			if (strlen(chans[i]) && !strncmp(chans[i], req, 110)) {
-				printf("channel exist ? : %s\n", chans[i]);
-				break;
-			}
-		}
-	}
-	return (i);
-}
-
 int	join(const char *channame, int clifd)
 {
 	static char chans[MAXCHAN][MAXCHANNAME];
-	static int chanselect;
+	int chanselect = 0;
+	int cnt = 0;
 
-	fprintf(stderr, "%s\n", "sa plante aprés");
-	// chanselect = isnewchannel(channame, chans);
-	chanselect = 0;
-	if (chanselect || !chanselect) {
-		sprintf(chans[chanselect], "Welcome to %s\n", channame);
-		printf("\n%s", chans[chanselect]);
-		dprintf(clifd, "%s\r\n", chans[chanselect]);
+	for (chanselect = 0; chanselect <= MAXCHAN; ++chanselect) {
+		if (!strcmp(channame, chans[chanselect])) {
+			printf("chans ? %s ", chans[chanselect]);
+			break;
+		} else if (strlen(chans[chanselect]) > 2) {
+			sprintf(chans[chanselect], "%s", channame);
+			cnt += 1;
+		}
 	}
+	chanselect = cnt ? cnt : chanselect;
+	sprintf(chans[chanselect], "%s", channame);
+	dprintf(clifd, "Welcome to %s channel\r\n", chans[chanselect]);
 	return (0);
 }
 
