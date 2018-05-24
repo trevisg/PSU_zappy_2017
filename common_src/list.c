@@ -84,8 +84,8 @@ void clean_me(t_list *head)
 int main(void)
 {
         t_list *foo = NULL;
-        char *yolo[4] = {"foo", "fii", "faa"};
-        for (int i = 0; i != 3; ++i) {
+        char *yolo[5] = {"foo", "fii", "faa", "#yolo", "#yulu"};
+        for (int i = 0; i != 5; ++i) {
                 t_list *faa = get_new(yolo[i]);
                 foo = push_back(foo, faa);
         }
