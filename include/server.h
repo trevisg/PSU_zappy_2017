@@ -32,8 +32,6 @@
 #define MAXCHAN 1000
 /** Idem, see join() function */
 #define MAXCHANNAME 200
-/** Dummy client prompted connection banneer */
-#define BIRC "(BrokenIRC 0.0.42) - Service ready for new user."
 /** For windows compactbility, added carriage return here */
 #define RESP_FMT "%d %s\r\n"
 /** Dummy hack to remove newline char from cmd buffer see ```man strcspn()```*/
