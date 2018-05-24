@@ -11,16 +11,16 @@ DOXYGEN		= doxygen
 
 RM      	= rm -f
 
-CFLAGS		+= -Wall -Werror -Wextra -coverage
+CFLAGS		+= -I./include -Wall -Werror -Wextra
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
-## Sources and rules for my_ftp => client
+## Sources and rules for irc client
 CLIENT_SRCS	= client.c
 
-CLIENTSRC	= $(addprefix client/, $(FTP_SRCS))
+CLIENTSRC	= $(addprefix client_src/, $(CLIENT_SRCS))
 
-CLIENTOBJS	:= $(FTPSRC:.c=.o)
+CLIENTOBJS	:= $(CLIENTSRC:.c=.o)
 
 ## Sources and rules for server
 SERVER_SRCS	= logs_helpers.c \
@@ -29,7 +29,7 @@ SERVER_SRCS	= logs_helpers.c \
 		server_decls.c \
 		rfc_cmds0.c
 
-SERVERSRC	= $(addprefix server/, $(SERVER_SRCS))
+SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
 
 SERVEROBJS	:= $(SERVERSRC:.c=.o)
 
@@ -41,8 +41,8 @@ SERVER		= server
 
 all:		$(CLIENT) $(SERVER)
 
-$(CLIENT):	$(CLIENTTOBJS)
-		$(CC) $(CFLAGS) $(FTPOBJS) -o $(CLIENT)
+$(CLIENT):	$(CLIENTOBJS)
+		$(CC) $(CFLAGS) $(CLIENTOBJS) -o $(CLIENT)
 
 $(SERVER):	$(SERVEROBJS)
 		$(CC) $(CFLAGS) $(SERVEROBJS) -o $(SERVER)
