@@ -17,33 +17,46 @@
 #include <sys/time.h>
 #include <sys/stat.h>
 
+/** Number of simultaneous connection on server listening socket => listen() */
 #define BACKLOG 5
+/** Number of RFC command handled by this (broken) server */
 #define REF_NB 15
+/** This good old C mem alloc dirty method */
 #define BUF_SIZE 1057
+/** The length of the struct epoll_events array pointed to by *events */
 #define MAX_EVENTS 10
-#define BFTPD "(BrokenFtPd 0.0.42) - Service ready for new user."
+/** This good old ... u know */
+#define MAXCHAN 1000
+/** Idem, see join() function */
+#define MAXCHANNAME 110
+/** Dummy client prompted connection banneer */
+#define BIRC "(BrokenIRC 0.0.42) - Service ready for new user."
+/** For windows compactbility, added carriage return here */
 #define RESP_FMT "%d %s\r\n"
+/** Dummy hack to remove newline char from cmd buffer see ```man strcspn()```*/
 #define RM_NL(a) a[strcspn(a, "\n")] = 0;
 
-/** See @file miserver/methods_uq.c */
-int user(const char *username, int clifd);
-int pass(const char *pass, int clifd);
-int cwd(const char *none, int clifd);
+/** See @file server_src/rfc_cmds0.c */
+int join(const char *channame, int clifd);
 
-/** See @file miserver/decls.c */
+/** See @file server_src/server_decls.c */
 /** Main EPITECH MyFTP Protocol (RFC959 Extract)
 * methods function pointer
 */
 typedef int (*cmds)(const char *, int);
-/** The object mapping the methods name */
+/** The object prototype mapping the methods name */
 extern const char *G_PROTOS[REF_NB];
 /** The global pointer */
 extern const cmds G_CMDS[REF_NB];
-/** Only here for code clarity and lisibility */
+/** Only here for code clarity and lisibility
+* @TODO : still missing lot of rfc command see subject, rfc or
+* this [gist](https://gist.github.com/xero/2d6e4b061b4ecbeb9f99) for help
+*/
 enum  CMDS {
-	USER, PASS, CWD, CDUP, QUIT,
-	DELE, PWD, PASV, PORT, HELP,
-	NOOP, RETR, STOR, LIST
+	JOIN, NICK, LIST, SERVER, PART,
+	USERS, NAMES, ACCEPTF, MSGAB, MSGABC,
+	QUERY, ME, NOTICE, WHOIS, WHOWAS,
+	DNS, PING, KICK
 };
 
 /* Future login handler filepath (to be set in a .conf file) */
@@ -64,13 +77,10 @@ typedef struct			s_log {
 	mode_t		dir_mode;
 }				t_log;
 
-/** @NOTE : When doing network code, 80 chars column length
-* is a pain in di a** to respect. So here is this dirty typedef ;)
-*/
+/** Yeah simplification */
 typedef struct addrinfo adrinf;
 
-/** Yeah I know , sounds like we got a trashbin struct here ;)
-* will improve promise!
+/** @TODO : please split this **mess** !!
 */
 typedef struct				s_serv {
 	int			nfds;
@@ -90,7 +100,7 @@ typedef struct				s_serv {
 	struct sockaddr_storage addr;
 }					t_serv;
 
-/** See miserver/inits.c */
+/** See server_src/inits.c */
 int	set_sockfd(t_serv *all);
 int	set_epoll(t_serv *all);
 int	set_iface(adrinf *hints, adrinf **res, const char *port);
