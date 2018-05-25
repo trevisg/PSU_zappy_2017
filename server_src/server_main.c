@@ -123,7 +123,6 @@ static int	getactiveclients(t_serv *all, char **args)
 			initco(all, args, &connected);
 		} else {
 			all->nread = read(clifd, all->buf, BUF_SIZE);
-			// RM_NL(all->buf);
 			evhandler(all, clifd);
 		}
 	}
@@ -143,7 +142,8 @@ int	server(char **args)
 		rt = 84;
 	} else {
 		for (;;) {
-			all.nfds = epoll_wait(all.epollfd, all.events, MAX_EVENTS, -1);
+			all.nfds = epoll_wait(all.epollfd, all.events,
+				MAX_EVENTS, -1);
 			if (all.nfds == -1) {
 				perror("server: epoll_wait");
 				break;
