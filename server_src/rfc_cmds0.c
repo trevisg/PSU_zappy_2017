@@ -9,14 +9,14 @@
 #include <stdlib.h>
 #include "../include/server.h"
 
-int	join(const char **channame, int clifd)
+int	join(cmdargs channame, int clifd)
 {
 	char *resp2 = ":127.0.0.1 <[RPL_TOPIC][1]> <username>! #foobar :foobi";
 	dprintf(clifd, ":<username> %s %s %s\r\n", "JOIN", channame[1], resp2);
 	return (0);
 }
 
-int     nick(const char **nickname, int clifd)
+int     nick(cmdargs nickname, int clifd)
 {
 	char *banneer = " || Welcome to BrokenIRC Network || ";
 	if (clifd)
@@ -25,7 +25,7 @@ int     nick(const char **nickname, int clifd)
 	return (0);
 }
 
-int     ping(const char **nope, int clifd)
+int     ping(cmdargs nope, int clifd)
 {
 	if (nope || !nope)
 	dprintf(clifd, "PONG\r\n");
@@ -33,7 +33,7 @@ int     ping(const char **nope, int clifd)
 	return (0);
 }
 
-int     user(const char **usercmd, int clifd)
+int     user(cmdargs usercmd, int clifd)
 {
 	if (clifd)
 	printf("USER [%s] cmd received\n", usercmd[4]);
