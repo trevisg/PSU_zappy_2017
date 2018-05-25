@@ -18,10 +18,9 @@ int	join(cmdargs channame, int clifd)
 
 int     nick(cmdargs nickname, int clifd)
 {
-	char *banneer = ":BrokenIRC.foo || Welcome to BrokenIRC Network || ";
 	if (clifd)
 	printf("NICK [%s] joining the BrokenIRC server\r\n", nickname[1]);
-	dprintf(clifd, "001 :Welcome %s %s\r\n", nickname[1], banneer);
+	// dprintf(clifd, "001 :Welcome %s\r\n", nickname[1]);
 	return (0);
 }
 
@@ -35,7 +34,22 @@ int     ping(cmdargs nope, int clifd)
 
 int     user(cmdargs usercmd, int clifd)
 {
-	if (clifd)
-	printf("USER [%s] cmd received\n", usercmd[1]);
+	static t_userlist *liste = NULL;
+	char *banneer = ":BrokenIRC.foo || Welcome to BrokenIRC Network || ";
+
+	if (usercmd[1][0]) {
+		t_user *usr = get_new_user(clifd, usercmd);
+		t_userlist *userlist = get_new_userlist(usr);
+		liste = push_back(liste, userlist);
+		dprintf(clifd, "001 %s :Welcome %s\r\n", usercmd[1], banneer);
+	}
+	print_users(liste);
+	return (0);
+}
+
+int 	quit(cmdargs quitmsg, int clifd)
+{
+	printf("%scmd received\n", quitmsg[0]);
+	dprintf(clifd, ":BrokenIRC!127.0.0.1 QUIT :%s", quitmsg[1]);
 	return (0);
 }
