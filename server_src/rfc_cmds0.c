@@ -18,7 +18,7 @@ int	join(cmdargs channame, int clifd)
 
 int     nick(cmdargs nickname, int clifd)
 {
-	char *banneer = " || Welcome to BrokenIRC Network || ";
+	char *banneer = ":BrokenIRC.foo || Welcome to BrokenIRC Network || ";
 	if (clifd)
 	printf("NICK [%s] joining the BrokenIRC server\r\n", nickname[1]);
 	dprintf(clifd, "001 :Welcome %s %s\r\n", nickname[1], banneer);
@@ -36,6 +36,6 @@ int     ping(cmdargs nope, int clifd)
 int     user(cmdargs usercmd, int clifd)
 {
 	if (clifd)
-	printf("USER [%s] cmd received\n", usercmd[4]);
+	printf("USER [%s] cmd received\n", usercmd[1]);
 	return (0);
 }
