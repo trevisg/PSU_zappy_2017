@@ -31,19 +31,18 @@ static int	get_methods(char *req, int clifd)
 {
 	int index = 0;
 	char *str, *arg = NULL;
-	const char **args = malloc(10);
+	char args[MAXARGS][MAXARGSIZE] = {{0},{0}};
 	int i = 0;
 
-	RM_NL(req);
 	str = strdup(req);
 	for (index = 0; G_PROTOS[index] != NULL; ++index) {
 		if ((strcasestr(req, G_PROTOS[index]))) {
 			arg = strtok(str, " ");
 			while (arg) {
-				args[i] = strdup(arg);
+				strncpy(args[i++], arg, MAXARGSIZE);
 				arg = strtok(NULL, " ");
-				i++;
 			}
+			print_arg(args);
 			if (G_CMDS[index] != NULL) {
 				index = G_CMDS[index](args, clifd);
 			}
@@ -123,6 +122,8 @@ static int	getactiveclients(t_serv *all, char **args)
 			initco(all, args, &connected);
 		} else {
 			all->nread = read(clifd, all->buf, BUF_SIZE);
+			RM_NL(all->buf);
+			RM_CR(all->buf);
 			evhandler(all, clifd);
 		}
 	}
