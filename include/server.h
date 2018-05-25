@@ -27,7 +27,7 @@
 	/** Number of RFC command handled by this (broken) server */
 	#define REF_NB 15
 	/** This good old C mem alloc dirty method */
-	#define BUF_SIZE 1057
+	#define BUF_SIZE 1060
 	/** The length of the struct epoll_events array pointed to by *events
 	*/
 	#define MAX_EVENTS 10
@@ -39,8 +39,10 @@
 	* see section 2.3 of RFC 2812
 	*/
 	#define MAXARGS 15
-	/** Maximum argument length see ref below */
-	#define MAXARGSIZE 510
+	/** Maximum argument length see ref below
+	* @note obtained by 500 / max args
+	*/
+	#define MAXARGSIZE 33
 	/** For windows compactibility, added carriage return here */
 	#define RESP_FMT "%d %s\r\n"
 	/** Dummy hack to remove newline char from cmd buffer
@@ -56,6 +58,7 @@
 	int nick(cmdargs nickname, int clifd);
 	int ping(cmdargs nope, int clifd);
 	int user(cmdargs usercmd, int clifd);
+	int quit(cmdargs quitmsg, int clifd);
 
 	/** See @file server_src/server_decls.c */
 	/** Main EPITECH MyIRC Protocol (RFC 1459 Extract)
@@ -146,10 +149,16 @@
 	int	set_iface(adrinf *hints, adrinf **res, const char *port);
 	int	set_clifd(int clisock, int epollfd, struct epoll_event *ev);
 
-	/** See miserver/loghelpers.c */
+	/** See server_src/logs_helpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
 	void	print_arg(cmdargs args);
+
+	/** see server_src/client_list.c */
+	t_user		*get_new_user(int clifd, cmdargs usercmd);
+	t_userlist	*get_new_userlist(t_user *usr);
+	void		*push_back(t_userlist *head, t_userlist *users);
+	void		print_users(t_userlist *liste);
 
 	#endif /* !SERVER_H_ */
 
