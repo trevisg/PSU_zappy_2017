@@ -35,24 +35,33 @@
 	#define MAXCHAN 1000
 	/** Idem, see join() function and RFC 1459 and RFC 2812 */
 	#define MAXCHANNAME 50
+	/** Maximum number of args in command as per rfc request
+	* see section 2.3 of RFC 2812
+	*/
+	#define MAXARGS 15
+	/** Maximum argument length see ref below */
+	#define MAXARGSIZE 510
 	/** For windows compactibility, added carriage return here */
 	#define RESP_FMT "%d %s\r\n"
 	/** Dummy hack to remove newline char from cmd buffer
 	* see ```man strcspn()```
 	*/
-	#define RM_NL(a) a[strcspn(a, "\r")] = 0;
+	#define RM_CR(a) a[strcspn(a, "\r")] = 0;
+	#define RM_NL(a) a[strcspn(a, "\n")] = 0;
+	/** Argument format typedef as per RFC request */
+	typedef char cmdargs[MAXARGS][MAXARGSIZE];
 
 	/** See @file server_src/rfc_cmds0.c */
-	int join(const char **channame, int clifd);
-	int nick(const char **nickname, int clifd);
-	int ping(const char **nope, int clifd);
-	int user(const char **usercmd, int clifd);
+	int join(cmdargs channame, int clifd);
+	int nick(cmdargs nickname, int clifd);
+	int ping(cmdargs nope, int clifd);
+	int user(cmdargs usercmd, int clifd);
 
 	/** See @file server_src/server_decls.c */
 	/** Main EPITECH MyIRC Protocol (RFC 1459 Extract)
 	* methods function pointer
 	*/
-	typedef int (*cmds)(const char **, int);
+	typedef int (*cmds)(cmdargs, int);
 	/** The object prototype mapping the methods name */
 	extern const char *G_PROTOS[REF_NB];
 	/** The global pointer */
@@ -140,6 +149,7 @@
 	/** See miserver/loghelpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
+	void	print_arg(cmdargs args);
 
 	#endif /* !SERVER_H_ */
 
