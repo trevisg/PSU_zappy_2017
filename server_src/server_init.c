@@ -11,13 +11,9 @@
 #include <fcntl.h>
 #include <sys/types.h>
 
-/**
-* @TODO : read [this](https://bit.ly/2gOr7gr) medium blog
-* post on 'epoll madness'
-*/
-
 /** Add the new client file descriptor in struct epoll_event structure
 * for polling their events
+* @NOTE read [this](https://bit.ly/2gOr7gr) medium blog post on 'epoll madness'
 */
 int	set_clifd(int clisock, int epollfd, struct epoll_event *ev)
 {
@@ -72,7 +68,8 @@ int	set_epoll(t_serv *all)
 	} else {
 		all->ev.events = EPOLLIN;
 		all->ev.data.fd = all->listen_sock;
-		rt = epoll_ctl(all->epollfd, EPOLL_CTL_ADD, all->listen_sock, &all->ev);
+		rt = epoll_ctl(all->epollfd, EPOLL_CTL_ADD, all->listen_sock,
+			&all->ev);
 		if (rt == -1) {
 			perror("set_epoll: epoll_ctl");
 			rt = 84;
@@ -86,7 +83,8 @@ static void 	prevent_reused(int sockfd)
 {
 	int yes = 1;
 
-	if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&yes, sizeof(int)) == -1) {
+	if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&yes,
+		sizeof(int)) == -1) {
 		perror("prevent_reused: setsockopt");
 		exit(84);
 	}
@@ -104,7 +102,8 @@ int	set_sockfd(t_serv *all)
 	int sfd = -1;
 
 	for (all->rp = all->res; all->rp != NULL; all->rp = all->rp->ai_next) {
-		sfd = socket(all->rp->ai_family, all->rp->ai_socktype, all->rp->ai_protocol);
+		sfd = socket(all->rp->ai_family, all->rp->ai_socktype,
+			all->rp->ai_protocol);
 		prevent_reused(sfd);
 		if (sfd == -1) {
 			continue;
