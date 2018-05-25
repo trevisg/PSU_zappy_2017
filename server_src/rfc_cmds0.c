@@ -25,7 +25,6 @@ int     nick(const char **nickname, int clifd)
 	return (0);
 }
 
-
 int     ping(const char **nope, int clifd)
 {
 	if (nope || !nope)
