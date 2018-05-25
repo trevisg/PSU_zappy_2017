@@ -11,6 +11,7 @@
 #include <sys/wait.h>
 #include <sys/prctl.h>
 #include <arpa/inet.h>
+#include <regex.h>
 
 /** Dummy signal hander to exit server properly on console with CTRL-C
 * @param signo the catched signal type (hit ```man 2 signal```)
@@ -30,25 +31,29 @@ void sig_handler(int signo)
 static int	get_methods(char *req, int clifd)
 {
 	int index = 0;
+	int i = 0;
+	int j = 0;
 	char *str, *arg = NULL;
 	char args[MAXARGS][MAXARGSIZE] = {{0},{0}};
-	int i = 0;
 
 	str = strdup(req);
-	for (index = 0; G_PROTOS[index] != NULL; ++index) {
-		if ((strcasestr(req, G_PROTOS[index]))) {
-			arg = strtok(str, " ");
-			while (arg) {
-				strncpy(args[i++], arg, MAXARGSIZE);
-				arg = strtok(NULL, " ");
+	arg = strtok(str, " \r\n");
+	while (arg) {
+		strncpy(args[i++], arg, MAXARGSIZE);
+		arg = strtok(NULL, " \r\n");
+	}
+	print_arg(args);
+	for (j = 0; args[j]; ++j) {
+		for (index = 0; G_PROTOS[index] != NULL; ++index) {
+			if ((strcasestr(args[j], G_PROTOS[index]))) {
+				if (G_CMDS[index] != NULL) {
+					index = G_CMDS[index](args, clifd);
+				}
+				break;
 			}
-			print_arg(args);
-			if (G_CMDS[index] != NULL) {
-				index = G_CMDS[index](args, clifd);
-			}
-			break;
 		}
 	}
+
 	memset(req, 0, BUF_SIZE);
 	return ((index == REF_NB) ? (0) : (index));
 }
@@ -122,8 +127,6 @@ static int	getactiveclients(t_serv *all, char **args)
 			initco(all, args, &connected);
 		} else {
 			all->nread = read(clifd, all->buf, BUF_SIZE);
-			RM_NL(all->buf);
-			RM_CR(all->buf);
 			evhandler(all, clifd);
 		}
 	}
@@ -145,28 +148,28 @@ int	server(char **args)
 		for (;;) {
 			all.nfds = epoll_wait(all.epollfd, all.events,
 				MAX_EVENTS, -1);
-			if (all.nfds == -1) {
-				perror("server: epoll_wait");
-				break;
+				if (all.nfds == -1) {
+					perror("server: epoll_wait");
+					break;
+				}
+				rt = getactiveclients(&all, args);
 			}
-			rt = getactiveclients(&all, args);
+			close(all.listen_sock);
 		}
-		close(all.listen_sock);
+		return (rt);
 	}
-	return (rt);
-}
 
-int	main(int ac, char **av)
-{
-	int rt = 0;
+	int	main(int ac, char **av)
+	{
+		int rt = 0;
 
-	if (ac == 2) {
-		prctl(PR_SET_PDEATHSIG, SIGHUP);
-		signal(SIGINT, sig_handler);
-		rt = server(av);
-	} else {
-		fprintf(stderr, "%s: [port]\n", av[0]);
-		rt = 84;
+		if (ac == 2) {
+			prctl(PR_SET_PDEATHSIG, SIGHUP);
+			signal(SIGINT, sig_handler);
+			rt = server(av);
+		} else {
+			fprintf(stderr, "%s: [port]\n", av[0]);
+			rt = 84;
+		}
+		return (rt);
 	}
-	return (rt);
-}
