@@ -8,9 +8,17 @@
 #include "../include/server.h"
 #include <unistd.h>
 
-/**
-* @function
-* @brief ### Switch type and print data in t_serv according to a fmt string
+/** Dummy print 2d Array containing received cmd args
+* @param args the args array to print
+*/
+void print_arg(char args[MAXARGS][MAXARGSIZE])
+{
+	for (int i = 0; args[i][0]; i++) {
+		printf("arg[%d] : [%s]\n", i, args[i]);
+	}
+}
+
+/** Switch type and print data in t_serv according to a fmt string
 * @param etype the kind of event type in [C]onnect, [D]isconnect or default
 * @param all the 'catch them all' structure with server infos
 * @return 1
@@ -23,7 +31,6 @@ int	logthisevent(const char etype, t_serv *all)
 	char *def_fmt = "Type:%c Size:%zd DATA: [%s]\n";
 
 	memset(usr, 0, BUF_SIZE);
-	RM_NL(all->buf);
 	sprintf(usr, "%s:%s", all->host, all->service);
 	switch (etype) {
 		case 'c':
@@ -38,9 +45,7 @@ int	logthisevent(const char etype, t_serv *all)
 	return (1);
 }
 
-/**
-* @function
-* @brief ### Check if log path is writtable and open logs *FILE pointers.
+/** Check if log path is writtable and open logs *FILE pointers.
 * @param paths a 2D array of char containing the conf file paths
 * @param ptr the returned setupded struct
 * @return 0 if ok with access and all other syscalls

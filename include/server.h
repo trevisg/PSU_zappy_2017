@@ -21,35 +21,47 @@
 	#include <sys/stat.h>
 
 	/** Number of simultaneous connection on server listening socket
-	* see listen() call */
+	* see listen() call
+	*/
 	#define BACKLOG 5
 	/** Number of RFC command handled by this (broken) server */
 	#define REF_NB 15
 	/** This good old C mem alloc dirty method */
 	#define BUF_SIZE 1057
-	/** The length of the struct epoll_events array pointed to by *events */
+	/** The length of the struct epoll_events array pointed to by *events
+	*/
 	#define MAX_EVENTS 10
 	/** This good old ... u know */
 	#define MAXCHAN 1000
 	/** Idem, see join() function and RFC 1459 and RFC 2812 */
 	#define MAXCHANNAME 50
+	/** Maximum number of args in command as per rfc request
+	* see section 2.3 of RFC 2812
+	*/
+	#define MAXARGS 15
+	/** Maximum argument length see ref below */
+	#define MAXARGSIZE 510
 	/** For windows compactibility, added carriage return here */
 	#define RESP_FMT "%d %s\r\n"
 	/** Dummy hack to remove newline char from cmd buffer
-	* see ```man strcspn()```*/
-	#define RM_NL(a) a[strcspn(a, "\r")] = 0;
+	* see ```man strcspn()```
+	*/
+	#define RM_CR(a) a[strcspn(a, "\r")] = 0;
+	#define RM_NL(a) a[strcspn(a, "\n")] = 0;
+	/** Argument format typedef as per RFC request */
+	typedef char cmdargs[MAXARGS][MAXARGSIZE];
 
 	/** See @file server_src/rfc_cmds0.c */
-	int join(const char **channame, int clifd);
-	int nick(const char **nickname, int clifd);
-	int ping(const char **nope, int clifd);
-	int user(const char **usercmd, int clifd);
+	int join(cmdargs channame, int clifd);
+	int nick(cmdargs nickname, int clifd);
+	int ping(cmdargs nope, int clifd);
+	int user(cmdargs usercmd, int clifd);
 
 	/** See @file server_src/server_decls.c */
 	/** Main EPITECH MyIRC Protocol (RFC 1459 Extract)
 	* methods function pointer
 	*/
-	typedef int (*cmds)(const char **, int);
+	typedef int (*cmds)(cmdargs, int);
 	/** The object prototype mapping the methods name */
 	extern const char *G_PROTOS[REF_NB];
 	/** The global pointer */
@@ -57,7 +69,8 @@
 	/** Only here for code clarity and lisibility
 	* @TODO : still missing lot of rfc command see subject, rfc or
 	* this [gist](https://gist.github.com/xero/2d6e4b061b4ecbeb9f99)
-	* for help */
+	* for help
+	*/
 	enum  CMDS {
 		JOIN, NICK, LIST, SERVER, PART,
 		USERS, NAMES, ACCEPTF, MSGAB, MSGABC,
@@ -87,14 +100,13 @@
 	/** Yeah simplification */
 	typedef struct addrinfo adrinf;
 
-	/** @TODO : please split this **mess** !! */
-	typedef struct				s_serv {
+	/** Main server structure */
+	typedef struct			s_serv {
 		int			nfds;
 		int			epollfd;
 		int			conn_sock;
 		int			listen_sock;
 		ssize_t 		nread;
-		socklen_t 		addrlen;
 		char 			buf[BUF_SIZE];
 		char 			host[NI_MAXHOST];
 		char 			service[NI_MAXSERV];
@@ -103,14 +115,30 @@
 		adrinf			hints;
 		struct epoll_event 	ev;
 		struct epoll_event 	events[MAX_EVENTS];
-		struct sockaddr_storage addr;
-	}					t_serv;
+	}				t_serv;
 
-	typedef struct			s_client {
+	/** A typical IRC user */
+	typedef struct			s_user {
 		int			clifd;
+		int			mode;
 		char			*nick;
-		char			*channel;
-	}				t_client;
+		char 			*rname;
+	}				t_user;
+
+	/** The doubly linked list of connected users */
+	typedef struct			s_userlist {
+		t_user 			*user;
+		struct s_userlist	*prev;
+		struct s_userlist	*next;
+	}				t_userlist;
+
+	/** A doubly linked list of current channels with their users */
+	typedef struct 			s_channel {
+		char 			*channame;
+		t_userlist		*users;
+		struct s_channel 	*prev;
+		struct s_channel 	*next;
+	}				t_channel;
 
 	/** See server_src/inits.c */
 	int	set_sockfd(t_serv *all);
@@ -121,6 +149,7 @@
 	/** See miserver/loghelpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
+	void	print_arg(cmdargs args);
 
 	#endif /* !SERVER_H_ */
 
