@@ -44,11 +44,9 @@ static int	get_methods(char *req, int clifd)
 	}
 	print_arg(args);
 	for (j = 0; args[j]; ++j) {
-		for (index = 0; G_PROTOS[index] != NULL; ++index) {
+		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strcasestr(args[j], G_PROTOS[index]))) {
-				if (G_CMDS[index] != NULL) {
-					index = G_CMDS[index](args, clifd);
-				}
+				index = G_CMDS[index](args, clifd);
 				break;
 			}
 		}
@@ -148,28 +146,28 @@ int	server(char **args)
 		for (;;) {
 			all.nfds = epoll_wait(all.epollfd, all.events,
 				MAX_EVENTS, -1);
-				if (all.nfds == -1) {
-					perror("server: epoll_wait");
-					break;
-				}
-				rt = getactiveclients(&all, args);
+			if (all.nfds == -1) {
+				perror("server: epoll_wait");
+				break;
 			}
-			close(all.listen_sock);
+			rt = getactiveclients(&all, args);
 		}
-		return (rt);
+		close(all.listen_sock);
 	}
+	return (rt);
+}
 
-	int	main(int ac, char **av)
-	{
-		int rt = 0;
+int	main(int ac, char **av)
+{
+	int rt = 0;
 
-		if (ac == 2) {
-			prctl(PR_SET_PDEATHSIG, SIGHUP);
-			signal(SIGINT, sig_handler);
-			rt = server(av);
-		} else {
-			fprintf(stderr, "%s: [port]\n", av[0]);
-			rt = 84;
-		}
-		return (rt);
+	if (ac == 2) {
+		prctl(PR_SET_PDEATHSIG, SIGHUP);
+		signal(SIGINT, sig_handler);
+		rt = server(av);
+	} else {
+		fprintf(stderr, "%s: [port]\n", av[0]);
+		rt = 84;
 	}
+	return (rt);
+}
