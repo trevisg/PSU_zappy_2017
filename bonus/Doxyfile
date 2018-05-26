@@ -792,6 +792,7 @@ WARN_LOGFILE           =
 
 INPUT                  = server_src \
 			client_src \
+                        include \
 			bonus/
 
 # This tag can be used to specify the character encoding of the source files
