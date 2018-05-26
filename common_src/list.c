@@ -53,6 +53,23 @@ void *push_back(t_list *head, t_list *new)
         return (head);
 }
 
+void 	delete_el(t_list *list, char *name)
+{
+	t_list *tmp = list;
+
+	while (tmp->next != NULL)
+	{
+		if (strcmp(tmp->data, name) == 0) {
+			tmp->prev->next = tmp->next;
+			tmp->next->prev = tmp->prev;
+			free(tmp->data);
+			free(tmp);
+			break;
+		}
+		tmp = tmp->next;
+	}
+}
+
 void print_me_right(t_list *liste)
 {
         printf("%s\n", "Print right");
@@ -90,6 +107,7 @@ int main(void)
                 foo = push_back(foo, faa);
         }
         print_me_right(foo);
+	delete_el(foo, "faa");
         print_me_back(foo);
         clean_me(foo);
         return (0);
