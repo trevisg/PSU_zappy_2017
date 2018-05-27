@@ -47,7 +47,7 @@ static int 	evhandler(t_serv *all, int newfd)
 	int res = getpeername(newfd, (struct sockaddr *)&addr, &addr_size);
 
 	if (res == -1) {
-		perror("getpeername ! :");
+		perror("evhandler: getpeername");
 	} else {
 		sprintf(all->host, "%s", inet_ntoa(addr.sin_addr));
 		sprintf(all->service, "%d", ntohs(addr.sin_port));
@@ -68,7 +68,7 @@ static int 	evhandler(t_serv *all, int newfd)
 * @return 0 fo normal exit
 * @exit(0) if a client / child process disconnect
 * @note must implement circular buffer instead of 2d char array
-* see [this ref](https://bit.ly/2s86kKz) for explanations and code exemple
+* see [this ref](https://bit.ly/2s86kKz) for explanations and code snippets
 * (note of note : will do it (maybe) later)
 */
 static int	getactiveclients(t_serv *all, char **args)
