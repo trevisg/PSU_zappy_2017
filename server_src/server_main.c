@@ -13,8 +13,7 @@
 #include <regex.h>
 
 /** Set the new accept() client socket in epoll event list
-* for new client handling and write 220 + [server header] on client socket
-* if connection succeed
+* for new client handling if connection succeed
 * @param all the 'foure tout' server struct
 * @param args the argv from main to update child process name
 */
@@ -68,6 +67,9 @@ static int 	evhandler(t_serv *all, int newfd)
 * @param args the argv pointer form main containing initial process names
 * @return 0 fo normal exit
 * @exit(0) if a client / child process disconnect
+* @note must implement circular buffer instead of 2d char array
+* see [this ref](https://bit.ly/2s86kKz) for explanations and code exemple
+* (note of note : will do it (maybe) later)
 */
 static int	getactiveclients(t_serv *all, char **args)
 {
@@ -89,7 +91,7 @@ static int	getactiveclients(t_serv *all, char **args)
 }
 
 /** Contain the main 'listening for event' loop
-* @TODO remove dirty struct
+* @TODO read the various notes on documentation and do what requested
 */
 int	server(char **args)
 {
@@ -114,6 +116,10 @@ int	server(char **args)
 	return (rt);
 }
 
+/** Self explanatory (here is the main())
+* @param ac the number of received args
+* @param av the received args, av[1] must be the server port
+*/
 int	main(int ac, char **av)
 {
 	int rt = 0;
