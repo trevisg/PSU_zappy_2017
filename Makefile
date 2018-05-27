@@ -30,6 +30,7 @@ SERVER_SRCS	= logs_helpers.c \
 		sig_handler.c \
 		user_list.c \
 		channel_list.c \
+		lists_helpers.c \
 		rfc_cmds0.c \
 		commands_parsing.c
 
