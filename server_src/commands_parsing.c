@@ -8,6 +8,17 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
+/** Free the token list */
+static void free_buffers(char **buffer)
+{
+	int i;
+
+	for (i = 0; buffer[i]; ++i) {
+		free(buffer[i]);
+	}
+	free(buffer);
+}
+
 /** Split the received buffer by the '\r\n' symbol to get multiple
 * commands in one buffer (or only one it's all depends)
 * @param req the read() buffer from clifd
@@ -22,7 +33,6 @@ static char	**get_commands(char *req)
 		memset(cmds, 0, sizeof(*cmds) * MAXARGS);
 		cmd = strtok(req, "\r\n");
 		while (cmd) {
-			printf("arg[%d] ? [%s]\n", i, cmd);
 			cmds[i] = strdup(cmd);
 			cmd = strtok(NULL, "\r\n");
 			i = i <= MAXARGS ? i + 1 : i;
@@ -44,7 +54,6 @@ static char 	**get_args(char *cmd)
 		memset(tkns, 0, sizeof(*tkns) * MAXARGS);
 		token = strtok(cmd, " ");
 		while (token) {
-			printf("arg[%d] ? [%s]\n", i, token);
 			tkns[i] = strdup(token);
 			token = strtok(NULL, " ");
 			i = i <= MAXARGS ? i + 1 : i;
@@ -64,17 +73,19 @@ int	get_methods(char *req, int clifd)
 	char **cmds = get_commands(req);
 	char **args = NULL;
 
-	print_2darray(cmds);
+	print_2darray(cmds, "Commands");
 	while (cmds[j]) {
 		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strcasestr(cmds[j], G_PROTOS[index]))) {
 				args = get_args(cmds[j]);
-				print_2darray(args);
+				print_2darray(args, "Args");
 				index = G_CMDS[index](args, clifd);
+				free_buffers(args);
 				break;
 			}
 		}
 		++j;
 	}
+	free_buffers(cmds);
 	return ((index == REF_NB) ? (0) : (index));
 }
