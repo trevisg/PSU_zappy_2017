@@ -51,22 +51,6 @@
 	/** Yess useless so mandatory */
 	#define EVER ;;
 
-	/** See @file server_src/rfc_cmds0.c */
-	int join(cmdargs channame, int clifd);
-	int nick(cmdargs nickname, int clifd);
-	int ping(cmdargs nope, int clifd);
-	int user(cmdargs usercmd, int clifd);
-	int quit(cmdargs quitmsg, int clifd);
-
-	/** See @file server_src/server_decls.c */
-	/** Main EPITECH MyIRC Protocol (RFC 1459 Extract)
-	* methods function pointer
-	*/
-	typedef int (*cmds)(cmdargs, int);
-	/** The object prototype mapping the methods name */
-	extern const char *G_PROTOS[REF_NB];
-	/** The global pointer */
-	extern const cmds G_CMDS[REF_NB];
 	/** Only here for code clarity and lisibility
 	* @TODO : still missing lot of rfc command see subject, rfc or
 	* this [gist](https://gist.github.com/xero/2d6e4b061b4ecbeb9f99)
@@ -153,16 +137,43 @@
 	/** See server_src/logs_helpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
-	void	print_2darray(char **array, char *ident);
-	void	print_users(t_userlist *liste);
+	void	print_users(t_userlist *list);
+	void	print_channels(t_channel *list);
 
 	/** See server_src/client_list.c */
-	t_user		*get_new_user(int clifd, cmdargs usercmd);
 	t_userlist	*get_new_userlist(t_user *usr);
-	void		*push_back(t_userlist *head, t_userlist *users);
 	void		print_users(t_userlist *liste);
 	void		free_userlist(t_userlist *list);
+	void		*remove_user(t_userlist *list, int clifd);
+	t_user		*get_new_user(int clifd, cmdargs usercmd);
+	void		*insert_back_user(t_userlist *head, t_userlist *users);
+	/** See server_src/channel_list.c */
+	t_channel	*init_default_channel();
+	void		free_channel_list(t_channel *list);
+	t_channel	*get_new_channel_list(t_userlist *userlist, char *);
+	void		remove_channel(t_channel *list, char *channame);
+	void		*insert_back_channel(t_channel *head, t_channel *chan);
 
+	/** See server_src/list_helpers.c */
+	t_user		*find_user_by_fd(t_userlist *list, int clifd);
+	t_userlist 	*get_channel_userlist(t_channel *list, char *channame);
+
+	/** See @file server_src/rfc_cmds0.c */
+	void	*join(cmdargs args, int clifd, t_channel *chanlist);
+	void	*nick(cmdargs args, int clifd, t_channel *chanlist);
+	void	*ping(cmdargs args, int clifd, t_channel *chanlist);
+	void	*user(cmdargs args, int clifd, t_channel *chanlist);
+	void	*quit(cmdargs args, int clifd, t_channel *chanlist);
+
+	/** See @file server_src/server_decls.c */
+	/** Main EPITECH MyIRC Protocol (RFC 1459 Extract)
+	* methods function pointer
+	*/
+	typedef void *(*cmds)(cmdargs args, int clifd, t_channel *chanlist);
+	/** The object prototype mapping the methods name */
+	extern const char *G_PROTOS[REF_NB];
+	/** The global pointer */
+	extern const cmds G_CMDS[REF_NB];
 	/** See server_src/signal_handler.c */
 	void		sig_handler(int signo);
 
