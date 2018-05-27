@@ -20,7 +20,6 @@ int     nick(cmdargs nickname, int clifd)
 {
 	if (clifd)
 	printf("NICK [%s] joining the BrokenIRC server\r\n", nickname[1]);
-	// dprintf(clifd, "001 :Welcome %s\r\n", nickname[1]);
 	return (0);
 }
 
