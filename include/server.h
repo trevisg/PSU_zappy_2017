@@ -154,11 +154,14 @@
 	int	initlogs(const char **paths, t_log *ptr);
 	void	print_arg(cmdargs args);
 
-	/** see server_src/client_list.c */
+	/** See server_src/client_list.c */
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
 	t_userlist	*get_new_userlist(t_user *usr);
 	void		*push_back(t_userlist *head, t_userlist *users);
 	void		print_users(t_userlist *liste);
+
+	/** See server_src/signal_handler.c */
+	void		sig_handler(int signo);
 
 	#endif /* !SERVER_H_ */
 
