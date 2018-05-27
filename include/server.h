@@ -149,6 +149,9 @@
 	int	set_iface(adrinf *hints, adrinf **res, const char *port);
 	int	set_clifd(int clisock, int epollfd, struct epoll_event *ev);
 
+	/** See server_src/commands_parsing.c */
+	int	get_methods(char *req, int clifd);
+
 	/** See server_src/logs_helpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
