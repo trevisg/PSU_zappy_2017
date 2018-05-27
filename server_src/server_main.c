@@ -9,7 +9,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/wait.h>
-#include <sys/prctl.h>
 #include <arpa/inet.h>
 #include <regex.h>
 
@@ -50,12 +49,11 @@ static int 	evhandler(t_serv *all, int newfd)
 
 	if (res == -1) {
 		perror("getpeername ! :");
-
 	} else {
 		sprintf(all->host, "%s", inet_ntoa(addr.sin_addr));
 		sprintf(all->service, "%d", ntohs(addr.sin_port));
 		if (all->nread && logthisevent('c', all)) {
-			return (get_methods(all->buf, newfd));
+			get_methods(all->buf, newfd);
 		} else {
 			logthisevent('d', all);
 		}
@@ -81,8 +79,10 @@ static int	getactiveclients(t_serv *all, char **args)
 		if (clifd == all->listen_sock) {
 			initco(all, args, &connected);
 		} else {
+			memset(all->buf, 0, BUF_SIZE);
 			all->nread = read(clifd, all->buf, BUF_SIZE);
 			evhandler(all, clifd);
+			memset(all->buf, 0, BUF_SIZE);
 		}
 	}
 	return (0);
@@ -100,7 +100,7 @@ int	server(char **args)
 	if ((all.listen_sock = set_sockfd(&all)) < 0 || set_epoll(&all) == -1) {
 		rt = 84;
 	} else {
-		for (;;) {
+		for (EVER) {
 			all.nfds = epoll_wait(all.epollfd, all.events,
 				MAX_EVENTS, -1);
 			if (all.nfds == -1) {
@@ -119,7 +119,6 @@ int	main(int ac, char **av)
 	int rt = 0;
 
 	if (ac == 2) {
-		prctl(PR_SET_PDEATHSIG, SIGHUP);
 		signal(SIGINT, sig_handler);
 		rt = server(av);
 	} else {
