@@ -161,6 +161,7 @@
 	t_userlist	*get_new_userlist(t_user *usr);
 	void		*push_back(t_userlist *head, t_userlist *users);
 	void		print_users(t_userlist *liste);
+	void		free_userlist(t_userlist *list);
 
 	/** See server_src/signal_handler.c */
 	void		sig_handler(int signo);
