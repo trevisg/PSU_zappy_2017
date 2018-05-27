@@ -63,7 +63,6 @@ int main(int ac, char **av)
                 exit(84);
         }
         if ((he = gethostbyname(av[1])) == NULL) {
-                herror("gethostbyname");
                 exit(84);
         }
         if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
