@@ -27,7 +27,6 @@ int     ping(cmdargs nope, int clifd)
 {
 	if (nope || !nope)
 	dprintf(clifd, "PONG\r\n");
-	printf("PONG\r\n");
 	return (0);
 }
 
@@ -48,8 +47,8 @@ int     user(cmdargs usercmd, int clifd)
 
 int 	quit(cmdargs quitmsg, int clifd)
 {
-	printf("%scmd received\n", quitmsg[0]);
-	dprintf(clifd, ":BrokenIRC!127.0.0.1 QUIT :%s", quitmsg[1]);
+	printf("[%s] cmd received\n", quitmsg[0]);
+	dprintf(clifd, ":BrokenIRC!127.0.0.1 <user> QUIT :%s", quitmsg[1]);
 	close(clifd);
 	return (0);
 }
