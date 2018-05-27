@@ -19,7 +19,7 @@ static void free_buffers(char **buffer)
 	free(buffer);
 }
 
-/** Split the received buffer by the '\r\n' symbol to get multiple
+/** Split the received buffer by the \\r\\n symbol to get multiple
 * commands in one buffer (or only one it's all depends)
 * @param req the read() buffer from clifd
 */
