@@ -49,9 +49,9 @@ void	*push_back(t_userlist *head, t_userlist *new)
 	return (head);
 }
 
-void	remove_user(t_userlist *liste, char *nick)
+void	remove_user(t_userlist *list, char *nick)
 {
-	t_userlist *tmp = liste;
+	t_userlist *tmp = list;
 
 	while (tmp->next != NULL)
 	{
@@ -65,5 +65,17 @@ void	remove_user(t_userlist *liste, char *nick)
 			break;
 		}
 		tmp = tmp->next;
+	}
+}
+
+void	free_userlist(t_userlist *list)
+{
+	while (list) {
+		free(list->user->rname);
+		free(list->user->nick);
+		free(list->user);
+		t_userlist *next = list->next;
+		free(list);
+		list = next;
 	}
 }
