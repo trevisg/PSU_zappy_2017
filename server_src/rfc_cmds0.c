@@ -51,5 +51,6 @@ int 	quit(cmdargs quitmsg, int clifd)
 {
 	printf("%scmd received\n", quitmsg[0]);
 	dprintf(clifd, ":BrokenIRC!127.0.0.1 QUIT :%s", quitmsg[1]);
+	close(clifd);
 	return (0);
 }
