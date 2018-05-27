@@ -8,7 +8,7 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
-t_user *get_new_user(int clifd, cmdargs usercmd)
+t_user	*get_new_user(int clifd, cmdargs usercmd)
 {
 	t_user *usr = malloc(sizeof(*usr));
 
@@ -22,7 +22,7 @@ t_user *get_new_user(int clifd, cmdargs usercmd)
 	return (usr);
 }
 
-t_userlist *get_new_userlist(t_user *usr)
+t_userlist	*get_new_userlist(t_user *usr)
 {
 	t_userlist *list = malloc(sizeof(*list));
 
@@ -35,7 +35,7 @@ t_userlist *get_new_userlist(t_user *usr)
 	return (list);
 }
 
-void *push_back(t_userlist *head, t_userlist *new)
+void	*push_back(t_userlist *head, t_userlist *new)
 {
 	t_userlist *tmp = head;
 
@@ -49,11 +49,21 @@ void *push_back(t_userlist *head, t_userlist *new)
 	return (head);
 }
 
-void	print_users(t_userlist *liste)
+void	remove_user(t_userlist *liste, char *nick)
 {
-	printf("\t\tUSERS LIST :\n");
-	for (t_userlist *tmp = liste; tmp; tmp = tmp->next) {
-		printf("User : [%s], Real Name : [%s]\n",
-		tmp->user->nick, tmp->user->rname);
+	t_userlist *tmp = liste;
+
+	while (tmp->next != NULL)
+	{
+		if (!strcmp(tmp->user->nick, nick)) {
+			tmp->prev->next = tmp->next;
+			tmp->next->prev = tmp->prev;
+			free(tmp->user->rname);
+			free(tmp->user->nick);
+			free(tmp->user);
+			free(tmp);
+			break;
+		}
+		tmp = tmp->next;
 	}
 }
