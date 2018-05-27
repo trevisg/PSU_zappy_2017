@@ -7,15 +7,30 @@
 
 #include "../include/server.h"
 #include <unistd.h>
+#include <stdlib.h>
 
-/** Dummy print 2d Array containing received cmd args
+/** Dummy print 2d Array for debug purpose
 * @param args the args array to print
 */
-void print_arg(char args[MAXARGS][MAXARGSIZE])
+void print_2darray(char **array)
 {
-	for (int i = 0; args[i][0]; i++) {
-		printf("arg[%d] : [%s]\n", i, args[i]);
+	for (int i = 0; array[i]; i++) {
+		printf("Print 2d says : arg[%d] : [%s]\n", i, array[i]);
 	}
+}
+
+/** Construct the host:service string from struct infos
+* @note this is to avoid sprintf usage
+*/
+static char *get_host_string(const char *host, const char *service)
+{
+	char *usr = malloc((NI_MAXHOST + 1 + NI_MAXSERV) * sizeof(*usr));
+
+	memset(usr, 0, NI_MAXHOST + 1 + NI_MAXSERV);
+	strncpy(usr, host, NI_MAXHOST);
+	strcat(usr, ":");
+	strncat(usr, service, NI_MAXSERV);
+	return (usr);
 }
 
 /** Switch type and print data in t_serv according to a fmt string
@@ -25,13 +40,11 @@ void print_arg(char args[MAXARGS][MAXARGSIZE])
 */
 int	logthisevent(const char etype, t_serv *all)
 {
-	char usr[BUF_SIZE];
+	char *usr = get_host_string(all->host, all->service);
 	char *c_fmt = " => IN: [%zd bytes] FROM: [%s] DATA: [%s]\n";
 	char *d_fmt = "USER: [%s] disconnect\n";
 	char *def_fmt = "Type:%c Size:%zd DATA: [%s]\n";
 
-	memset(usr, 0, BUF_SIZE);
-	sprintf(usr, "%s:%s", all->host, all->service);
 	switch (etype) {
 		case 'c':
 		fprintf(stdout, c_fmt, all->nread, usr, all->buf);
@@ -42,6 +55,7 @@ int	logthisevent(const char etype, t_serv *all)
 		default:
 		fprintf(stdout, def_fmt, etype, all->nread, all->buf);
 	}
+	free(usr);
 	return (1);
 }
 
