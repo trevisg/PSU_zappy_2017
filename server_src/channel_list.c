@@ -8,20 +8,21 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
-t_channel	*get_new_channel_list(t_userlist *userlist)
+t_channel	*get_new_channel_list(t_userlist *userlist, char *channame)
 {
 	t_channel *list = malloc(sizeof(*list));
 
 	if (list) {
 		memset(list, 0, sizeof(*list));
 		list->users = userlist;
+		list->channame = strdup(channame);
 		list->prev = NULL;
 		list->next = NULL;
 	}
 	return (list);
 }
 
-void	*insert_back(t_channel *head, t_channel *new)
+void	*insert_back_channel(t_channel *head, t_channel *new)
 {
 	t_channel *tmp = head;
 
@@ -45,6 +46,7 @@ void	remove_channel(t_channel *list, char *channame)
 			tmp->prev->next = tmp->next;
 			tmp->next->prev = tmp->prev;
 			free_userlist(tmp->users);
+			free(tmp->channame);
 			free(tmp);
 			break;
 		}
@@ -52,7 +54,7 @@ void	remove_channel(t_channel *list, char *channame)
 	}
 }
 
-void 	free_channel_list(t_channel *list)
+void	free_channel_list(t_channel *list)
 {
 	while (list) {
 		free_userlist(list->users);
@@ -60,4 +62,20 @@ void 	free_channel_list(t_channel *list)
 		free(list);
 		list = next;
 	}
+}
+
+t_channel	*init_default_channel()
+{
+	char *defuser[5] = {"NICK", "4Dm1n", "42", "*", ":John Doe"};
+	t_channel *defchan = malloc(sizeof(*defchan));
+	t_user *admin = get_new_user(0, defuser);
+	t_userlist *allusers = get_new_userlist(admin);
+
+	if (defchan && admin && allusers) {
+		defchan->channame = "#welcome";
+		defchan->users = allusers;
+		defchan->prev = NULL;
+		defchan->next = NULL;
+	}
+	return (defchan);
 }
