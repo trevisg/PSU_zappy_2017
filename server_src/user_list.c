@@ -35,7 +35,7 @@ t_userlist	*get_new_userlist(t_user *usr)
 	return (list);
 }
 
-void	*push_back(t_userlist *head, t_userlist *new)
+void	*insert_back_user(t_userlist *head, t_userlist *new)
 {
 	t_userlist *tmp = head;
 
@@ -49,13 +49,13 @@ void	*push_back(t_userlist *head, t_userlist *new)
 	return (head);
 }
 
-void	remove_user(t_userlist *list, char *nick)
+void	*remove_user(t_userlist *list, int clifd)
 {
 	t_userlist *tmp = list;
 
 	while (tmp->next != NULL)
 	{
-		if (!strcmp(tmp->user->nick, nick)) {
+		if (tmp->user->clifd == clifd) {
 			tmp->prev->next = tmp->next;
 			tmp->next->prev = tmp->prev;
 			free(tmp->user->rname);
@@ -66,6 +66,7 @@ void	remove_user(t_userlist *list, char *nick)
 		}
 		tmp = tmp->next;
 	}
+	return (list);
 }
 
 void	free_userlist(t_userlist *list)
