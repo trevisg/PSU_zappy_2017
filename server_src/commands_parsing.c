@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** MY_IRC
 ** File description:
-** my_irc server source file
+** my_irc server commands parsing functions source file
 */
 
 #include "../include/server.h"
@@ -63,31 +63,31 @@ static char 	**get_args(char *cmd)
 }
 
 /** Match all methods in G_CMDS for a given req command string
-* @param req the requested command on format 'CMD <space> [ARGS]'
+* @param req the readed commands buffer
 * @param clifd the client socket fd
 * @note could add compilation macro for debug print_2darray() calls
 * but epitech norm insist on 20 line per function so ...
 */
 int	get_methods(char *req, int clifd)
 {
-	int j = 0;
 	int index = 0;
 	char **cmds = get_commands(req);
 	char **args = NULL;
+	static t_channel *defchan = NULL;
 
-	print_2darray(cmds, "Commands");
-	while (cmds[j]) {
+	if (!defchan)
+		defchan = init_default_channel();
+	for(int j = 0; cmds[j]; ++j) {
 		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strcasestr(cmds[j], G_PROTOS[index]))) {
 				args = get_args(cmds[j]);
-				print_2darray(args, "Args");
-				index = G_CMDS[index](args, clifd);
+				G_CMDS[index](args, clifd, defchan);
 				free_buffers(args);
 				break;
 			}
 		}
-		++j;
 	}
+	print_users(defchan->users);
 	free_buffers(cmds);
 	return ((index == REF_NB) ? (0) : (index));
 }
