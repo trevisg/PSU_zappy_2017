@@ -12,25 +12,26 @@
 /** Print users nick and real name stored in a t_userlist doubly linked list
 * @param liste the t_userlist to print
 */
-void	print_users(t_userlist *liste)
+void	print_users(t_userlist *list)
 {
 	printf("\t\tUSERS LIST :\n");
-	for (t_userlist *tmp = liste; tmp; tmp = tmp->next) {
+	for (t_userlist *tmp = list; tmp; tmp = tmp->next) {
 		printf("User : [%s], Real Name : [%s]\n",
 		tmp->user->nick, tmp->user->rname);
 	}
+	printf("\n");
 }
 
-/** Dummy print 2d Array for debug purpose
-* @param args the args array to print
-* @param ident what the heck is this Array
+/** Print users nick and real name stored in a t_userlist doubly linked list
+* @param liste the t_userlist to print
 */
-void print_2darray(char **array, char *ident)
+void	print_channels(t_channel *list)
 {
-	printf("\t %s\n", ident);
-	for (int i = 0; array[i]; ++i) {
-		printf("arg[%d] : [%s]\n", i, array[i]);
+	printf("\t\tCHANNELS LIST :\n");
+	for (t_channel *tmp = list; tmp; tmp = tmp->next) {
+		printf("Channel : [%s]\n", tmp->channame);
 	}
+	printf("\n");
 }
 
 /** Construct the host:service string from struct infos
