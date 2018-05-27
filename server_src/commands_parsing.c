@@ -6,6 +6,52 @@
 */
 
 #include "../include/server.h"
+#include <stdlib.h>
+
+/** Split the received buffer by the '\r\n' symbol to get multiple
+* commands in one buffer (or only one it's all depends)
+* @param req the read() buffer from clifd
+*/
+static char	**get_commands(char *req)
+{
+	int i = 0;
+	char *cmd = NULL;
+	char **cmds = malloc(MAXARGS * sizeof(*cmds));
+
+	if (cmds) {
+		memset(cmds, 0, sizeof(*cmds) * MAXARGS);
+		cmd = strtok(req, "\r\n");
+		while (cmd) {
+			printf("arg[%d] ? [%s]\n", i, cmd);
+			cmds[i] = strdup(cmd);
+			cmd = strtok(NULL, "\r\n");
+			i = i <= MAXARGS ? i + 1 : i;
+		}
+	}
+	return (cmds);
+}
+
+/** Tokenize the command buffer by splitting by spaces
+* @param cmd a command string received after get_commands() tokenization
+*/
+static char 	**get_args(char *cmd)
+{
+	int i = 0;
+	char *token = NULL;
+	char **tkns = malloc(MAXARGS * sizeof(*tkns));
+
+	if (tkns) {
+		memset(tkns, 0, sizeof(*tkns) * MAXARGS);
+		token = strtok(cmd, " ");
+		while (token) {
+			printf("arg[%d] ? [%s]\n", i, token);
+			tkns[i] = strdup(token);
+			token = strtok(NULL, " ");
+			i = i <= MAXARGS ? i + 1 : i;
+		}
+	}
+	return (tkns);
+}
 
 /** Match all methods in G_CMDS for a given req command string
 * @param req the requested command on format 'CMD <space> [ARGS]'
@@ -13,28 +59,22 @@
 */
 int	get_methods(char *req, int clifd)
 {
-	int index = 0;
-	int i = 0;
 	int j = 0;
-	char *str, *arg = NULL;
-	char args[MAXARGS][MAXARGSIZE] = {{0},{0}};
+	int index = 0;
+	char **cmds = get_commands(req);
+	char **args = NULL;
 
-	str = strdup(req);
-	arg = strtok(str, " \r\n");
-	while (arg) {
-		strncpy(args[i++], arg, MAXARGSIZE);
-		arg = strtok(NULL, " \r\n");
-	}
-	print_arg(args);
-	for (j = 0; args[j]; ++j) {
+	print_2darray(cmds);
+	while (cmds[j]) {
 		for (index = 0; G_PROTOS[index]; ++index) {
-			if ((strcasestr(args[j], G_PROTOS[index]))) {
+			if ((strcasestr(cmds[j], G_PROTOS[index]))) {
+				args = get_args(cmds[j]);
+				print_2darray(args);
 				index = G_CMDS[index](args, clifd);
 				break;
 			}
 		}
+		++j;
 	}
-
-	memset(req, 0, BUF_SIZE);
 	return ((index == REF_NB) ? (0) : (index));
 }
