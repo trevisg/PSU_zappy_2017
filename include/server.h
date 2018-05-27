@@ -45,13 +45,13 @@
 	#define MAXARGSIZE 33
 	/** For windows compactibility, added carriage return here */
 	#define RESP_FMT "%d %s\r\n"
-	/** Dummy hack to remove newline char from cmd buffer
-	* see ```man strcspn()```
+	/** Argument format typedef as per RFC request
+	* @note Useless typedef came from a deprecated method, but hey too lazy
+	* to rename all
 	*/
-	#define RM_CR(a) a[strcspn(a, "\r")] = 0;
-	#define RM_NL(a) a[strcspn(a, "\n")] = 0;
-	/** Argument format typedef as per RFC request */
-	typedef char cmdargs[MAXARGS][MAXARGSIZE];
+	typedef char ** cmdargs;
+	/** Yess useless so mandatory */
+	#define EVER ;;
 
 	/** See @file server_src/rfc_cmds0.c */
 	int join(cmdargs channame, int clifd);
@@ -155,7 +155,7 @@
 	/** See server_src/logs_helpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
-	void	print_arg(cmdargs args);
+	void	print_2darray(char **array);
 
 	/** See server_src/client_list.c */
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
