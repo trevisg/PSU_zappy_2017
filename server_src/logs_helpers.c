@@ -11,11 +11,13 @@
 
 /** Dummy print 2d Array for debug purpose
 * @param args the args array to print
+* @param ident what the heck is this Array
 */
-void print_2darray(char **array)
+void print_2darray(char **array, char *ident)
 {
-	for (int i = 0; array[i]; i++) {
-		printf("Print 2d says : arg[%d] : [%s]\n", i, array[i]);
+	printf("\t %s\n", ident);
+	for (int i = 0; array[i]; ++i) {
+		printf("arg[%d] : [%s]\n", i, array[i]);
 	}
 }
 
