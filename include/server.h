@@ -154,6 +154,7 @@
 	int	logthisevent(const char etype, t_serv *all);
 	int	initlogs(const char **paths, t_log *ptr);
 	void	print_2darray(char **array, char *ident);
+	void	print_users(t_userlist *liste);
 
 	/** See server_src/client_list.c */
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
