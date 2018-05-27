@@ -65,6 +65,8 @@ static char 	**get_args(char *cmd)
 /** Match all methods in G_CMDS for a given req command string
 * @param req the requested command on format 'CMD <space> [ARGS]'
 * @param clifd the client socket fd
+* @note could add compilation macro for debug print_2darray() calls
+* but epitech norm insist on 20 line per function so ...
 */
 int	get_methods(char *req, int clifd)
 {
