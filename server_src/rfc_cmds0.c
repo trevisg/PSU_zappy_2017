@@ -9,46 +9,49 @@
 #include <stdlib.h>
 #include "../include/server.h"
 
-int	join(cmdargs channame, int clifd)
+void	*join(cmdargs args, int clifd, t_channel *chan)
 {
-	char *resp2 = ":127.0.0.1 <[RPL_TOPIC][1]> <username>! #foobar :foobi";
-	dprintf(clifd, ":<username> %s %s %s\r\n", "JOIN", channame[1], resp2);
-	return (0);
+	t_user *user = find_user_by_fd(chan->users, clifd);
+	t_channel *new = !get_channel_userlist(chan, args[1]) ?
+		get_new_channel_list(chan->users, args[1]) :
+		NULL;
+	chan = insert_back_channel(chan, new);
+	dprintf(clifd, "353 %s :%s %s %s\r\n",
+		args[1], "foob", user->nick, "fi");
+	return (chan);
 }
 
-int     nick(cmdargs nickname, int clifd)
+void     *nick(cmdargs args, int clifd, t_channel *chan)
 {
-	if (clifd)
-	printf("NICK [%s] joining the BrokenIRC server\r\n", nickname[1]);
-	return (0);
+	if (clifd || chan)
+	printf("NICK [%s] joining the BrokenIRC server\r\n", args[1]);
+	return (chan);
 }
 
-int     ping(cmdargs nope, int clifd)
+void	*ping(cmdargs args, int clifd, t_channel *chan)
 {
-	if (nope || !nope)
+	if (args || !args || chan)
 	dprintf(clifd, "PONG\r\n");
-	return (0);
+	return (chan);
 }
 
-int     user(cmdargs usercmd, int clifd)
+void     *user(cmdargs args, int clifd, t_channel *chan)
 {
-	static t_userlist *liste = NULL;
-	char *banneer = ":BrokenIRC.foo || Welcome to BrokenIRC Network || ";
+	char *banneer = "|| Welcome to BrokenIRC Network || ";
 
-	if (usercmd[1][0]) {
-		t_user *usr = get_new_user(clifd, usercmd);
-		t_userlist *userlist = get_new_userlist(usr);
-		liste = push_back(liste, userlist);
-		dprintf(clifd, "001 %s :Welcome %s\r\n", usercmd[1], banneer);
-	}
-	print_users(liste);
-	return (0);
+	t_user *usr = get_new_user(clifd, args);
+	t_userlist *list = get_new_userlist(usr);
+	chan->users = insert_back_user(chan->users, list);
+	dprintf(clifd, "001 :%s %s %s tamere\r\n", args[1], args[1], banneer);
+	return (chan);
 }
 
-int 	quit(cmdargs quitmsg, int clifd)
+void	*quit(cmdargs args, int clifd, t_channel *chan)
 {
-	printf("[%s] cmd received\n", quitmsg[0]);
-	dprintf(clifd, ":BrokenIRC!127.0.0.1 <user> QUIT :%s", quitmsg[1]);
+	if (chan || !chan)
+	printf("[%s] cmd received\n", args[0]);
+	chan = remove_user(chan->users, clifd);
+	dprintf(clifd, ":BrokenIRC!127.0.0.1 <user> QUIT :%s", args[1]);
 	close(clifd);
-	return (0);
+	return (chan);
 }
