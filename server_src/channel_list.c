@@ -8,7 +8,7 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
-t_channel	*get_new_channel_list(t_userlist *userlist, char *channame)
+t_channel	*get_new_chan_list(t_userlist *userlist, char *channame)
 {
 	t_channel *list = malloc(sizeof(*list));
 
@@ -29,7 +29,9 @@ void	*insert_back_channel(t_channel *head, t_channel *new)
 	if (!head) {
 		head = new;
 	} else {
-		while (tmp->next) tmp = tmp->next;
+		while (tmp->next) {
+			tmp = tmp->next;
+		}
 		tmp->next = new;
 		new->prev = tmp;
 	}
