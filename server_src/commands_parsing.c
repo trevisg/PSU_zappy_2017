@@ -75,8 +75,7 @@ int	get_methods(char *req, int clifd)
 	char **args = NULL;
 	static t_channel *defchan = NULL;
 
-	if (!defchan)
-		defchan = init_default_channel();
+	defchan = !defchan ? init_default_channel() : defchan;
 	for(int j = 0; cmds[j]; ++j) {
 		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strcasestr(cmds[j], G_PROTOS[index]))) {
@@ -87,7 +86,7 @@ int	get_methods(char *req, int clifd)
 			}
 		}
 	}
-	print_users(defchan->users);
+	print_users_in_chans(defchan, index);
 	free_buffers(cmds);
 	return ((index == REF_NB) ? (0) : (index));
 }
