@@ -9,6 +9,21 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/** Print each channel in list with its users
+* @param chanlist the channels doubly linked list
+* @param index the received command index to avoid printing each
+* time a PING cmd is received (too much log ;))
+*/
+void	print_users_in_chans(t_channel *chanlist, int index)
+{
+	if (index != PING) {
+		for (t_channel *tmp = chanlist; tmp; tmp = tmp->next) {
+			printf("\tChannel : [%s]\n", tmp->channame);
+			print_users(tmp->users);
+		}
+	}
+}
+
 /** Print users nick and real name stored in a t_userlist doubly linked list
 * @param liste the t_userlist to print
 */
@@ -18,18 +33,6 @@ void	print_users(t_userlist *list)
 	for (t_userlist *tmp = list; tmp; tmp = tmp->next) {
 		printf("User : [%s], Real Name : [%s]\n",
 		tmp->user->nick, tmp->user->rname);
-	}
-	printf("\n");
-}
-
-/** Print users nick and real name stored in a t_userlist doubly linked list
-* @param liste the t_userlist to print
-*/
-void	print_channels(t_channel *list)
-{
-	printf("\t\tCHANNELS LIST :\n");
-	for (t_channel *tmp = list; tmp; tmp = tmp->next) {
-		printf("Channel : [%s]\n", tmp->channame);
 	}
 	printf("\n");
 }
@@ -72,31 +75,4 @@ int	logthisevent(const char etype, t_serv *all)
 	}
 	free(usr);
 	return (1);
-}
-
-/** Check if log path is writtable and open logs *FILE pointers.
-* @param paths a 2D array of char containing the conf file paths
-* @param ptr the returned setupded struct
-* @return 0 if ok with access and all other syscalls
-* @return 84 if error
-* @NOTE The default file mode is a=rwx (0777) with selected permissions
-* removed in accordance with the file mode creation mask.
-*/
-int	initlogs(const char **paths, t_log *ptr)
-{
-	int rt = 0;
-	int flgs = R_OK | W_OK;
-
-	if (!access(paths[ACCESS], flgs) && !access(paths[ERRORS], flgs)) {
-		ptr->mode = 0777 & ~umask(0);
-		ptr->dir_mode = ptr->mode | S_IWUSR | S_IXUSR;
-		ptr->timeval = time(NULL);
-		ptr->timestmp = ctime(&ptr->timeval);
-		ptr->accesslog = fopen(paths[ACCESS], "rw");
-		ptr->errlog = fopen(paths[ERRORS], "rw");
-	} else {
-		perror("access");
-		rt = 84;
-	}
-	return (rt);
 }
