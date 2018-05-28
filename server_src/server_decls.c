@@ -9,11 +9,11 @@
 #include "../include/server.h"
 
 const char *G_PROTOS[REF_NB] = {
-	"join", "nick", "ping", "user", "quit",
+	"join", "nick", "ping", "user", "quit", "privmsg",
 	NULL
 };
 
 const cmds G_CMDS[REF_NB] = {
-	join, nick, ping, user, quit,
+	join, nick, ping, user, quit, privmsg,
 	NULL
 };
