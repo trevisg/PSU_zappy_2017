@@ -59,7 +59,7 @@ static char *get_host_string(const char *host, const char *service)
 int	logthisevent(const char etype, t_serv *all)
 {
 	char *usr = get_host_string(all->host, all->service);
-	char *c_fmt = " => IN: [%zd bytes] FROM: [%s] DATA: [%s]\n";
+	char *c_fmt = " = > IN: [%zd bytes] FROM: [%s] DATA: [%s]\n";
 	char *d_fmt = "USER: [%s] disconnect\n";
 	char *def_fmt = "Type:%c Size:%zd DATA: [%s]\n";
 
