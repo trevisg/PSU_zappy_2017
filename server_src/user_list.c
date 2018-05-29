@@ -74,11 +74,13 @@ void	*remove_user(t_userlist *list, int clifd)
 {
 	t_userlist *tmp = list;
 
-	while (tmp->next != NULL)
-	{
+	while (tmp) {
 		if (tmp->user->clifd == clifd) {
 			tmp->prev->next = tmp->next;
-			tmp->next->prev = tmp->prev;
+			if (tmp->next)
+				tmp->next->prev = tmp->prev;
+			else
+				tmp->next = NULL;
 			free(tmp->user->rname);
 			free(tmp->user->nick);
 			free(tmp->user);

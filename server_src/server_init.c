@@ -22,7 +22,7 @@ int	set_clifd(int clisock, int epollfd, struct epoll_event *ev)
 
 	ev->events = EPOLLIN | EPOLLET;
 	ev->data.fd = clisock;
-	if ((rt = epoll_ctl(epollfd, op, clisock, ev)) == -1) {
+	if (epoll_ctl(epollfd, op, clisock, ev) == -1) {
 		perror("set_clifd: epoll_ctl:");
 		rt = 84;
 	}
