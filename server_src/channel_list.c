@@ -86,7 +86,7 @@ void	free_channel_list(t_channel *list)
 * @note the channel name, the default user and all could be parsed from
 * a config file (#pullrequestIdea)
 */
-t_channel	*init_default_channel()
+t_channel	*init_default_channel(void)
 {
 	char *defuser[5] = {"NICK", "4Dm1n", "42", "*", ":John Doe"};
 	t_channel *defchan = malloc(sizeof(*defchan));
