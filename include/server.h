@@ -5,9 +5,6 @@
 ** my_ftp server header file
 */
 
-#ifndef _GNU_SOURCE
-# define _GNU_SOURCE
-
 #ifndef SERVER_H_
 # define SERVER_H_
 
@@ -180,6 +177,4 @@
 	/** See server_src/signal_handler.c */
 	void		sig_handler(int signo);
 
-	#endif /* !SERVER_H_ */
-
-#endif /* !_GNU_SOURCE */
+#endif /* !SERVER_H_ */
