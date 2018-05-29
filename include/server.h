@@ -9,13 +9,10 @@
 # define SERVER_H_
 
 	#include <stdio.h>
-	#include <time.h>
 	#include <netdb.h>
 	#include <string.h>
 	#include <sys/socket.h>
 	#include <sys/epoll.h>
-	#include <sys/time.h>
-	#include <sys/stat.h>
 
 	/** Number of simultaneous connection on server listening socket
 	* see listen() call
@@ -155,7 +152,6 @@
 	/** See server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
 	t_channel	*get_chan_by_name(t_channel *list, char *channame);
-	t_userlist	*get_channel_userlist(t_channel *list, char *channame);
 
 	/** See @file server_src/rfc_cmds0.c */
 	void	*join(cmdargs args, int clifd, t_channel *chanlist);
@@ -163,6 +159,7 @@
 	void	*ping(cmdargs args, int clifd, t_channel *chanlist);
 	void	*user(cmdargs args, int clifd, t_channel *chanlist);
 	void	*quit(cmdargs args, int clifd, t_channel *chanlist);
+	/** See @file server_src/rfc_cmds1.c */
 	void	*privmsg(cmdargs args, int clifd, t_channel *chans);
 
 	/** See @file server_src/server_decls.c */
