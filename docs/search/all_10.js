@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['ref_5fnb',['REF_NB',['../server_8h.html#a9880cfe1f4eb3140da2095fd081282f5',1,'server.h']]],
   ['remove_5fchannel',['remove_channel',['../channel__list_8c.html#ade7cba4847a297abf811114846d62cac',1,'remove_channel(t_channel *list, char *channame):&#160;channel_list.c'],['../server_8h.html#ade7cba4847a297abf811114846d62cac',1,'remove_channel(t_channel *list, char *channame):&#160;channel_list.c']]],
   ['remove_5fuser',['remove_user',['../user__list_8c.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c'],['../server_8h.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c']]],
