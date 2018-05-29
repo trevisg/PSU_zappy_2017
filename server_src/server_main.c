@@ -99,7 +99,8 @@ int	server(char **args)
 	t_serv all;
 
 	set_iface(&all.hints, &all.res, args[1]);
-	if ((all.listen_sock = set_sockfd(&all)) < 0 || set_epoll(&all) == -1) {
+	all.listen_sock = set_sockfd(&all);
+	if (all.listen_sock < 0 || set_epoll(&all) == -1) {
 		rt = 84;
 	} else {
 		for (EVER) {
@@ -123,10 +124,18 @@ int	server(char **args)
 int	main(int ac, char **av)
 {
 	int rt = 0;
+	char *endptr = NULL;
+	char *port = NULL;
+	int val = 0;
 
 	if (ac == 2) {
+		port = av[1];
+		val = strtol(port, &endptr, 10);
 		signal(SIGINT, sig_handler);
-		rt = server(av);
+		if (endptr != port  && val >= 1024)
+			rt = server(av);
+		else
+			rt = 84;
 	} else {
 		fprintf(stderr, "%s: [port]\n", av[0]);
 		rt = 84;
