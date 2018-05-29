@@ -45,8 +45,13 @@ void	*join(cmdargs args, int clifd, t_channel *chans)
 */
 void     *nick(cmdargs args, int clifd, t_channel *chans)
 {
+	char *fmt = ":BrokenIRC NICK %s\r\n";
+
+
 	if (clifd)
-	printf("NICK [%s] joining the BrokenIRC server\r\n", args[1]);
+	for (t_userlist *tmp = chans->users; tmp; tmp = tmp->next) {
+			dprintf(tmp->user->clifd, fmt, args[1]);
+	}
 	return (chans);
 }
 
@@ -77,10 +82,12 @@ void     *user(cmdargs args, int clifd, t_channel *chans)
 {
 	char *banneer = "|| Welcome to BrokenIRC Network || ";
 
-	t_user *usr = get_new_user(clifd, args);
-	t_userlist *list = get_new_userlist(usr);
-	chans->users = insert_back_user(chans->users, list);
-	dprintf(clifd, "001 :%s %s %s\r\n", args[1], args[1], banneer);
+	if (get_size(args) == 5) {
+		t_user *usr = get_new_user(clifd, args);
+		t_userlist *list = get_new_userlist(usr);
+		chans->users = insert_back_user(chans->users, list);
+		dprintf(clifd, "001 :%s %s %s\r\n", args[1], args[1], banneer);
+	}
 	return (chans);
 }
 
@@ -94,10 +101,13 @@ void     *user(cmdargs args, int clifd, t_channel *chans)
 void	*quit(cmdargs args, int clifd, t_channel *chans)
 {
 	t_user *usr = find_user_by_fd(chans->users, clifd);
+
 	for (t_userlist *b = chans->users; b; b = b->next) {
 		dprintf(b->user->clifd, ":%s QUIT :%s\r\n", usr->nick, args[1]);
 	}
-	chans->users = remove_user(chans->users, clifd);
+	for (t_channel *chan = chans; chan; chan = chan->next) {
+		is_user_in_chan(clifd, chan);
+	}
 	close(clifd);
 	return (chans);
 }
