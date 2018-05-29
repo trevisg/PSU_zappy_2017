@@ -9,7 +9,7 @@
 #include "../include/server.h"
 
 const char *G_PROTOS[REF_NB] = {
-	"join", "nick", "ping", "user", "quit", "privmsg",
+	"JOIN", "NICK", "PING", "USER", "QUIT", "PRIVMSG",
 	NULL
 };
 
