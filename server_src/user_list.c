@@ -56,7 +56,9 @@ void	*insert_back_user(t_userlist *head, t_userlist *nuser)
 	if (!head) {
 		head = nuser;
 	} else {
-		while (tmp->next) tmp = tmp->next;
+		while (tmp->next) {
+			tmp = tmp->next;
+		}
 		tmp->next = nuser;
 		nuser->prev = tmp;
 	}
