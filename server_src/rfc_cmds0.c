@@ -57,7 +57,7 @@ void	*quit(cmdargs args, int clifd, t_channel *chans)
 {
 	t_user *usr = find_user_by_fd(chans->users, clifd);
 	for (t_userlist *b = chans->users; b; b = b->next) {
-		dprintf(b->user->clifd, ":%s QUIT :%s", usr->nick, args[1]);
+		dprintf(b->user->clifd, ":%s QUIT :%s\r\n", usr->nick, args[1]);
 	}
 	chans->users = remove_user(chans->users, clifd);
 	close(clifd);
