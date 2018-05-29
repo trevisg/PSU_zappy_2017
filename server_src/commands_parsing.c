@@ -8,7 +8,9 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
-/** Free the token list */
+/** Free the token list
+* @param buffer the 2D array to be free'd
+*/
 static void free_buffers(char **buffer)
 {
 	int i;
@@ -19,8 +21,8 @@ static void free_buffers(char **buffer)
 	free(buffer);
 }
 
-/** Split the received buffer by the \\r\\n symbol to get multiple
-* commands in one buffer (or only one it's all depends)
+/** Split the received buffer by the '\\r\\n' symbol to get multiple
+* commands in one buffer (or only one it's all depends on the client)
 * @param req the read() buffer from clifd
 */
 static char	**get_commands(char *req)
@@ -52,10 +54,10 @@ static char 	**get_args(char *cmd)
 
 	if (tkns) {
 		memset(tkns, 0, sizeof(*tkns) * MAXARGS);
-		token = strtok(cmd, " ");
+		token = strtok(cmd, " :");
 		while (token) {
 			tkns[i] = strdup(token);
-			token = strtok(NULL, " ");
+			token = strtok(NULL, " :");
 			i = i <= MAXARGS ? i + 1 : i;
 		}
 	}
