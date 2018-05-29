@@ -15,14 +15,15 @@
 */
 t_user	*find_user_by_fd(t_userlist *list, int clifd)
 {
-	t_userlist *tmp;
+	t_user *usr = NULL;
 
-	for (tmp = list; tmp; tmp = tmp->next) {
+	for (t_userlist *tmp = list; tmp; tmp = tmp->next) {
 		if (tmp->user->clifd == clifd) {
+			usr = tmp->user;
 			break;
 		}
 	}
-	return (tmp->user->clifd == clifd ? tmp->user : NULL);
+	return (usr);
 }
 
 /** Get the t_userlist from a t_channel channel list
