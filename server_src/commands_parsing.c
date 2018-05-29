@@ -78,7 +78,7 @@ int	get_methods(char *req, int clifd)
 	defchan = !defchan ? init_default_channel() : defchan;
 	for(int j = 0; cmds[j]; ++j) {
 		for (index = 0; G_PROTOS[index]; ++index) {
-			if ((strcasestr(cmds[j], G_PROTOS[index]))) {
+			if ((strstr(cmds[j], G_PROTOS[index]))) {
 				args = get_args(cmds[j]);
 				G_CMDS[index](args, clifd, defchan);
 				free_buffers(args);
