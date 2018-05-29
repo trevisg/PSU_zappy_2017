@@ -1,4 +1,4 @@
-# BrokenIRC
+# BrokenIRC {#mainpage}
 [![Build Status](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack.svg?branch=master)](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack)
 
 - ```make server && make clean ``` to build
