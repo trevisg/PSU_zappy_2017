@@ -10,3 +10,5 @@
 ## Doc
 
 - U'll find the doc at [this page](https://trevisg.github.io/PSU_myirc_2017BrokenStuffisBack)
+- Hope this RFC 2812 [little write-up]() will help you somehow
+- Refresh doc with ```make doc```
