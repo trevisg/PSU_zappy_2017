@@ -1,0 +1,5 @@
+<map id="privmsg" name="privmsg">
+<area shape="rect" id="node2" href="$lists__helpers_8c.html#a0195cd48a4c52a9624a811825cef8afb" title="find_user_by_fd" alt="" coords="131,5,246,32"/>
+<area shape="rect" id="node3" href="$lists__helpers_8c.html#ae86be37e5d76544c9d6feb9d7b9b6b02" title="get_chan_by_name" alt="" coords="121,56,256,83"/>
+<area shape="rect" id="node4" href="$rfc__cmds1_8c.html#a67423079c85c9a88a611514cd9558865" title="get_full_msg" alt="" coords="141,107,237,133"/>
+</map>

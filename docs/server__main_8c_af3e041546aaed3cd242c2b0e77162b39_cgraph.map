@@ -1,0 +1,21 @@
+<map id="server" name="server">
+<area shape="rect" id="node2" href="$server__main_8c.html#a825c9cedc1751b000c44487b4233c37c" title="getactiveclients" alt="" coords="112,233,225,260"/>
+<area shape="rect" id="node17" href="$server__init_8c.html#a5cb15d408ef32c09c2485937503438ed" title="set_epoll" alt="" coords="131,284,206,311"/>
+<area shape="rect" id="node18" href="$server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="131,335,206,361"/>
+<area shape="rect" id="node19" href="$server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="125,385,212,412"/>
+<area shape="rect" id="node3" href="$server__main_8c.html#a4178685c6a99dba7611faf9fe58f1a54" title="evhandler" alt="" coords="289,208,368,235"/>
+<area shape="rect" id="node15" href="$server__main_8c.html#a01aa22f887842d97133af9b3f2cf4a7c" title="initco" alt="" coords="302,259,355,285"/>
+<area shape="rect" id="node4" href="$commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="432,132,529,159"/>
+<area shape="rect" id="node13" href="$logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="435,208,527,235"/>
+<area shape="rect" id="node5" href="$commands__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="605,5,695,32"/>
+<area shape="rect" id="node6" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="614,56,686,83"/>
+<area shape="rect" id="node7" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="595,107,705,133"/>
+<area shape="rect" id="node8" href="$channel__list_8c.html#ae77dc560fd8b9408c6f2b221ab54824e" title="init_default_channel" alt="" coords="581,157,719,184"/>
+<area shape="rect" id="node11" href="$logs__helpers_8c.html#a805324e4c542079956ff84a290274d23" title="print_users_in_chans" alt="" coords="577,208,723,235"/>
+<area shape="rect" id="node9" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="779,107,882,133"/>
+<area shape="rect" id="node10" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="771,157,891,184"/>
+<area shape="rect" id="node12" href="$logs__helpers_8c.html#a45c9c768c2486ac046ac242d3c46aadb" title="print_users" alt="" coords="787,208,874,235"/>
+<area shape="rect" id="node14" href="$logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0" title="get_host_string" alt="" coords="595,259,705,285"/>
+<area shape="rect" id="node16" href="$server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500" title="set_clifd" alt="" coords="445,259,516,285"/>
+<area shape="rect" id="node20" href="$server__init_8c.html#a381b88f843ed1ebdaa5b2a8ded74931b" title="prevent_reused" alt="" coords="273,385,384,412"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="join" name="join">
+<area shape="rect" id="node2" href="$lists__helpers_8c.html#a0195cd48a4c52a9624a811825cef8afb" title="find_user_by_fd" alt="" coords="109,5,224,32"/>
+<area shape="rect" id="node3" href="$lists__helpers_8c.html#ae86be37e5d76544c9d6feb9d7b9b6b02" title="get_chan_by_name" alt="" coords="99,56,234,83"/>
+<area shape="rect" id="node4" href="$channel__list_8c.html#ab30bae85710efb83f84f2f60279750d4" title="get_new_chan_list" alt="" coords="101,107,232,133"/>
+<area shape="rect" id="node5" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="107,157,227,184"/>
+<area shape="rect" id="node6" href="$channel__list_8c.html#a5050eeaaa964d8e01bb2a0bb28dd3092" title="insert_back_channel" alt="" coords="96,208,237,235"/>
+<area shape="rect" id="node7" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="106,259,227,285"/>
+</map>
