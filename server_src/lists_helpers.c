@@ -6,6 +6,16 @@
 */
 
 #include "../include/server.h"
+#include <stdlib.h>
+
+unsigned int get_size(cmdargs args)
+{
+	unsigned int i = 0;
+	while (args[i])
+		++i;
+	return (i);
+}
+
 
 /** Find a t_user structure pointer if clientfd exist inside
 * @param list the full userlist
@@ -42,4 +52,33 @@ t_channel	*get_chan_by_name(t_channel *list, char *channame)
 		}
 	}
 	return (rt);
+}
+
+unsigned int	is_user_in_chan(int clifd, t_channel *chans)
+{
+	for (t_userlist *usrs = chans->users; usrs; usrs = usrs->next) {
+		if (clifd == usrs->user->clifd) {
+			printf("Chan name [%s] Is in list ? [%s]\n",
+			chans->channame, usrs->user->nick);
+			usrs->user->isco = false;
+		}
+	}
+	return (1);
+}
+
+/** Find a user by name literaly
+* @param name the name to find
+*/
+t_user	*find_user_by_name(const char *name, t_userlist *usrs)
+{
+	t_user *needle = NULL;
+
+	for (t_userlist *foo = usrs; foo; foo = foo->next) {
+		if (!strcmp(name, foo->user->nick) ||
+		!strcmp(name, foo->user->rname)) {
+			needle = foo->user;
+			break;
+		}
+	}
+	return (needle);
 }
