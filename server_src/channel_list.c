@@ -8,6 +8,10 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
+/** Self explanatory
+* @param userlist the userlist to insert in the new channel element
+* @param channame the new channel name
+*/
 t_channel	*get_new_chan_list(t_userlist *userlist, char *channame)
 {
 	t_channel *list = malloc(sizeof(*list));
@@ -22,6 +26,10 @@ t_channel	*get_new_chan_list(t_userlist *userlist, char *channame)
 	return (list);
 }
 
+/** Push back a new channel element to the main list container
+* @param head the head pointer
+* @param new the new channel element to be inserted
+*/
 void	*insert_back_channel(t_channel *head, t_channel *new)
 {
 	t_channel *tmp = head;
@@ -38,6 +46,10 @@ void	*insert_back_channel(t_channel *head, t_channel *new)
 	return (head);
 }
 
+/** Remove a channel element from the doubly linked list
+* @param list the userlist to be updated
+* @param channame the channel name to be deleted
+*/
 void	remove_channel(t_channel *list, char *channame)
 {
 	t_channel *tmp = list;
@@ -56,6 +68,9 @@ void	remove_channel(t_channel *list, char *channame)
 	}
 }
 
+/** Self explanatory
+* @param list the list to be de-allocated
+*/
 void	free_channel_list(t_channel *list)
 {
 	while (list) {
@@ -66,6 +81,11 @@ void	free_channel_list(t_channel *list)
 	}
 }
 
+/** Self explanatory
+* @return the default channel where all user resides
+* @note the channel name, the default user and all could be parsed from
+* a config file (#pullrequestIdea)
+*/
 t_channel	*init_default_channel()
 {
 	char *defuser[5] = {"NICK", "4Dm1n", "42", "*", ":John Doe"};
