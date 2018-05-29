@@ -7,5 +7,6 @@ var searchData=
   ['t_5fuserlist',['t_userlist',['../structt__userlist.html',1,'']]],
   ['timestmp',['timestmp',['../structt__log.html#a41cf6fa30fc42623fb3eab3fb41e3f67',1,'t_log']]],
   ['timeval',['timeval',['../structt__log.html#af2f435ec93298ebfa988fffa4f4d99f0',1,'t_log']]],
-  ['todo_20list',['Todo List',['../todo.html',1,'']]]
+  ['todo_20list',['Todo List',['../todo.html',1,'']]],
+  ['true',['true',['../server_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7',1,'server.h']]]
 ];

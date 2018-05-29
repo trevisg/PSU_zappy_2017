@@ -71,6 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="server_8h_source.html">../include/server.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for lists_helpers.c:</div>
 <div class="dyncontent">
@@ -84,10 +85,16 @@ Include dependency graph for lists_helpers.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a5c9b2cd4523b5cc43326163d534225d9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lists__helpers_8c.html#a5c9b2cd4523b5cc43326163d534225d9">get_size</a> (<a class="el" href="server_8h.html#acfbe918d8821ff3d1d8dc2c90bb8f6a2">cmdargs</a> args)</td></tr>
+<tr class="separator:a5c9b2cd4523b5cc43326163d534225d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0195cd48a4c52a9624a811825cef8afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__user.html">t_user</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lists__helpers_8c.html#a0195cd48a4c52a9624a811825cef8afb">find_user_by_fd</a> (<a class="el" href="structt__userlist.html">t_userlist</a> *list, int clifd)</td></tr>
 <tr class="separator:a0195cd48a4c52a9624a811825cef8afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae86be37e5d76544c9d6feb9d7b9b6b02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__channel.html">t_channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lists__helpers_8c.html#ae86be37e5d76544c9d6feb9d7b9b6b02">get_chan_by_name</a> (<a class="el" href="structt__channel.html">t_channel</a> *list, char *channame)</td></tr>
 <tr class="separator:ae86be37e5d76544c9d6feb9d7b9b6b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f57eda934151d707615e8f315e7897"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lists__helpers_8c.html#af9f57eda934151d707615e8f315e7897">is_user_in_chan</a> (int clifd, <a class="el" href="structt__channel.html">t_channel</a> *chans)</td></tr>
+<tr class="separator:af9f57eda934151d707615e8f315e7897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebf668b9cfc31f3b29114dfed75c0ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__user.html">t_user</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lists__helpers_8c.html#a7ebf668b9cfc31f3b29114dfed75c0ad">find_user_by_name</a> (const char *name, <a class="el" href="structt__userlist.html">t_userlist</a> *usrs)</td></tr>
+<tr class="separator:a7ebf668b9cfc31f3b29114dfed75c0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a0195cd48a4c52a9624a811825cef8afb"></a>
@@ -126,14 +133,14 @@ Functions</h2></td></tr>
 <dd>
 NULL pointer if nothing found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00016">16</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00026">26</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
 
-<p class="reference">References <a class="el" href="server_8h_source.html#l00113">t_userlist::next</a>.</p>
+<p class="reference">References <a class="el" href="server_8h_source.html#l00117">t_userlist::next</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00019">join()</a>, <a class="el" href="rfc__cmds1_8c_source.html#l00040">privmsg()</a>, and <a class="el" href="rfc__cmds0_8c_source.html#l00094">quit()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="structt__user.html">t_user</a> *usr = NULL;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *tmp = list; tmp; tmp = tmp-&gt;<a class="code" href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">next</a>) {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">if</span> (tmp-&gt;user-&gt;clifd == clifd) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                        usr = tmp-&gt;user;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> (usr);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div><div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00110">server.h:110</a></div></div>
-<div class="ttc" id="structt__user_html"><div class="ttname"><a href="structt__user.html">t_user</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00102">server.h:102</a></div></div>
-<div class="ttc" id="structt__userlist_html_a3b987a9a352379a703da737198b42d4a"><div class="ttname"><a href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00113">server.h:113</a></div></div>
+<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00019">join()</a>, <a class="el" href="rfc__cmds1_8c_source.html#l00054">privmsg()</a>, and <a class="el" href="rfc__cmds0_8c_source.html#l00101">quit()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="structt__user.html">t_user</a> *usr = NULL;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *tmp = list; tmp; tmp = tmp-&gt;<a class="code" href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">next</a>) {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (tmp-&gt;user-&gt;clifd == clifd) {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        usr = tmp-&gt;user;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> (usr);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00114">server.h:114</a></div></div>
+<div class="ttc" id="structt__user_html"><div class="ttname"><a href="structt__user.html">t_user</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00105">server.h:105</a></div></div>
+<div class="ttc" id="structt__userlist_html_a3b987a9a352379a703da737198b42d4a"><div class="ttname"><a href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00117">server.h:117</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -142,6 +149,57 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="server_8h.html#a7bc519f56f91233055c4bee31d1c33bb" title="join" alt="" coords="181,5,223,32"/>
 <area shape="rect" id="node3" href="server_8h.html#aa5da766def7467ba7a3899fddbfcd278" title="privmsg" alt="" coords="168,56,236,83"/>
 <area shape="rect" id="node4" href="server_8h.html#a8a966c4254db49b02978407670cc9fa9" title="quit" alt="" coords="181,107,223,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7ebf668b9cfc31f3b29114dfed75c0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebf668b9cfc31f3b29114dfed75c0ad">&#9670;&nbsp;</a></span>find_user_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__user.html">t_user</a>* find_user_by_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__userlist.html">t_userlist</a> *&#160;</td>
+          <td class="paramname"><em>usrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find a user by name literaly </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name to find </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00072">72</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
+
+<p class="reference">References <a class="el" href="server_8h_source.html#l00117">t_userlist::next</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rfc__cmds1_8c_source.html#l00054">privmsg()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="structt__user.html">t_user</a> *needle = NULL;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *foo = usrs; foo; foo = foo-&gt;<a class="code" href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">next</a>) {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span> (!strcmp(name, foo-&gt;user-&gt;nick) ||</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                !strcmp(name, foo-&gt;user-&gt;rname)) {</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        needle = foo-&gt;user;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> (needle);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div><div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00114">server.h:114</a></div></div>
+<div class="ttc" id="structt__user_html"><div class="ttname"><a href="structt__user.html">t_user</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00105">server.h:105</a></div></div>
+<div class="ttc" id="structt__userlist_html_a3b987a9a352379a703da737198b42d4a"><div class="ttname"><a href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00117">server.h:117</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lists__helpers_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph.png" border="0" usemap="#lists__helpers_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph" alt=""/></div>
+<map name="lists__helpers_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph" id="lists__helpers_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#aa5da766def7467ba7a3899fddbfcd278" title="privmsg" alt="" coords="188,5,256,32"/>
 </map>
 </div>
 
@@ -181,13 +239,13 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="structt__channel.html">t_channel</a> pointer if exists , NULL otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00034">34</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00044">44</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
 
-<p class="reference">References <a class="el" href="server_8h_source.html#l00121">t_channel::next</a>.</p>
+<p class="reference">References <a class="el" href="server_8h_source.html#l00125">t_channel::next</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00019">join()</a>, and <a class="el" href="rfc__cmds1_8c_source.html#l00040">privmsg()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="structt__channel.html">t_channel</a> *rt = NULL;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__channel.html">t_channel</a> *tmp = list; tmp; tmp = tmp-&gt;<a class="code" href="structt__channel.html#ad735fa416150cd0bbd1ce42e82a1c1fa">next</a>) {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">if</span> (!strcmp(tmp-&gt;channame, channame)) {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        rt = tmp;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> (rt);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div><div class="ttc" id="structt__channel_html_ad735fa416150cd0bbd1ce42e82a1c1fa"><div class="ttname"><a href="structt__channel.html#ad735fa416150cd0bbd1ce42e82a1c1fa">t_channel::next</a></div><div class="ttdeci">struct s_channel * next</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00121">server.h:121</a></div></div>
-<div class="ttc" id="structt__channel_html"><div class="ttname"><a href="structt__channel.html">t_channel</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00117">server.h:117</a></div></div>
+<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00019">join()</a>, and <a class="el" href="rfc__cmds1_8c_source.html#l00054">privmsg()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="structt__channel.html">t_channel</a> *rt = NULL;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__channel.html">t_channel</a> *tmp = list; tmp; tmp = tmp-&gt;<a class="code" href="structt__channel.html#ad735fa416150cd0bbd1ce42e82a1c1fa">next</a>) {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (!strcmp(tmp-&gt;channame, channame)) {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                        rt = tmp;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> (rt);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="structt__channel_html_ad735fa416150cd0bbd1ce42e82a1c1fa"><div class="ttname"><a href="structt__channel.html#ad735fa416150cd0bbd1ce42e82a1c1fa">t_channel::next</a></div><div class="ttdeci">struct s_channel * next</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00125">server.h:125</a></div></div>
+<div class="ttc" id="structt__channel_html"><div class="ttname"><a href="structt__channel.html">t_channel</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00121">server.h:121</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -195,6 +253,82 @@ Here is the caller graph for this function:</div>
 <map name="lists__helpers_8c_ae86be37e5d76544c9d6feb9d7b9b6b02_icgraph" id="lists__helpers_8c_ae86be37e5d76544c9d6feb9d7b9b6b02_icgraph">
 <area shape="rect" id="node2" href="server_8h.html#a7bc519f56f91233055c4bee31d1c33bb" title="join" alt="" coords="201,5,243,32"/>
 <area shape="rect" id="node3" href="server_8h.html#aa5da766def7467ba7a3899fddbfcd278" title="privmsg" alt="" coords="188,56,256,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c9b2cd4523b5cc43326163d534225d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9b2cd4523b5cc43326163d534225d9">&#9670;&nbsp;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="server_8h.html#acfbe918d8821ff3d1d8dc2c90bb8f6a2">cmdargs</a>&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00011">11</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00081">user()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">while</span> (args[i])</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                ++i;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> (i);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lists__helpers_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph.png" border="0" usemap="#lists__helpers_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph" alt=""/></div>
+<map name="lists__helpers_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph" id="lists__helpers_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#ac36f6273cc3b6d793ac67fd4ab88fbc4" title="user" alt="" coords="124,5,171,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9f57eda934151d707615e8f315e7897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f57eda934151d707615e8f315e7897">&#9670;&nbsp;</a></span>is_user_in_chan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int is_user_in_chan </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clifd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__channel.html">t_channel</a> *&#160;</td>
+          <td class="paramname"><em>chans</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="lists__helpers_8c_source.html#l00057">57</a> of file <a class="el" href="lists__helpers_8c_source.html">lists_helpers.c</a>.</p>
+
+<p class="reference">References <a class="el" href="server_8h_source.html#l00122">t_channel::channame</a>, <a class="el" href="server_8h_source.html#l00117">t_userlist::next</a>, and <a class="el" href="server_8h_source.html#l00123">t_channel::users</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00101">quit()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *usrs = chans-&gt;<a class="code" href="structt__channel.html#a8097607fae5d78c98125bac6caaefe18">users</a>; usrs; usrs = usrs-&gt;<a class="code" href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">next</a>) {</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (clifd == usrs-&gt;user-&gt;clifd) {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        printf(<span class="stringliteral">&quot;Chan name [%s] Is in list ? [%s]\n&quot;</span>,</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        chans-&gt;<a class="code" href="structt__channel.html#a8d701df6c8b899848e450905cf1e70dd">channame</a>, usrs-&gt;user-&gt;nick);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        usrs-&gt;user-&gt;isco = <span class="keyword">false</span>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> (1);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div><div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00114">server.h:114</a></div></div>
+<div class="ttc" id="structt__channel_html_a8097607fae5d78c98125bac6caaefe18"><div class="ttname"><a href="structt__channel.html#a8097607fae5d78c98125bac6caaefe18">t_channel::users</a></div><div class="ttdeci">t_userlist * users</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00123">server.h:123</a></div></div>
+<div class="ttc" id="structt__channel_html_a8d701df6c8b899848e450905cf1e70dd"><div class="ttname"><a href="structt__channel.html#a8d701df6c8b899848e450905cf1e70dd">t_channel::channame</a></div><div class="ttdeci">char * channame</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00122">server.h:122</a></div></div>
+<div class="ttc" id="structt__userlist_html_a3b987a9a352379a703da737198b42d4a"><div class="ttname"><a href="structt__userlist.html#a3b987a9a352379a703da737198b42d4a">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00117">server.h:117</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lists__helpers_8c_af9f57eda934151d707615e8f315e7897_icgraph.png" border="0" usemap="#lists__helpers_8c_af9f57eda934151d707615e8f315e7897_icgraph" alt=""/></div>
+<map name="lists__helpers_8c_af9f57eda934151d707615e8f315e7897_icgraph" id="lists__helpers_8c_af9f57eda934151d707615e8f315e7897_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#a8a966c4254db49b02978407670cc9fa9" title="quit" alt="" coords="169,5,212,32"/>
 </map>
 </div>
 

@@ -11,6 +11,7 @@ var searchData=
   ['get_5fnew_5fchan_5flist',['get_new_chan_list',['../channel__list_8c.html#ab30bae85710efb83f84f2f60279750d4',1,'get_new_chan_list(t_userlist *userlist, char *channame):&#160;channel_list.c'],['../server_8h.html#a46341819e18479370867b55731a6c6dd',1,'get_new_chan_list(t_userlist *userlist, char *):&#160;channel_list.c']]],
   ['get_5fnew_5fuser',['get_new_user',['../user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0',1,'get_new_user(int clifd, cmdargs usercmd):&#160;user_list.c'],['../server_8h.html#ace045c243817cc0c9885bdf3b41263c0',1,'get_new_user(int clifd, cmdargs usercmd):&#160;user_list.c']]],
   ['get_5fnew_5fuserlist',['get_new_userlist',['../user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039',1,'get_new_userlist(t_user *usr):&#160;user_list.c'],['../server_8h.html#a1cf3d818bc2607cb0f69c043dba3c039',1,'get_new_userlist(t_user *usr):&#160;user_list.c']]],
+  ['get_5fsize',['get_size',['../lists__helpers_8c.html#a5c9b2cd4523b5cc43326163d534225d9',1,'get_size(cmdargs args):&#160;lists_helpers.c'],['../server_8h.html#a5c9b2cd4523b5cc43326163d534225d9',1,'get_size(cmdargs args):&#160;lists_helpers.c']]],
   ['getactiveclients',['getactiveclients',['../server__main_8c.html#a825c9cedc1751b000c44487b4233c37c',1,'server_main.c']]],
-  ['getmessage',['getmessage',['../main_8c.html#a72d984ff69783f5d9066d0ec1ff9250e',1,'main.c']]]
+  ['getmessage',['getmessage',['../main_8c.html#a767aa034c2b7e6e21e43026db0e3baa6',1,'main.c']]]
 ];

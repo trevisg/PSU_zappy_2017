@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listen_5fsock',['listen_sock',['../structt__serv.html#ac9f24d41d8822f2c1b7df4362e18cad9',1,'t_serv']]]
+  ['isco',['isco',['../structt__user.html#af93924b30e62f9eec7fbf113f8051173',1,'t_user']]]
 ];

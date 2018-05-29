@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['init_5fdefault_5fchannel',['init_default_channel',['../channel__list_8c.html#ae77dc560fd8b9408c6f2b221ab54824e',1,'init_default_channel():&#160;channel_list.c'],['../server_8h.html#ae77dc560fd8b9408c6f2b221ab54824e',1,'init_default_channel():&#160;channel_list.c']]],
-  ['initco',['initco',['../server__main_8c.html#a01aa22f887842d97133af9b3f2cf4a7c',1,'server_main.c']]],
-  ['insert_5fback_5fchannel',['insert_back_channel',['../channel__list_8c.html#a5050eeaaa964d8e01bb2a0bb28dd3092',1,'insert_back_channel(t_channel *head, t_channel *new):&#160;channel_list.c'],['../server_8h.html#a0f3f52d09747a128a3107f465a4f3421',1,'insert_back_channel(t_channel *head, t_channel *chan):&#160;channel_list.c']]],
-  ['insert_5fback_5fuser',['insert_back_user',['../user__list_8c.html#a2b16f778b01689e31ef5530b66d41390',1,'insert_back_user(t_userlist *head, t_userlist *nuser):&#160;user_list.c'],['../server_8h.html#a2b16f778b01689e31ef5530b66d41390',1,'insert_back_user(t_userlist *head, t_userlist *nuser):&#160;user_list.c']]]
+  ['get_5fargs',['get_args',['../commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae',1,'commands_parsing.c']]],
+  ['get_5fchan_5fby_5fname',['get_chan_by_name',['../lists__helpers_8c.html#ae86be37e5d76544c9d6feb9d7b9b6b02',1,'get_chan_by_name(t_channel *list, char *channame):&#160;lists_helpers.c'],['../server_8h.html#ae86be37e5d76544c9d6feb9d7b9b6b02',1,'get_chan_by_name(t_channel *list, char *channame):&#160;lists_helpers.c']]],
+  ['get_5fcommands',['get_commands',['../commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414',1,'commands_parsing.c']]],
+  ['get_5ffull_5fmsg',['get_full_msg',['../rfc__cmds1_8c.html#a67423079c85c9a88a611514cd9558865',1,'rfc_cmds1.c']]],
+  ['get_5fhost_5fstring',['get_host_string',['../logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0',1,'logs_helpers.c']]],
+  ['get_5fmethods',['get_methods',['../commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961',1,'get_methods(char *req, int clifd):&#160;commands_parsing.c'],['../server_8h.html#ac5949d17278df5e1ada98dca25ccd961',1,'get_methods(char *req, int clifd):&#160;commands_parsing.c']]],
+  ['get_5fnew_5fchan_5flist',['get_new_chan_list',['../channel__list_8c.html#ab30bae85710efb83f84f2f60279750d4',1,'get_new_chan_list(t_userlist *userlist, char *channame):&#160;channel_list.c'],['../server_8h.html#a46341819e18479370867b55731a6c6dd',1,'get_new_chan_list(t_userlist *userlist, char *):&#160;channel_list.c']]],
+  ['get_5fnew_5fuser',['get_new_user',['../user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0',1,'get_new_user(int clifd, cmdargs usercmd):&#160;user_list.c'],['../server_8h.html#ace045c243817cc0c9885bdf3b41263c0',1,'get_new_user(int clifd, cmdargs usercmd):&#160;user_list.c']]],
+  ['get_5fnew_5fuserlist',['get_new_userlist',['../user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039',1,'get_new_userlist(t_user *usr):&#160;user_list.c'],['../server_8h.html#a1cf3d818bc2607cb0f69c043dba3c039',1,'get_new_userlist(t_user *usr):&#160;user_list.c']]],
+  ['get_5fsize',['get_size',['../lists__helpers_8c.html#a5c9b2cd4523b5cc43326163d534225d9',1,'get_size(cmdargs args):&#160;lists_helpers.c'],['../server_8h.html#a5c9b2cd4523b5cc43326163d534225d9',1,'get_size(cmdargs args):&#160;lists_helpers.c']]],
+  ['getactiveclients',['getactiveclients',['../server__main_8c.html#a825c9cedc1751b000c44487b4233c37c',1,'server_main.c']]],
+  ['getmessage',['getmessage',['../main_8c.html#a767aa034c2b7e6e21e43026db0e3baa6',1,'main.c']]]
 ];

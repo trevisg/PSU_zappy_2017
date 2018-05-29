@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cli_5floop',['cli_loop',['../client_8c.html#a5796b82e83d29fbaf258b6233167a2f0',1,'client.c']]]
+  ['broadcast_5fmsg',['broadcast_msg',['../rfc__cmds1_8c.html#aaf538656f62d920ed911f41ea4a0f186',1,'rfc_cmds1.c']]]
 ];

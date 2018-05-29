@@ -1,0 +1,7 @@
+<map id="init_default_channel" name="init_default_channel">
+<area shape="rect" id="node2" href="$server_8h.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="191,5,288,32"/>
+<area shape="rect" id="node3" href="$server__main_8c.html#a4178685c6a99dba7611faf9fe58f1a54" title="evhandler" alt="" coords="336,5,415,32"/>
+<area shape="rect" id="node4" href="$server__main_8c.html#a825c9cedc1751b000c44487b4233c37c" title="getactiveclients" alt="" coords="463,5,576,32"/>
+<area shape="rect" id="node5" href="$server__main_8c.html#af3e041546aaed3cd242c2b0e77162b39" title="server" alt="" coords="624,5,683,32"/>
+<area shape="rect" id="node6" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="731,5,781,32"/>
+</map>

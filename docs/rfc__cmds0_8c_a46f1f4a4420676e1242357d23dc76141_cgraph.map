@@ -1,5 +1,6 @@
 <map id="user" name="user">
 <area shape="rect" id="node2" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="109,5,212,32"/>
 <area shape="rect" id="node3" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="101,56,221,83"/>
-<area shape="rect" id="node4" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="100,107,221,133"/>
+<area shape="rect" id="node4" href="$lists__helpers_8c.html#a5c9b2cd4523b5cc43326163d534225d9" title="get_size" alt="" coords="125,107,196,133"/>
+<area shape="rect" id="node5" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="100,157,221,184"/>
 </map>

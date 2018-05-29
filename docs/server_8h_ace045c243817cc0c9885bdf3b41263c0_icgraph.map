@@ -1,5 +1,5 @@
 <map id="get_new_user" name="get_new_user">
-<area shape="rect" id="node2" href="$server_8h.html#ae77dc560fd8b9408c6f2b221ab54824e" title="init_default_channel" alt="" coords="156,5,293,32"/>
+<area shape="rect" id="node2" href="$server_8h.html#a1c3fc93845d179d198452e745f3460b1" title="init_default_channel" alt="" coords="156,5,293,32"/>
 <area shape="rect" id="node8" href="$server_8h.html#ac36f6273cc3b6d793ac67fd4ab88fbc4" title="user" alt="" coords="201,56,248,83"/>
 <area shape="rect" id="node3" href="$server_8h.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="341,5,439,32"/>
 <area shape="rect" id="node4" href="$server__main_8c.html#a4178685c6a99dba7611faf9fe58f1a54" title="evhandler" alt="" coords="487,5,565,32"/>

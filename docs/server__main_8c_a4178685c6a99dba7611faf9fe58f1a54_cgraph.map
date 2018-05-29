@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$commands__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="305,5,395,32"/>
 <area shape="rect" id="node4" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="314,56,386,83"/>
 <area shape="rect" id="node5" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="295,107,405,133"/>
-<area shape="rect" id="node6" href="$channel__list_8c.html#ae77dc560fd8b9408c6f2b221ab54824e" title="init_default_channel" alt="" coords="281,157,419,184"/>
+<area shape="rect" id="node6" href="$channel__list_8c.html#a1c3fc93845d179d198452e745f3460b1" title="init_default_channel" alt="" coords="281,157,419,184"/>
 <area shape="rect" id="node9" href="$logs__helpers_8c.html#a805324e4c542079956ff84a290274d23" title="print_users_in_chans" alt="" coords="277,208,423,235"/>
 <area shape="rect" id="node7" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="479,107,582,133"/>
 <area shape="rect" id="node8" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="471,157,591,184"/>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['evhandler',['evhandler',['../server__main_8c.html#a4178685c6a99dba7611faf9fe58f1a54',1,'server_main.c']]]
+  ['cli_5floop',['cli_loop',['../client_8c.html#a5796b82e83d29fbaf258b6233167a2f0',1,'client.c']]]
 ];
