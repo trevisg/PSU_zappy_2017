@@ -98,12 +98,16 @@
 		struct epoll_event 	events[MAX_EVENTS];
 	}				t_serv;
 
+	/** To avoid stdbool include (for s_user.isco)*/
+	#define true	1
+	#define false 	0
 	/** A typical IRC user */
 	typedef struct			s_user {
 		int			clifd;
 		int			mode;
 		char			*nick;
 		char 			*rname;
+		unsigned int		isco;
 	}				t_user;
 
 	/** The doubly linked list of connected users */
@@ -143,7 +147,7 @@
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
 	void		*insert_back_user(t_userlist *head, t_userlist *nuser);
 	/** See server_src/channel_list.c */
-	t_channel	*init_default_channel();
+	t_channel	*init_default_channel(void);
 	void		free_channel_list(t_channel *list);
 	t_channel	*get_new_chan_list(t_userlist *userlist, char *);
 	void		remove_channel(t_channel *list, char *channame);
@@ -152,7 +156,9 @@
 	/** See server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
 	t_channel	*get_chan_by_name(t_channel *list, char *channame);
-
+	unsigned int	is_user_in_chan(int clifd, t_channel *chans);
+	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
+	unsigned int 	get_size(cmdargs args);
 	/** See @file server_src/rfc_cmds0.c */
 	void	*join(cmdargs args, int clifd, t_channel *chanlist);
 	void	*nick(cmdargs args, int clifd, t_channel *chanlist);
