@@ -65,13 +65,14 @@ int	logthisevent(const char etype, t_serv *all)
 
 	switch (etype) {
 		case 'c':
-		fprintf(stdout, c_fmt, all->nread, usr, all->buf);
-		break;
+			fprintf(stdout, c_fmt, all->nread, usr, all->buf);
+			break;
 		case 'd':
-		fprintf(stdout, d_fmt, usr);
-		break;
+			fprintf(stdout, d_fmt, usr);
+			break;
 		default:
-		fprintf(stdout, def_fmt, etype, all->nread, all->buf);
+			fprintf(stdout, def_fmt, etype, all->nread, all->buf);
+			break;
 	}
 	free(usr);
 	return (1);
