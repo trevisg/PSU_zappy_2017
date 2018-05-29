@@ -23,7 +23,7 @@ void *set_iface(struct sockaddr_in *addr, int server_port,
 	addr->sin_addr = *((struct in_addr *)he->h_addr);
 	bzero(&(addr->sin_zero), 8);
 	if (server_port == -1 || connect(sockfd,
-		(struct sockaddr *)&addr,sizeof(struct sockaddr)) == -1) {
+		(struct sockaddr *)&addr, sizeof(struct sockaddr)) == -1) {
 		perror("connect");
 		exit(1);
 	} else {
@@ -43,35 +43,39 @@ int cli_loop(int sockfd)
 			exit (84);
 		}
 		printf("After the send function \n");
-		if ((numbytes=recv(sockfd, buf, 1024, 0)) == -1) {
+		numbytes = recv(sockfd, buf, 1024, 0);
+		if (numbytes == -1) {
 			perror("recv");
 		}
 		buf[numbytes] = '\0';
-		printf("Received in pid=%d, text=: %s \n",getpid(), buf);
+		printf("Received in pid = %d, text = : %s \n", getpid(), buf);
 		sleep(1);
 	}
 }
 
 int main(int ac, char **av)
 {
-        int sockfd, server_port;
-        struct hostent *he;
-        struct sockaddr_in their_addr;
+	int sockfd;
+	int server_port;
+	struct hostent *he;
+	struct sockaddr_in their_addr;
 
-        if (ac != 3) {
-                fprintf(stderr,"Usage: %s [host] [port]\n", av[0]);
-                exit(84);
-        }
-        if ((he = gethostbyname(av[1])) == NULL) {
-                exit(84);
-        }
-        if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
-                perror("socket");
-                exit(84);
-        }
-        server_port = atoi(av[2]);
-        set_iface(&their_addr, server_port, he, sockfd);
-        cli_loop(sockfd);
-        close(sockfd);
-        return 0;
+	if (ac != 3) {
+		fprintf(stderr, "Usage: %s [host] [port]\n", av[0]);
+		exit(84);
+	}
+	he = gethostbyname(av[1]);
+	if (he == NULL) {
+		exit(84);
+	}
+	sockfd = socket(AF_INET, SOCK_STREAM, 0);
+	if (sockfd == -1) {
+		perror("socket");
+		exit(84);
+	}
+	server_port = atoi(av[2]);
+	set_iface(&their_addr, server_port, he, sockfd);
+	cli_loop(sockfd);
+	close(sockfd);
+	return 0;
 }

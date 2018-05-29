@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	write_separator()
+void	write_separator(void)
 {
 	int i = 0;
 
@@ -23,11 +23,11 @@ void	write_separator()
 	}
 }
 
-char *getmessage()
+char *getmessage(void)
 {
 	static char message[515];
 
-	read(0,message, 515);
+	read(0, message, 515);
 	return message;
 }
 
@@ -38,7 +38,7 @@ int main(int ac, char **av)
 	} else if (av) {
 		initscr();
 		write_separator();
-		move(LINES -1,0);
+		move(LINES -1, 0);
 		printw("message:");
 		refresh();
 		getch();
