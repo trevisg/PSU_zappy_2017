@@ -1,4 +1,5 @@
-# BrokenIRC {#mainpage}
+# BrokenIRC
+### The '5days work' 'not so broken' C Unix IRCd
 [![Build Status](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack.svg?branch=master)](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack)
 
 - ```make server && make clean ``` to build
