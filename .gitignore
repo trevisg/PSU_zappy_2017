@@ -3,5 +3,5 @@
 *.txt
 a.out
 */a.out
-server
+zappy_server
 client
