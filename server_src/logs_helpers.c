@@ -16,11 +16,10 @@
 */
 void	print_users_in_chans(t_channel *chanlist, int index)
 {
-	if (index != PING) {
-		for (t_channel *tmp = chanlist; tmp; tmp = tmp->next) {
-			printf("\tChannel : [%s]\n", tmp->channame);
-			print_users(tmp->users);
-		}
+	if (index)
+	for (t_channel *tmp = chanlist; tmp; tmp = tmp->next) {
+		printf("\tChannel : [%s]\n", tmp->channame);
+		print_users(tmp->users);
 	}
 }
 
