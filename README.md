@@ -1,14 +1,20 @@
-# BrokenIRC
-### The '5days work' 'not so broken' C Unix IRCd
-[![Build Status](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack.svg?branch=master)](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack)
+# **PSU_zappy_2017** - _server_
 
-- ```make server && make clean ``` to build
-- ```./server [port] ``` to run (6667 is the default for most IRC servers)
-- Connect your favorite client and join a #channel
-- Enjoy
+> Just another useless school project
 
-## Doc
+## Usage :
 
-- U'll find this project documentation at [this page](https://trevisg.github.io/PSU_myirc_2017BrokenStuffisBack)
-- Hope this RFC 2812 [little write-up](https://github.com/trevisg/PSU_myirc_2017BrokenStuffisBack/blob/master/bonus/RFC2812Markdown.md) will help you somehow
-- Refresh doc with ```make doc```
+-   `make server && make clean` to build
+
+-   See required args with `./zappy_server -h or --help`
+
+-   `./zappy_server -[flag] [options]` to run
+
+-   Connect your  **ia client**
+
+-   Enjoy
+
+## Documentation :
+
+-   A [quick write up](bonus/ZAPPY_CMDS/md) with server commands could be found on the bonus directory
+-   U'll find the doc hosted at [this page](https://trevisg.github.io/PSU_zappy_2017Server)

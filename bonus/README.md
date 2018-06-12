@@ -1,12 +1,12 @@
-# BrokenIRC{#mainpage}
-### The '5days work' 'not so broken' C Unix IRCd
-[![Build Status](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack.svg?branch=master)](https://travis-ci.org/trevisg/PSU_myirc_2017BrokenStuffisBack)
+# ZappyServer {#mainpage}
 
-- ```make server && make clean ``` to build
-- ```./server [port] ``` to run (6667 is the default for most IRC servers)
-- Connect your favorite client and join a #channel
-- Enjoy
+> Just another useless school project
+
+-   `make server && make clean` to build
+-   `./zappy_server -[flag] [options]` to run
+-   Connect your favorite client
+-   Enjoy
 
 ## Doc
 
-- U'll find the doc at [this page](https://trevisg.github.io/PSU_myirc_2017BrokenStuffisBack)
+-   U'll find the doc at [this page](https://trevisg.github.io/PSU_zappy_2017Server)

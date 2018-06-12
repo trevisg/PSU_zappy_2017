@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** PSU_ZAPPY_2017 - Server
 ** File description:
-** my_irc server source file
+** Zappy server source file
 */
 
 #include "../include/server.h"

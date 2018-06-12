@@ -1,8 +1,8 @@
 ##
 ## EPITECH PROJECT, 2018
-## my_irc makefile
+## PSU_zappy_2017Server makefile
 ## File description:
-## Makefile for my_irc client & server
+## Makefile for zappy server
 ##
 
 CC      	= gcc
@@ -14,13 +14,6 @@ RM      	= rm -f
 CFLAGS		+= -I./include -Wall -Werror -Wextra -std=gnu99
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
-
-## Sources and rules for irc client
-CLIENT_SRCS	= client.c
-
-CLIENTSRC	= $(addprefix client_src/, $(CLIENT_SRCS))
-
-CLIENTOBJS	:= $(CLIENTSRC:.c=.o)
 
 ## Sources and rules for server
 SERVER_SRCS	= logs_helpers.c \
@@ -39,26 +32,20 @@ SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
 
 SERVEROBJS	:= $(SERVERSRC:.c=.o)
 
-#Binaries names
-CLIENT    	= client
+#Binary name
 
-SERVER		= server
+SERVER		= zappy_server
 
 
-all:		$(CLIENT) $(SERVER)
-
-$(CLIENT):	$(CLIENTOBJS)
-		$(CC) $(CFLAGS) $(CLIENTOBJS) -o $(CLIENT)
+all:		$(SERVER)
 
 $(SERVER):	$(SERVEROBJS)
 		$(CC) $(CFLAGS) $(SERVEROBJS) -o $(SERVER)
 
 clean:
-		$(RM) $(CLIENTOBJS)
 		$(RM) $(SERVEROBJS)
 
 fclean: 	clean
-		$(RM) $(CLIENT)
 		$(RM) $(SERVER)
 
 re:		fclean all
@@ -66,4 +53,4 @@ re:		fclean all
 doc:
 		$(DOXYGEN) bonus/Doxyfile
 
-.PHONY: all clean fclean re doc server client
+.PHONY:		all clean fclean re doc server

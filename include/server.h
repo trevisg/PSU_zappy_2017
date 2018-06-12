@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_FTP
+** PSU_zappy_2017
 ** File description:
-** my_ftp server header file
+** zappy_server header file
 */
 
 #ifndef SERVER_H_
@@ -17,12 +17,13 @@
 	/** Number of simultaneous connection on server listening socket
 	* see listen() call
 	*/
-	#define BACKLOG 5
-	/** Number of RFC command handled by this (broken) server */
-	#define REF_NB 15
+	#define BACKLOG 10
+	/** Number of Zappy command */
+	#define REF_NB 13
 	/** This good old C mem alloc dirty method */
 	#define BUF_SIZE 1060
-	/** The length of the struct epoll_events array pointed to by *events
+	/** The length of the struct epoll_events array
+	* pointed to by *events
 	*/
 	#define MAX_EVENTS 10
 	/** This good old ... u know */
@@ -46,15 +47,11 @@
 	#define EVER ;;
 
 	/** Only here for code clarity and lisibility
-	* @TODO : still missing lot of rfc command see subject, rfc or
-	* this [gist](https://gist.github.com/xero/2d6e4b061b4ecbeb9f99)
-	* for help
+	* @NOTE : Have a look at ZAPPY_CMDS.md file for ref
 	*/
 	enum  CMDS {
-		JOIN, NICK, PING, USER, QUIT, SERVER, PART,
-		USERS, NAMES, ACCEPTF, MSGAB, MSGABC,
-		QUERY, ME, NOTICE, WHOIS, WHOWAS,
-		DNS, KICK
+		FORWARD, RIGHT, LEFT, LOOK, INVENTORY, BROADCAST_TEXT,
+		CONNECT_NBR, FORK, EJECT, TAKE_OBJECT, SET_OBJECT, INCANTATION
 	};
 
 	/* Future login handler filepath (to be set in a .conf file) */
@@ -78,12 +75,21 @@
 		mode_t		dir_mode;
 	}				t_log;
 
+	typedef struct			s_clargs {
+		int			port;
+		int			width;
+		int			height;
+		char			**teams_names;
+		int			clientsNb;
+		int			freq;
+	}				t_clargs;
 	/** Yeah simplification */
 	typedef struct addrinfo adrinf;
 
 	/** Main server structure */
 	typedef struct			s_serv {
 		int			nfds;
+		int			port;
 		int			epollfd;
 		int			conn_sock;
 		int			listen_sock;
@@ -101,7 +107,7 @@
 	/** To avoid stdbool include (for s_user.isco)*/
 	#define true	1
 	#define false 	0
-	/** A typical IRC user */
+	/** A typical Zappy client */
 	typedef struct			s_user {
 		int			clifd;
 		int			mode;
