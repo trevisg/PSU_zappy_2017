@@ -197,6 +197,9 @@ static char	*get_req(unsigned int ac, char **av)
 * @param av the 2d char array from main()
 * @return args the storage struct
 * @return NULL if errors
+* @note consider refactoring / splitting this function as it's 2 lines above
+* the 20's authorized by this silly/f**ing norm and variables are uncorrectly
+* declared. We also could do a trashbin struct for all args
 */
 t_clargs		*get_args(int ac, char **av)
 {
