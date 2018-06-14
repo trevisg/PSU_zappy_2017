@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
 ** Server listening socket and interface init
 */

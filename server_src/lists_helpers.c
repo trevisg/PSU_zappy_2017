@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
-** my_irc server t_userlist and t_channel lists helpers functions
+** Zappy server t_userlist and t_teams lists helpers functions
 */
 
 #include "../include/server.h"
@@ -11,8 +11,9 @@
 unsigned int get_size(cmdargs args)
 {
 	unsigned int i = 0;
-	while (args[i])
+	while (args[i]) {
 		++i;
+	}
 	return (i);
 }
 
@@ -36,16 +37,16 @@ t_user	*find_user_by_fd(t_userlist *list, int clifd)
 	return (usr);
 }
 
-/** Get the t_channel pointer by its name
-* @param list the channel list
-* @param channame the resquested channel
-* @return a t_channel pointer if exists , NULL otherwise
+/** Get the t_teams pointer by its name
+* @param list the teams list
+* @param channame the resquested teams
+* @return a t_teams pointer if exists , NULL otherwise
 */
-t_channel	*get_chan_by_name(t_channel *list, char *channame)
+t_teams	*get_team_by_name(t_teams *list, char *channame)
 {
-	t_channel *rt = NULL;
+	t_teams *rt = NULL;
 
-	for (t_channel *tmp = list; tmp; tmp = tmp->next) {
+	for (t_teams *tmp = list; tmp; tmp = tmp->next) {
 		if (!strcmp(tmp->channame, channame)) {
 			rt = tmp;
 			break;
@@ -54,7 +55,7 @@ t_channel	*get_chan_by_name(t_channel *list, char *channame)
 	return (rt);
 }
 
-unsigned int	is_user_in_chan(int clifd, t_channel *chans)
+unsigned int	is_user_in_chan(int clifd, t_teams *chans)
 {
 	for (t_userlist *usrs = chans->users; usrs; usrs = usrs->next) {
 		if (clifd == usrs->user->clifd) {

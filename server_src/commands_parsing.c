@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
-** my_irc server commands parsing functions source file
+** Zappy server commands parsing functions source file
 */
 
 #include "../include/server.h"
@@ -75,9 +75,9 @@ int	get_methods(char *req, int clifd)
 	int index = 0;
 	char **cmds = get_commands(req);
 	char **args = NULL;
-	static t_channel *defchan = NULL;
+	static t_teams *defchan = NULL;
 
-	defchan = !defchan ? init_default_channel() : defchan;
+	defchan = !defchan ? init_default_teams() : defchan;
 	for (int j = 0; cmds[j]; ++j) {
 		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strstr(cmds[j], G_PROTOS[index]))) {

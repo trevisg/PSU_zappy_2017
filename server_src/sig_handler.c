@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
-** my_irc signal handler source file
+** Zappy signal handler source file
 */
 
 #include "../include/server.h"

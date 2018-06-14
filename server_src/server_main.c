@@ -60,9 +60,8 @@ static int 	evhandler(t_serv *all, int newfd)
 	return (0);
 }
 
-/** Get the active fd from event queue, if it's our server fd, initco()
-* with the new connected client, else handle received cmd buffer
-* through evhandler()
+/** Get the active fd from event queue, if it's our server fd, initco() with
+* the new connected client, else handle received cmd buffer through evhandler()
 * @param all the 'catch them all' structure with server infos
 * @param args the argv pointer form main containing initial process names
 * @return 0 fo normal exit

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
-** my_irc server global variables
+** Zappy server global variables
 ** for commands settings see methodsXX.c files
 */
 
