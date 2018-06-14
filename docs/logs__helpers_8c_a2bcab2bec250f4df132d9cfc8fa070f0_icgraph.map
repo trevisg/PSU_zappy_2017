@@ -1,7 +1,0 @@
-<map id="get_host_string" name="get_host_string">
-<area shape="rect" id="node2" href="$server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="164,5,256,32"/>
-<area shape="rect" id="node3" href="$server__main_8c.html#a4178685c6a99dba7611faf9fe58f1a54" title="evhandler" alt="" coords="304,5,383,32"/>
-<area shape="rect" id="node4" href="$server__main_8c.html#a825c9cedc1751b000c44487b4233c37c" title="getactiveclients" alt="" coords="431,5,544,32"/>
-<area shape="rect" id="node5" href="$server__main_8c.html#af3e041546aaed3cd242c2b0e77162b39" title="server" alt="" coords="592,5,651,32"/>
-<area shape="rect" id="node6" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="699,5,749,32"/>
-</map>
