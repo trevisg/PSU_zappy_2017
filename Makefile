@@ -1,6 +1,6 @@
 ##
 ## EPITECH PROJECT, 2018
-## PSU_zappy_2017Server makefile
+## PSU_zappy_2017 makefile
 ## File description:
 ## Makefile for zappy server
 ##
@@ -22,7 +22,7 @@ SERVER_SRCS	= logs_helpers.c \
 		server_decls.c \
 		sig_handler.c \
 		user_list.c \
-		channel_list.c \
+		teams_list.c \
 		lists_helpers.c \
 		commands_parsing.c \
 		rfc_cmds0.c \
@@ -52,5 +52,9 @@ re:		fclean all
 
 doc:
 		$(DOXYGEN) bonus/Doxyfile
+
+cltest:
+		@echo "Debug server command line args handler"
+		gcc server_src/cl_args.c $(CFLAGS) -D CLTEST -g3
 
 .PHONY:		all clean fclean re doc server
