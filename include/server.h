@@ -27,18 +27,16 @@
 	*/
 	#define MAX_EVENTS 10
 	/** This good old ... u know */
-	#define MAXCHAN 1000
-	/** Idem, see join() function and RFC 1459 and RFC 2812 */
-	#define MAXCHANNAME 50
-	/** Maximum number of args in command as per rfc request
-	* see section 2.3 of RFC 2812
-	*/
+	#define MAXTEAMS 1000
+	/** Max teams */
+	#define MAXTEAMSNAME 50
+	/** Maximum number of args in a single command */
 	#define MAXARGS 15
 	/** Maximum argument length see ref below
 	* @note obtained by 500 / max args
 	*/
 	#define MAXARGSIZE 33
-	/** Argument format typedef as per RFC request
+	/** Argument format typedef as per subject request
 	* @note Useless typedef came from a deprecated method, but hey too lazy
 	* to rename all
 	*/
@@ -50,8 +48,10 @@
 	* @NOTE : Have a look at ZAPPY_CMDS.md file for ref
 	*/
 	enum  CMDS {
-		FORWARD, RIGHT, LEFT, LOOK, INVENTORY, BROADCAST_TEXT,
-		CONNECT_NBR, FORK, EJECT, TAKE_OBJECT, SET_OBJECT, INCANTATION
+		FORWARD, RIGHT, LEFT,
+		LOOK, INVENTORY, BROADCAST_TEXT,
+		CONNECT_NBR, FORK, EJECT,
+		TAKE_OBJECT, SET_OBJECT, INCANTATION
 	};
 
 	/* Future login handler filepath (to be set in a .conf file) */
@@ -75,6 +75,7 @@
 		mode_t		dir_mode;
 	}				t_log;
 
+	/** Used to store command line args */
 	typedef struct			s_clargs {
 		int			port;
 		int			width;
@@ -123,13 +124,13 @@
 		struct s_userlist	*next;
 	}				t_userlist;
 
-	/** A doubly linked list of current channels with their users */
-	typedef struct 			s_channel {
+	/** A doubly linked list of current teamss with their users */
+	typedef struct 			s_teams {
 		char 			*channame;
 		t_userlist		*users;
-		struct s_channel 	*prev;
-		struct s_channel 	*next;
-	}				t_channel;
+		struct s_teams 	*prev;
+		struct s_teams 	*next;
+	}				t_teams;
 
 	/** See server_src/inits.c */
 	int	set_sockfd(t_serv *all);
@@ -143,7 +144,7 @@
 	/** See server_src/logs_helpers.c */
 	int	logthisevent(const char etype, t_serv *all);
 	void	print_users(t_userlist *list);
-	void	print_users_in_chans(t_channel *chanlist, int index);
+	void	print_users_in_chans(t_teams *chanlist, int index);
 
 	/** See server_src/client_list.c */
 	t_userlist	*get_new_userlist(t_user *usr);
@@ -152,33 +153,32 @@
 	void		*remove_user(t_userlist *list, int clifd);
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
 	void		*insert_back_user(t_userlist *head, t_userlist *nuser);
-	/** See server_src/channel_list.c */
-	t_channel	*init_default_channel(void);
-	void		free_channel_list(t_channel *list);
-	t_channel	*get_new_chan_list(t_userlist *userlist, char *);
-	void		remove_channel(t_channel *list, char *channame);
-	void		*insert_back_channel(t_channel *head, t_channel *chan);
+	/** See server_src/teams_list.c */
+	t_teams	*init_default_teams(void);
+	void		free_teams_list(t_teams *list);
+	t_teams	*get_new_chan_list(t_userlist *userlist, char *);
+	void		remove_teams(t_teams *list, char *channame);
+	void		*insert_back_teams(t_teams *head, t_teams *chan);
 
 	/** See server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
-	t_channel	*get_chan_by_name(t_channel *list, char *channame);
-	unsigned int	is_user_in_chan(int clifd, t_channel *chans);
+	t_teams	*get_chan_by_name(t_teams *list, char *channame);
+	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
 	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
 	unsigned int 	get_size(cmdargs args);
 	/** See @file server_src/rfc_cmds0.c */
-	void	*join(cmdargs args, int clifd, t_channel *chanlist);
-	void	*nick(cmdargs args, int clifd, t_channel *chanlist);
-	void	*ping(cmdargs args, int clifd, t_channel *chanlist);
-	void	*user(cmdargs args, int clifd, t_channel *chanlist);
-	void	*quit(cmdargs args, int clifd, t_channel *chanlist);
+	void	*join(cmdargs args, int clifd, t_teams *chanlist);
+	void	*nick(cmdargs args, int clifd, t_teams *chanlist);
+	void	*ping(cmdargs args, int clifd, t_teams *chanlist);
+	void	*user(cmdargs args, int clifd, t_teams *chanlist);
+	void	*quit(cmdargs args, int clifd, t_teams *chanlist);
 	/** See @file server_src/rfc_cmds1.c */
-	void	*privmsg(cmdargs args, int clifd, t_channel *chans);
+	void	*privmsg(cmdargs args, int clifd, t_teams *chans);
 
 	/** See @file server_src/server_decls.c */
-	/** Main EPITECH MyIRC Protocol (RFC 1459 Extract)
-	* methods function pointer
-	*/
-	typedef void *(*cmds)(cmdargs args, int clifd, t_channel *chanlist);
+
+	/** Main Zappy Protocol methods function pointer */
+	typedef void *(*cmds)(cmdargs args, int clifd, t_teams *chanlist);
 	/** The object prototype mapping the methods name */
 	extern const char *G_PROTOS[REF_NB];
 	/** The global pointer */
