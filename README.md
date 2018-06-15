@@ -1,12 +1,12 @@
-# **PSU_zappy_2017** - _server_
+# **PSU_zappy_2017**
 
 > Just another useless school project
 
 ## Usage :
 
--   `make server && make clean` to build
+-   `make zappy_server && make clean` to build
 
--   See required args with `./zappy_server -h or --help`
+-   See required flags and arguments with `./zappy_server -h`
 
 -   `./zappy_server -[flag] [options]` to run
 
@@ -16,5 +16,5 @@
 
 ## Documentation :
 
--   A [quick write up](bonus/ZAPPY_CMDS/md) with server commands could be found on the bonus directory
--   U'll find the doc hosted at [this page](https://trevisg.github.io/PSU_zappy_2017Server)
+-   A [quick write up](bonus/ZAPPY_CMDS.md) with server commands could be found on the bonus directory
+-   U'll find the complete documentation hosted at [this page](https://trevisg.github.io/PSU_zappy_2017/)
