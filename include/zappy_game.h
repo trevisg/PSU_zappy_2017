@@ -34,7 +34,9 @@
 		unsigned int 	id;
 		float		ttl;
 		unsigned int 	level;
+		t_ressources	inventory;
 		int 		curr_pos[2];
+		char		team_name[MAX_TEAM_NAME];
 	}			t_inhabitant;
 	/** A trantorian team */
 	typedef struct		s_team {
