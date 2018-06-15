@@ -49,7 +49,7 @@
 	}			t_tile;
 	/** The Trantor world */
 	typedef struct 		s_world {
-		t_tile		tile;
+		t_tile		**tiles;
 	}			t_world;
 
 	/** See @file server_src/stones_decl.c */
