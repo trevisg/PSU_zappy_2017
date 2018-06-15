@@ -16,7 +16,8 @@ CFLAGS		+= -I./include -Wall -Werror -Wextra -std=gnu99
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for server
-SERVER_SRCS	= commands_parsing.c \
+SERVER_SRCS	= cl_args_helpers.c \
+		commands_parsing.c \
 		cl_args_parsing.c \
 		time_handlers.c \
 		lists_helpers.c \
