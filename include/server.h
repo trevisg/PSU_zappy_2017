@@ -71,41 +71,42 @@
 	* @note not yet implemented
 	*/
 	typedef struct			s_log {
-		FILE				*errlog;
-		FILE				*accesslog;
-		char				*timestmp;
-		time_t				timeval;
-		mode_t				*set;
-		mode_t 				mode;
-		mode_t				dir_mode;
-	}						t_log;
+		FILE			*errlog;
+		FILE			*accesslog;
+		char			*timestmp;
+		time_t			timeval;
+		mode_t			*set;
+		mode_t 			mode;
+		mode_t			dir_mode;
+	}				t_log;
 
 	/** Used to store command line args */
 	typedef struct			s_clargs {
-		int					port;
-		int					width;
-		int					height;
-		char				**teams_names;
-		int					clientsNb;
-		int					freq;
-	}						t_clargs;
+		char			*port;
+		int			width;
+		int			height;
+		char			**teams_names;
+		int			clientsNb;
+		int			freq;
+	}				t_clargs;
+
 	/** Yeah simplification */
 	typedef struct addrinfo adrinf;
 
 	/** Main server structure */
 	typedef struct			s_serv {
-		int					nfds;
-		int					port;
-		int					epollfd;
-		int					conn_sock;
-		int					listen_sock;
-		ssize_t 			nread;
-		char 				buf[BUF_SIZE];
-		char 				host[NI_MAXHOST];
-		char 				service[NI_MAXSERV];
-		adrinf				*rp;
-		adrinf				*res;
-		adrinf				hints;
+		int			nfds;
+		int			port;
+		int			epollfd;
+		int			conn_sock;
+		int			listen_sock;
+		ssize_t 		nread;
+		char 			buf[BUF_SIZE];
+		char 			host[NI_MAXHOST];
+		char 			service[NI_MAXSERV];
+		adrinf			*rp;
+		adrinf			*res;
+		adrinf			hints;
 		struct epoll_event 	ev;
 		struct epoll_event 	events[MAX_EVENTS];
 	}				t_serv;
@@ -133,24 +134,21 @@
 	typedef struct 			s_teams {
 		char 			*channame;
 		t_userlist		*users;
-		struct s_teams 	*prev;
-		struct s_teams 	*next;
+		struct s_teams		*prev;
+		struct s_teams		*next;
 	}				t_teams;
 
 	/** See server_src/inits.c */
-	int	set_sockfd(t_serv *all);
-	int	set_epoll(t_serv *all);
-	int	set_iface(adrinf *hints, adrinf **res, const char *port);
-	int	set_clifd(int clisock, int epollfd, struct epoll_event *ev);
-
+	int		set_sockfd(t_serv *all);
+	int		set_epoll(t_serv *all);
+	int		set_iface(adrinf *hints, adrinf **res, const char *port);
+	int		set_clifd(int clisock, int epollfd, struct epoll_event *ev);
 	/** See server_src/commands_parsing.c */
-	int	get_methods(char *req, int clifd);
-
+	int		get_methods(char *req, int clifd);
 	/** See server_src/logs_helpers.c */
-	int	logthisevent(const char etype, t_serv *all);
-	void	print_users(t_userlist *list);
-	void	print_users_in_chans(t_teams *chanlist, int index);
-
+	int		logthisevent(const char etype, t_serv *all);
+	void		print_users(t_userlist *list);
+	void		print_users_in_chans(t_teams *chanlist, int index);
 	/** See server_src/client_list.c */
 	t_userlist	*get_new_userlist(t_user *usr);
 	void		print_users(t_userlist *liste);
@@ -164,24 +162,35 @@
 	t_teams		*get_new_chan_list(t_userlist *userlist, char *);
 	void		remove_teams(t_teams *list, char *channame);
 	void		*insert_back_teams(t_teams *head, t_teams *chan);
-
 	/** See server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
+	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
 	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
-	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
 	unsigned int 	get_size(cmdargs args);
 	/** See @file server_src/rfc_cmds0.c */
-	void	*join(cmdargs args, int clifd, t_teams *chanlist);
-	void	*nick(cmdargs args, int clifd, t_teams *chanlist);
-	void	*ping(cmdargs args, int clifd, t_teams *chanlist);
-	void	*user(cmdargs args, int clifd, t_teams *chanlist);
-	void	*quit(cmdargs args, int clifd, t_teams *chanlist);
+	void		*join(cmdargs args, int clifd, t_teams *chanlist);
+	void		*nick(cmdargs args, int clifd, t_teams *chanlist);
+	void		*ping(cmdargs args, int clifd, t_teams *chanlist);
+	void		*user(cmdargs args, int clifd, t_teams *chanlist);
+	void		*quit(cmdargs args, int clifd, t_teams *chanlist);
 	/** See @file server_src/rfc_cmds1.c */
-	void	*privmsg(cmdargs args, int clifd, t_teams *chans);
+	void		*privmsg(cmdargs args, int clifd, t_teams *chans);
+
+	/** The flags 'gatherer' function pointer */
+	typedef void *(*clargs)(char **, t_clargs *);
+	/** See @file server_src/cl_flags.c */
+	void		*get_port(char **port, t_clargs *args);
+	void		*get_width(char **width, t_clargs *args);
+	void		*get_height(char **height, t_clargs *args);
+	/** See @file server_src/cl_flags_bis.c */
+	void		*get_teams(char **teams, t_clargs *args);
+	void		*get_clientsNb(char **clientsNb, t_clargs *args);
+	void		*get_freq(char **freq, t_clargs *args);
+	/** See @file server_src/cl_args.c */
+	t_clargs	*get_opts(int ac, char **av);
 
 	/** See @file server_src/server_decls.c */
-
 	/** Main Zappy Protocol methods function pointer */
 	typedef void *(*cmds)(cmdargs args, int clifd, t_teams *chanlist);
 	/** The object prototype mapping the methods name */
