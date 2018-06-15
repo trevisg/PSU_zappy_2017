@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../include/server.h"
+#include "../../include/server.h"
 
 /** Free the token list
 * @param buffer the 2D array to be free'd
@@ -21,7 +21,9 @@ void	free_buffers(char **buffer)
 	free(buffer);
 }
 
-/** The flags 'gatherer' initialiser */
+/** The flags 'gatherer' initialiser
+* @return opts the flags function pointer malloc'ed and assigned
+*/
 clargs  *set_opts()
 {
 	clargs *opts = malloc(sizeof(clargs) * 'z');

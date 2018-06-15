@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../include/server.h"
+#include "../../include/server.h"
 
 #if defined(CLTEST) || defined(CLDBG)
 static void	print_2d(char **buff)
@@ -75,7 +75,10 @@ static char	*get_req(unsigned int ac, char **av)
 	return (strlen(req) ? req : NULL);
 }
 
-t_clargs	*set_default_args()
+/** Set default params for frequency argument
+* @return args a malloc'ed t_clargs struct with args-freq set to dflt value
+*/
+static t_clargs		*set_default_args()
 {
 	t_clargs	*args = malloc(sizeof(*args));
 
