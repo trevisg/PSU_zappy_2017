@@ -49,6 +49,6 @@
 	}			t_world;
 
 	/** See @file server_src/stones_decl.c */
-	extern t_ressources STONES;
+	extern volatile t_ressources STONES;
 
 #endif /* !ZAPPY_GAME_H_ */

@@ -7,7 +7,7 @@
 
 #include "../include/zappy_game.h"
 
-t_ressources STONES = {
+volatile t_ressources STONES = {
 	{"sibur", 0},
 	{"phiras", 0},
 	{"mendiane", 0},
