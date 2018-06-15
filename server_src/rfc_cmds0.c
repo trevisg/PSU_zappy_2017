@@ -20,18 +20,20 @@ void	*join(cmdargs args, int clifd, t_teams *chans)
 {
 	t_user *usr = find_user_by_fd(chans->users, clifd);
 	t_userlist *list = get_new_userlist(usr);
-	t_teams *rchan = get_chan_by_name(chans, args[1]);
+	t_teams *rchan = get_team_by_name(chans, args[1]);
 
-	if (!rchan) {
+	if (usr) {
+		if (!rchan) {
 		rchan = get_new_chan_list(list, args[1]);
 		chans = insert_back_teams(chans, rchan);
-	} else if (!find_user_by_fd(rchan->users, clifd)) {
-		rchan->users = insert_back_user(rchan->users, list);
+		} else if (!find_user_by_fd(rchan->users, clifd)) {
+			rchan->users = insert_back_user(rchan->users, list);
+		}
+		for (t_userlist *b = rchan->users; b; b = b->next) {
+			dprintf(b->user->clifd, ":%s JOIN :%s\r\n", usr->nick, args[1]);
+		}
+		dprintf(clifd, ":server 331\r\n%s: no topic is set\r\n", args[1]);
 	}
-	for (t_userlist *b = rchan->users; b; b = b->next) {
-		dprintf(b->user->clifd, ":%s JOIN :%s\r\n", usr->nick, args[1]);
-	}
-	dprintf(clifd, ":server 331\r\n%s: no topic is set\r\n", args[1]);
 	return (chans);
 }
 
@@ -102,11 +104,13 @@ void	*quit(cmdargs args, int clifd, t_teams *chans)
 {
 	t_user *usr = find_user_by_fd(chans->users, clifd);
 
-	for (t_userlist *b = chans->users; b; b = b->next) {
-		dprintf(b->user->clifd, ":%s QUIT :%s\r\n", usr->nick, args[1]);
-	}
-	for (t_teams *chan = chans; chan; chan = chan->next) {
-		is_user_in_chan(clifd, chan);
+	if (usr) {
+		for (t_userlist *b = chans->users; b; b = b->next) {
+			dprintf(b->user->clifd, ":%s QUIT :%s\r\n", usr->nick, args[1]);
+		}
+		for (t_teams *chan = chans; chan; chan = chan->next) {
+			is_user_in_chan(clifd, chan);
+		}
 	}
 	close(clifd);
 	return (chans);
