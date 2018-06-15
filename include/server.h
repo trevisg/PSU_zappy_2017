@@ -138,69 +138,76 @@
 		struct s_teams		*next;
 	}				t_teams;
 
-	/** See server_src/inits.c */
+	/** Main Zappy Protocol methods function pointer
+	* @note see @file server_src/server_decls.c
+	*/
+	typedef void *(*cmds)(cmdargs args, int clifd, t_teams *chanlist);
+	/** The flags 'gatherer' function pointer
+	* @note see @file server_src/cl_args_helpers.c
+	*/
+	typedef void *(*clargs)(char **, t_clargs *);
+
+	/** @note see server_src/inits.c */
 	int		set_sockfd(t_serv *all);
 	int		set_epoll(t_serv *all);
 	int		set_iface(adrinf *hints, adrinf **res, const char *port);
 	int		set_clifd(int clisock, int epollfd, struct epoll_event *ev);
-	/** See server_src/commands_parsing.c */
+	/** @note see server_src/commands_parsing.c */
 	int		get_methods(char *req, int clifd);
-	/** See server_src/logs_helpers.c */
+	/** @note see server_src/logs_helpers.c */
 	int		logthisevent(const char etype, t_serv *all);
 	void		print_users(t_userlist *list);
 	void		print_users_in_chans(t_teams *chanlist, int index);
-	/** See server_src/client_list.c */
+	/** @note see server_src/client_list.c */
 	t_userlist	*get_new_userlist(t_user *usr);
 	void		print_users(t_userlist *liste);
 	void		free_userlist(t_userlist *list);
 	void		*remove_user(t_userlist *list, int clifd);
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
 	void		*insert_back_user(t_userlist *head, t_userlist *nuser);
-	/** See server_src/teams_list.c */
+	/** @note see server_src/teams_list.c */
 	t_teams		*init_default_teams(void);
 	void		free_teams_list(t_teams *list);
 	t_teams		*get_new_chan_list(t_userlist *userlist, char *);
 	void		remove_teams(t_teams *list, char *channame);
 	void		*insert_back_teams(t_teams *head, t_teams *chan);
-	/** See server_src/list_helpers.c */
+	/** @note see server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
 	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
 	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
 	unsigned int 	get_size(cmdargs args);
-	/** See @file server_src/rfc_cmds0.c */
+	/** @note see @file server_src/rfc_cmds0.c */
 	void		*join(cmdargs args, int clifd, t_teams *chanlist);
 	void		*nick(cmdargs args, int clifd, t_teams *chanlist);
 	void		*ping(cmdargs args, int clifd, t_teams *chanlist);
 	void		*user(cmdargs args, int clifd, t_teams *chanlist);
 	void		*quit(cmdargs args, int clifd, t_teams *chanlist);
-	/** See @file server_src/rfc_cmds1.c */
+	/** @note see @file server_src/rfc_cmds1.c */
 	void		*privmsg(cmdargs args, int clifd, t_teams *chans);
-
-	/** The flags 'gatherer' function pointer */
-	typedef void *(*clargs)(char **, t_clargs *);
-	/** See @file server_src/cl_flags.c */
+	/** @note See @file server_src/cl_flags.c */
 	void		*get_port(char **port, t_clargs *args);
 	void		*get_width(char **width, t_clargs *args);
 	void		*get_height(char **height, t_clargs *args);
-	/** See @file server_src/cl_flags_bis.c */
+	/** @note see @file server_src/cl_flags_bis.c */
 	void		*get_teams(char **teams, t_clargs *args);
 	void		*get_clientsNb(char **clientsNb, t_clargs *args);
 	void		*get_freq(char **freq, t_clargs *args);
-	/** See @file server_src/cl_args.c */
+	/** @note see @file server_src/cl_args.c */
 	t_clargs	*get_opts(int ac, char **av);
+	/** @note see @file server_src/cl_args_helpers.c */
+	clargs		*set_opts();
+	void		free_buffers(char **buffer);
+	/** @note see server_src/signal_handler.c */
+	void		sig_handler(int signo);
+	/** @note see server_src/usage.c */
+	void 		usage(char *progname);
 
-	/** See @file server_src/server_decls.c */
-	/** Main Zappy Protocol methods function pointer */
-	typedef void *(*cmds)(cmdargs args, int clifd, t_teams *chanlist);
-	/** The object prototype mapping the methods name */
+	/** The object prototype mapping the methods name
+	* @note see @file server_src/server_decls.c
+	*/
 	extern const char *G_PROTOS[REF_NB];
 	/** The global pointer */
 	extern const cmds G_CMDS[REF_NB];
-	/** See server_src/signal_handler.c */
-	void		sig_handler(int signo);
-
-	/** See server_src/usage.c */
-	void 	usage(char *progname);
 
 #endif /* !SERVER_H_ */
