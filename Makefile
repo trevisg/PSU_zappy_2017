@@ -25,6 +25,7 @@ SERVER_SRCS	= commands_parsing.c \
 		server_init.c \
 		server_main.c \
 		sig_handler.c \
+		stones_decl.c \
 		teams_list.c \
 		user_list.c \
 		rfc_cmds0.c \
@@ -46,6 +47,8 @@ all:		$(SERVER)
 $(SERVER):	$(SERVEROBJS)
 		$(CC) $(CFLAGS) $(SERVEROBJS) -o $(SERVER)
 
+zappy_server:	all
+
 clean:
 		$(RM) $(SERVEROBJS)
 
@@ -57,8 +60,14 @@ re:		fclean all
 doc:
 		$(DOXYGEN) bonus/Doxyfile
 
-cltest:
-		@echo "Debug server command line args handler"
+argstest:
+		@printf "Debug server command line args handler\n"
 		gcc server_src/cl_args.c $(CFLAGS) -D CLTEST -g3
+		@printf "Done.\nNow run with ./a.out [see subject for args]\n"
+
+clocktest:
+		@printf "Debug clock processing methods\n"
+		gcc server_src/time_handlers.c $(CFLAGS) -D CLOCKTEST -g3
+		@printf "Done.\nNow run with ./a.out [no args]\n"
 
 .PHONY:		all clean fclean re doc server
