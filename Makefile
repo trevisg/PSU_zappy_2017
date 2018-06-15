@@ -28,7 +28,7 @@ SERVER_SRCS	= various_helpers_functions/time_handlers.c \
 		command_line_args/cl_flags_bis.c \
 		command_line_args/cl_flags.c \
 		commands_parsing.c \
-		lists_helpers.c \
+		lists_finders.c \
 		stones_decl.c \
 		teams_list.c \
 		user_list.c \
