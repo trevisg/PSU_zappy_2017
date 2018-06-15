@@ -5,7 +5,7 @@
 ** Zappy server logger function source
 */
 
-#include "../include/server.h"
+#include "../../include/server.h"
 #include <unistd.h>
 #include <stdlib.h>
 

@@ -6,7 +6,7 @@
 */
 
 #include <time.h>
-#include "../include/server.h"
+#include "../../include/server.h"
 
 /** Return time spent from begin to ttl
 * @param begin the programm start count

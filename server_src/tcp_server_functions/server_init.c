@@ -5,7 +5,7 @@
 ** Server listening socket and interface init
 */
 
-#include "../include/server.h"
+#include "../../include/server.h"
 #include <unistd.h>
 #include <stdlib.h>
 // #include <fcntl.h>

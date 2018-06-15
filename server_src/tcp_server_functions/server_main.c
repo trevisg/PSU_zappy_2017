@@ -5,7 +5,7 @@
 ** Zappy server source file
 */
 
-#include "../include/server.h"
+#include "../../include/server.h"
 #include <unistd.h>
 #include <signal.h>
 #include <stdlib.h>
