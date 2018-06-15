@@ -34,6 +34,7 @@
 		unsigned int 	id;
 		float		ttl;
 		unsigned int 	level;
+		t_ressources	inventory;
 		int 		curr_pos[2];
 	}			t_inhabitant;
 	/** A trantorian team */
