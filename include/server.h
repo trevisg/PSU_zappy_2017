@@ -14,6 +14,7 @@
 	#include <sys/epoll.h>
 	#include <netinet/in.h>
 	#include <sys/socket.h>
+	#include "zappy_game.h"
 
 	/** Number of simultaneous connection on server listening socket
 	* see listen() call
@@ -27,10 +28,9 @@
 	* pointed to by *events
 	*/
 	#define MAX_EVENTS 10
-	/** This good old ... u know */
-	#define MAXTEAMS 1000
+
 	/** Max teams */
-	#define MAXTEAMSNAME 50
+	#define MAXTEAMS 1000
 	/** Maximum number of args in a single command */
 	#define MAXARGS 15
 	/** Maximum argument length see ref below
