@@ -7,10 +7,10 @@
 
 #include "../include/server.h"
 #include <unistd.h>
+#include <signal.h>
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <arpa/inet.h>
-#include <regex.h>
 
 /** Set the new accept() client socket in epoll event list
 * for new client handling if connection succeed
@@ -136,7 +136,7 @@ int	main(int ac, char **av)
 		else
 			rt = 84;
 	} else {
-		fprintf(stderr, "%s: [port]\n", av[0]);
+		usage(av[0]);
 		rt = 84;
 	}
 	return (rt);
