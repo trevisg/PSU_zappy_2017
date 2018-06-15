@@ -16,17 +16,20 @@ CFLAGS		+= -I./include -Wall -Werror -Wextra -std=gnu99
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for server
-SERVER_SRCS	= logs_helpers.c \
+SERVER_SRCS	= commands_parsing.c \
+		cl_args_parsing.c \
+		lists_helpers.c \
+		cl_flags_bis.c \
+		logs_helpers.c \
+		server_decls.c \
 		server_init.c \
 		server_main.c \
-		server_decls.c \
 		sig_handler.c \
-		user_list.c \
 		teams_list.c \
-		lists_helpers.c \
-		commands_parsing.c \
+		user_list.c \
 		rfc_cmds0.c \
 		rfc_cmds1.c \
+		cl_flags.c \
 		usage.c
 
 SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
