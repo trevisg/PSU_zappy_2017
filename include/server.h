@@ -11,8 +11,9 @@
 	#include <stdio.h>
 	#include <netdb.h>
 	#include <string.h>
-	#include <sys/socket.h>
 	#include <sys/epoll.h>
+	#include <netinet/in.h>
+	#include <sys/socket.h>
 
 	/** Number of simultaneous connection on server listening socket
 	* see listen() call
@@ -36,6 +37,10 @@
 	* @note obtained by 500 / max args
 	*/
 	#define MAXARGSIZE 33
+	/** Maximal size for a client IP address */
+	#define NI_MAXHOST 1025
+	/** Maximal size for a client host port */
+	#define NI_MAXSERV 32
 	/** Argument format typedef as per subject request
 	* @note Useless typedef came from a deprecated method, but hey too lazy
 	* to rename all
@@ -66,41 +71,41 @@
 	* @note not yet implemented
 	*/
 	typedef struct			s_log {
-		FILE		*errlog;
-		FILE		*accesslog;
-		char		*timestmp;
-		time_t		timeval;
-		mode_t		*set;
-		mode_t 		mode;
-		mode_t		dir_mode;
-	}				t_log;
+		FILE				*errlog;
+		FILE				*accesslog;
+		char				*timestmp;
+		time_t				timeval;
+		mode_t				*set;
+		mode_t 				mode;
+		mode_t				dir_mode;
+	}						t_log;
 
 	/** Used to store command line args */
 	typedef struct			s_clargs {
-		int			port;
-		int			width;
-		int			height;
-		char			**teams_names;
-		int			clientsNb;
-		int			freq;
-	}				t_clargs;
+		int					port;
+		int					width;
+		int					height;
+		char				**teams_names;
+		int					clientsNb;
+		int					freq;
+	}						t_clargs;
 	/** Yeah simplification */
 	typedef struct addrinfo adrinf;
 
 	/** Main server structure */
 	typedef struct			s_serv {
-		int			nfds;
-		int			port;
-		int			epollfd;
-		int			conn_sock;
-		int			listen_sock;
-		ssize_t 		nread;
-		char 			buf[BUF_SIZE];
-		char 			host[NI_MAXHOST];
-		char 			service[NI_MAXSERV];
-		adrinf			*rp;
-		adrinf			*res;
-		adrinf			hints;
+		int					nfds;
+		int					port;
+		int					epollfd;
+		int					conn_sock;
+		int					listen_sock;
+		ssize_t 			nread;
+		char 				buf[BUF_SIZE];
+		char 				host[NI_MAXHOST];
+		char 				service[NI_MAXSERV];
+		adrinf				*rp;
+		adrinf				*res;
+		adrinf				hints;
 		struct epoll_event 	ev;
 		struct epoll_event 	events[MAX_EVENTS];
 	}				t_serv;
@@ -154,15 +159,15 @@
 	t_user		*get_new_user(int clifd, cmdargs usercmd);
 	void		*insert_back_user(t_userlist *head, t_userlist *nuser);
 	/** See server_src/teams_list.c */
-	t_teams	*init_default_teams(void);
+	t_teams		*init_default_teams(void);
 	void		free_teams_list(t_teams *list);
-	t_teams	*get_new_chan_list(t_userlist *userlist, char *);
+	t_teams		*get_new_chan_list(t_userlist *userlist, char *);
 	void		remove_teams(t_teams *list, char *channame);
 	void		*insert_back_teams(t_teams *head, t_teams *chan);
 
 	/** See server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
-	t_teams	*get_chan_by_name(t_teams *list, char *channame);
+	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
 	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
 	unsigned int 	get_size(cmdargs args);
@@ -185,5 +190,8 @@
 	extern const cmds G_CMDS[REF_NB];
 	/** See server_src/signal_handler.c */
 	void		sig_handler(int signo);
+
+	/** See server_src/usage.c */
+	void 	usage(char *progname);
 
 #endif /* !SERVER_H_ */
