@@ -39,17 +39,14 @@ SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
 
 SERVEROBJS	:= $(SERVERSRC:.c=.o)
 
-#Binary name
+## Binary and rule name for zappy_server
 
 SERVER		= zappy_server
-
 
 all:		$(SERVER)
 
 $(SERVER):	$(SERVEROBJS)
 		$(CC) $(CFLAGS) $(SERVEROBJS) -o $(SERVER)
-
-zappy_server:	all
 
 clean:
 		$(RM) $(SERVEROBJS)
