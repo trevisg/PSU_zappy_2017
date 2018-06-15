@@ -1,2 +1,2 @@
 langage: c
-script: make && make clean
+script: make zappy_server && make clean
