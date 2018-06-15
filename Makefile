@@ -18,6 +18,7 @@ CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 ## Sources and rules for server
 SERVER_SRCS	= commands_parsing.c \
 		cl_args_parsing.c \
+		time_handlers.c \
 		lists_helpers.c \
 		cl_flags_bis.c \
 		logs_helpers.c \
