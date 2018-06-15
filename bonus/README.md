@@ -1,12 +1,22 @@
-# ZappyServer {#mainpage}
+# **PSU_zappy_2017**{#mainpage}
+
+[![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017)
 
 > Just another useless school project
 
--   `make server && make clean` to build
+## Usage :
+
+-   `make zappy_server && make clean` to build
+
+-   See required flags and arguments with `./zappy_server -h`
+
 -   `./zappy_server -[flag] [options]` to run
--   Connect your favorite client
+
+-   Connect your  **ia client**
+
 -   Enjoy
 
-## Doc
+## Documentation :
 
--   U'll find the doc at [this page](https://trevisg.github.io/PSU_zappy_2017Server)
+-   A [quick write up](bonus/ZAPPY_CMDS.md) with server commands could be found on the bonus directory
+-   U'll find the complete documentation hosted at [this page](https://trevisg.github.io/PSU_zappy_2017/)
