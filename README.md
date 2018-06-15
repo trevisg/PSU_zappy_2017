@@ -1,5 +1,7 @@
 # **PSU_zappy_2017**
 
+[![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017)
+
 > Just another useless school project
 
 ## Usage :
