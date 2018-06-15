@@ -26,7 +26,8 @@ SERVER_SRCS	= logs_helpers.c \
 		lists_helpers.c \
 		commands_parsing.c \
 		rfc_cmds0.c \
-		rfc_cmds1.c
+		rfc_cmds1.c \
+		usage.c
 
 SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
 
