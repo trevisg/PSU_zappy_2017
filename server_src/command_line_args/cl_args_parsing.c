@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../include/server.h"
+#include "../../include/server.h"
 
 #if defined(CLTEST) || defined(CLDBG)
 static void	print_2d(char **buff)
@@ -29,19 +29,6 @@ static void	print_clargs(t_clargs *args)
 	printf("Frequency [%d]\n", args->freq);
 }
 #endif
-
-/** Free the token list
-* @param buffer the 2D array to be free'd
-*/
-static void free_buffers(char **buffer)
-{
-	int i;
-
-	for (i = 0; buffer[i]; ++i) {
-		free(buffer[i]);
-	}
-	free(buffer);
-}
 
 /** Tokenize the flag buffer, splitting by spaces
 * @param buff a command string like "-[x] [args]"
@@ -68,20 +55,6 @@ static char	**get_cmdargs(char *buff, char **saveptr)
 	return (cmd_args);
 }
 
-/** The flags 'gatherer' initialiser */
-static clargs  *set_opts()
-{
-	clargs *opts = malloc(sizeof(clargs) * 'z');
-
-	opts['p'] = get_port;
-	opts['x'] = get_width;
-	opts['y'] = get_height;
-	opts['n'] = get_teams;
-	opts['c'] = get_clientsNb;
-	opts['f'] = get_freq;
-	return (opts);
-}
-
 /** Construct a single string from av args for an easiest parsing
 * @param ac the number of received args
 * @param av the command line option from main()
@@ -93,13 +66,26 @@ static char	*get_req(unsigned int ac, char **av)
 	unsigned int size = 0;
 
 	memset(req, 0, 2048);
-	if (ac >= 11 && req) {
+	if (ac >= 10 && req) {
 		for (size = 1; av[size]; ++size) {
 			strncat(req, av[size], strlen(av[size]));
 			size != ac - 1 ? strcat(req, " ") : req;
 		}
 	}
 	return (strlen(req) ? req : NULL);
+}
+
+/** Set default params for frequency argument
+* @return args a malloc'ed t_clargs struct with args-freq set to dflt value
+*/
+static t_clargs		*set_default_args()
+{
+	t_clargs	*args = malloc(sizeof(*args));
+
+	if (args) {
+		args->freq = 100;
+	}
+	return (args);
 }
 
 /** Parse command line args flags from av[] and store it in a t_clargs struct
@@ -113,7 +99,7 @@ static char	*get_req(unsigned int ac, char **av)
 */
 t_clargs		*get_opts(int ac, char **av)
 {
-	t_clargs	*args = malloc(sizeof(*args));
+	t_clargs	*args = set_default_args();
 	clargs		*opts = set_opts();
 	char 		*req = get_req(ac, av);
 	char 		**cmd_args = NULL;

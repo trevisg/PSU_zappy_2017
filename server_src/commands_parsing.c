@@ -8,19 +8,6 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
-/** Free the token list
-* @param buffer the 2D array to be free'd
-*/
-static void free_buffers(char **buffer)
-{
-	int i;
-
-	for (i = 0; buffer[i]; ++i) {
-		free(buffer[i]);
-	}
-	free(buffer);
-}
-
 /** Split the received buffer by the '\\r\\n' symbol to get multiple
 * commands in one buffer (or only one it's all depends on the client)
 * @param req the read() buffer from clifd

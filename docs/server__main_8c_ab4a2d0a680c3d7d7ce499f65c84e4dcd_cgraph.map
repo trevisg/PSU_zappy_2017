@@ -3,7 +3,7 @@
 <area shape="rect" id="node14" href="$server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="167,259,277,285"/>
 <area shape="rect" id="node3" href="$commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="325,132,423,159"/>
 <area shape="rect" id="node12" href="$logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="328,208,420,235"/>
-<area shape="rect" id="node4" href="$commands__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="498,5,589,32"/>
+<area shape="rect" id="node4" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="498,5,589,32"/>
 <area shape="rect" id="node5" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="507,56,579,83"/>
 <area shape="rect" id="node6" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="488,107,599,133"/>
 <area shape="rect" id="node7" href="$teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="479,157,607,184"/>

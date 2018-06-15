@@ -1,5 +1,5 @@
 <map id="get_methods" name="get_methods">
-<area shape="rect" id="node2" href="$commands__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="178,5,269,32"/>
+<area shape="rect" id="node2" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="178,5,269,32"/>
 <area shape="rect" id="node3" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="187,56,259,83"/>
 <area shape="rect" id="node4" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="168,107,279,133"/>
 <area shape="rect" id="node5" href="$teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="159,157,287,184"/>

@@ -1,8 +1,8 @@
 <map id="join" name="join">
-<area shape="rect" id="node2" href="$lists__helpers_8c.html#a0195cd48a4c52a9624a811825cef8afb" title="find_user_by_fd" alt="" coords="107,5,221,32"/>
+<area shape="rect" id="node2" href="$lists__finders_8c.html#a0195cd48a4c52a9624a811825cef8afb" title="find_user_by_fd" alt="" coords="107,5,221,32"/>
 <area shape="rect" id="node3" href="$teams__list_8c.html#a502d66bd7955b127bcb41fbb0c23667b" title="get_new_chan_list" alt="" coords="99,56,229,83"/>
 <area shape="rect" id="node4" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="104,107,224,133"/>
-<area shape="rect" id="node5" href="$lists__helpers_8c.html#a840e59afe03b793c671dae92364c4e0e" title="get_team_by_name" alt="" coords="96,157,232,184"/>
+<area shape="rect" id="node5" href="$lists__finders_8c.html#a840e59afe03b793c671dae92364c4e0e" title="get_team_by_name" alt="" coords="96,157,232,184"/>
 <area shape="rect" id="node6" href="$teams__list_8c.html#a2864aabc062e9bfb99771b29e499c510" title="insert_back_teams" alt="" coords="98,208,230,235"/>
 <area shape="rect" id="node7" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="103,259,225,285"/>
 </map>

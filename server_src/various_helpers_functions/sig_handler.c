@@ -5,7 +5,7 @@
 ** Zappy signal handler source file
 */
 
-#include "../include/server.h"
+#include "../../include/server.h"
 #include <sys/wait.h>
 #include <stdlib.h>
 

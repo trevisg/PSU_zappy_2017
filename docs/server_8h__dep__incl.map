@@ -1,18 +1,18 @@
 <map id="include/server.h" name="include/server.h">
-<area shape="rect" id="node2" href="$cl__args__parsing_8c.html" title="server_src/cl_args\l_parsing.c" alt="" coords="5,80,135,121"/>
-<area shape="rect" id="node3" href="$cl__flags_8c.html" title="server_src/cl_flags.c" alt="" coords="159,87,301,114"/>
-<area shape="rect" id="node4" href="$cl__flags__bis_8c.html" title="server_src/cl_flags\l_bis.c" alt="" coords="325,80,457,121"/>
-<area shape="rect" id="node5" href="$commands__parsing_8c.html" title="server_src/commands\l_parsing.c" alt="" coords="481,80,632,121"/>
-<area shape="rect" id="node6" href="$lists__helpers_8c.html" title="server_src/lists_helpers.c" alt="" coords="657,87,827,114"/>
-<area shape="rect" id="node7" href="$logs__helpers_8c.html" title="server_src/logs_helpers.c" alt="" coords="851,87,1022,114"/>
-<area shape="rect" id="node8" href="$rfc__cmds0_8c.html" title="server_src/rfc_cmds0.c" alt="" coords="1047,87,1205,114"/>
-<area shape="rect" id="node9" href="$rfc__cmds1_8c.html" title="server_src/rfc_cmds1.c" alt="" coords="1229,87,1388,114"/>
-<area shape="rect" id="node10" href="$server__decls_8c.html" title="server_src/server_decls.c" alt="" coords="1412,87,1584,114"/>
-<area shape="rect" id="node11" href="$server__init_8c.html" title="server_src/server_init.c" alt="" coords="1608,87,1767,114"/>
-<area shape="rect" id="node12" href="$server__main_8c.html" title="server_src/server_main.c" alt="" coords="1791,87,1960,114"/>
-<area shape="rect" id="node13" href="$sig__handler_8c.html" title="server_src/sig_handler.c" alt="" coords="1984,87,2148,114"/>
-<area shape="rect" id="node14" href="$teams__list_8c.html" title="server_src/teams_list.c" alt="" coords="2172,87,2331,114"/>
-<area shape="rect" id="node15" href="$time__handlers_8c.html" title="server_src/time_handlers.c" alt="" coords="2355,87,2534,114"/>
-<area shape="rect" id="node16" href="$usage_8c.html" title="server_src/usage.c" alt="" coords="2558,87,2691,114"/>
-<area shape="rect" id="node17" href="$user__list_8c.html" title="server_src/user_list.c" alt="" coords="2715,87,2862,114"/>
+<area shape="rect" id="node2" href="$cl__args__helpers_8c.html" title="server_src/command\l_line_args/cl_args_helpers.c" alt="" coords="5,87,192,129"/>
+<area shape="rect" id="node3" href="$cl__args__parsing_8c.html" title="server_src/command\l_line_args/cl_args_parsing.c" alt="" coords="216,87,403,129"/>
+<area shape="rect" id="node4" href="$cl__flags__bis_8c.html" title="server_src/command\l_line_args/cl_flags_bis.c" alt="" coords="427,87,592,129"/>
+<area shape="rect" id="node5" href="$commands__parsing_8c.html" title="server_src/commands\l_parsing.c" alt="" coords="617,87,767,129"/>
+<area shape="rect" id="node6" href="$lists__finders_8c.html" title="server_src/lists_finders.c" alt="" coords="792,95,960,121"/>
+<area shape="rect" id="node7" href="$rfc__cmds0_8c.html" title="server_src/rfc_cmds0.c" alt="" coords="985,95,1143,121"/>
+<area shape="rect" id="node8" href="$rfc__cmds1_8c.html" title="server_src/rfc_cmds1.c" alt="" coords="1167,95,1326,121"/>
+<area shape="rect" id="node9" href="$server__decls_8c.html" title="server_src/tcp_server\l_functions/server_decls.c" alt="" coords="1351,87,1521,129"/>
+<area shape="rect" id="node10" href="$server__init_8c.html" title="server_src/tcp_server\l_functions/server_init.c" alt="" coords="1545,87,1703,129"/>
+<area shape="rect" id="node11" href="$server__main_8c.html" title="server_src/tcp_server\l_functions/server_main.c" alt="" coords="1727,87,1895,129"/>
+<area shape="rect" id="node12" href="$teams__list_8c.html" title="server_src/teams_list.c" alt="" coords="1919,95,2078,121"/>
+<area shape="rect" id="node13" href="$user__list_8c.html" title="server_src/user_list.c" alt="" coords="2103,95,2249,121"/>
+<area shape="rect" id="node14" href="$logs__helpers_8c.html" title="server_src/various\l_helpers_functions/logs\l_helpers.c" alt="" coords="2274,80,2433,136"/>
+<area shape="rect" id="node15" href="$sig__handler_8c.html" title="server_src/various\l_helpers_functions/sig\l_handler.c" alt="" coords="2457,80,2609,136"/>
+<area shape="rect" id="node16" href="$time__handlers_8c.html" title="server_src/various\l_helpers_functions/time\l_handlers.c" alt="" coords="2633,80,2793,136"/>
+<area shape="rect" id="node17" href="$usage_8c.html" title="server_src/various\l_helpers_functions/usage.c" alt="" coords="2817,87,2999,129"/>
 </map>

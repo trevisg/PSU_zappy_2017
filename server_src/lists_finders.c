@@ -8,6 +8,9 @@
 #include "../include/server.h"
 #include <stdlib.h>
 
+/** Get the size of a 2d Array
+* @return i the size of the cmdargs 2d char *array
+*/
 unsigned int get_size(cmdargs args)
 {
 	unsigned int i = 0;
