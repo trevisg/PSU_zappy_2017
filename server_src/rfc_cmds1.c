@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
-** my_irc server rfc methods functions
+** Zappy server rfc methods functions
 */
 
 #include <unistd.h>
@@ -27,15 +27,15 @@ static char	*get_full_msg(char **args)
 	return (msg);
 }
 
-void	*broadcast_msg(t_channel *reqchan, char **message, int clifd)
+void	*broadcast_msg(t_teams *reqchan, char **message, int clifd)
 {
 	t_userlist *broadcast_list =  reqchan ? reqchan->users : NULL;
 
 	if (broadcast_list)
 		for (t_userlist *tmp = broadcast_list; tmp; tmp = tmp->next) {
 			if (tmp->user->clifd != clifd) {
-			dprintf(tmp->user->clifd, ":%s PRIVMSG %s %s\r\n",
-			message[1], message[2], message[0]);
+				dprintf(tmp->user->clifd, ":%s PRIVMSG %s %s\r\n",
+				message[1], message[2], message[0]);
 			}
 		}
 	return (NULL);
@@ -44,17 +44,17 @@ void	*broadcast_msg(t_channel *reqchan, char **message, int clifd)
 /** The PRIVMSG <msgtarget> <message> command
 * @param args the PRIVMSG arguments, see above
 * @param clifd the client file descriptor
-* @param chans the main channel doubly linked list (updated if new channel)
-* @return chans the head pointer of the channel list passed in params
+* @param chans the main teams doubly linked list (updated if new teams)
+* @return chans the head pointer of the teams list passed in params
 * @note as get_args() split by space we need to reconstruct the original
 * message with the get_full_msg() method
-* @todo for now, message can only be sent to a channel , missing the message a
+* @todo for now, message can only be sent to a teams , missing the message a
 * user function
 */
-void	*privmsg(cmdargs args, int clifd, t_channel *chans)
+void	*privmsg(cmdargs args, int clifd, t_teams *chans)
 {
 	t_user *from = find_user_by_fd(chans->users, clifd);
-	t_channel *reqchan = get_chan_by_name(chans, args[1]);
+	t_teams *reqchan = get_team_by_name(chans, args[1]);
 	t_user *to = reqchan ? NULL : find_user_by_name(args[1], chans->users);
 	char *message[3] = { get_full_msg(args), from->nick, args[1] };
 

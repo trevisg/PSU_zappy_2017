@@ -1,8 +1,0 @@
-<map id="print_users" name="print_users">
-<area shape="rect" id="node2" href="$server_8h.html#a805324e4c542079956ff84a290274d23" title="print_users_in_chans" alt="" coords="140,5,285,32"/>
-<area shape="rect" id="node3" href="$server_8h.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="333,5,431,32"/>
-<area shape="rect" id="node4" href="$server__main_8c.html#a4178685c6a99dba7611faf9fe58f1a54" title="evhandler" alt="" coords="479,5,557,32"/>
-<area shape="rect" id="node5" href="$server__main_8c.html#a825c9cedc1751b000c44487b4233c37c" title="getactiveclients" alt="" coords="605,5,719,32"/>
-<area shape="rect" id="node6" href="$server__main_8c.html#af3e041546aaed3cd242c2b0e77162b39" title="server" alt="" coords="767,5,825,32"/>
-<area shape="rect" id="node7" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="873,5,924,32"/>
-</map>

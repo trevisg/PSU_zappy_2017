@@ -7,17 +7,17 @@
 
 #include "../include/server.h"
 #include <unistd.h>
+#include <signal.h>
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <arpa/inet.h>
-#include <regex.h>
 
 /** Set the new accept() client socket in epoll event list
 * for new client handling if connection succeed
 * @param all the 'foure tout' server struct
 * @param args the argv from main to update child process name
 */
-static int	initco(t_serv *all, char **args, int *connected)
+static int	init_connection(t_serv *all, int *connected)
 {
 	int rt = 84;
 	struct sockaddr_in addr;
@@ -30,7 +30,7 @@ static int	initco(t_serv *all, char **args, int *connected)
 	if (all->conn_sock == -1) {
 		perror("initco: accept");
 	} else if (!(rt = set_clifd(all->conn_sock, all->epollfd, &all->ev))) {
-		fprintf(stdout, "\n%s: %s\n", args[0], okco);
+		fprintf(stdout, "\n./zappy_server: %s\n", okco);
 		*(connected) += 1;
 	}
 	return (rt);
@@ -40,7 +40,7 @@ static int	initco(t_serv *all, char **args, int *connected)
 * @param all the infamous structure
 * @param newfd the client socket fd
 */
-static int 	evhandler(t_serv *all, int newfd)
+static int 	events_handler(t_serv *all, int newfd)
 {
 	struct sockaddr_in addr;
 	socklen_t addr_size = sizeof(struct sockaddr_in);
@@ -60,9 +60,8 @@ static int 	evhandler(t_serv *all, int newfd)
 	return (0);
 }
 
-/** Get the active fd from event queue, if it's our server fd, initco()
-* with the new connected client, else handle received cmd buffer
-* through evhandler()
+/** Get the active fd from event queue, if it's our server fd, initco() with
+* the new connected client, else handle received cmd buffer through evhandler()
 * @param all the 'catch them all' structure with server infos
 * @param args the argv pointer form main containing initial process names
 * @return 0 fo normal exit
@@ -71,7 +70,7 @@ static int 	evhandler(t_serv *all, int newfd)
 * see [this ref](https://bit.ly/2s86kKz) for explanations and code snippets
 * (note of note : will do it (maybe) later)
 */
-static int	getactiveclients(t_serv *all, char **args)
+static int	getactiveclients(t_serv *all)
 {
 	int clifd = -1;
 	static int connected;
@@ -79,11 +78,11 @@ static int	getactiveclients(t_serv *all, char **args)
 	for (int n = 0; n < all->nfds; ++n) {
 		clifd = all->events[n].data.fd;
 		if (clifd == all->listen_sock) {
-			initco(all, args, &connected);
+			init_connection(all, &connected);
 		} else {
 			memset(all->buf, 0, BUF_SIZE);
 			all->nread = read(clifd, all->buf, BUF_SIZE);
-			evhandler(all, clifd);
+			events_handler(all, clifd);
 			memset(all->buf, 0, BUF_SIZE);
 		}
 	}
@@ -93,12 +92,13 @@ static int	getactiveclients(t_serv *all, char **args)
 /** Contain the main 'listening for event' loop
 * @TODO read the various notes on documentation and do what requested
 */
-int	server(char **args)
+static int	server(t_clargs *options)
 {
 	int rt = 0;
 	t_serv all;
 
-	set_iface(&all.hints, &all.res, args[1]);
+	printf("port ? %s\n", options->port);
+	set_iface(&all.hints, &all.res, options->port);
 	all.listen_sock = set_sockfd(&all);
 	if (all.listen_sock < 0 || set_epoll(&all) == -1) {
 		rt = 84;
@@ -110,7 +110,7 @@ int	server(char **args)
 				perror("server: epoll_wait");
 				break;
 			}
-			rt = getactiveclients(&all, args);
+			rt = getactiveclients(&all);
 		}
 		close(all.listen_sock);
 	}
@@ -119,25 +119,18 @@ int	server(char **args)
 
 /** Self explanatory (here is the main())
 * @param ac the number of received args
-* @param av the received args, av[1] must be the server port
+* @param av the received args, set get_args() for details
 */
-int	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	int rt = 0;
-	char *endptr = NULL;
-	char *port = NULL;
-	int val = 0;
+	t_clargs *params = NULL;
 
-	if (ac == 2) {
-		port = av[1];
-		val = strtol(port, &endptr, 10);
+	if ((params = get_opts(ac, av))) {
 		signal(SIGINT, sig_handler);
-		if (endptr != port  && val >= 1024)
-			rt = server(av);
-		else
-			rt = 84;
+		rt = server(params);
 	} else {
-		fprintf(stderr, "%s: [port]\n", av[0]);
+		usage(av[0]);
 		rt = 84;
 	}
 	return (rt);

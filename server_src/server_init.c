@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
 ** Server listening socket and interface init
 */
@@ -8,7 +8,7 @@
 #include "../include/server.h"
 #include <unistd.h>
 #include <stdlib.h>
-#include <fcntl.h>
+// #include <fcntl.h>
 #include <sys/types.h>
 
 /** Add the new client file descriptor in struct epoll_event structure

@@ -1,24 +1,24 @@
 /*
 ** EPITECH PROJECT, 2018
-** MY_IRC
+** Zappy
 ** File description:
-** my_irc server logger function source
+** Zappy server logger function source
 */
 
 #include "../include/server.h"
 #include <unistd.h>
 #include <stdlib.h>
 
-/** Print each channel in list with its users
-* @param chanlist the channels doubly linked list
+/** Print each teams in list with its users
+* @param chanlist the teamss doubly linked list
 * @param index the received command index to avoid printing each
 * time a PING cmd is received (too much log ;))
 */
-void	print_users_in_chans(t_channel *chanlist, int index)
+void	print_users_in_chans(t_teams *chanlist, int index)
 {
 	if (index)
-	for (t_channel *tmp = chanlist; tmp; tmp = tmp->next) {
-		printf("\tChannel : [%s]\n", tmp->channame);
+	for (t_teams *tmp = chanlist; tmp; tmp = tmp->next) {
+		printf("\tteams : [%s]\n", tmp->channame);
 		print_users(tmp->users);
 	}
 }
