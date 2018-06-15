@@ -1,0 +1,6 @@
+<map id="t_world" name="t_world">
+<area shape="rect" id="node2" href="$structt__tile.html" title="t_tile" alt="" coords="75,257,126,284"/>
+<area shape="rect" id="node3" href="$structt__inhabitant.html" title="t_inhabitant" alt="" coords="5,168,95,195"/>
+<area shape="rect" id="node4" href="$structt__ressources.html" title="t_ressources" alt="" coords="119,168,216,195"/>
+<area shape="rect" id="node5" href="$structt__stone.html" title="t_stone" alt="" coords="135,5,200,32"/>
+</map>

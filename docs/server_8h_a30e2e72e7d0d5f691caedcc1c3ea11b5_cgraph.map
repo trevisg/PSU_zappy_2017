@@ -1,0 +1,36 @@
+<map id="get_opts" name="get_opts">
+<area shape="rect" id="node2" href="$cl__args__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="371,43,462,69"/>
+<area shape="rect" id="node3" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="862,188,934,215"/>
+<area shape="rect" id="node4" href="$cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae" title="get_cmdargs" alt="" coords="368,93,465,120"/>
+<area shape="rect" id="node5" href="$cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290" title="get_req" alt="" coords="384,144,449,171"/>
+<area shape="rect" id="node6" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,195,176,221"/>
+<area shape="rect" id="node8" href="$cl__args__parsing_8c.html#ae2a05f41a88c5ee3d6608f5912ea8051" title="set_opts" alt="" coords="381,333,453,360"/>
+<area shape="rect" id="node7" href="$cl__args__parsing_8c.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="232,195,304,221"/>
+<area shape="rect" id="node15" href="$sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285" title="sig_handler" alt="" coords="224,245,312,272"/>
+<area shape="rect" id="node16" href="$server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="239,543,297,569"/>
+<area shape="rect" id="node35" href="$usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="239,144,297,171"/>
+<area shape="rect" id="node9" href="$cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed" title="get_port" alt="" coords="542,492,611,519"/>
+<area shape="rect" id="node10" href="$cl__flags_8c.html#af5fbca203e6e949739857574cecf5869" title="get_width" alt="" coords="537,239,616,265"/>
+<area shape="rect" id="node11" href="$cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c" title="get_height" alt="" coords="535,289,618,316"/>
+<area shape="rect" id="node12" href="$cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb" title="get_teams" alt="" coords="535,340,618,367"/>
+<area shape="rect" id="node13" href="$cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7" title="get_clientsNb" alt="" coords="525,391,628,417"/>
+<area shape="rect" id="node14" href="$cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d" title="get_freq" alt="" coords="542,441,611,468"/>
+<area shape="rect" id="node17" href="$server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="379,593,454,620"/>
+<area shape="rect" id="node18" href="$server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="373,644,460,671"/>
+<area shape="rect" id="node20" href="$server__init_8c.html#a5cb15d408ef32c09c2485937503438ed" title="set_epoll" alt="" coords="379,492,454,519"/>
+<area shape="rect" id="node21" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="360,543,473,569"/>
+<area shape="rect" id="node19" href="$server__init_8c.html#a381b88f843ed1ebdaa5b2a8ded74931b" title="prevent_reused" alt="" coords="521,644,632,671"/>
+<area shape="rect" id="node22" href="$server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="522,593,631,620"/>
+<area shape="rect" id="node24" href="$server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="521,543,632,569"/>
+<area shape="rect" id="node23" href="$server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500" title="set_clifd" alt="" coords="693,593,764,620"/>
+<area shape="rect" id="node25" href="$logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="683,543,775,569"/>
+<area shape="rect" id="node27" href="$commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="680,365,777,392"/>
+<area shape="rect" id="node26" href="$logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0" title="get_host_string" alt="" coords="843,543,953,569"/>
+<area shape="rect" id="node28" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="843,391,953,417"/>
+<area shape="rect" id="node29" href="$teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="834,441,962,468"/>
+<area shape="rect" id="node32" href="$commands__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="853,289,943,316"/>
+<area shape="rect" id="node33" href="$logs__helpers_8c.html#aa850593a71a47d3dacf466ad78564298" title="print_users_in_chans" alt="" coords="825,340,971,367"/>
+<area shape="rect" id="node30" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="1027,416,1130,443"/>
+<area shape="rect" id="node31" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="1019,467,1139,493"/>
+<area shape="rect" id="node34" href="$logs__helpers_8c.html#a45c9c768c2486ac046ac242d3c46aadb" title="print_users" alt="" coords="1035,340,1122,367"/>
+</map>

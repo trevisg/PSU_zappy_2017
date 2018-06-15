@@ -1,0 +1,11 @@
+<map id="get_new_user" name="get_new_user">
+<area shape="rect" id="node2" href="$server_8h.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="156,5,284,32"/>
+<area shape="rect" id="node10" href="$server_8h.html#ad327eb7104560eb158c432ff391b5591" title="user" alt="" coords="197,56,243,83"/>
+<area shape="rect" id="node3" href="$server_8h.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="332,5,429,32"/>
+<area shape="rect" id="node4" href="$server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="477,5,588,32"/>
+<area shape="rect" id="node5" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="636,5,749,32"/>
+<area shape="rect" id="node6" href="$server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="797,5,856,32"/>
+<area shape="rect" id="node7" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="904,5,955,32"/>
+<area shape="rect" id="node8" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="1003,5,1075,32"/>
+<area shape="rect" id="node9" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="1003,56,1075,83"/>
+</map>
