@@ -1,6 +1,7 @@
 var searchData=
 [
   ['channame',['channame',['../structt__teams.html#a526b3d425d108d0897a1ad260bf4dbf0',1,'t_teams']]],
+  ['cl_5fargs_5fhelpers_2ec',['cl_args_helpers.c',['../cl__args__helpers_8c.html',1,'']]],
   ['cl_5fargs_5fparsing_2ec',['cl_args_parsing.c',['../cl__args__parsing_8c.html',1,'']]],
   ['cl_5fflags_2ec',['cl_flags.c',['../cl__flags_8c.html',1,'']]],
   ['cl_5fflags_5fbis_2ec',['cl_flags_bis.c',['../cl__flags__bis_8c.html',1,'']]],

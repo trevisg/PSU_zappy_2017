@@ -7,6 +7,6 @@ var searchData=
   ['insert_5fback_5fteams',['insert_back_teams',['../teams__list_8c.html#a2864aabc062e9bfb99771b29e499c510',1,'insert_back_teams(t_teams *head, t_teams *new):&#160;teams_list.c'],['../server_8h.html#aac4fcb2dc412d9a2dea82c82b3ca7a96',1,'insert_back_teams(t_teams *head, t_teams *chan):&#160;teams_list.c']]],
   ['insert_5fback_5fuser',['insert_back_user',['../user__list_8c.html#a2b16f778b01689e31ef5530b66d41390',1,'insert_back_user(t_userlist *head, t_userlist *nuser):&#160;user_list.c'],['../server_8h.html#a2b16f778b01689e31ef5530b66d41390',1,'insert_back_user(t_userlist *head, t_userlist *nuser):&#160;user_list.c']]],
   ['inventory',['INVENTORY',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faa6342d4e2db15fb13f0651aa0b9015c4',1,'server.h']]],
-  ['is_5fuser_5fin_5fchan',['is_user_in_chan',['../lists__helpers_8c.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_helpers.c'],['../server_8h.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_helpers.c']]],
+  ['is_5fuser_5fin_5fchan',['is_user_in_chan',['../lists__finders_8c.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_finders.c'],['../server_8h.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_finders.c']]],
   ['isco',['isco',['../structt__user.html#af93924b30e62f9eec7fbf113f8051173',1,'t_user']]]
 ];

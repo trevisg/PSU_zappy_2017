@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSU_zappy_2017Server: server_src/cl_flags_bis.c File Reference</title>
+<title>PSU_zappy_2017Server: server_src/command_line_args/cl_flags_bis.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,7 +60,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_20e5c1c74b8b955148e6b35ac4a0bc4d.html">server_src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_20e5c1c74b8b955148e6b35ac4a0bc4d.html">server_src</a></li><li class="navelem"><a class="el" href="dir_3c0463f751d04aede32f9df982477115.html">command_line_args</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,13 +71,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="server_8h_source.html">../include/server.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="server_8h_source.html">../../include/server.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for cl_flags_bis.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="cl__flags__bis_8c__incl.png" border="0" usemap="#server__src_2cl__flags__bis_8c" alt=""/></div>
-<map name="server__src_2cl__flags__bis_8c" id="server__src_2cl__flags__bis_8c">
-<area shape="rect" id="node3" href="server_8h.html" title="../include/server.h" alt="" coords="250,95,377,121"/>
+<div class="center"><img src="cl__flags__bis_8c__incl.png" border="0" usemap="#server__src_2command__line__args_2cl__flags__bis_8c" alt=""/></div>
+<map name="server__src_2command__line__args_2cl__flags__bis_8c" id="server__src_2command__line__args_2cl__flags__bis_8c">
+<area shape="rect" id="node3" href="server_8h.html" title="../../include/server.h" alt="" coords="244,95,383,121"/>
 <area shape="rect" id="node10" href="zappy__game_8h.html" title="zappy_game.h" alt="" coords="613,169,720,196"/>
 </map>
 </div>
@@ -93,11 +93,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab6a86c8cb20c084c9f07c06841e9114d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d">get_freq</a> (char **freq, <a class="el" href="structt__clargs.html">t_clargs</a> *args)</td></tr>
 <tr class="separator:ab6a86c8cb20c084c9f07c06841e9114d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>See </p>
-
-<p class="definition">Definition in file <a class="el" href="cl__flags__bis_8c_source.html">cl_flags_bis.c</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a7594cec69e8dc7da322bdc98b258f7e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7594cec69e8dc7da322bdc98b258f7e7">&#9670;&nbsp;</a></span>get_clientsNb()</h2>
 
@@ -135,14 +131,14 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="server_8h_source.html#l00089">t_clargs::clientsNb</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00072">set_opts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cl__args__helpers_8c_source.html#l00027">set_opts()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        #ifdef CLDBG</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                printf(<span class="stringliteral">&quot;\t%s\n&quot;</span>, <span class="stringliteral">&quot;get_clientsNb ouh yeah!&quot;</span>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                print_2d(clientsNb);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">        #endif</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        args-&gt;<a class="code" href="structt__clargs.html#ad77e45db1c71ab1709853fac0e5fcf20">clientsNb</a> = atoi(clientsNb[1]);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> (args-&gt;<a class="code" href="structt__clargs.html#ad77e45db1c71ab1709853fac0e5fcf20">clientsNb</a> &gt;= 0 ? args : NULL);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="structt__clargs_html_ad77e45db1c71ab1709853fac0e5fcf20"><div class="ttname"><a href="structt__clargs.html#ad77e45db1c71ab1709853fac0e5fcf20">t_clargs::clientsNb</a></div><div class="ttdeci">int clientsNb</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00089">server.h:89</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__flags__bis_8c_a7594cec69e8dc7da322bdc98b258f7e7_icgraph.png" border="0" usemap="#cl__flags__bis_8c_a7594cec69e8dc7da322bdc98b258f7e7_icgraph" alt=""/></div>
 <map name="cl__flags__bis_8c_a7594cec69e8dc7da322bdc98b258f7e7_icgraph" id="cl__flags__bis_8c_a7594cec69e8dc7da322bdc98b258f7e7_icgraph">
-<area shape="rect" id="node2" href="cl__args__parsing_8c.html#ae2a05f41a88c5ee3d6608f5912ea8051" title="set_opts" alt="" coords="156,5,228,32"/>
+<area shape="rect" id="node2" href="server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="156,5,228,32"/>
 <area shape="rect" id="node3" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="276,5,348,32"/>
 <area shape="rect" id="node4" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="396,5,447,32"/>
 <area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="495,5,567,32"/>
@@ -188,14 +184,14 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="server_8h_source.html#l00090">t_clargs::freq</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00072">set_opts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cl__args__helpers_8c_source.html#l00027">set_opts()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">        #ifdef CLDBG</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                printf(<span class="stringliteral">&quot;\t%s\n&quot;</span>, <span class="stringliteral">&quot;get_freq ouh yeah!&quot;</span>);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                print_2d(freq);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        #endif</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        args-&gt;<a class="code" href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">freq</a> = atoi(freq[1]);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> (args-&gt;<a class="code" href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">freq</a> &gt;= 0 ? args : NULL);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="structt__clargs_html_afa11d0bffd6c1d845e4289d274ba9cd9"><div class="ttname"><a href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">t_clargs::freq</a></div><div class="ttdeci">int freq</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00090">server.h:90</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__flags__bis_8c_ab6a86c8cb20c084c9f07c06841e9114d_icgraph.png" border="0" usemap="#cl__flags__bis_8c_ab6a86c8cb20c084c9f07c06841e9114d_icgraph" alt=""/></div>
 <map name="cl__flags__bis_8c_ab6a86c8cb20c084c9f07c06841e9114d_icgraph" id="cl__flags__bis_8c_ab6a86c8cb20c084c9f07c06841e9114d_icgraph">
-<area shape="rect" id="node2" href="cl__args__parsing_8c.html#ae2a05f41a88c5ee3d6608f5912ea8051" title="set_opts" alt="" coords="123,5,195,32"/>
+<area shape="rect" id="node2" href="server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="123,5,195,32"/>
 <area shape="rect" id="node3" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="243,5,315,32"/>
 <area shape="rect" id="node4" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="363,5,413,32"/>
 <area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="461,5,533,32"/>
@@ -241,7 +237,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="server_8h_source.html#l00033">MAXTEAMS</a>, and <a class="el" href="server_8h_source.html#l00088">t_clargs::teams_names</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00072">set_opts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cl__args__helpers_8c_source.html#l00027">set_opts()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = 0;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">        #ifdef CLDBG</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                printf(<span class="stringliteral">&quot;\t%s\n&quot;</span>, <span class="stringliteral">&quot;get_teams ouh yeah!&quot;</span>);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                print_2d(teams);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">        #endif</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        args-&gt;<a class="code" href="structt__clargs.html#a912f604527fad6466804c2a570297e5a">teams_names</a> = malloc(<a class="code" href="server_8h.html#a62fc18737cc14ec9c2e3efb1bdbf6f04">MAXTEAMS</a>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">for</span> (size = 1; teams[size]; ++size) {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                args-&gt;<a class="code" href="structt__clargs.html#a912f604527fad6466804c2a570297e5a">teams_names</a>[size - 1] = strdup(teams[size]);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> (size &gt; 0 ? args : NULL);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div><div class="ttc" id="server_8h_html_a62fc18737cc14ec9c2e3efb1bdbf6f04"><div class="ttname"><a href="server_8h.html#a62fc18737cc14ec9c2e3efb1bdbf6f04">MAXTEAMS</a></div><div class="ttdeci">#define MAXTEAMS</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00033">server.h:33</a></div></div>
 <div class="ttc" id="structt__clargs_html_a912f604527fad6466804c2a570297e5a"><div class="ttname"><a href="structt__clargs.html#a912f604527fad6466804c2a570297e5a">t_clargs::teams_names</a></div><div class="ttdeci">char ** teams_names</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00088">server.h:88</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -249,7 +245,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__flags__bis_8c_a434f4fa9452d570e766cdc09e16179fb_icgraph.png" border="0" usemap="#cl__flags__bis_8c_a434f4fa9452d570e766cdc09e16179fb_icgraph" alt=""/></div>
 <map name="cl__flags__bis_8c_a434f4fa9452d570e766cdc09e16179fb_icgraph" id="cl__flags__bis_8c_a434f4fa9452d570e766cdc09e16179fb_icgraph">
-<area shape="rect" id="node2" href="cl__args__parsing_8c.html#ae2a05f41a88c5ee3d6608f5912ea8051" title="set_opts" alt="" coords="136,5,208,32"/>
+<area shape="rect" id="node2" href="server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="136,5,208,32"/>
 <area shape="rect" id="node3" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="256,5,328,32"/>
 <area shape="rect" id="node4" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="376,5,427,32"/>
 <area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="475,5,547,32"/>

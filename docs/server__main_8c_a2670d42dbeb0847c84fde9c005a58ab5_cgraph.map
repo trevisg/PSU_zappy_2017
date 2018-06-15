@@ -1,7 +1,7 @@
 <map id="events_handler" name="events_handler">
 <area shape="rect" id="node2" href="$commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="164,132,261,159"/>
 <area shape="rect" id="node11" href="$logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="167,208,259,235"/>
-<area shape="rect" id="node3" href="$commands__parsing_8c.html#a9bf380b201748032988ca121dc4ed068" title="free_buffers" alt="" coords="337,5,427,32"/>
+<area shape="rect" id="node3" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="337,5,427,32"/>
 <area shape="rect" id="node4" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="346,56,418,83"/>
 <area shape="rect" id="node5" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="327,107,437,133"/>
 <area shape="rect" id="node6" href="$teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="318,157,446,184"/>
