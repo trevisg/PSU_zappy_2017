@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['server',['server',['../server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af',1,'server_main.c']]],
+  ['server',['server',['../server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32',1,'server(t_clargs *options):&#160;server_main.c'],['../server_8h.html#a520962dfbb3f1db337f798e6335d8e32',1,'server(t_clargs *options):&#160;server_main.c']]],
   ['server_2eh',['server.h',['../server_8h.html',1,'']]],
   ['server_5fdecls_2ec',['server_decls.c',['../server__decls_8c.html',1,'']]],
   ['server_5finit_2ec',['server_init.c',['../server__init_8c.html',1,'']]],

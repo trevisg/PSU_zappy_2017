@@ -1,6 +1,6 @@
 <map id="set_epoll" name="set_epoll">
-<area shape="rect" id="node2" href="$server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="128,5,187,32"/>
-<area shape="rect" id="node3" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="235,5,285,32"/>
+<area shape="rect" id="node2" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="128,5,187,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="235,5,285,32"/>
 <area shape="rect" id="node4" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="333,5,405,32"/>
 <area shape="rect" id="node5" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="333,56,405,83"/>
 </map>

@@ -147,7 +147,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph.png" border="0" usemap="#cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph" id="cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph">
 <area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="151,5,223,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="271,5,321,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="271,5,321,32"/>
 <area shape="rect" id="node4" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="369,5,441,32"/>
 </map>
 </div>
@@ -182,7 +182,7 @@ Here is the caller graph for this function:</div>
 <p>Parse command line args flags from av[] and store it in a <a class="el" href="structt__clargs.html">t_clargs</a> struct </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ac</td><td>the number of received params </td></tr>
-    <tr><td class="paramname">av</td><td>the 2d char array from <a class="el" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f">main()</a> </td></tr>
+    <tr><td class="paramname">av</td><td>the 2d char array from <a class="el" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f">main()</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,9 +193,9 @@ NULL if errors </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="cl__args__parsing_8c_source.html#l00100">100</a> of file <a class="el" href="cl__args__parsing_8c_source.html">cl_args_parsing.c</a>.</p>
 
-<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00014">free_buffers()</a>, <a class="el" href="commands__parsing_8c_source.html#l00036">get_args()</a>, <a class="el" href="cl__args__parsing_8c_source.html#l00038">get_cmdargs()</a>, <a class="el" href="cl__args__parsing_8c_source.html#l00063">get_req()</a>, <a class="el" href="server__main_8c_source.html#l00124">main()</a>, <a class="el" href="cl__args__parsing_8c_source.html#l00081">set_default_args()</a>, and <a class="el" href="cl__args__helpers_8c_source.html#l00027">set_opts()</a>.</p>
+<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00014">free_buffers()</a>, <a class="el" href="commands__parsing_8c_source.html#l00036">get_args()</a>, <a class="el" href="cl__args__parsing_8c_source.html#l00038">get_cmdargs()</a>, <a class="el" href="cl__args__parsing_8c_source.html#l00063">get_req()</a>, <a class="el" href="main_8c_source.html#l00015">main()</a>, <a class="el" href="cl__args__parsing_8c_source.html#l00081">set_default_args()</a>, and <a class="el" href="cl__args__helpers_8c_source.html#l00027">set_opts()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server__main_8c_source.html#l00124">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8c_source.html#l00015">main()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="structt__clargs.html">t_clargs</a>        *args = <a class="code" href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47">set_default_args</a>();</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a>          *opts = <a class="code" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">set_opts</a>();</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">char</span>            *req = <a class="code" href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290">get_req</a>(ac, av);</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">char</span>            **cmd_args = NULL;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">char</span>            *token;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">char</span>            *saveptr1, *saveptr2;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">int</span>             index = 0;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (args &amp;&amp; req) {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">for</span> (; ; req = NULL) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        token = strtok_r(req, <span class="stringliteral">&quot;-&quot;</span>, &amp;saveptr1);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        <span class="keywordflow">if</span> (token == NULL) {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                index = token[0];</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                cmd_args = <a class="code" href="cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae">get_cmdargs</a>(token, &amp;saveptr2);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                cmd_args ? opts[index](cmd_args, args) : opts;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                cmd_args ? <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(cmd_args) : cmd_args;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                        }</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                }</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> (args);</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div><div class="ttc" id="cl__args__parsing_8c_html_a27cf687fc8b49a7330675e8f95cab290"><div class="ttname"><a href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290">get_req</a></div><div class="ttdeci">static char * get_req(unsigned int ac, char **av)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__parsing_8c_source.html#l00063">cl_args_parsing.c:63</a></div></div>
 <div class="ttc" id="cl__args__helpers_8c_html_a5d0ed2431dadc51ca65db27c5df01efd"><div class="ttname"><a href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">set_opts</a></div><div class="ttdeci">clargs * set_opts()</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00027">cl_args_helpers.c:27</a></div></div>
 <div class="ttc" id="structt__clargs_html"><div class="ttname"><a href="structt__clargs.html">t_clargs</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00084">server.h:84</a></div></div>
@@ -212,11 +212,11 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="945,347,1017,373"/>
 <area shape="rect" id="node4" href="cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae" title="get_cmdargs" alt="" coords="136,347,233,373"/>
 <area shape="rect" id="node5" href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290" title="get_req" alt="" coords="152,397,217,424"/>
-<area shape="rect" id="node6" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="159,157,210,184"/>
+<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="159,157,210,184"/>
 <area shape="rect" id="node27" href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47" title="set_default_args" alt="" coords="125,448,244,475"/>
 <area shape="rect" id="node28" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="149,499,221,525"/>
 <area shape="rect" id="node7" href="sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285" title="sig_handler" alt="" coords="299,107,387,133"/>
-<area shape="rect" id="node8" href="server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="314,56,373,83"/>
+<area shape="rect" id="node8" href="server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="314,56,373,83"/>
 <area shape="rect" id="node26" href="usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="315,157,372,184"/>
 <area shape="rect" id="node9" href="server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="462,107,537,133"/>
 <area shape="rect" id="node10" href="server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="456,157,543,184"/>
@@ -248,7 +248,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph.png" border="0" usemap="#cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph" id="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph">
-<area shape="rect" id="node2" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,5,176,32"/>
+<area shape="rect" id="node2" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,5,176,32"/>
 <area shape="rect" id="node3" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="224,5,296,32"/>
 <area shape="rect" id="node4" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="224,56,296,83"/>
 </map>
@@ -292,7 +292,7 @@ Here is the caller graph for this function:</div>
 <p>Construct a single string from av args for an easiest parsing </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ac</td><td>the number of received args </td></tr>
-    <tr><td class="paramname">av</td><td>the command line option from <a class="el" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f">main()</a> </td></tr>
+    <tr><td class="paramname">av</td><td>the command line option from <a class="el" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f">main()</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -307,7 +307,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph.png" border="0" usemap="#cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph" id="cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph">
 <area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="119,5,191,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="239,5,289,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="239,5,289,32"/>
 <area shape="rect" id="node4" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="337,5,409,32"/>
 </map>
 </div>
@@ -351,7 +351,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph.png" border="0" usemap="#cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph" id="cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph">
 <area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="172,5,244,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="292,5,343,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="292,5,343,32"/>
 <area shape="rect" id="node4" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="391,5,463,32"/>
 </map>
 </div>

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['main',['main',['../server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'server_main.c']]],
+  ['main',['main',['../main_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main.c']]],
+  ['main_2ec',['main.c',['../main_8c.html',1,'']]],
   ['max_5fevents',['MAX_EVENTS',['../server_8h.html#ae42954bb8545d24e3e9dcde5920c9a0b',1,'server.h']]],
   ['max_5ffood_5fname',['MAX_FOOD_NAME',['../zappy__game_8h.html#a0e52db99fb3f728289dbd87b4603c38f',1,'zappy_game.h']]],
   ['max_5flevel',['MAX_LEVEL',['../zappy__game_8h.html#a5bb4257ca9fa4bfcf9391b7895b97761',1,'zappy_game.h']]],

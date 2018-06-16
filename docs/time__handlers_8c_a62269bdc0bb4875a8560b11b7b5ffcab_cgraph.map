@@ -1,7 +1,7 @@
 <map id="get_time" name="get_time">
-<area shape="rect" id="node2" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,309,176,336"/>
+<area shape="rect" id="node2" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,309,176,336"/>
 <area shape="rect" id="node3" href="$cl__args__parsing_8c.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="232,309,304,336"/>
-<area shape="rect" id="node16" href="$server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="239,107,297,133"/>
+<area shape="rect" id="node16" href="$server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="239,107,297,133"/>
 <area shape="rect" id="node34" href="$sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285" title="sig_handler" alt="" coords="224,360,312,387"/>
 <area shape="rect" id="node35" href="$usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="239,411,297,437"/>
 <area shape="rect" id="node4" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="858,499,949,525"/>

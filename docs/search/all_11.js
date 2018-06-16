@@ -25,5 +25,5 @@ var searchData=
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['trantorian',['trantorian',['../structt__tile.html#a5522b4f4295f19dd03f8f3feb0278f7b',1,'t_tile']]],
   ['true',['true',['../server_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7',1,'server.h']]],
-  ['ttl',['ttl',['../structt__inhabitant.html#af58acf92f9a883b577eaf3c5fd351fc5',1,'t_inhabitant']]]
+  ['ttl',['ttl',['../structt__inhabitant.html#ae63dc7bd7aee968ad33e0e161731ac01',1,'t_inhabitant']]]
 ];

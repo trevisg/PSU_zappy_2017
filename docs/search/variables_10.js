@@ -7,5 +7,5 @@ var searchData=
   ['timestmp',['timestmp',['../structt__log.html#a41cf6fa30fc42623fb3eab3fb41e3f67',1,'t_log']]],
   ['timeval',['timeval',['../structt__log.html#af2f435ec93298ebfa988fffa4f4d99f0',1,'t_log']]],
   ['trantorian',['trantorian',['../structt__tile.html#a5522b4f4295f19dd03f8f3feb0278f7b',1,'t_tile']]],
-  ['ttl',['ttl',['../structt__inhabitant.html#af58acf92f9a883b577eaf3c5fd351fc5',1,'t_inhabitant']]]
+  ['ttl',['ttl',['../structt__inhabitant.html#ae63dc7bd7aee968ad33e0e161731ac01',1,'t_inhabitant']]]
 ];
