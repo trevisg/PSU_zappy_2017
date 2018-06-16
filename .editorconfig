@@ -2,7 +2,7 @@
 root = true
 
 # Unix-style newlines with a newline ending every file
-[*]
+[**]
 charset = utf-8
 trim_trailing_whitespace = true
 end_of_line = lf
@@ -13,6 +13,16 @@ max_line_length = 80
 [Makefile]
 indent_style = tab
 
-[*.{c,h,cpp,hpp}]
+# Supposed to match all c and cpp files but really not sure if it works ..
+[**.{c,h,cpp,hpp}]
+indent_size = 8
+indent_style = tab
+
+# Maybe with more explicit rules ?
+[include/*.h]
+indent_size = 8
+indent_style = tab
+
+[server_src/**.c]
 indent_size = 8
 indent_style = tab
