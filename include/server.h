@@ -50,7 +50,7 @@
 	#define EVER ;;
 
 	/** Only here for code clarity and lisibility
-	* @NOTE : Have a look at ZAPPY_CMDS.md file for ref
+	* @todo : Have a look at ZAPPY_CMDS.md file for ref
 	*/
 	enum  CMDS {
 		FORWARD, RIGHT, LEFT,
@@ -114,7 +114,9 @@
 	/** To avoid stdbool include (for s_user.isco)*/
 	#define true	1
 	#define false 	0
-	/** A typical Zappy client */
+	/** A typical Zappy client
+	* @todo update with the t_inhabitant struct
+	*/
 	typedef struct			s_user {
 		int			clifd;
 		int			mode;
@@ -130,7 +132,7 @@
 		struct s_userlist	*next;
 	}				t_userlist;
 
-	/** A doubly linked list of current teamss with their users */
+	/** A doubly linked list of current teams with their users */
 	typedef struct 			s_teams {
 		char 			*channame;
 		t_userlist		*users;
@@ -139,11 +141,11 @@
 	}				t_teams;
 
 	/** Main Zappy Protocol methods function pointer
-	* @note see @file server_src/server_decls.c
+	* @note see server_src/server_decls.c
 	*/
 	typedef void *(*cmds)(cmdargs args, int clifd, t_teams *chanlist);
 	/** The flags 'gatherer' function pointer
-	* @note see @file server_src/cl_args_helpers.c
+	* @note see server_src/cl_args_helpers.c
 	*/
 	typedef void *(*clargs)(char **, t_clargs *);
 
@@ -187,19 +189,19 @@
 	void		*ping(cmdargs args, int clifd, t_teams *chanlist);
 	void		*user(cmdargs args, int clifd, t_teams *chanlist);
 	void		*quit(cmdargs args, int clifd, t_teams *chanlist);
-	/** @note see @file server_src/rfc_cmds1.c */
+	/** @note see server_src/rfc_cmds1.c */
 	void		*privmsg(cmdargs args, int clifd, t_teams *chans);
-	/** @note See @file server_src/cl_flags.c */
+	/** @note See server_src/cl_flags.c */
 	void		*get_port(char **port, t_clargs *args);
 	void		*get_width(char **width, t_clargs *args);
 	void		*get_height(char **height, t_clargs *args);
-	/** @note see @file server_src/cl_flags_bis.c */
+	/** @note see server_src/cl_flags_bis.c */
 	void		*get_teams(char **teams, t_clargs *args);
 	void		*get_clientsNb(char **clientsNb, t_clargs *args);
 	void		*get_freq(char **freq, t_clargs *args);
-	/** @note see @file server_src/cl_args.c */
+	/** @note see server_src/cl_args.c */
 	t_clargs	*get_opts(int ac, char **av);
-	/** @note see @file server_src/cl_args_helpers.c */
+	/** @note see server_src/cl_args_helpers.c */
 	clargs		*set_opts();
 	void		free_buffers(char **buffer);
 	/** @note see server_src/signal_handler.c */
@@ -208,10 +210,10 @@
 	void 		usage(char *progname);
 
 	/** The object prototype mapping the methods name
-	* @note see @file server_src/server_decls.c
+	* @note see server_src/server_decls.c
 	*/
 	extern const char *G_PROTOS[REF_NB];
-	/** The global pointer */
+	/** The global pointer for subject commands methods */
 	extern const cmds G_CMDS[REF_NB];
 
 #endif /* !SERVER_H_ */
