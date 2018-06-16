@@ -16,17 +16,17 @@ CFLAGS		+= -I./include -Wall -Werror -Wextra -std=gnu99
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for server
-SERVER_SRCS	= various_helpers_functions/time_handlers.c \
-		various_helpers_functions/logs_helpers.c \
-		various_helpers_functions/sig_handler.c \
-		command_line_args/cl_args_helpers.c \
-		command_line_args/cl_args_parsing.c \
-		tcp_server_functions/server_decls.c \
-		tcp_server_functions/server_init.c \
-		tcp_server_functions/server_main.c \
-		various_helpers_functions/usage.c \
-		command_line_args/cl_flags_bis.c \
-		command_line_args/cl_flags.c \
+SERVER_SRCS	= varioushelpers_functions/time_handlers.c \
+		varioushelpers_functions/logs_helpers.c \
+		varioushelpers_functions/sig_handler.c \
+		commandline_args_handlers/cl_args_helpers.c \
+		commandline_args_handlers/cl_args_parsing.c \
+		tcpserver_functions/server_decls.c \
+		tcpserver_functions/server_init.c \
+		tcpserver_functions/server_main.c \
+		varioushelpers_functions/usage.c \
+		commandline_args_handlers/cl_flags_bis.c \
+		commandline_args_handlers/cl_flags.c \
 		commands_parsing.c \
 		ressources_decl.c \
 		lists_finders.c \
