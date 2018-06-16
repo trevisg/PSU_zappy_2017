@@ -12,7 +12,7 @@
 	#define MAX_STONE_NAME	9
 	/** For t_food::name size */
 	#define MAX_FOOD_NAME	9
-	/** To devine to maximal elevation level after an incantation */
+	/** To define to maximal elevation level after an incantation */
 	#define MAX_LEVEL	8
 	/** For t_team::team_name and t_clargs::teams_names sizes */
 	#define MAX_TEAM_NAME	200
