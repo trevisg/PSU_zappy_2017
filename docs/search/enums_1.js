@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lpaths',['LPATHS',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84f',1,'server.h']]]
+  ['items_5fnames',['ITEMS_NAMES',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb',1,'zappy_game.h']]]
 ];

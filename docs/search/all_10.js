@@ -14,9 +14,7 @@ var searchData=
   ['set_5fobject',['SET_OBJECT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faf33522f663fe86edd569a413ad624124',1,'server.h']]],
   ['set_5fopts',['set_opts',['../cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd',1,'set_opts():&#160;cl_args_helpers.c'],['../server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd',1,'set_opts():&#160;cl_args_helpers.c']]],
   ['set_5fsockfd',['set_sockfd',['../server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02',1,'set_sockfd(t_serv *all):&#160;server_init.c'],['../server_8h.html#a1f61d16ccfab82b21ca40ce23feb7c02',1,'set_sockfd(t_serv *all):&#160;server_init.c']]],
-  ['sibur',['sibur',['../structt__ressources.html#af2d946413588c3bf733a757f910f191d',1,'t_ressources']]],
+  ['sibur',['sibur',['../structt__ressources.html#af2d946413588c3bf733a757f910f191d',1,'t_ressources::sibur()'],['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5',1,'SIBUR():&#160;zappy_game.h']]],
   ['sig_5fhandler',['sig_handler',['../sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285',1,'sig_handler(int signo):&#160;sig_handler.c'],['../server_8h.html#a4f31a6fd48ee5d4579ae4aaaa3cae285',1,'sig_handler(int signo):&#160;sig_handler.c']]],
-  ['sig_5fhandler_2ec',['sig_handler.c',['../sig__handler_8c.html',1,'']]],
-  ['stones',['STONES',['../stones__decl_8c.html#a5d7d837e11d2d767ec859802a1af8590',1,'STONES():&#160;stones_decl.c'],['../zappy__game_8h.html#a5d7d837e11d2d767ec859802a1af8590',1,'STONES():&#160;stones_decl.c']]],
-  ['stones_5fdecl_2ec',['stones_decl.c',['../stones__decl_8c.html',1,'']]]
+  ['sig_5fhandler_2ec',['sig_handler.c',['../sig__handler_8c.html',1,'']]]
 ];

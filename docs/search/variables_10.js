@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['team_5fname',['team_name',['../structt__inhabitant.html#a295e0c0309328f91b85a8697e7152a3c',1,'t_inhabitant::team_name()'],['../structt__tem.html#a9dcdbf7d5f51d9cc5627f287072cadac',1,'t_tem::team_name()']]],
+  ['team_5fname',['team_name',['../structt__inhabitant.html#a295e0c0309328f91b85a8697e7152a3c',1,'t_inhabitant::team_name()'],['../structt__team.html#acd2908ff4ef8e23e6b3f9097ab1ad17d',1,'t_team::team_name()']]],
   ['teams_5fnames',['teams_names',['../structt__clargs.html#a912f604527fad6466804c2a570297e5a',1,'t_clargs']]],
   ['thystame',['thystame',['../structt__ressources.html#adc6a1049278a558f3913d9d102a580f7',1,'t_ressources']]],
   ['tiles',['tiles',['../structt__world.html#aa363f8f1028c8a0f60ca3c48f65d8a6c',1,'t_world']]],

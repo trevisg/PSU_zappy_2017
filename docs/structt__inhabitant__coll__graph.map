@@ -1,4 +1,5 @@
 <map id="t_inhabitant" name="t_inhabitant">
-<area shape="rect" id="node2" href="$structt__ressources.html" title="t_ressources" alt="" coords="5,168,103,195"/>
-<area shape="rect" id="node3" href="$structt__stone.html" title="t_stone" alt="" coords="21,5,87,32"/>
+<area shape="rect" id="node2" href="$structt__ressources.html" title="t_ressources" alt="" coords="35,168,132,195"/>
+<area shape="rect" id="node3" href="$structt__stone.html" title="t_stone" alt="" coords="5,5,71,32"/>
+<area shape="rect" id="node4" href="$structt__food.html" title="t_food" alt="" coords="101,5,159,32"/>
 </map>
