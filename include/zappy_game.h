@@ -65,7 +65,7 @@
 	*/
 	typedef struct 		s_inhabitant {
 		unsigned int 	id;
-		float		ttl;
+		double		ttl;
 		unsigned int 	level;
 		t_ressources	inventory;
 		int 		curr_pos[2];
