@@ -5,7 +5,7 @@ var searchData=
   ['remove_5fteams',['remove_teams',['../teams__list_8c.html#af3fe52c79c167c58efbf529bf96796e1',1,'remove_teams(t_teams *list, char *channame):&#160;teams_list.c'],['../server_8h.html#af3fe52c79c167c58efbf529bf96796e1',1,'remove_teams(t_teams *list, char *channame):&#160;teams_list.c']]],
   ['remove_5fuser',['remove_user',['../user__list_8c.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c'],['../server_8h.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c']]],
   ['res',['res',['../structt__serv.html#ae8783e38ef0c183366703267ca7b3298',1,'t_serv']]],
-  ['ressources',['ressources',['../structt__tile.html#a667ba745672f2807d5832dd53d828aa0',1,'t_tile']]],
+  ['ressources',['ressources',['../structt__tile.html#a28649d079c4f8a1d23849ce09ec3b137',1,'t_tile']]],
   ['ressources_5fdecl_2ec',['ressources_decl.c',['../ressources__decl_8c.html',1,'']]],
   ['rfc_5fcmds0_2ec',['rfc_cmds0.c',['../rfc__cmds0_8c.html',1,'']]],
   ['rfc_5fcmds1_2ec',['rfc_cmds1.c',['../rfc__cmds1_8c.html',1,'']]],
