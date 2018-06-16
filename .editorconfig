@@ -12,6 +12,11 @@ max_line_length = 80
 # Tab indentation (no size specified)
 [Makefile]
 indent_style = tab
+indent_size = 8
+
+# Travis file rules
+[*.yml]
+indent_size = 2
 
 # Supposed to match all c and cpp files but really not sure if it works ..
 [**.{c,h,cpp,hpp}]
