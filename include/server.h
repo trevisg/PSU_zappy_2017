@@ -150,8 +150,12 @@
 	/** @note see server_src/inits.c */
 	int		set_sockfd(t_serv *all);
 	int		set_epoll(t_serv *all);
-	int		set_iface(adrinf *hints, adrinf **res, const char *port);
-	int		set_clifd(int clisock, int epollfd, struct epoll_event *ev);
+	int		set_iface(adrinf *hints, adrinf **res,
+				const char *port);
+	int		set_clifd(int clisock, int epollfd,
+				struct epoll_event *ev);
+	/** @note see server_src/server_main.c */
+	int		server(t_clargs *options);
 	/** @note see server_src/commands_parsing.c */
 	int		get_methods(char *req, int clifd);
 	/** @note see server_src/logs_helpers.c */
