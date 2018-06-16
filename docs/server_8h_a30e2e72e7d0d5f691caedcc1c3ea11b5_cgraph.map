@@ -3,12 +3,12 @@
 <area shape="rect" id="node3" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="867,429,939,456"/>
 <area shape="rect" id="node4" href="$cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae" title="get_cmdargs" alt="" coords="371,303,468,329"/>
 <area shape="rect" id="node5" href="$cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290" title="get_req" alt="" coords="387,353,452,380"/>
-<area shape="rect" id="node6" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,379,176,405"/>
+<area shape="rect" id="node6" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="125,379,176,405"/>
 <area shape="rect" id="node8" href="$cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47" title="set_default_args" alt="" coords="360,505,479,532"/>
 <area shape="rect" id="node9" href="$cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="383,632,455,659"/>
 <area shape="rect" id="node7" href="$cl__args__parsing_8c.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="232,404,304,431"/>
 <area shape="rect" id="node16" href="$sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285" title="sig_handler" alt="" coords="224,455,312,481"/>
-<area shape="rect" id="node17" href="$server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="239,201,297,228"/>
+<area shape="rect" id="node17" href="$server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="239,201,297,228"/>
 <area shape="rect" id="node35" href="$usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="239,353,297,380"/>
 <area shape="rect" id="node10" href="$cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed" title="get_port" alt="" coords="547,759,617,785"/>
 <area shape="rect" id="node11" href="$cl__flags_8c.html#af5fbca203e6e949739857574cecf5869" title="get_width" alt="" coords="543,809,621,836"/>

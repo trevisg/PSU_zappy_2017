@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['server_2eh',['server.h',['../server_8h.html',1,'']]],
-  ['server_5fdecls_2ec',['server_decls.c',['../server__decls_8c.html',1,'']]],
-  ['server_5finit_2ec',['server_init.c',['../server__init_8c.html',1,'']]],
-  ['server_5fmain_2ec',['server_main.c',['../server__main_8c.html',1,'']]],
-  ['sig_5fhandler_2ec',['sig_handler.c',['../sig__handler_8c.html',1,'']]],
-  ['stones_5fdecl_2ec',['stones_decl.c',['../stones__decl_8c.html',1,'']]]
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['ressources_5fdecl_2ec',['ressources_decl.c',['../ressources__decl_8c.html',1,'']]],
+  ['rfc_5fcmds0_2ec',['rfc_cmds0.c',['../rfc__cmds0_8c.html',1,'']]],
+  ['rfc_5fcmds1_2ec',['rfc_cmds1.c',['../rfc__cmds1_8c.html',1,'']]]
 ];

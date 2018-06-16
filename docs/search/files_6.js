@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zappy_5fgame_2eh',['zappy_game.h',['../zappy__game_8h.html',1,'']]]
+  ['usage_2ec',['usage.c',['../usage_8c.html',1,'']]],
+  ['user_5flist_2ec',['user_list.c',['../user__list_8c.html',1,'']]]
 ];

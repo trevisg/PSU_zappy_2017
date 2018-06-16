@@ -3,11 +3,11 @@
 <area shape="rect" id="node3" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="945,347,1017,373"/>
 <area shape="rect" id="node4" href="$cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae" title="get_cmdargs" alt="" coords="136,347,233,373"/>
 <area shape="rect" id="node5" href="$cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290" title="get_req" alt="" coords="152,397,217,424"/>
-<area shape="rect" id="node6" href="$server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="159,157,210,184"/>
+<area shape="rect" id="node6" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="159,157,210,184"/>
 <area shape="rect" id="node27" href="$cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47" title="set_default_args" alt="" coords="125,448,244,475"/>
 <area shape="rect" id="node28" href="$cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="149,499,221,525"/>
 <area shape="rect" id="node7" href="$sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285" title="sig_handler" alt="" coords="299,107,387,133"/>
-<area shape="rect" id="node8" href="$server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="314,56,373,83"/>
+<area shape="rect" id="node8" href="$server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="314,56,373,83"/>
 <area shape="rect" id="node26" href="$usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="315,157,372,184"/>
 <area shape="rect" id="node9" href="$server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="462,107,537,133"/>
 <area shape="rect" id="node10" href="$server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="456,157,543,184"/>

@@ -5,12 +5,11 @@
 ** Zappy server source file
 */
 
-#include "../../include/server.h"
 #include <unistd.h>
-#include <signal.h>
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <arpa/inet.h>
+#include "../../include/server.h"
 
 /** Set the new accept() client socket in epoll event list
 * for new client handling if connection succeed
@@ -65,8 +64,8 @@ static int 	events_handler(t_serv *all, int newfd)
 * @param all the 'catch them all' structure with server infos
 * @param args the argv pointer form main containing initial process names
 * @return 0 fo normal exit
-* @exit(0) if a client / child process disconnect
-* @note must implement circular buffer instead of 2d char array
+* @return exit() if a client / child process disconnect
+* @todo must implement circular buffer instead of 2d char array
 * see [this ref](https://bit.ly/2s86kKz) for explanations and code snippets
 * (note of note : will do it (maybe) later)
 */
@@ -89,15 +88,15 @@ static int	getactiveclients(t_serv *all)
 	return (0);
 }
 
-/** Contain the main 'listening for event' loop
-* @TODO read the various notes on documentation and do what requested
+/** Contain the main server infinite loop
+* @param options the server and game settings received from main()
+* @todo read the various notes on documentation and do what requested
 */
-static int	server(t_clargs *options)
+int	server(t_clargs *options)
 {
 	int rt = 0;
 	t_serv all;
 
-	printf("port ? %s\n", options->port);
 	set_iface(&all.hints, &all.res, options->port);
 	all.listen_sock = set_sockfd(&all);
 	if (all.listen_sock < 0 || set_epoll(&all) == -1) {
@@ -113,25 +112,6 @@ static int	server(t_clargs *options)
 			rt = getactiveclients(&all);
 		}
 		close(all.listen_sock);
-	}
-	return (rt);
-}
-
-/** Self explanatory (here is the main())
-* @param ac the number of received args
-* @param av the received args, set get_args() for details
-*/
-int		main(int ac, char **av)
-{
-	int rt = 0;
-	t_clargs *params = NULL;
-
-	if ((params = get_opts(ac, av))) {
-		signal(SIGINT, sig_handler);
-		rt = server(params);
-	} else {
-		usage(av[0]);
-		rt = 84;
 	}
 	return (rt);
 }

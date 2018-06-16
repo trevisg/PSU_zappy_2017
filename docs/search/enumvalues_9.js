@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['set_5fobject',['SET_OBJECT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faf33522f663fe86edd569a413ad624124',1,'server.h']]]
+  ['notices',['NOTICES',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84faa4c3e403340be8ad2c8b1a70534adb12',1,'server.h']]]
 ];

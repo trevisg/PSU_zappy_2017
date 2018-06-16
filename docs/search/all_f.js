@@ -6,6 +6,7 @@ var searchData=
   ['remove_5fuser',['remove_user',['../user__list_8c.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c'],['../server_8h.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c']]],
   ['res',['res',['../structt__serv.html#ae8783e38ef0c183366703267ca7b3298',1,'t_serv']]],
   ['ressources',['ressources',['../structt__tile.html#a667ba745672f2807d5832dd53d828aa0',1,'t_tile']]],
+  ['ressources_5fdecl_2ec',['ressources_decl.c',['../ressources__decl_8c.html',1,'']]],
   ['rfc_5fcmds0_2ec',['rfc_cmds0.c',['../rfc__cmds0_8c.html',1,'']]],
   ['rfc_5fcmds1_2ec',['rfc_cmds1.c',['../rfc__cmds1_8c.html',1,'']]],
   ['right',['RIGHT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faec8379af7490bb9eaaf579cf17876f38',1,'server.h']]],

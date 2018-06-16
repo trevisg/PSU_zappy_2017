@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['phiras',['phiras',['../structt__ressources.html#a958bc44c15394fa1e029db7e984f7834',1,'t_ressources']]],
+  ['phiras',['phiras',['../structt__ressources.html#a958bc44c15394fa1e029db7e984f7834',1,'t_ressources::phiras()'],['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82',1,'PHIRAS():&#160;zappy_game.h']]],
   ['ping',['ping',['../rfc__cmds0_8c.html#a0f0d0e51f2d5d863cb8be57983ccedfb',1,'ping(cmdargs args, int clifd, t_teams *chans):&#160;rfc_cmds0.c'],['../server_8h.html#ade5bdd0cbcbf41408a6f631e58efed6e',1,'ping(cmdargs args, int clifd, t_teams *chanlist):&#160;rfc_cmds0.c']]],
   ['port',['port',['../structt__clargs.html#a379d0896574e50e83aec408e664b174d',1,'t_clargs::port()'],['../structt__serv.html#a94e2ed77b5dab9df832e9cd3b4bb27ad',1,'t_serv::port()']]],
   ['pos',['pos',['../structt__tile.html#ac27a2811f9b19e4ac51f6e3fb5b78338',1,'t_tile']]],

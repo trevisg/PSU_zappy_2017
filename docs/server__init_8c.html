@@ -134,8 +134,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="server__init_8c_a381b88f843ed1ebdaa5b2a8ded74931b_icgraph.png" border="0" usemap="#server__init_8c_a381b88f843ed1ebdaa5b2a8ded74931b_icgraph" alt=""/></div>
 <map name="server__init_8c_a381b88f843ed1ebdaa5b2a8ded74931b_icgraph" id="server__init_8c_a381b88f843ed1ebdaa5b2a8ded74931b_icgraph">
 <area shape="rect" id="node2" href="server_8h.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="164,5,251,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="299,5,357,32"/>
-<area shape="rect" id="node4" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="405,5,456,32"/>
+<area shape="rect" id="node3" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="299,5,357,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="405,5,456,32"/>
 <area shape="rect" id="node5" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="504,5,576,32"/>
 <area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="504,56,576,83"/>
 </map>
@@ -178,7 +178,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="server__init_8c_source.html#l00018">18</a> of file <a class="el" href="server__init_8c_source.html">server_init.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server__main_8c_source.html#l00020">init_connection()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server__main_8c_source.html#l00019">init_connection()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> rt = 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> op = EPOLL_CTL_ADD;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ev-&gt;events = EPOLLIN | EPOLLET;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ev-&gt;data.fd = clisock;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (epoll_ctl(epollfd, op, clisock, ev) == -1) {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                perror(<span class="stringliteral">&quot;set_clifd: epoll_ctl:&quot;</span>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                rt = 84;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Add client n°[%d] to epoll interest list\n&quot;</span>, clisock);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> (rt);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -186,8 +186,8 @@ Here is the caller graph for this function:</div>
 <map name="server__init_8c_aa9bc3ff8e7f409540f85b3cc97636500_icgraph" id="server__init_8c_aa9bc3ff8e7f409540f85b3cc97636500_icgraph">
 <area shape="rect" id="node2" href="server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="124,5,233,32"/>
 <area shape="rect" id="node3" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="281,5,395,32"/>
-<area shape="rect" id="node4" href="server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="443,5,501,32"/>
-<area shape="rect" id="node5" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="549,5,600,32"/>
+<area shape="rect" id="node4" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="443,5,501,32"/>
+<area shape="rect" id="node5" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="549,5,600,32"/>
 <area shape="rect" id="node6" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="648,5,720,32"/>
 <area shape="rect" id="node7" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="648,56,720,83"/>
 </map>
@@ -229,8 +229,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="server__init_8c_a5cb15d408ef32c09c2485937503438ed_icgraph.png" border="0" usemap="#server__init_8c_a5cb15d408ef32c09c2485937503438ed_icgraph" alt=""/></div>
 <map name="server__init_8c_a5cb15d408ef32c09c2485937503438ed_icgraph" id="server__init_8c_a5cb15d408ef32c09c2485937503438ed_icgraph">
-<area shape="rect" id="node2" href="server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="128,5,187,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="235,5,285,32"/>
+<area shape="rect" id="node2" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="128,5,187,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="235,5,285,32"/>
 <area shape="rect" id="node4" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="333,5,405,32"/>
 <area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="333,56,405,83"/>
 </map>
@@ -279,8 +279,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="server__init_8c_a3802a71fa34e93cb1d85f919914f5abf_icgraph.png" border="0" usemap="#server__init_8c_a3802a71fa34e93cb1d85f919914f5abf_icgraph" alt=""/></div>
 <map name="server__init_8c_a3802a71fa34e93cb1d85f919914f5abf_icgraph" id="server__init_8c_a3802a71fa34e93cb1d85f919914f5abf_icgraph">
-<area shape="rect" id="node2" href="server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="128,5,187,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="235,5,285,32"/>
+<area shape="rect" id="node2" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="128,5,187,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="235,5,285,32"/>
 <area shape="rect" id="node4" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="333,5,405,32"/>
 <area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="333,56,405,83"/>
 </map>
@@ -338,8 +338,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="server__init_8c_a1f61d16ccfab82b21ca40ce23feb7c02_icgraph.png" border="0" usemap="#server__init_8c_a1f61d16ccfab82b21ca40ce23feb7c02_icgraph" alt=""/></div>
 <map name="server__init_8c_a1f61d16ccfab82b21ca40ce23feb7c02_icgraph" id="server__init_8c_a1f61d16ccfab82b21ca40ce23feb7c02_icgraph">
-<area shape="rect" id="node2" href="server__main_8c.html#aa218a86dd867d68e4026341ec69bd4af" title="server" alt="" coords="140,5,199,32"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="247,5,297,32"/>
+<area shape="rect" id="node2" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="140,5,199,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="247,5,297,32"/>
 <area shape="rect" id="node4" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="345,5,417,32"/>
 <area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="345,56,417,83"/>
 </map>
