@@ -1,4 +1,4 @@
-# **PSU_zappy_2017**{#mainpage}
+# **PSU_zappy_2017** {#mainpage}
 
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017)
 
