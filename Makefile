@@ -34,6 +34,7 @@ SERVER_SRCS	= various_helpers_functions/time_handlers.c \
 		user_list.c \
 		rfc_cmds0.c \
 		rfc_cmds1.c \
+		main.c
 
 SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
 
