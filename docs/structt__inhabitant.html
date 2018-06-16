@@ -81,116 +81,135 @@ Collaboration diagram for t_inhabitant:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a7a711ff5e17b384d16c6ac48c70d9564"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a7a711ff5e17b384d16c6ac48c70d9564">id</a></td></tr>
-<tr class="separator:a7a711ff5e17b384d16c6ac48c70d9564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae63dc7bd7aee968ad33e0e161731ac01"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#ae63dc7bd7aee968ad33e0e161731ac01">ttl</a></td></tr>
-<tr class="separator:ae63dc7bd7aee968ad33e0e161731ac01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa63437624eea13130b0508b9734fd0e4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#aa63437624eea13130b0508b9734fd0e4">level</a></td></tr>
-<tr class="separator:aa63437624eea13130b0508b9734fd0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9733bf193adb75accd9fc5c777490fef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__ressources.html">t_ressources</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a9733bf193adb75accd9fc5c777490fef">inventory</a></td></tr>
-<tr class="separator:a9733bf193adb75accd9fc5c777490fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0d3eb8992b3bc0193730f7eb68ed448"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#af0d3eb8992b3bc0193730f7eb68ed448">curr_pos</a> [2]</td></tr>
-<tr class="separator:af0d3eb8992b3bc0193730f7eb68ed448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a295e0c0309328f91b85a8697e7152a3c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a295e0c0309328f91b85a8697e7152a3c">team_name</a> [<a class="el" href="zappy__game_8h.html#a6324c4f056459fe67320041b34f29b3c">MAX_TEAM_NAME</a>]</td></tr>
-<tr class="separator:a295e0c0309328f91b85a8697e7152a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0c6947fc0b6e2372a2b579fcc5d602"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a1b0c6947fc0b6e2372a2b579fcc5d602">id</a></td></tr>
+<tr class="memdesc:a1b0c6947fc0b6e2372a2b579fcc5d602"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique player id.  <a href="#a1b0c6947fc0b6e2372a2b579fcc5d602">More...</a><br /></td></tr>
+<tr class="separator:a1b0c6947fc0b6e2372a2b579fcc5d602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1760506e1cf8684f3e7bd8c031689391"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a1760506e1cf8684f3e7bd8c031689391">ttl</a></td></tr>
+<tr class="memdesc:a1760506e1cf8684f3e7bd8c031689391"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player TimeToLive (his life counter)  <a href="#a1760506e1cf8684f3e7bd8c031689391">More...</a><br /></td></tr>
+<tr class="separator:a1760506e1cf8684f3e7bd8c031689391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4384563ff0c793088180f2723fa129f9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a4384563ff0c793088180f2723fa129f9">level</a></td></tr>
+<tr class="memdesc:a4384563ff0c793088180f2723fa129f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The incantation level (1-&gt;MAX_LEVEL)  <a href="#a4384563ff0c793088180f2723fa129f9">More...</a><br /></td></tr>
+<tr class="separator:a4384563ff0c793088180f2723fa129f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22dff03db052a7b6c58a0bbcedd307e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__ressources.html">t_ressources</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#af22dff03db052a7b6c58a0bbcedd307e">inventory</a></td></tr>
+<tr class="memdesc:af22dff03db052a7b6c58a0bbcedd307e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player ressources inventory.  <a href="#af22dff03db052a7b6c58a0bbcedd307e">More...</a><br /></td></tr>
+<tr class="separator:af22dff03db052a7b6c58a0bbcedd307e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2021f265a71f22a47be369c54e2d86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#a0e2021f265a71f22a47be369c54e2d86">curr_pos</a> [2]</td></tr>
+<tr class="memdesc:a0e2021f265a71f22a47be369c54e2d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current player position (x,y format)  <a href="#a0e2021f265a71f22a47be369c54e2d86">More...</a><br /></td></tr>
+<tr class="separator:a0e2021f265a71f22a47be369c54e2d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36c745a9ba662164b67bfdc378c3a1d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html#ac36c745a9ba662164b67bfdc378c3a1d">team_name</a> [<a class="el" href="zappy__game_8h.html#a6324c4f056459fe67320041b34f29b3c">MAX_TEAM_NAME</a>]</td></tr>
+<tr class="memdesc:ac36c745a9ba662164b67bfdc378c3a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The trantorian team name.  <a href="#ac36c745a9ba662164b67bfdc378c3a1d">More...</a><br /></td></tr>
+<tr class="separator:ac36c745a9ba662164b67bfdc378c3a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00066">66</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00083">83</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="af0d3eb8992b3bc0193730f7eb68ed448"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0d3eb8992b3bc0193730f7eb68ed448">&#9670;&nbsp;</a></span>curr_pos</h2>
+<a id="a0e2021f265a71f22a47be369c54e2d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e2021f265a71f22a47be369c54e2d86">&#9670;&nbsp;</a></span>curr_pos</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int t_inhabitant::curr_pos[2]</td>
+          <td class="memname">t_inhabitant::curr_pos</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00071">71</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p>The current player position (x,y format) </p>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00088">88</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
-<a id="a7a711ff5e17b384d16c6ac48c70d9564"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a711ff5e17b384d16c6ac48c70d9564">&#9670;&nbsp;</a></span>id</h2>
+<a id="a1b0c6947fc0b6e2372a2b579fcc5d602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0c6947fc0b6e2372a2b579fcc5d602">&#9670;&nbsp;</a></span>id</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int t_inhabitant::id</td>
+          <td class="memname">t_inhabitant::id</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00067">67</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p>The unique player id. </p>
+<p>A typical Trantor inhabitant (also a game player) </p>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00084">84</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
-<a id="a9733bf193adb75accd9fc5c777490fef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9733bf193adb75accd9fc5c777490fef">&#9670;&nbsp;</a></span>inventory</h2>
+<a id="af22dff03db052a7b6c58a0bbcedd307e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22dff03db052a7b6c58a0bbcedd307e">&#9670;&nbsp;</a></span>inventory</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__ressources.html">t_ressources</a> t_inhabitant::inventory</td>
+          <td class="memname">t_inhabitant::inventory</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00070">70</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p>The player ressources inventory. </p>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00087">87</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
-<a id="aa63437624eea13130b0508b9734fd0e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa63437624eea13130b0508b9734fd0e4">&#9670;&nbsp;</a></span>level</h2>
+<a id="a4384563ff0c793088180f2723fa129f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4384563ff0c793088180f2723fa129f9">&#9670;&nbsp;</a></span>level</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int t_inhabitant::level</td>
+          <td class="memname">t_inhabitant::level</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00069">69</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p>The incantation level (1-&gt;MAX_LEVEL) </p>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00086">86</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
-<a id="a295e0c0309328f91b85a8697e7152a3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a295e0c0309328f91b85a8697e7152a3c">&#9670;&nbsp;</a></span>team_name</h2>
+<a id="ac36c745a9ba662164b67bfdc378c3a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36c745a9ba662164b67bfdc378c3a1d">&#9670;&nbsp;</a></span>team_name</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char t_inhabitant::team_name[<a class="el" href="zappy__game_8h.html#a6324c4f056459fe67320041b34f29b3c">MAX_TEAM_NAME</a>]</td>
+          <td class="memname">t_inhabitant::team_name</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00072">72</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p>The trantorian team name. </p>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00089">89</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
-<a id="ae63dc7bd7aee968ad33e0e161731ac01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae63dc7bd7aee968ad33e0e161731ac01">&#9670;&nbsp;</a></span>ttl</h2>
+<a id="a1760506e1cf8684f3e7bd8c031689391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1760506e1cf8684f3e7bd8c031689391">&#9670;&nbsp;</a></span>ttl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double t_inhabitant::ttl</td>
+          <td class="memname">t_inhabitant::ttl</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00068">68</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p>The player TimeToLive (his life counter) </p>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00085">85</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
