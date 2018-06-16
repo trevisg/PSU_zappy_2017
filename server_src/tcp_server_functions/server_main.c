@@ -89,6 +89,7 @@ static int	getactiveclients(t_serv *all)
 }
 
 /** Contain the main server infinite loop
+* @param options the server and game settings received from main()
 * @todo read the various notes on documentation and do what requested
 */
 int	server(t_clargs *options)
