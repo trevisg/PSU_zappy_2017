@@ -8,15 +8,22 @@
 #ifndef INVENTORY_HPP
 #define INVENTORY_HPP
 
-#include "Rocks.hpp"
+#include "../include/stone.hpp"
+#include "../include/food.hpp"
 
 class Inventory
 {
 public:
-
+	Inventory();
+	Stone linemate;
+	Stone deraumere;
+	Stone sibur;
+	Stone mendiane;
+	Stone phiras;
+	Stone thystame;
+	Food foodItem;
 private:
-	Rock	rocks;
-	int	food;
+
 };
 
 #endif /*INVENTORY_HPP*/

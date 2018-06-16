@@ -9,6 +9,8 @@
 #ifndef TILE_HPP
 #define TILE_HPP
 
+#include "../include/inventory.hpp"
+#include "../include/player.hpp"
 #include "Tile.hpp"
 
 class Tile
@@ -16,9 +18,9 @@ class Tile
 public:
 
 private:
-std::pair<int X, int Y> pos;
-vector<Player> player_list;
-Intem items;
+std::pair <int, int> pos; // a remplacer par l'objet pos
+std::vector<Player> player_list;
+Inventory inv;
 };
 
 #endif /*TILE_HPP*/
