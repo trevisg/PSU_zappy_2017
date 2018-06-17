@@ -216,4 +216,8 @@
 	/** The global pointer for subject commands methods */
 	extern const cmds G_CMDS[REF_NB];
 
+	/** See server_src/trantor_setup/world_creation */
+	t_world		*get_world(t_clargs *args);
+	void		free_world(t_world *trantor, t_clargs *args);
+
 #endif /* !SERVER_H_ */
