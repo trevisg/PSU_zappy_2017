@@ -5,38 +5,46 @@
 ## Makefile for zappy client
 ##
 
-CC      	= gcc
+CC      	= g++
 
 DOXYGEN		= doxygen
 
 RM      	= rm -f
 
-CFLAGS		+= -I./include -Wall -Werror -Wextra -std=gnu99
+CFLAGS		+= -I./include -Wall -Werror -Wextra
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
-## Sources and rules for server
-SERVER_SRCS	=  src/main.c
+## Sources and rules for client
+CLIENT_SRCS	=  src/main.c		\
+							 src/core.cpp \
+							 src/food.cpp			\
+							 src/inventory.cpp\
+							 src/map.cpp			\
+							 src/player.cpp		\
+							 src/pos.cpp			\
+							 src/stone.cpp		\
+							 src/Tile.cpp
 
-SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
+CLIENTSRC	= $(addprefix ./, $(CLIENT_SRCS))
 
-SERVEROBJS	:= $(SERVERSRC:.c=.o)
+CLIENTOBJS	:= $(CLIENTSRC:.c=.o)
 
 #Binary name
 
-SERVER		= zappy_server
+CLIENT		= zappy_client
 
 
-all:		$(SERVER)
+all:		$(CLIENT)
 
-$(SERVER):	$(SERVEROBJS)
-		$(CC) $(CFLAGS) $(SERVEROBJS) -o $(SERVER)
+$(CLIENT):	$(CLIENTOBJS)
+		$(CC) $(CFLAGS) $(CLIENTOBJS) -o $(CLIENT)
 
 clean:
-		$(RM) $(SERVEROBJS)
+		$(RM) $(CLIENTOBJS)
 
 fclean: 	clean
-		$(RM) $(SERVER)
+		$(RM) $(CLIENT)
 
 re:		fclean all
 

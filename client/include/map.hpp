@@ -8,14 +8,19 @@
 #ifndef MAP_HPP
 #define MAP_HPP
 
+#include <vector>
 #include "Tile.hpp"
 
-class map
+class Map
 {
 public:
-
+  Map();
+  void setSize(int xMax, int yMax);
 private:
- std::vector<std::vector<Tile>>
+std::vector<std::vector<Tile>> tileList;
+int maxX;
+int maxY;
+bool is_set;
 };
 
 #endif /*MAP_HPP*/
