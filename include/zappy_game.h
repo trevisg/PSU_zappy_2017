@@ -18,6 +18,8 @@
 	#define MAX_TEAM_NAME	200
 	/** "One unit of food allows them to live for 126 units of time." */
 	#define FOOD_VALUE	126
+	/** For ramdom generation of world ressources */
+	#define MAX_RAND 5
 
 	/** The stone ressources needed by the trantorians
 	* to do an incantation
@@ -39,7 +41,7 @@
 	*/
 	typedef struct		s_food {
 		char		name[MAX_FOOD_NAME];
-		unsigned int 	value;
+		unsigned int 	qtt;
 	}			t_food;
 	/** All the differents ressources possible for a t_world::tiles
 	* @var t_ressources::food
@@ -102,13 +104,13 @@
 	* @var t_tile::ressources
 	* @brief The randomly generated ressource on a tile
 	* @var t_tile::trantorian
-	* @brief Is there a trantorian on a tile ?
+	* @brief Is there any trantorian(s) on a tile ?
 	* @var t_tile::pos
 	* @brief The x,y style coord for a particular tile
 	*/
 	typedef struct		s_tile {
 		t_ressources	ressources;
-		t_inhabitant	trantorian;
+		t_inhabitant	*trantorian;
 		int 		pos[2];
 	}			t_tile;
 	/** The Trantor world
@@ -121,6 +123,7 @@
 
 	/** For ITEMS access (improve usage and readability)
 	* @note glob var ITEM can be accessed by ITEMS[FOOD] or ITEMS[PHIRAS]
+	* @deprecated In fact this is useless as ITEMS is not a pointer
 	*/
 	enum	ITEMS_NAMES {
 		FOOD = 0,
@@ -132,8 +135,8 @@
 		DERAUMERE = 6
 	};
 	/** The items description / setting
-	* @note See server_src/stones_decl.c
+	* @note See server_src/trantor_setup/ressources_decl.c
 	*/
-	extern volatile t_ressources ITEMS;
+	extern t_ressources ITEMS;
 
 #endif /* !ZAPPY_GAME_H_ */
