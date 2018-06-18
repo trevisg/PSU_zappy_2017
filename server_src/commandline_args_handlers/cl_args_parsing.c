@@ -120,7 +120,7 @@ t_clargs		*get_opts(int ac, char **av)
 			}
 		}
 	}
-	return (args);
+	return (req ? args : NULL);
 }
 
 #ifdef CLTEST
