@@ -16,15 +16,15 @@ CFLAGS		+= -I./include -Wall -Werror -Wextra
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for client
-CLIENT_SRCS	=  src/main.c		\
-							 src/core.cpp \
-							 src/food.cpp			\
-							 src/inventory.cpp\
-							 src/map.cpp			\
-							 src/player.cpp		\
-							 src/pos.cpp			\
-							 src/stone.cpp		\
-							 src/Tile.cpp
+CLIENT_SRCS	=  src/main.c \
+		src/core.cpp \
+		src/food.cpp \
+		src/inventory.cpp \
+		src/map.cpp \
+		src/player.cpp \
+		src/pos.cpp	\
+		src/stone.cpp	\
+		src/Tile.cpp
 
 CLIENTSRC	= $(addprefix ./, $(CLIENT_SRCS))
 
@@ -50,5 +50,9 @@ re:		fclean all
 
 doc:
 		$(DOXYGEN) bonus/Doxyfile
+
+socktest:
+		gcc $(CFLAGS) -D SOCKTEST src/sockets/sockets_methods.c -o cli
+		@printf "Done run with ./cli [host] [port]\n"
 
 .PHONY:		all clean fclean re doc server
