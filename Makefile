@@ -61,9 +61,9 @@ re:		fclean all
 doc:
 		$(DOXYGEN) bonus/Doxyfile
 
-argstest:
+cltest:
 		@printf "Debug server command line args handler\n"
-		gcc server_src/command_line_args/cl_args.c $(CFLAGS) \
+		gcc server_src/commandline_args_handlers/*.c $(CFLAGS) \
  		-D CLTEST -g3
 		@printf "Done.\nNow run with ./a.out [see subject for args]\n"
 
