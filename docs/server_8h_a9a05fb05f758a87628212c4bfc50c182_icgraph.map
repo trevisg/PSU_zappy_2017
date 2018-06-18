@@ -1,5 +1,6 @@
 <map id="usage" name="usage">
-<area shape="rect" id="node2" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="111,5,161,32"/>
-<area shape="rect" id="node3" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="209,5,281,32"/>
-<area shape="rect" id="node4" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="209,56,281,83"/>
+<area shape="rect" id="node2" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="111,43,161,69"/>
+<area shape="rect" id="node3" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="213,5,285,32"/>
+<area shape="rect" id="node4" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="209,80,288,107"/>
+<area shape="rect" id="node5" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="213,131,285,157"/>
 </map>

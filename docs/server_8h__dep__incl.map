@@ -11,9 +11,10 @@
 <area shape="rect" id="node11" href="$server__init_8c.html" title="server_src/tcpserver\l_functions/server_init.c" alt="" coords="1681,87,1838,129"/>
 <area shape="rect" id="node12" href="$server__main_8c.html" title="server_src/tcpserver\l_functions/server_main.c" alt="" coords="1862,87,2030,129"/>
 <area shape="rect" id="node13" href="$teams__list_8c.html" title="server_src/teams_list.c" alt="" coords="2055,95,2213,121"/>
-<area shape="rect" id="node14" href="$user__list_8c.html" title="server_src/user_list.c" alt="" coords="2238,95,2385,121"/>
-<area shape="rect" id="node15" href="$logs__helpers_8c.html" title="server_src/varioushelpers\l_functions/logs_helpers.c" alt="" coords="2409,87,2579,129"/>
-<area shape="rect" id="node16" href="$sig__handler_8c.html" title="server_src/varioushelpers\l_functions/sig_handler.c" alt="" coords="2603,87,2774,129"/>
-<area shape="rect" id="node17" href="$time__handlers_8c.html" title="server_src/varioushelpers\l_functions/time_handlers.c" alt="" coords="2798,87,2977,129"/>
-<area shape="rect" id="node18" href="$usage_8c.html" title="server_src/varioushelpers\l_functions/usage.c" alt="" coords="3001,87,3171,129"/>
+<area shape="rect" id="node14" href="$world__creation_8c.html" title="server_src/trantor\l_setup/world_creation.c" alt="" coords="2238,87,2398,129"/>
+<area shape="rect" id="node15" href="$user__list_8c.html" title="server_src/user_list.c" alt="" coords="2422,95,2569,121"/>
+<area shape="rect" id="node16" href="$logs__helpers_8c.html" title="server_src/varioushelpers\l_functions/logs_helpers.c" alt="" coords="2593,87,2763,129"/>
+<area shape="rect" id="node17" href="$sig__handler_8c.html" title="server_src/varioushelpers\l_functions/sig_handler.c" alt="" coords="2787,87,2958,129"/>
+<area shape="rect" id="node18" href="$time__handlers_8c.html" title="server_src/varioushelpers\l_functions/time_handlers.c" alt="" coords="2982,87,3161,129"/>
+<area shape="rect" id="node19" href="$usage_8c.html" title="server_src/varioushelpers\l_functions/usage.c" alt="" coords="3185,87,3355,129"/>
 </map>

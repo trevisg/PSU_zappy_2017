@@ -1,6 +1,7 @@
 <map id="get_clientsNb" name="get_clientsNb">
-<area shape="rect" id="node2" href="$server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="156,5,228,32"/>
-<area shape="rect" id="node3" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="276,5,348,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="396,5,447,32"/>
-<area shape="rect" id="node5" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="495,5,567,32"/>
+<area shape="rect" id="node2" href="$server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="156,55,228,81"/>
+<area shape="rect" id="node3" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="276,55,348,81"/>
+<area shape="rect" id="node4" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="396,55,447,81"/>
+<area shape="rect" id="node5" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="495,29,573,56"/>
+<area shape="rect" id="node6" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="498,80,570,107"/>
 </map>

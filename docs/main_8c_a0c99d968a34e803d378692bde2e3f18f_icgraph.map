@@ -1,4 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="104,5,176,32"/>
-<area shape="rect" id="node3" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="104,56,176,83"/>
+<area shape="rect" id="node2" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="107,5,179,32"/>
+<area shape="rect" id="node3" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="107,56,179,83"/>
+<area shape="rect" id="node4" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="104,131,183,157"/>
 </map>

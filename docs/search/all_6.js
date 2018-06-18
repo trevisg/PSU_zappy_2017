@@ -17,10 +17,13 @@ var searchData=
   ['get_5fopts',['get_opts',['../cl__args__parsing_8c.html#a30e2e72e7d0d5f691caedcc1c3ea11b5',1,'get_opts(int ac, char **av):&#160;cl_args_parsing.c'],['../server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5',1,'get_opts(int ac, char **av):&#160;cl_args_parsing.c']]],
   ['get_5fport',['get_port',['../cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed',1,'get_port(char **port, t_clargs *args):&#160;cl_flags.c'],['../server_8h.html#ab01a1e2057ed7de1aa23abff3ae0b0ed',1,'get_port(char **port, t_clargs *args):&#160;cl_flags.c']]],
   ['get_5freq',['get_req',['../cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290',1,'cl_args_parsing.c']]],
+  ['get_5fressources',['get_ressources',['../world__creation_8c.html#a87320761bf5ee6dc2f660be75652c266',1,'world_creation.c']]],
   ['get_5fsize',['get_size',['../lists__finders_8c.html#a5c9b2cd4523b5cc43326163d534225d9',1,'get_size(cmdargs args):&#160;lists_finders.c'],['../server_8h.html#a5c9b2cd4523b5cc43326163d534225d9',1,'get_size(cmdargs args):&#160;lists_finders.c']]],
   ['get_5fteam_5fby_5fname',['get_team_by_name',['../lists__finders_8c.html#a840e59afe03b793c671dae92364c4e0e',1,'get_team_by_name(t_teams *list, char *channame):&#160;lists_finders.c'],['../server_8h.html#a840e59afe03b793c671dae92364c4e0e',1,'get_team_by_name(t_teams *list, char *channame):&#160;lists_finders.c']]],
   ['get_5fteams',['get_teams',['../cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb',1,'get_teams(char **teams, t_clargs *args):&#160;cl_flags_bis.c'],['../server_8h.html#a434f4fa9452d570e766cdc09e16179fb',1,'get_teams(char **teams, t_clargs *args):&#160;cl_flags_bis.c']]],
+  ['get_5ftiles',['get_tiles',['../world__creation_8c.html#a6e9075cf51ee03ae102e4420fa3269de',1,'world_creation.c']]],
   ['get_5ftime',['get_time',['../time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab',1,'time_handlers.c']]],
   ['get_5fwidth',['get_width',['../cl__flags_8c.html#af5fbca203e6e949739857574cecf5869',1,'get_width(char **width, t_clargs *args):&#160;cl_flags.c'],['../server_8h.html#af5fbca203e6e949739857574cecf5869',1,'get_width(char **width, t_clargs *args):&#160;cl_flags.c']]],
+  ['get_5fworld',['get_world',['../world__creation_8c.html#a45a079803a87adc3a172025e7eded81d',1,'get_world(t_clargs *args):&#160;world_creation.c'],['../server_8h.html#a45a079803a87adc3a172025e7eded81d',1,'get_world(t_clargs *args):&#160;world_creation.c']]],
   ['getactiveclients',['getactiveclients',['../server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd',1,'server_main.c']]]
 ];
