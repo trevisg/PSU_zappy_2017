@@ -30,7 +30,6 @@ SERVER_SRCS	= varioushelpers_functions/time_handlers.c \
 		trantor_setup/ressources_decl.c \
 		trantor_setup/world_creation.c \
 		commands_parsing.c \
-		ressources_decl.c \
 		lists_finders.c \
 		teams_list.c \
 		user_list.c \
