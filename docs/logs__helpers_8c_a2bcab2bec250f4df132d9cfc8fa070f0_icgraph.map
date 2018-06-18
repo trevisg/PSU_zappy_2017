@@ -1,10 +1,10 @@
 <map id="get_host_string" name="get_host_string">
-<area shape="rect" id="node2" href="$server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="164,31,256,57"/>
-<area shape="rect" id="node3" href="$server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="304,31,415,57"/>
-<area shape="rect" id="node4" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="463,31,576,57"/>
-<area shape="rect" id="node5" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="624,31,683,57"/>
-<area shape="rect" id="node6" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="731,31,781,57"/>
-<area shape="rect" id="node7" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="833,5,905,32"/>
-<area shape="rect" id="node8" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="833,56,905,83"/>
-<area shape="rect" id="node9" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="829,131,908,157"/>
+<area shape="rect" id="node2" href="$server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="164,55,256,81"/>
+<area shape="rect" id="node3" href="$server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="304,55,415,81"/>
+<area shape="rect" id="node4" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="463,55,576,81"/>
+<area shape="rect" id="node5" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="624,55,683,81"/>
+<area shape="rect" id="node6" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="731,55,781,81"/>
+<area shape="rect" id="node7" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="833,29,905,56"/>
+<area shape="rect" id="node8" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="833,80,905,107"/>
+<area shape="rect" id="node9" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="829,155,908,181"/>
 </map>

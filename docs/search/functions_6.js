@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logthisevent',['logthisevent',['../logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49',1,'logthisevent(const char etype, t_serv *all):&#160;logs_helpers.c'],['../server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49',1,'logthisevent(const char etype, t_serv *all):&#160;logs_helpers.c']]]
+  ['join',['join',['../rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b',1,'join(cmdargs args, int clifd, t_teams *chans):&#160;rfc_cmds0.c'],['../server_8h.html#a4477b4240ca31860ac231bee92c92c63',1,'join(cmdargs args, int clifd, t_teams *chanlist):&#160;rfc_cmds0.c']]]
 ];

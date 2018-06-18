@@ -1,8 +1,8 @@
 <map id="events_handler" name="events_handler">
-<area shape="rect" id="node2" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="164,31,277,57"/>
-<area shape="rect" id="node3" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="325,31,384,57"/>
-<area shape="rect" id="node4" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="432,31,483,57"/>
-<area shape="rect" id="node5" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="534,5,606,32"/>
-<area shape="rect" id="node6" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="534,56,606,83"/>
-<area shape="rect" id="node7" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="531,131,609,157"/>
+<area shape="rect" id="node2" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="164,55,277,81"/>
+<area shape="rect" id="node3" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="325,55,384,81"/>
+<area shape="rect" id="node4" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="432,55,483,81"/>
+<area shape="rect" id="node5" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="534,29,606,56"/>
+<area shape="rect" id="node6" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="534,80,606,107"/>
+<area shape="rect" id="node7" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="531,155,609,181"/>
 </map>
