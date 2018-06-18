@@ -1,0 +1,54 @@
+##
+## EPITECH PROJECT, 2018
+## PSU_zappy_2017client makefile
+## File description:
+## Makefile for zappy client
+##
+
+CC      	= g++
+
+DOXYGEN		= doxygen
+
+RM      	= rm -f
+
+CFLAGS		+= -I./include -Wall -Werror -Wextra
+
+CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
+
+## Sources and rules for client
+CLIENT_SRCS	=  src/main.c		\
+							 src/core.cpp \
+							 src/food.cpp			\
+							 src/inventory.cpp\
+							 src/map.cpp			\
+							 src/player.cpp		\
+							 src/pos.cpp			\
+							 src/stone.cpp		\
+							 src/Tile.cpp
+
+CLIENTSRC	= $(addprefix ./, $(CLIENT_SRCS))
+
+CLIENTOBJS	:= $(CLIENTSRC:.c=.o)
+
+#Binary name
+
+CLIENT		= zappy_client
+
+
+all:		$(CLIENT)
+
+$(CLIENT):	$(CLIENTOBJS)
+		$(CC) $(CFLAGS) $(CLIENTOBJS) -o $(CLIENT)
+
+clean:
+		$(RM) $(CLIENTOBJS)
+
+fclean: 	clean
+		$(RM) $(CLIENT)
+
+re:		fclean all
+
+doc:
+		$(DOXYGEN) bonus/Doxyfile
+
+.PHONY:		all clean fclean re doc server
