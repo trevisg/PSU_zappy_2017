@@ -39,7 +39,7 @@ static void	get_ressources(t_ressources *tileress)
 	tileress->thystame.qtt = rand()%(MAX_RAND-0)+0;
 }
 
-/** Alloc memory and fill with ressource the t_world::tile
+/** Alloc memory and fill with ressource the t_world::tiles
 * @param x the map width
 * @param y the map height
 * @return tiles the 2D tiles array
