@@ -19,14 +19,16 @@ CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 SERVER_SRCS	= varioushelpers_functions/time_handlers.c \
 		varioushelpers_functions/logs_helpers.c \
 		varioushelpers_functions/sig_handler.c \
+		varioushelpers_functions/usage.c \
 		commandline_args_handlers/cl_args_helpers.c \
 		commandline_args_handlers/cl_args_parsing.c \
+		commandline_args_handlers/cl_flags_bis.c \
+		commandline_args_handlers/cl_flags.c \
 		tcpserver_functions/server_decls.c \
 		tcpserver_functions/server_init.c \
 		tcpserver_functions/server_main.c \
-		varioushelpers_functions/usage.c \
-		commandline_args_handlers/cl_flags_bis.c \
-		commandline_args_handlers/cl_flags.c \
+		trantor_setup/ressources_decl.c \
+		trantor_setup/world_creation.c \
 		commands_parsing.c \
 		ressources_decl.c \
 		lists_finders.c \
@@ -71,5 +73,11 @@ clocktest:
 		gcc server_src/various_helpers_functions/time_handlers.c  \
 		$(CFLAGS) -D CLOCKTEST -g3
 		@printf "Done.\nNow run with ./a.out [no args]\n"
+
+maptest:
+		@printf "Debug map gen methods\n"
+		gcc server_src/world_creation.c server_src/ressources_decl.c \
+		$(CFLAGS) -D MAPTEST -g3
+		@printf "Done.\nNow run with ./a.out X Y\n"
 
 .PHONY:		all clean fclean re doc server

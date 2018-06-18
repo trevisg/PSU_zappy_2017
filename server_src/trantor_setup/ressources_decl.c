@@ -5,13 +5,13 @@
 ** zappy_server stones / ressources declarations
 */
 
-#include "../include/zappy_game.h"
+#include "../../include/zappy_game.h"
 
 /** @note volatile type is here because theses values will constantly
 * be updated as the game runnin'
 */
-volatile t_ressources ITEMS = {
-	{"eatme", FOOD_VALUE},
+t_ressources	ITEMS = {
+	{"eatme", 0},
 	{"sibur", 0},
 	{"phiras", 0},
 	{"mendiane", 0},
