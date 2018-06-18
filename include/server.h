@@ -76,7 +76,7 @@
 		char			*timestmp;
 		time_t			timeval;
 		mode_t			*set;
-		mode_t 			mode;
+		mode_t			mode;
 		mode_t			dir_mode;
 	}				t_log;
 
@@ -100,20 +100,20 @@
 		int			epollfd;
 		int			conn_sock;
 		int			listen_sock;
-		ssize_t 		nread;
-		char 			buf[BUF_SIZE];
-		char 			host[NI_MAXHOST];
-		char 			service[NI_MAXSERV];
+		ssize_t			nread;
+		char			buf[BUF_SIZE];
+		char			host[NI_MAXHOST];
+		char			service[NI_MAXSERV];
 		adrinf			*rp;
 		adrinf			*res;
 		adrinf			hints;
-		struct epoll_event 	ev;
-		struct epoll_event 	events[MAX_EVENTS];
+		struct epoll_event	ev;
+		struct epoll_event	events[MAX_EVENTS];
 	}				t_serv;
 
 	/** To avoid stdbool include (for s_user.isco)*/
 	#define true	1
-	#define false 	0
+	#define false	0
 	/** A typical Zappy client
 	* @todo update with the t_inhabitant struct
 	*/
@@ -121,23 +121,24 @@
 		int			clifd;
 		int			mode;
 		char			*nick;
-		char 			*rname;
+		char			*rname;
 		unsigned int		isco;
 	}				t_user;
 
 	/** The doubly linked list of connected users */
 	typedef struct			s_userlist {
-		t_user 			*user;
+		t_user			*user;
 		struct s_userlist	*prev;
 		struct s_userlist	*next;
 	}				t_userlist;
 
 	/** A doubly linked list of current teams with their users */
-	typedef struct 			s_teams {
-		char 			*channame;
+	typedef struct			s_teams {
+		char			team_name[MAX_TEAM_NAME];
 		t_userlist		*users;
 		struct s_teams		*prev;
 		struct s_teams		*next;
+		t_world                 *refmap;
 	}				t_teams;
 
 	/** Main Zappy Protocol methods function pointer
@@ -182,7 +183,7 @@
 	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
 	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
-	unsigned int 	get_size(cmdargs args);
+	unsigned int	get_size(cmdargs args);
 	/** @note see @file server_src/rfc_cmds0.c */
 	void		*join(cmdargs args, int clifd, t_teams *chanlist);
 	void		*nick(cmdargs args, int clifd, t_teams *chanlist);
@@ -207,7 +208,7 @@
 	/** @note see server_src/signal_handler.c */
 	void		sig_handler(int signo);
 	/** @note see server_src/usage.c */
-	void 		usage(char *progname);
+	void		usage(char *progname);
 
 	/** The object prototype mapping the methods name
 	* @note see server_src/server_decls.c

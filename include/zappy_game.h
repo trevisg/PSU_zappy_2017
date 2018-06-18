@@ -28,10 +28,10 @@
 	* @var t_stone::qtt
 	* @brief The stone quantity present on a world tile
 	*/
-	typedef struct 	s_stone {
-		char	name[MAX_STONE_NAME];
-		int	qtt;
-	}		t_stone;
+	typedef struct		s_stone {
+		char		name[MAX_STONE_NAME];
+		unsigned int	qtt;
+	}			t_stone;
 	/** The food ressource needed by the trantorians
 	* to subsist
 	* @var t_food::name
@@ -81,6 +81,8 @@
 	* @brief The current player position (x,y format)
 	* @var t_inhabitant::team_name
 	* @brief The trantorian team name
+	* @var t_inhabitant::refuser
+	* @brief The reference to the t_user associated
 	*/
 	typedef struct 		s_inhabitant {
 		unsigned int 	id;
@@ -89,17 +91,8 @@
 		t_ressources	inventory;
 		int 		curr_pos[2];
 		char		team_name[MAX_TEAM_NAME];
+		t_user		*refuser;
 	}			t_inhabitant;
-	/** A trantorian team
-	* @var t_team::team_name
-	* @brief The team name as defined in t_clargs struct
-	* @var t_team::members
-	* @brief The team members pointer
-	*/
-	typedef struct		s_team {
-		char		team_name[MAX_TEAM_NAME];
-		t_inhabitant	*members;
-	}			t_team;
 	/** A world tile
 	* @var t_tile::ressources
 	* @brief The randomly generated ressource on a tile
@@ -110,14 +103,17 @@
 	*/
 	typedef struct		s_tile {
 		t_ressources	ressources;
-		t_inhabitant	*trantorian;
+		t_inhabitant	*trantorians;
 		int 		pos[2];
 	}			t_tile;
 	/** The Trantor world
 	* @var t_world::tile
 	* @brief The world consist off a 2d array of t_tile (s)
+	* @var t_world::dim
+	* @brief Dimensions of the world dim[0](x) dim[1](y)
 	*/
 	typedef struct 		s_world {
+		int		dim[2];
 		t_tile		**tiles;
 	}			t_world;
 
