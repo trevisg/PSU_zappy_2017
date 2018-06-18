@@ -1,9 +1,12 @@
+#Various tmp files
 *.o
 *test
 *.txt
+#Test binaries
 a.out
 */a.out
+#Program binaries
 zappy_server
-client
+zappy_client
 #IDE settings
 .vscode
