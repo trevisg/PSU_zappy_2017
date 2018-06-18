@@ -6,6 +6,7 @@
 */
 
 #include <stdlib.h>
+#include <stdbool.h>
 #include "../../include/server.h"
 
 #if defined(CLTEST) || defined(CLDBG)
@@ -20,7 +21,7 @@ static void	print_2d(char **buff)
 static void	print_clargs(t_clargs *args)
 {
 	printf("%s\n", "t_clargs *args :");
-	printf("Server port [%d]\n", args->port);
+	printf("Server port [%s]\n", args->port);
 	printf("Map width [%d]\n", args->width);
 	printf("Map height [%d]\n", args->height);
 	printf("Teams names :\n");
@@ -29,6 +30,31 @@ static void	print_clargs(t_clargs *args)
 	printf("Frequency [%d]\n", args->freq);
 }
 #endif
+
+/** Check if all flags are present in command line arguments from main()
+* @param av the 2D char array from main()
+* @return true if all flags are presents
+* @return false if there is any problem
+*/
+static bool		check_opts(char **av)
+{
+	int		i = 1;
+	int		j = 0;
+	int		k = 0;
+	char		flags_cnt[6] = "\0";
+	const char	*flags[5] = {"-p", "-x", "-y", "-n", "-c"};
+
+	for (; av[i]; ++i) {
+		for (j = 0; j <= 4; ++j) {
+			if (!strcmp(av[i], flags[j])) {
+				flags_cnt[k] = av[i][1];
+				++k;
+				break;
+			}
+		}
+	}
+	return (strstr(flags_cnt, "pxync") ? true : false);
+}
 
 /** Tokenize the flag buffer, splitting by spaces
 * @param buff a command string like "-[x] [args]"
@@ -96,6 +122,7 @@ static t_clargs		*set_default_args()
 * @note consider refactoring / splitting this function as it's 2 lines above
 * the 20's authorized by this silly/f**ing norm. Variables are also uncorrectly
 * declared. We also could do a 'trash bin struct' for all args
+* @todo fix this bogus function, error handling is not working
 */
 t_clargs		*get_opts(int ac, char **av)
 {
@@ -107,7 +134,7 @@ t_clargs		*get_opts(int ac, char **av)
 	char		*saveptr1, *saveptr2;
 	int		index = 0;
 
-	if (args && req) {
+	if (args && req && check_opts(av)) {
 		for (; ; req = NULL) {
 			token = strtok_r(req, "-", &saveptr1);
 			if (token == NULL) {
@@ -120,7 +147,7 @@ t_clargs		*get_opts(int ac, char **av)
 			}
 		}
 	}
-	return (req ? args : NULL);
+	return (check_opts(av) ? args : NULL);
 }
 
 #ifdef CLTEST
@@ -129,7 +156,7 @@ int	main(int ac, char **av)
 	int rt = 0;
 	t_clargs *args = NULL;
 
-	if (!(args = get_args(ac, av))) {
+	if (!(args = get_opts(ac, av))) {
 		fprintf(stderr, "%s\n", "Bogus args RTFM");
 		rt = 84;
 	} else {
