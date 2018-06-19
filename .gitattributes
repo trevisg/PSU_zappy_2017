@@ -5,3 +5,4 @@ client/gui_part/assets/fonts/elasis.ttf filter=lfs diff=lfs merge=lfs -text
 client/gui_part/assets/fonts/tantor.ttf filter=lfs diff=lfs merge=lfs -text
 client/gui_part/assets/textures/trantor.jpeg filter=lfs diff=lfs merge=lfs -text
 client/gui_part/assets/textures/trantor.jpg filter=lfs diff=lfs merge=lfs -text
+client/gui_part/assets/musics/menu-bg.ogg filter=lfs diff=lfs merge=lfs -text
