@@ -17,15 +17,20 @@ Menu::Menu()
 	menuwindow.create(mode, windowtitle);
 	menuwindow.setFramerateLimit(60);
 	if (!menufont.loadFromFile("assets/fonts/tantor.ttf")) {
-		fprintf(stderr, "Failed to load font\n");
+		fprintf(stderr, "Failed to load menu font\n");
 		menuwindow.close();
 	}
 	if (!background.loadFromFile("assets/textures/trantor.jpg")) {
-		fprintf(stderr, "Failed to load background\n");
+		fprintf(stderr, "Failed to load background image\n");
 		menuwindow.close();
 	}
 	background.setSmooth(true);
 	bgsprite.setTexture(background);
+	if (!bgmusic.openFromFile("assets/musics/menu-bg.ogg")) {
+		fprintf(stderr, "Failed to load background music\n");
+		menuwindow.close();
+	}
+	bgmusic.setLoop(true);
 }
 
 Menu::~Menu()
@@ -33,9 +38,9 @@ Menu::~Menu()
 	menuwindow.close();
 }
 
-void 	event_handler()
+void 	Menu::event_handler()
 {
-	sf::Event event;
+	sf::SoundSource::Status mstatus;
 
 	while (menuwindow.pollEvent(event)) {
 		if (event.type == sf::Event::Closed) {
@@ -43,6 +48,12 @@ void 	event_handler()
 		} else if (event.type == sf::Event::KeyPressed) {
 			if (event.key.code == sf::Keyboard::Q) {
 				menuwindow.close();
+			} else if (event.key.code == sf::Keyboard::P) {
+				 mstatus = bgmusic.getStatus();
+				if (mstatus == sf::SoundSource::Playing)
+					bgmusic.pause();
+				else
+					bgmusic.play();
 			}
 		}
 	}
@@ -54,6 +65,7 @@ bool	Menu::get_menu()
 	MenuOptions opts(130, 1080);
 	MenuNewGame ngame(100, 100);
 
+	bgmusic.play();
 	while (menuwindow.isOpen()) {
 		event_handler();
 		menuwindow.clear(sf::Color::Black);
