@@ -5,6 +5,7 @@
 // Main Gui Menu header
 //
 
+#include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -13,13 +14,16 @@ class Menu {
 		Menu();
 		~Menu();
 		bool get_menu();
+		void event_handler();
 	private:
-		sf::IntRect bgpos;
-		sf::Font menufont;
-		sf::VideoMode mode;
-		sf::Sprite bgsprite;
-		sf::Texture background;
-		sf::String windowtitle;
+		sf::VideoMode	mode;
+		sf::Event	event;
+		sf::IntRect	bgpos;
+		sf::Music	bgmusic;
+		sf::Font	menufont;
+		sf::Sprite	bgsprite;
+		sf::Texture	background;
+		sf::String	windowtitle;
 };
 
 extern sf::RenderWindow menuwindow;
