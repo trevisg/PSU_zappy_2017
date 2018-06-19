@@ -11,7 +11,7 @@ RM      	= rm -f
 
 CFLAGS		+= -I./include -Wall -Werror -Wextra
 
-LDFLAGS		+= -lsfml-graphics -lsfml-window -lsfml-system
+LDFLAGS		+= -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
