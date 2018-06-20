@@ -11,19 +11,19 @@ MenuTitle::MenuTitle(int xpos, int ypos)
 {
 	x = xpos;
 	y = ypos;
-	if (!titlefont.loadFromFile("assets/fonts/elasis.ttf")) {
+	if (!TitleFont.loadFromFile("assets/fonts/elasis.ttf")) {
 		fprintf(stderr, "Failed to load font\n");
 	}
-	titletext.setFont(titlefont);
-	titlestring = sf::String("Menu");
-	titletext.setString(titlestring);
-	titletext.setCharacterSize(50);
-	titletext.setStyle(sf::Text::Bold | sf::Text::Underlined);
-	titletext.setFillColor(sf::Color::Blue);
-	titletext.setPosition(x, y);
+	TitleText.setFont(TitleFont);
+	TitleString = sf::String("Menu");
+	TitleText.setString(TitleString);
+	TitleText.setCharacterSize(50);
+	TitleText.setStyle(sf::Text::Bold | sf::Text::Underlined);
+	TitleText.setFillColor(sf::Color::Blue);
+	TitleText.setPosition(x, y);
 }
 
-sf::Text	MenuTitle::get_menutitletext()
+sf::Text	MenuTitle::get_menuTitleText()
 {
-	return titletext;
+	return TitleText;
 }
