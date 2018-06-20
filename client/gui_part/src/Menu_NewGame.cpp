@@ -16,24 +16,24 @@ MenuNewGame::MenuNewGame(int xsize, int ysize)
 	newgamerect.setOutlineColor(sf::Color::Black);
 	newgamerect.setPosition(200, 100);
 	if (!newgamefont.loadFromFile("assets/fonts/elasis.ttf")) {
-		fprintf(stderr, "Failed to load options font\n");
+		fprintf(stderr, "Failed to load Settings font\n");
 	}
 	newgametext.setFont(newgamefont);
-	newgametext.setString("Options");
+	newgametext.setString("Play");
 	newgametext.setCharacterSize(20);
 	newgametext.setStyle(sf::Text::Underlined);
 	newgametext.setFillColor(sf::Color::Red);
-	newgametext.setPosition(100, 40);
+	newgametext.setPosition(210, 100);
 }
 
 sf::RectangleShape	MenuNewGame::getNewGameRect()
 {
-	return newgamerect;
+	return (newgamerect);
 }
 
 sf::Text 		MenuNewGame::getNewGameText()
 {
-	return newgametext;
+	return (newgametext);
 }
 
 void			MenuNewGame::setNewGamePos(int xpos, int ypos)
