@@ -14,13 +14,13 @@
 class Map
 {
 public:
-  Map();
-  void setSize(int xMax, int yMax);
+	Map();
+	void setSize(int xMax, int yMax);
 private:
-std::vector<std::vector<Tile>> tileList;
-int maxX;
-int maxY;
-bool is_set;
+	std::vector<std::vector<Tile>> _tileList;
+	int _maxX;
+	int _maxY;
+	bool _is_set;
 };
 
 #endif /*MAP_HPP*/

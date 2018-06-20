@@ -60,7 +60,7 @@ Player Parser::playerConnect(std::string srvMsg)
 	player.setNumber(infos[0]);
 	player.pos.setX(infos[1]);
 	player.pos.setY(infos[2]);
-	player.setOrientation(infos[3]);
+	player.setDir(infos[3]);
 	player.setLvl(infos[4]);
 	player.setTeam(tmp);
 	return (player);

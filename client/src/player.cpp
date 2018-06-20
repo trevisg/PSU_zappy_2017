@@ -9,72 +9,87 @@
 
 Player::Player()
 {
-  lifeLeft = 1260;
-  readyToRitual = false;
-  level = 1;
-  direction = NORTH;
+	_lifeLeft = 1260;
+	_readyToRitual = false;
+	_level = 1;
+	_direction = NORTH;
 }
 
-void Player::setTeam(std::string teamName) {team = teamName;}
-std::string Player::getTeam() {return team;}
+void Player::setTeam(std::string teamName) {_team = teamName;}
+std::string Player::getTeam() {return _team;}
 
 std::vector<Pos> Player::GetviewPos(int maxX, int maxY)
 {
-    Pos point;
-    Pos tmp;
-    std::vector<Pos> list;
-    int i = 0;
-    int nbc = 1;
-    int j = 0;
+	Pos point;
+	Pos tmp;
+	std::vector<Pos> list;
+	int i = 0;
+	int nbc = 1;
+	int j = 0;
 
-    // !!!!! les deux prochaines lignes doivent etre set en amont pas ici
-    position.setMaxX(600);
-    position.setMaxY(200);
-    // !!!                                                            !!!!
+	// !!!!! les deux prochaines lignes doivent etre set en amont pas ici
+	_position.setMaxX(600);
+	_position.setMaxY(200);
+	// !!!                                                            !!!!
 
-    point = position;
-    while (i <= level)
-    {
-      tmp = point;
-      while (j < nbc)
-      {
-        list.emplace_back(tmp);
-        tmp.move(direction);
-        j++;
-      }
-      j = 0;
-      point = nextCalcPos(point);
-      i++;
-      nbc = nbc + 2;
-    }
-    return list;
+	point = _position;
+	while (i <= level)
+	{
+		tmp = point;
+		while (j < nbc)
+		{
+			list.emplace_back(tmp);
+			tmp.move(_direction);
+			j++;
+		}
+		j = 0;
+		point = nextCalcPos(point);
+		i++;
+		nbc = nbc + 2;
+	}
+	return list;
 }
 
 Pos Player::nextCalcPos(Pos old)
 {
-    Pos tmp = old;
-    int tmpdir = direction;
+	Pos tmp = old;
+	int tmpdir = _direction;
 
-    tmp.move(direction);
-    tmpdir = tmpdir - 1;
-    if (tmpdir < 0)
-      tmpdir = 3;
-    tmp.move(tmpdir);
-    return tmp;
+	tmp.move(_direction);
+	tmpdir = tmpdir - 1;
+	if (tmpdir < 0)
+		tmpdir = 3;
+	tmp.move(tmpdir);
+	return tmp;
 }
 
 void Player::turnRight()
 {
-  direction = direction + 1;
-  if (direction >=4)
-    direction = 0;
-  // send turn right request
+	_direction = _direction + 1;
+	if (_direction >=4)
+		_direction = 0;
+	// send turn right request
 }
 
 void Player::turnLeft()
 {
-  direction = direction - 1;
-  if (direction < 0)
-    direction = 3;
-  // send turn left request
+	_direction = _direction - 1;
+	if (_direction < 0)
+		_direction = 3;
+	// send turn left request
+}
+
+void Player::setLvl(int lvl)
+{
+	_level = lvl;
+}
+
+void Player::setDir(int dir)
+{
+	_direction = dir;
+}
+
+void Player::setInv(std::vector<int> inv)
+{
+	_inventory = inv;
 }

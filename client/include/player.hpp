@@ -20,21 +20,24 @@ class Player
 public:
 	Player();
 	void setTeam(std::string teamName);
+	void setLvl(int lvl);
+	void setDir(int dir);
+	void setInv(std::vector<int> inv);
 	std::string getTeam();
 	std::vector<Pos> GetviewPos(int maxX, int maxY);
 	void turnRight();
 	void turnLeft();
 	Pos nextCalcPos(Pos old);
-private:
 
-	int lifeLeft;
-	int level;
-	int direction;
-	std::string team;
-	Inventory	invent;
-	Pos position;
-	PlayerView view;
-	bool readyToRitual;
+private:
+	int _lifeLeft;
+	int _level;
+	int _direction;
+	std::string _team;
+	std::vector<int> _inventory;
+	Pos _position;
+	PlayerView _view;
+	bool _readyToRitual;
 };
 
 #endif /*PLAYER_HPP*/

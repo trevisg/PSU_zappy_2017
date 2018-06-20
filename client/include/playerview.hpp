@@ -14,17 +14,17 @@
 class PlayerView
 {
 public:
-    PlayerView();
-    void addTile();
-    void tileSetPos(int nx, int ny);
-    void addPlayer(Player ntretor);
-    void tileSetItem(std::string itemname, int qte);
+	PlayerView();
+	void addTile();
+	void tileSetPos(int nx, int ny);
+	void addPlayer(Player ntretor);
+	void tileSetItem(std::string itemname, int qte);
 private:
 
-    std::vector<Tile> view;
-    Tile tmptile;
-    
-    void clearTile();
+	std::vector<Tile> _view;
+	Tile _tmptile;
+
+	void clearTile();
 };
 
 #endif /*CORE_HPP*/

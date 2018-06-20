@@ -9,14 +9,14 @@
 
 Pos::Pos()
 {
-  x = 0;
-  y = 0;
+	_x = 0;
+	_y = 0;
 }
 
 Pos::Pos(int valx, int valy)
 {
-  x = valx;
-  y = valy;
+	_x = valx;
+	_y = valy;
 }
 
 int Pos::getX() {return x;}
@@ -28,32 +28,32 @@ void Pos::setMaxY(int maxy) {maxY = maxy;}
 
 void Pos::move(int direction)
 {
-  if (direction == 0)
-  {
-    if (getY() + 1 < maxY)
-      setY(getY() + 1);
-    else
-      setY(0);
-  }
-  else if (direction == 1)
-  {
-    if (getX() + 1 < maxX)
-      setX(getX() + 1);
-    else
-      setX(0);
-  }
-  else if (direction == 2)
-  {
-    if (getY() - 1 >= 0)
-      setY(getY() - 1);
-    else
-      setY(maxY);
-  }
-  else
-  {
-    if (getX() - 1 >= 0)
-      setX(getX() - 1);
-    else
-      setX(maxX);
-  }
+	if (direction == 0)
+	{
+		if (getY() + 1 < _maxY)
+			setY(getY() + 1);
+		else
+			setY(0);
+	}
+	else if (direction == 1)
+	{
+		if (getX() + 1 < _maxX)
+			setX(getX() + 1);
+		else
+			setX(0);
+	}
+	else if (direction == 2)
+	{
+		if (getY() - 1 >= 0)
+			setY(getY() - 1);
+		else
+			setY(maxY);
+	}
+	else
+	{
+		if (getX() - 1 >= 0)
+			setX(getX() - 1);
+		else
+			setX(_maxX);
+	}
 }
