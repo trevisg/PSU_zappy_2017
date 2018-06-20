@@ -1,0 +1,19 @@
+digraph "send_expulsion"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="send_expulsion",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="find_user_in_teams",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$find__list_8c.html#acd187da9c982bdcd9e7b547c9fe44d0e"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="user",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="get_new_user",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="get_new_userlist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="get_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lists__finders_8c.html#a5c9b2cd4523b5cc43326163d534225d9"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="insert_back_user",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390"];
+}

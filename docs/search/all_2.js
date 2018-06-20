@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['channame',['channame',['../structt__teams.html#a526b3d425d108d0897a1ad260bf4dbf0',1,'t_teams']]],
   ['check_5fopts',['check_opts',['../cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b',1,'cl_args_parsing.c']]],
   ['cl_5fargs_5fhelpers_2ec',['cl_args_helpers.c',['../cl__args__helpers_8c.html',1,'']]],
   ['cl_5fargs_5fparsing_2ec',['cl_args_parsing.c',['../cl__args__parsing_8c.html',1,'']]],
@@ -9,6 +8,8 @@ var searchData=
   ['clargs',['clargs',['../server_8h.html#a2f142533ce77a226c50d6f995a314a2e',1,'server.h']]],
   ['clientsnb',['clientsNb',['../structt__clargs.html#ad77e45db1c71ab1709853fac0e5fcf20',1,'t_clargs']]],
   ['clifd',['clifd',['../structt__user.html#a29a8abb5e21ec4d86ce72c756b6b43e4',1,'t_user']]],
+  ['cmd_2ec',['cmd.c',['../cmd_8c.html',1,'']]],
+  ['cmd_5ffcts_2eh',['cmd_fcts.h',['../cmd__fcts_8h.html',1,'']]],
   ['cmdargs',['cmdargs',['../server_8h.html#acfbe918d8821ff3d1d8dc2c90bb8f6a2',1,'server.h']]],
   ['cmds',['CMDS',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581f',1,'CMDS():&#160;server.h'],['../server_8h.html#aad1a6ebb0da853175fa1c6c60681f4f8',1,'cmds():&#160;server.h']]],
   ['commands_5fparsing_2ec',['commands_parsing.c',['../commands__parsing_8c.html',1,'']]],

@@ -1,0 +1,11 @@
+digraph "quit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node296 [label="quit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node296 -> Node297 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node297 [label="find_user_by_fd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lists__finders_8c.html#a0195cd48a4c52a9624a811825cef8afb"];
+  Node296 -> Node298 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node298 [label="is_user_in_chan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lists__finders_8c.html#a89a3ecace723ab3c2e85b151eb031dc7"];
+}
