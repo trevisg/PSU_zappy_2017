@@ -8,7 +8,8 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-class MenuNewGame {
+class	MenuNewGame
+{
 	public:
 		MenuNewGame(int xsize, int ysize);
 		sf::RectangleShape	getNewGameRect();
