@@ -8,14 +8,15 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-class MenuTitle {
+class	MenuTitle
+{
 	public:
 		MenuTitle(int xpos, int ypos);
-		sf::Text get_menutitletext();
+		sf::Text get_menuTitleText();
 	private:
-		int 	x;
-		int 	y;
-		sf::Font titlefont;
-		sf::Text titletext;
-		sf::String titlestring;
+		int 		x;
+		int 		y;
+		sf::Font	TitleFont;
+		sf::Text	TitleText;
+		sf::String	TitleString;
 };
