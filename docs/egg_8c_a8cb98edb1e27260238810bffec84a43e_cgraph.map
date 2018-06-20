@@ -1,0 +1,9 @@
+<map id="send_egg_hatch" name="send_egg_hatch">
+<area shape="rect" id="node2" href="$find__list_8c.html#abbc7ca817fffc27aa144fa18d851c527" title="find_egg_state" alt="" coords="185,5,291,32"/>
+<area shape="rect" id="node3" href="$find__list_8c.html#acd187da9c982bdcd9e7b547c9fe44d0e" title="find_user_in_teams" alt="" coords="171,56,305,83"/>
+<area shape="rect" id="node4" href="$rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430" title="user" alt="" coords="215,107,261,133"/>
+<area shape="rect" id="node5" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="363,31,465,57"/>
+<area shape="rect" id="node6" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="354,81,474,108"/>
+<area shape="rect" id="node7" href="$lists__finders_8c.html#a5c9b2cd4523b5cc43326163d534225d9" title="get_size" alt="" coords="379,132,449,159"/>
+<area shape="rect" id="node8" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="353,183,475,209"/>
+</map>

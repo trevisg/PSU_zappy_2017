@@ -1,0 +1,8 @@
+<map id="send_res_drop" name="send_res_drop">
+<area shape="rect" id="node2" href="$find__list_8c.html#acd187da9c982bdcd9e7b547c9fe44d0e" title="find_user_in_teams" alt="" coords="160,31,295,57"/>
+<area shape="rect" id="node3" href="$rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430" title="user" alt="" coords="204,81,251,108"/>
+<area shape="rect" id="node4" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="352,5,455,32"/>
+<area shape="rect" id="node5" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="343,56,463,83"/>
+<area shape="rect" id="node6" href="$lists__finders_8c.html#a5c9b2cd4523b5cc43326163d534225d9" title="get_size" alt="" coords="368,107,439,133"/>
+<area shape="rect" id="node7" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="343,157,464,184"/>
+</map>

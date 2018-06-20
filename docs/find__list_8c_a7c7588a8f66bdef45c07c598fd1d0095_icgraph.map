@@ -1,0 +1,4 @@
+<map id="find_player_by_id" name="find_player_by_id">
+<area shape="rect" id="node2" href="$cmd__fcts_8h.html#a8f67dfcaba0bea6e705cc279f32aaf03" title="send_player_inv" alt="" coords="176,5,292,32"/>
+<area shape="rect" id="node3" href="$cmd__fcts_8h.html#a2fc867fdff9a7ed572df61bd44a0aa4a" title="send_player_lv" alt="" coords="179,56,289,83"/>
+</map>

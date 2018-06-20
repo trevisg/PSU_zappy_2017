@@ -4,7 +4,7 @@ var searchData=
   ['ref_5fnb',['REF_NB',['../server_8h.html#a9880cfe1f4eb3140da2095fd081282f5',1,'server.h']]],
   ['refmap',['refmap',['../structt__teams.html#ad83966cce071adf2e1e58acd369fbf31',1,'t_teams']]],
   ['refuser',['refuser',['../structt__inhabitant.html#a946861d84323e44cdf95f2a5bf37faae',1,'t_inhabitant']]],
-  ['remove_5fteams',['remove_teams',['../teams__list_8c.html#af3fe52c79c167c58efbf529bf96796e1',1,'remove_teams(t_teams *list, char *channame):&#160;teams_list.c'],['../server_8h.html#af3fe52c79c167c58efbf529bf96796e1',1,'remove_teams(t_teams *list, char *channame):&#160;teams_list.c']]],
+  ['remove_5fteams',['remove_teams',['../teams__list_8c.html#aac08e46e68007ce08675cdaecda90882',1,'remove_teams(t_teams *list, char *team_name):&#160;teams_list.c'],['../server_8h.html#aac08e46e68007ce08675cdaecda90882',1,'remove_teams(t_teams *list, char *team_name):&#160;teams_list.c']]],
   ['remove_5fuser',['remove_user',['../user__list_8c.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c'],['../server_8h.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'remove_user(t_userlist *list, int clifd):&#160;user_list.c']]],
   ['res',['res',['../structt__serv.html#ae8783e38ef0c183366703267ca7b3298',1,'t_serv']]],
   ['ressources',['ressources',['../structt__tile.html#a28649d079c4f8a1d23849ce09ec3b137',1,'t_tile']]],
