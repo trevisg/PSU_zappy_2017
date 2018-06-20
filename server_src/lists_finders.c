@@ -42,15 +42,15 @@ t_user	*find_user_by_fd(t_userlist *list, int clifd)
 
 /** Get the t_teams pointer by its name
 * @param list the teams list
-* @param channame the resquested teams
+* @param team_name the resquested teams
 * @return a t_teams pointer if exists , NULL otherwise
 */
-t_teams	*get_team_by_name(t_teams *list, char *channame)
+t_teams	*get_team_by_name(t_teams *list, char *team_name)
 {
 	t_teams *rt = NULL;
 
 	for (t_teams *tmp = list; tmp; tmp = tmp->next) {
-		if (!strcmp(tmp->channame, channame)) {
+		if (!strcmp(tmp->team_name, team_name)) {
 			rt = tmp;
 			break;
 		}
@@ -63,7 +63,7 @@ unsigned int	is_user_in_chan(int clifd, t_teams *chans)
 	for (t_userlist *usrs = chans->users; usrs; usrs = usrs->next) {
 		if (clifd == usrs->user->clifd) {
 			printf("Chan name [%s] Is in list ? [%s]\n",
-			chans->channame, usrs->user->nick);
+			chans->team_name, usrs->user->nick);
 			usrs->user->isco = false;
 		}
 	}
