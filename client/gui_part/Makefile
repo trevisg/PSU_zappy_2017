@@ -11,14 +11,14 @@ RM      	= rm -f
 
 CFLAGS		+= -I./include -Wall -Werror -Wextra
 
-LDFLAGS		+= -lsfml-graphics -lsfml-window -lsfml-system
+LDFLAGS		+= -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for GUI client
 GUICLIENT_SRCS	=  Zappy_gui.cpp \
 		Menu_Title.cpp \
-		Menu_Options.cpp \
+		Menu_Settings.cpp \
 		Menu_NewGame.cpp \
 		Menu.cpp
 
