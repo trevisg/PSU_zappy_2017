@@ -5,6 +5,9 @@
 // Main Gui Menu header
 //
 
+#include "../include/Menu_Title.hpp"
+#include "../include/Menu_NewGame.hpp"
+#include "../include/Menu_Settings.hpp"
 #include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
@@ -14,7 +17,12 @@ class Menu {
 		Menu();
 		~Menu();
 		bool get_menu();
-		void event_handler();
+		void key_press_handler(sf::Event::KeyEvent ev);
+		void event_handler(MenuSettings *, MenuNewGame *);
+		void text_entered_handler(sf::Event, MenuSettings *);
+		void mouse_click_handler(sf::Event::MouseButtonEvent,
+					MenuSettings *, MenuNewGame *);
+		void draw_menu(MenuTitle *, MenuSettings *, MenuNewGame *);
 	private:
 		sf::VideoMode	mode;
 		sf::Event	event;
