@@ -19,10 +19,14 @@ class Tile
 {
 public:
     Tile();
+    void setPos(int nx, int ny);
+    Pos  getPos();
+    void addPlayer(Player nplayer);
+    
+    Inventory inv;
 private:
 
 std::vector<Player> player_list;
-Inventory inv;
 Pos position;
 };
 

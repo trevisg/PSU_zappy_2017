@@ -31,6 +31,8 @@ bool Core::initConnexion(std::string teamName)
   if (clientNum < 1)
     return false;
   //set interpreter la talle de la map
-  map.setSize(20, 30); // remplacer ces valeurs par la reponse du serveur
+  map.setSize(150, 300); // remplacer ces valeurs par la reponse du serveur
   return true;
 }
+
+void Core::

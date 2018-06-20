@@ -17,9 +17,15 @@ public:
     int getY();
     void setX(int nx);
     void setY(int ny);
+    void setMaxX(int maxx);
+    void setMaxY(int maxy);
+    void move(int direction);
+
 private:
 	int x;
   int y;
+  int maxX;
+  int maxY;
 };
 
 #endif /*PLAYER_HPP*/

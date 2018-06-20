@@ -8,6 +8,7 @@
 #ifndef INVENTORY_HPP
 #define INVENTORY_HPP
 
+#include <string>
 #include "../include/stone.hpp"
 #include "../include/food.hpp"
 
@@ -15,6 +16,7 @@ class Inventory
 {
 public:
 	Inventory();
+	void  setItem(std::string stonename, int qte);
 	Stone linemate;
 	Stone deraumere;
 	Stone sibur;
