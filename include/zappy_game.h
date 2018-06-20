@@ -68,6 +68,17 @@
 		t_stone		linemate;
 		t_stone 	deraumere;
 	}			t_ressources;
+
+	/** A typical Zappy client
+	* @todo update with the t_inhabitant struct
+	*/
+	typedef struct			s_user {
+		int			clifd;
+		int			mode;
+		char			*nick;
+		char			*rname;
+		unsigned int		isco;
+	}				t_user;
 	/** A typical Trantor inhabitant (also a game player)
 	* @var t_inhabitant::id
 	* @brief The unique player id
@@ -82,7 +93,7 @@
 	* @var t_inhabitant::team_name
 	* @brief The trantorian team name
 	* @var t_inhabitant::refuser
-	* @brief The reference to the t_user associated
+	* @brief The reference to associated t_user tcp server client
 	*/
 	typedef struct 		s_inhabitant {
 		unsigned int 	id;

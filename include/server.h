@@ -114,16 +114,6 @@
 	/** To avoid stdbool include (for s_user.isco)*/
 	#define true	1
 	#define false	0
-	/** A typical Zappy client
-	* @todo update with the t_inhabitant struct
-	*/
-	typedef struct			s_user {
-		int			clifd;
-		int			mode;
-		char			*nick;
-		char			*rname;
-		unsigned int		isco;
-	}				t_user;
 
 	/** The doubly linked list of connected users */
 	typedef struct			s_userlist {
@@ -176,12 +166,12 @@
 	t_teams		*init_default_teams(void);
 	void		free_teams_list(t_teams *list);
 	t_teams		*get_new_chan_list(t_userlist *userlist, char *);
-	void		remove_teams(t_teams *list, char *channame);
+	void		remove_teams(t_teams *list, char *team_name);
 	void		*insert_back_teams(t_teams *head, t_teams *chan);
 	/** @note see server_src/list_helpers.c */
 	t_user		*find_user_by_fd(t_userlist *list, int clifd);
 	t_user		*find_user_by_name(const char *name, t_userlist *usrs);
-	t_teams		*get_team_by_name(t_teams *list, char *channame);
+	t_teams		*get_team_by_name(t_teams *list, char *team_name);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
 	unsigned int	get_size(cmdargs args);
 	/** @note see @file server_src/rfc_cmds0.c */
