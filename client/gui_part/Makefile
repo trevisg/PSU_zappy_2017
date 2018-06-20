@@ -18,7 +18,7 @@ CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 ## Sources and rules for GUI client
 GUICLIENT_SRCS	=  Zappy_gui.cpp \
 		Menu_Title.cpp \
-		Menu_Options.cpp \
+		Menu_Settings.cpp \
 		Menu_NewGame.cpp \
 		Menu.cpp
 
