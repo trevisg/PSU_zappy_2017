@@ -16,11 +16,11 @@ class Core
 {
 public:
 	Core();
-  void start();
-  bool initConnexion(std::string teamName);
+	void start();
+	bool initConnexion(std::string teamName);
 private:
-  Player trantor;
-  Map map;
+	Player _trantor;
+	Map _map;
 };
 
 #endif /*CORE_HPP*/

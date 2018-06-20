@@ -11,19 +11,33 @@
 #include "string"
 #include "../include/inventory.hpp"
 #include "../include/pos.hpp"
+#include "../include/playerview.hpp"
+
+enum {NORTH = 0, EAST = 1, SOUTH = 2, WEST = 3};
 
 class Player
 {
 public:
 	Player();
 	void setTeam(std::string teamName);
+	void setLvl(int lvl);
+	void setDir(int dir);
+	void setInv(std::vector<int> inv);
 	std::string getTeam();
+	std::vector<Pos> GetviewPos(int maxX, int maxY);
+	void turnRight();
+	void turnLeft();
+	Pos nextCalcPos(Pos old);
+
 private:
-	int lifeLeft;
-	std::string team;
-	Inventory	invent;
-	Pos position;
-	bool readyToRitual;
+	int _lifeLeft;
+	int _level;
+	int _direction;
+	std::string _team;
+	std::vector<int> _inventory;
+	Pos _position;
+	PlayerView _view;
+	bool _readyToRitual;
 };
 
 #endif /*PLAYER_HPP*/
