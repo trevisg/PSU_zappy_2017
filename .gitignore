@@ -2,6 +2,7 @@
 *.o
 *test
 *.txt
+*~
 #Test binaries
 a.out
 */a.out
