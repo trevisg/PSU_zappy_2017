@@ -18,7 +18,7 @@ void	print_users_in_chans(t_teams *chanlist, int index)
 {
 	if (index)
 	for (t_teams *tmp = chanlist; tmp; tmp = tmp->next) {
-		printf("\tteams : [%s]\n", tmp->channame);
+		printf("\tteams : [%s]\n", tmp->team_name);
 		print_users(tmp->users);
 	}
 }
