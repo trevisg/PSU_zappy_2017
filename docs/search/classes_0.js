@@ -7,7 +7,6 @@ var searchData=
   ['t_5fressources',['t_ressources',['../structt__ressources.html',1,'']]],
   ['t_5fserv',['t_serv',['../structt__serv.html',1,'']]],
   ['t_5fstone',['t_stone',['../structt__stone.html',1,'']]],
-  ['t_5fteam',['t_team',['../structt__team.html',1,'']]],
   ['t_5fteams',['t_teams',['../structt__teams.html',1,'']]],
   ['t_5ftile',['t_tile',['../structt__tile.html',1,'']]],
   ['t_5fuser',['t_user',['../structt__user.html',1,'']]],
