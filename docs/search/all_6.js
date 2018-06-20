@@ -2,6 +2,7 @@ var searchData=
 [
   ['g_5fcmds',['G_CMDS',['../server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28',1,'G_CMDS():&#160;server_decls.c'],['../server_8h.html#a7bb29231b69e3767e187ffe5d5717b28',1,'G_CMDS():&#160;server_decls.c']]],
   ['g_5fprotos',['G_PROTOS',['../server__decls_8c.html#ae19e01ff7678899828036520edec313c',1,'G_PROTOS():&#160;server_decls.c'],['../server_8h.html#ae19e01ff7678899828036520edec313c',1,'G_PROTOS():&#160;server_decls.c']]],
+  ['game_2ec',['game.c',['../game_8c.html',1,'']]],
   ['get_5fargs',['get_args',['../commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae',1,'commands_parsing.c']]],
   ['get_5fclientsnb',['get_clientsNb',['../cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7',1,'get_clientsNb(char **clientsNb, t_clargs *args):&#160;cl_flags_bis.c'],['../server_8h.html#a7594cec69e8dc7da322bdc98b258f7e7',1,'get_clientsNb(char **clientsNb, t_clargs *args):&#160;cl_flags_bis.c']]],
   ['get_5fcmdargs',['get_cmdargs',['../cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae',1,'cl_args_parsing.c']]],
@@ -11,6 +12,7 @@ var searchData=
   ['get_5fheight',['get_height',['../cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c',1,'get_height(char **height, t_clargs *args):&#160;cl_flags.c'],['../server_8h.html#a3ea4530e0397932b35cde078235aa56c',1,'get_height(char **height, t_clargs *args):&#160;cl_flags.c']]],
   ['get_5fhost_5fstring',['get_host_string',['../logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0',1,'logs_helpers.c']]],
   ['get_5fmethods',['get_methods',['../commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961',1,'get_methods(char *req, int clifd):&#160;commands_parsing.c'],['../server_8h.html#ac5949d17278df5e1ada98dca25ccd961',1,'get_methods(char *req, int clifd):&#160;commands_parsing.c']]],
+  ['get_5fnbr_5fby_5flevel',['get_nbr_by_level',['../find__list_8c.html#adfc01cd0e9e0541889768cc67bff0b5a',1,'find_list.c']]],
   ['get_5fnew_5fchan_5flist',['get_new_chan_list',['../teams__list_8c.html#a502d66bd7955b127bcb41fbb0c23667b',1,'get_new_chan_list(t_userlist *userlist, char *channame):&#160;teams_list.c'],['../server_8h.html#a9613fd1ea430fdb90ed081ffdaae75b5',1,'get_new_chan_list(t_userlist *userlist, char *):&#160;teams_list.c']]],
   ['get_5fnew_5fuser',['get_new_user',['../user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0',1,'get_new_user(int clifd, cmdargs usercmd):&#160;user_list.c'],['../server_8h.html#ace045c243817cc0c9885bdf3b41263c0',1,'get_new_user(int clifd, cmdargs usercmd):&#160;user_list.c']]],
   ['get_5fnew_5fuserlist',['get_new_userlist',['../user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039',1,'get_new_userlist(t_user *usr):&#160;user_list.c'],['../server_8h.html#a1cf3d818bc2607cb0f69c043dba3c039',1,'get_new_userlist(t_user *usr):&#160;user_list.c']]],
