@@ -6,9 +6,7 @@
 //
 
 #include "../include/Menu.hpp"
-#include "../include/Menu_Title.hpp"
-#include "../include/Menu_Options.hpp"
-#include "../include/Menu_NewGame.hpp"
+#include <iostream>
 
 Menu::Menu()
 {
@@ -38,42 +36,97 @@ Menu::~Menu()
 	menuwindow.close();
 }
 
-void 	Menu::event_handler()
+void	Menu::text_entered_handler(sf::Event ev, MenuSettings *opts)
+{
+	static std::string	str;
+	const  std::string	hostmod("127.0.0.1");
+	sf::Text		txt;
+
+	if (ev.text.unicode < 128 && (opts || !opts)) {
+		str += static_cast<char>(ev.text.unicode);
+		if (str.length() == hostmod.length()) {
+			std::cout << str << std::endl;
+			txt.setString(str);
+		}
+	}
+}
+
+void	Menu::mouse_click_handler(sf::Event::MouseButtonEvent ev,
+			MenuSettings *opts, MenuNewGame *ngame)
+{
+	sf::Vector2i pixelPos = sf::Mouse::getPosition(menuwindow);
+	sf::Vector2f worldPos = menuwindow.mapPixelToCoords(pixelPos);
+	sf::FloatRect newgamebounds = ngame->getNewGameRect().getGlobalBounds();
+	sf::FloatRect optsbounds = opts->getOptsRect().getGlobalBounds();
+	bool foo = newgamebounds.contains(worldPos.x, worldPos.y);
+	bool faa = optsbounds.contains(worldPos.x, worldPos.y);
+
+	if (ev.button == sf::Mouse::Button::Right && opts) {
+		printf("\n\t\tMouse right click !!\n");
+		printf("Click on new game : %s\n", foo ? "true" : "false");
+		printf("Click on options : %s\n", faa ? "true" : "false");
+	} else if (ev.button == sf::Mouse::Button::Left && opts) {
+		printf("\n\t\tMouse left click !!\n");
+		printf("Click on new game : %s\n", foo ? "true" : "false");
+		printf("Click on options : %s\n", faa ? "true" : "false");
+	}
+}
+
+void	Menu::key_press_handler(sf::Event::KeyEvent ev)
 {
 	sf::SoundSource::Status mstatus;
 
+	if (ev.code == sf::Keyboard::Escape) {
+		menuwindow.close();
+	} else if (ev.code == sf::Keyboard::F1) {
+		 mstatus = bgmusic.getStatus();
+		if (mstatus == sf::SoundSource::Playing)
+			bgmusic.pause();
+		else
+			bgmusic.play();
+	}
+}
+
+void 	Menu::event_handler(MenuSettings *opts, MenuNewGame *ngame)
+{
 	while (menuwindow.pollEvent(event)) {
 		if (event.type == sf::Event::Closed) {
 			menuwindow.close();
 		} else if (event.type == sf::Event::KeyPressed) {
-			if (event.key.code == sf::Keyboard::Q) {
-				menuwindow.close();
-			} else if (event.key.code == sf::Keyboard::P) {
-				 mstatus = bgmusic.getStatus();
-				if (mstatus == sf::SoundSource::Playing)
-					bgmusic.pause();
-				else
-					bgmusic.play();
-			}
+			key_press_handler(event.key);
+		} else if (event.type == sf::Event::MouseButtonPressed) {
+			mouse_click_handler(event.mouseButton, opts, ngame);
+		} else if (event.type == sf::Event::TextEntered) {
+			text_entered_handler(event, opts);
 		}
 	}
+}
+
+void	Menu::draw_menu(MenuTitle *title, MenuSettings *opts,
+			MenuNewGame *ngame)
+{
+	menuwindow.draw(bgsprite);
+	menuwindow.draw(opts->getOptsRect());
+	menuwindow.draw(opts->getOptsText());
+	menuwindow.draw(ngame->getNewGameRect());
+	menuwindow.draw(ngame->getNewGameText());
+	menuwindow.draw(title->get_menuTitleText());
 }
 
 bool	Menu::get_menu()
 {
 	MenuTitle title(400, 0);
-	MenuOptions opts(130, 1080);
+	MenuSettings opts(140, 1080);
 	MenuNewGame ngame(100, 100);
+	MenuTitle *title_ptr = &title;
+	MenuSettings *opts_ptr = &opts;
+	MenuNewGame *ngame_ptr = &ngame;
 
 	bgmusic.play();
 	while (menuwindow.isOpen()) {
-		event_handler();
+		event_handler(opts_ptr, ngame_ptr);
 		menuwindow.clear(sf::Color::Black);
-		menuwindow.draw(bgsprite);
-		menuwindow.draw(opts.getOptsRect());
-		menuwindow.draw(opts.getOptsText());
-		menuwindow.draw(ngame.getNewGameRect());
-		menuwindow.draw(title.get_menutitletext());
+		draw_menu(title_ptr, opts_ptr, ngame_ptr);
 		menuwindow.display();
 	}
 	return (false);
