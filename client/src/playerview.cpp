@@ -13,21 +13,17 @@ PlayerView::PlayerView()
 
 void PlayerView::addTile()
 {
-	_view.emplace_back(tmptile);
-	clearTile();
+  view.emplace_back(tmptile);
+  clearTile();
 }
 
-void PlayerView::tileSetPos(int nx, int ny) {_tmptile.setPos(nx, ny);}
-
-void PlayerView::tileSetItem(std::string itemname, int qte)
-{
-	_tmptile.inv.setItem(itemname, qte);
-}
+void PlayerView::tileSetPos(int nx, int ny) {tmptile.setPos(nx, ny);}
+void PlayerView::tileSetItem(std::string itemname, int qte) {tmptile.inv.setItem(itemname, qte);}
 void PlayerView::addPlayer(Player ntretor) {tmptile.addPlayer(ntretor);}
 
 void PlayerView::clearTile()
 {
-	Tile ntmp;
+  Tile ntmp;
 
-	_tmptile = ntmp;
+  tmptile = ntmp;
 }
