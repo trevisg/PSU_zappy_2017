@@ -9,7 +9,6 @@
 #define PLAYER_HPP
 
 #include "string"
-#include "../include/inventory.hpp"
 #include "../include/pos.hpp"
 #include "../include/playerview.hpp"
 
@@ -19,6 +18,7 @@ class Player
 {
 public:
 	Player();
+	~Player();
 	void setTeam(std::string teamName);
 	void setLvl(int lvl);
 	void setDir(int dir);

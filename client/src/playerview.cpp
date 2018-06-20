@@ -19,7 +19,7 @@ void PlayerView::addTile()
 
 void PlayerView::tileSetPos(int nx, int ny) {tmptile.setPos(nx, ny);}
 void PlayerView::tileSetItem(std::string itemname, int qte) {tmptile.inv.setItem(itemname, qte);}
-void PlayerView::addPlayer(Player ntretor) {tmptile.addPlayer(ntretor);}
+//void PlayerView::addPlayer(Player ntretor) {tmptile.addPlayer(ntretor);}
 
 void PlayerView::clearTile()
 {

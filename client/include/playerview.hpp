@@ -10,7 +10,7 @@
 
 #include <vector>
 #include "tile.hpp"
-#include "player.hpp"
+//#include "player.hpp"
 
 class PlayerView
 {
@@ -18,7 +18,7 @@ public:
     PlayerView();
     void addTile();
     void tileSetPos(int nx, int ny);
-    void addPlayer(Player ntretor);
+	//void addPlayer(Player ntretor);
     void tileSetItem(std::string itemname, int qte);
 private:
 

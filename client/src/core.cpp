@@ -34,5 +34,3 @@ bool Core::initConnexion(std::string teamName)
 	_map.setSize(150, 300); // remplacer ces valeurs par la reponse du serveur
 	return true;
 }
-
-void Core::

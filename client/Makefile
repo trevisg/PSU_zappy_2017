@@ -16,15 +16,11 @@ CFLAGS		+= -I./include -Wall -Werror -Wextra
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for client
-CLIENT_SRCS	=  src/main.c \
-		src/core.cpp \
-		src/food.cpp \
-		src/inventory.cpp \
-		src/map.cpp \
-		src/player.cpp \
-		src/pos.cpp	\
-		src/stone.cpp	\
-		src/Tile.cpp
+CLIENT_SRCS	=	src/player.cpp 	\
+			src/core.cpp 	\
+			src/pos.cpp	\
+			src/tile.cpp	\
+			src/main.c
 
 CLIENTSRC	= $(addprefix ./, $(CLIENT_SRCS))
 
@@ -40,13 +36,13 @@ all:		$(CLIENT)
 $(CLIENT):	$(CLIENTOBJS)
 		$(CC) $(CFLAGS) $(CLIENTOBJS) -o $(CLIENT)
 
-clean:
-		$(RM) $(CLIENTOBJS)
+##clean:
+##		$(RM) $(CLIENTOBJS)
 
-fclean: 	clean
-		$(RM) $(CLIENT)
+##fclean: 	clean
+##		$(RM) $(CLIENT)
 
-re:		fclean all
+##re:		fclean all
 
 doc:
 		$(DOXYGEN) bonus/Doxyfile

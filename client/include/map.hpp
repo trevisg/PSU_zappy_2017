@@ -9,7 +9,7 @@
 #define MAP_HPP
 
 #include <vector>
-#include "Tile.hpp"
+#include "tile.hpp"
 
 class Map
 {

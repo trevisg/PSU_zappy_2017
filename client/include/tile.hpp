@@ -9,10 +9,8 @@
 #define TILE_HPP
 
 #include <vector>
-#include "../include/inventory.hpp"
 #include "../include/player.hpp"
 #include "../include/pos.hpp"
-#include "Tile.hpp"
 
 class Tile
 {
@@ -20,12 +18,12 @@ public:
 	Tile();
 	void setPos(int nx, int ny);
 	Pos  getPos();
-	void addPlayer(Player nplayer);
+	//void addPlayer(Player nplayer);
 	void setInv(std::vector<int> inv);
 	std::vector<int> getInv(void);
 private:
 
-	std::vector<Player> _player_list;
+	//std::vector<Player> _player_list;
 	std::vector<int> _inventory;
 	Pos _position;
 };

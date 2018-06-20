@@ -15,6 +15,11 @@ Player::Player()
 	_direction = NORTH;
 }
 
+Player::~Player()
+{
+	
+}
+
 void Player::setTeam(std::string teamName) {_team = teamName;}
 std::string Player::getTeam() {return _team;}
 
@@ -33,7 +38,7 @@ std::vector<Pos> Player::GetviewPos(int maxX, int maxY)
 	// !!!                                                            !!!!
 
 	point = _position;
-	while (i <= level)
+	while (i <= _level)
 	{
 		tmp = point;
 		while (j < nbc)

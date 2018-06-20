@@ -19,12 +19,12 @@ Pos::Pos(int valx, int valy)
 	_y = valy;
 }
 
-int Pos::getX() {return x;}
-int Pos::getY() {return y;}
-void Pos::setX(int nx) {x = nx;}
-void Pos::setY(int ny) {y = ny;}
-void Pos::setMaxX(int maxx) {maxX = maxx;}
-void Pos::setMaxY(int maxy) {maxY = maxy;}
+int Pos::getX() {return _x;}
+int Pos::getY() {return _y;}
+void Pos::setX(int nx) {_x = nx;}
+void Pos::setY(int ny) {_y = ny;}
+void Pos::setMaxX(int maxx) {_maxX = maxx;}
+void Pos::setMaxY(int maxy) {_maxY = maxy;}
 
 void Pos::move(int direction)
 {
@@ -47,7 +47,7 @@ void Pos::move(int direction)
 		if (getY() - 1 >= 0)
 			setY(getY() - 1);
 		else
-			setY(maxY);
+			setY(_maxY);
 	}
 	else
 	{

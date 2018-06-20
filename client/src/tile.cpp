@@ -5,7 +5,7 @@
 // tile header
 //
 
-#include "../include/Tile.hpp"
+#include "tile.hpp"
 
 Tile::Tile() {}
 
@@ -15,9 +15,9 @@ void Tile::setPos(int nx, int ny)
 	_position.setY(ny);
 }
 
-Pos Tile::getPos() {return position;}
+Pos Tile::getPos() {return _position;}
 
-void Tile::addPlayer(Player nplayer) {_player_list.emplace_back(nplayer);}
+//void Tile::addPlayer(Player nplayer) {_player_list.emplace_back(nplayer);}
 
 void setInv(std::vector<int> inv) : _inventory(inv)
 {
