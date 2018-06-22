@@ -5,6 +5,8 @@
 // Main Gui Menu header
 //
 
+#ifndef MENU_HPP_
+
 #include "../include/Menu_Title.hpp"
 #include "../include/Menu_NewGame.hpp"
 #include "../include/Menu_Settings.hpp"
@@ -35,3 +37,4 @@ class Menu {
 };
 
 extern sf::RenderWindow menuwindow;
+#endif /* !MENU_HPP_ */
