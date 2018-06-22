@@ -9,8 +9,11 @@
 
 MenuSettings::MenuSettings(int xsize, int ysize)
 {
-	SettingsPos = sf::Vector2f(xsize, ysize);
-	SettingsRect = sf::RectangleShape(SettingsPos);
+	/** Main settings for Settings rectangle shape on
+	* the left side of the menuwindow
+	*/
+	SettingsSize = sf::Vector2f(xsize, ysize);
+	SettingsRect = sf::RectangleShape(SettingsSize);
 	SettingsRect.setFillColor(sf::Color::Black);
 	SettingsRect.setOutlineThickness(10);
 	SettingsRect.setOutlineColor(sf::Color::Red);
@@ -23,6 +26,24 @@ MenuSettings::MenuSettings(int xsize, int ysize)
 	SettingsText.setStyle(sf::Text::Underlined);
 	SettingsText.setFillColor(sf::Color::Red);
 	SettingsText.setPosition(10, 40);
+	/** Main settings for Host user input rectangle shape on
+	* the left side of the menuwindow
+	*/
+	ServerHostSettingsSize = sf::Vector2f(100, 20);
+	ServerHostSettingsRect = sf::RectangleShape(ServerHostSettingsSize);
+	ServerHostSettingsRect.setFillColor(sf::Color::White);
+	ServerHostSettingsRect.setOutlineThickness(5);
+	ServerHostSettingsRect.setOutlineColor(sf::Color::Red);
+	ServerHostSettingsRect.setPosition(20, 100);
+	/** Main settings for Port user input rectangle shape on
+	* the left side of the menuwindow
+	*/
+	ServerPortSettingsSize = sf::Vector2f(100, 20);
+	ServerPortSettingsRect = sf::RectangleShape(ServerHostSettingsSize);
+	ServerPortSettingsRect.setFillColor(sf::Color::White);
+	ServerPortSettingsRect.setOutlineThickness(5);
+	ServerPortSettingsRect.setOutlineColor(sf::Color::Red);
+	ServerPortSettingsRect.setPosition(20, 160);
 }
 
 sf::RectangleShape	MenuSettings::getOptsRect()
