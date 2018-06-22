@@ -17,8 +17,8 @@ class	GameWindow
 {
 	public:
 		GameWindow();
-		bool start_me();
 		void setgamesound();
+		bool start_me(int x_mapsize, int y_mapsize);
 	private:
 		sf::Music	gamemusic;
 		sf::SoundBuffer	soundbuff;

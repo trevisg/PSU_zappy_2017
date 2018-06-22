@@ -65,7 +65,7 @@ void	Menu::mouse_click_handler(sf::Event::MouseButtonEvent ev,
 		if (start) {
 			bgmusic.pause();
 			// menuwindow.close();
-			if (!(ngame->getGameWindow()->start_me())) {
+			if (!(ngame->getGameWindow()->start_me(20, 20))) {
 				bgmusic.play();
 				// get_menu();
 			}

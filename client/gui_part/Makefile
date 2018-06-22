@@ -9,7 +9,7 @@ CC      	= g++
 
 RM      	= rm -f
 
-CFLAGS		+= -I./include -Wall -Werror -Wextra
+CPPFLAGS	+= -I./include -Wall -Werror -Wextra
 
 LDFLAGS		+= -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 
@@ -34,6 +34,11 @@ all:		$(GUICLIENT)
 
 $(GUICLIENT):
 		$(CC) $(CFLAGS) $(LDFLAGS) $(GUICLIENTSRC) -o $(GUICLIENT)
+
+testgame:
+		@printf "Debug game window methods\n"
+		g++ src/Game_Window.cpp $(CPPFLAGS) $(LDFLAGS) -D TESTGAME
+		@printf "Done.\nNow run with ./a.out x y (map size)\n"
 
 fclean: 	clean
 		$(RM) $(GUICLIENT)
