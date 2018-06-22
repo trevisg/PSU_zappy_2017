@@ -20,6 +20,7 @@ GUICLIENT_SRCS	=  Zappy_gui.cpp \
 		Menu_Title.cpp \
 		Menu_Settings.cpp \
 		Menu_NewGame.cpp \
+		Game_Window.cpp \
 		Menu.cpp
 
 GUICLIENTSRC	= $(addprefix src/, $(GUICLIENT_SRCS))
