@@ -58,16 +58,18 @@ void	Menu::mouse_click_handler(sf::Event::MouseButtonEvent ev,
 	sf::Vector2f worldPos = menuwindow.mapPixelToCoords(pixelPos);
 	sf::FloatRect newgamebounds = ngame->getNewGameRect().getGlobalBounds();
 	sf::FloatRect optsbounds = opts->getOptsRect().getGlobalBounds();
-	bool foo = newgamebounds.contains(worldPos.x, worldPos.y);
+	bool start = newgamebounds.contains(worldPos.x, worldPos.y);
 	bool faa = optsbounds.contains(worldPos.x, worldPos.y);
 
-	if (ev.button == sf::Mouse::Button::Right && opts) {
-		printf("\n\t\tMouse right click !!\n");
-		printf("Click on new game : %s\n", foo ? "true" : "false");
-		printf("Click on options : %s\n", faa ? "true" : "false");
-	} else if (ev.button == sf::Mouse::Button::Left && opts) {
-		printf("\n\t\tMouse left click !!\n");
-		printf("Click on new game : %s\n", foo ? "true" : "false");
+	if (ev.button == sf::Mouse::Button::Left && opts) {
+		if (start) {
+			bgmusic.pause();
+			// menuwindow.close();
+			if (!(ngame->getGameWindow()->start_me())) {
+				bgmusic.play();
+				// get_menu();
+			}
+		}
 		printf("Click on options : %s\n", faa ? "true" : "false");
 	}
 }
@@ -108,6 +110,8 @@ void	Menu::draw_menu(MenuTitle *title, MenuSettings *opts,
 	menuwindow.draw(bgsprite);
 	menuwindow.draw(opts->getOptsRect());
 	menuwindow.draw(opts->getOptsText());
+	menuwindow.draw(opts->getServerHostSettingsRect());
+	menuwindow.draw(opts->getServerPortSettingsRect());
 	menuwindow.draw(ngame->getNewGameRect());
 	menuwindow.draw(ngame->getNewGameText());
 	menuwindow.draw(title->get_menuTitleText());
@@ -117,7 +121,7 @@ bool	Menu::get_menu()
 {
 	MenuTitle title(400, 0);
 	MenuSettings opts(140, 1080);
-	MenuNewGame ngame(100, 100);
+	MenuNewGame ngame(100, 30);
 	MenuTitle *title_ptr = &title;
 	MenuSettings *opts_ptr = &opts;
 	MenuNewGame *ngame_ptr = &ngame;
