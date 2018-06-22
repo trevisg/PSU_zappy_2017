@@ -23,29 +23,29 @@ void	GameWindow::setgamesound()
 
 }
 
-void 	DrawTile(sf::RectangleShape *bg, sf::Vector2f pos)
+void 	DrawTile(sf::Vector2f pos)
 {
-	if (bg && pos.x) {
-		sf::Vector2f tile_size  = sf::Vector2f(20, 20);
-		sf::RectangleShape the_tile(tile_size);
-		the_tile.setFillColor(sf::Color::Blue);
-		the_tile.setOutlineThickness(5);
-		the_tile.setOutlineColor(sf::Color::Black);
-		the_tile.setPosition(20, 20);
-		gamewindow.draw(the_tile);
-	}
+	sf::Vector2f tile_size  = sf::Vector2f(40, 40);
+	sf::RectangleShape the_tile(tile_size);
+	the_tile.setFillColor(sf::Color::Blue);
+	the_tile.setOutlineThickness(3);
+	the_tile.setOutlineColor(sf::Color::Black);
+	the_tile.setPosition(pos);
+	gamewindow.draw(the_tile);
 }
 
 void 	DrawBoard(int x_size, int y_size)
 {
-	sf::RectangleShape bg(sf::Vector2f(gamewindow.getSize().x - 100,
-		gamewindow.getSize().y - 100));
-	sf::RectangleShape *bg_ptr = &bg;
-
+	int ypos = 0;
+	int xpos = 0;
+	// sf::RectangleShape bg(sf::Vector2f(gamewindow.getSize().x - 100,
+	// 	gamewindow.getSize().y - 100));
 
 	for (int i = 0; i < y_size; ++i) {
+		ypos = (gamewindow.getSize().y / 2) - ((y_size * 40) / 2 - (i  * 40));
 		for (int j = 0; j < x_size; ++j) {
-			DrawTile(bg_ptr, sf::Vector2f(i, j));
+			xpos = (gamewindow.getSize().x / 2) - ((x_size * 40) / 2  - (j * 40));
+			DrawTile(sf::Vector2f(xpos, ypos));
 		}
 	}
 
@@ -82,7 +82,7 @@ int main(int ac, char **av)
 	int		y;
 
 	if (ac >= 2 && (x = atoi(av[1])) > 0 && (y = atoi(av[1])) > 0) {
-		gm.start_me(atoi(av[1]), atoi(av[2]));
+		gm.start_me(x, y);
 	} else {
 		fprintf(stderr, "Usage %s int x, int y\t(map size)\n", av[0]);
 	}
