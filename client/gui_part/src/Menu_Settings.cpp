@@ -16,7 +16,7 @@ MenuSettings::MenuSettings(int xsize, int ysize)
 	SettingsRect = sf::RectangleShape(SettingsSize);
 	SettingsRect.setFillColor(sf::Color::Black);
 	SettingsRect.setOutlineThickness(10);
-	SettingsRect.setOutlineColor(sf::Color::Red);
+	SettingsRect.setOutlineColor(sf::Color::Blue);
 	if (!SettingsFont.loadFromFile("assets/fonts/elasis.ttf")) {
 		fprintf(stderr, "Failed to load Settings font\n");
 	}

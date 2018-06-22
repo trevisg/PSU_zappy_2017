@@ -15,7 +15,7 @@ class	MenuNewGame
 {
 	public:
 		MenuNewGame(int xsize, int ysize);
-		sf::RectangleShape	getNewGameRect();
+		sf::CircleShape		getnewgamebutton();
 		sf::Text		getNewGameText();
 		GameWindow		*getGameWindow();
 		void 			setNewGamePos(int xpos, int ypos);
@@ -26,7 +26,7 @@ class	MenuNewGame
 		sf::Texture		newgametextures;
 		sf::Sprite		newgamesprite;
 		sf::Vector2f		newgamesize;
-		sf::RectangleShape 	newgamerect;
+		sf::CircleShape		newgamebutton;
 		sf::Font		newgamefont;
 		sf::Text 		newgametext;
 };

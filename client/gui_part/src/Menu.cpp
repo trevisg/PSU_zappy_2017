@@ -56,7 +56,7 @@ void	Menu::mouse_click_handler(sf::Event::MouseButtonEvent ev,
 {
 	sf::Vector2i pixelPos = sf::Mouse::getPosition(menuwindow);
 	sf::Vector2f worldPos = menuwindow.mapPixelToCoords(pixelPos);
-	sf::FloatRect newgamebounds = ngame->getNewGameRect().getGlobalBounds();
+	sf::FloatRect newgamebounds = ngame->getnewgamebutton().getGlobalBounds();
 	sf::FloatRect optsbounds = opts->getOptsRect().getGlobalBounds();
 	bool start = newgamebounds.contains(worldPos.x, worldPos.y);
 	bool faa = optsbounds.contains(worldPos.x, worldPos.y);
@@ -112,14 +112,15 @@ void	Menu::draw_menu(MenuTitle *title, MenuSettings *opts,
 	menuwindow.draw(opts->getOptsText());
 	menuwindow.draw(opts->getServerHostSettingsRect());
 	menuwindow.draw(opts->getServerPortSettingsRect());
-	menuwindow.draw(ngame->getNewGameRect());
+	menuwindow.draw(ngame->getnewgamebutton());
 	menuwindow.draw(ngame->getNewGameText());
 	menuwindow.draw(title->get_menuTitleText());
+	menuwindow.draw(title->get_menuHelpText());
 }
 
 bool	Menu::get_menu()
 {
-	MenuTitle title(400, 0);
+	MenuTitle title(880, 0);
 	MenuSettings opts(140, 1080);
 	MenuNewGame ngame(100, 30);
 	MenuTitle *title_ptr = &title;

@@ -15,12 +15,15 @@ class	MenuTitle
 	public:
 		MenuTitle(int xpos, int ypos);
 		sf::Text get_menuTitleText();
+		sf::Text get_menuHelpText();
 	private:
 		int 		x;
 		int 		y;
 		sf::Font	TitleFont;
 		sf::Text	TitleText;
 		sf::String	TitleString;
+		sf::String	menuhelpstring;
+		sf::Text 	menuhelptext;
 };
 
 #endif /* !MENU_TITLE_HPP_ */
