@@ -9,7 +9,6 @@
 
 sf::RenderWindow menuwindow;
 
-
 int main(void)
 {
 	Menu menu;
