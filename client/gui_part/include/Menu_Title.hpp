@@ -5,6 +5,8 @@
 // Main Gui Menu Title header
 //
 
+#ifndef MENU_TITLE_HPP_
+
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -20,3 +22,5 @@ class	MenuTitle
 		sf::Text	TitleText;
 		sf::String	TitleString;
 };
+
+#endif /* !MENU_TITLE_HPP_ */
