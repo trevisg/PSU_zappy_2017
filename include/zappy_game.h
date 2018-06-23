@@ -21,6 +21,35 @@
 	/** For ramdom generation of world ressources */
 	#define MAX_RAND 5
 
+	typedef enum	ORIENTATION
+	{
+		N = 1,
+		E = 2,
+		S = 3,
+		W = 4
+	} ORIENTATION;
+	/* State of evolution of an egg */
+	enum	EGG_STATE {
+		IN_PROCESS = 0,
+		HATCHED = 1,
+		DEAD = 2
+	};
+	typedef enum EGG_STATE EGG_STATE;
+	/** For ITEMS access (improve usage and readability)
+	* @note glob var ITEM can be accessed by ITEMS[FOOD] or ITEMS[PHIRAS]
+	* @deprecated In fact this is useless as ITEMS is not a pointer
+	*/
+	enum	ITEMS_NAMES {
+		EMPTY = -1,
+		FOOD = 0,
+		DERAUMERE = 1,
+		LINEMATE = 2,
+		SIBUR = 3,
+		MENDIANE = 4,
+		PHIRAS = 5,
+		THYSTAME = 6
+	};
+	typedef enum ITEMS_NAMES ITEMS_NAMES;
 	/** The stone ressources needed by the trantorians
 	* to do an incantation
 	* @var t_stone::name
@@ -41,7 +70,7 @@
 	*/
 	typedef struct		s_food {
 		char		name[MAX_FOOD_NAME];
-		unsigned int 	qtt;
+		unsigned int	qtt;
 	}			t_food;
 	/** All the differents ressources possible for a t_world::tiles
 	* @var t_ressources::food
@@ -66,19 +95,16 @@
 		t_stone		mendiane;
 		t_stone		thystame;
 		t_stone		linemate;
-		t_stone 	deraumere;
+		t_stone		deraumere;
 	}			t_ressources;
-
-	/** A typical Zappy client
-	* @todo update with the t_inhabitant struct
-	*/
-	typedef struct			s_user {
-		int			clifd;
-		int			mode;
-		char			*nick;
-		char			*rname;
-		unsigned int		isco;
-	}				t_user;
+	/* Egg  */
+	typedef struct		s_egg {
+		unsigned int	id;
+		EGG_STATE	ev;
+		unsigned int	id_droper;
+		struct s_egg	*next;
+		struct s_egg	*prev;
+	}			t_egg;
 	/** A typical Trantor inhabitant (also a game player)
 	* @var t_inhabitant::id
 	* @brief The unique player id
@@ -93,17 +119,36 @@
 	* @var t_inhabitant::team_name
 	* @brief The trantorian team name
 	* @var t_inhabitant::refuser
-	* @brief The reference to associated t_user tcp server client
+	* @brief The reference to the t_user associated
 	*/
-	typedef struct 		s_inhabitant {
-		unsigned int 	id;
+	typedef struct		s_inhabitant {
+		int		clifd;
+		unsigned int	isco;
+		unsigned int	id;
 		double		ttl;
-		unsigned int 	level;
+		unsigned int	level;
 		t_ressources	inventory;
-		int 		curr_pos[2];
+		int		curr_pos[2];
 		char		team_name[MAX_TEAM_NAME];
-		t_user		*refuser;
+		ORIENTATION	o;
+		ITEMS_NAMES	just_drop;
+		ITEMS_NAMES	just_collect;
+		t_egg		*eggs;
 	}			t_inhabitant;
+	/** The doubly linked list of connected users */
+	typedef struct                  s_userlist {
+		t_inhabitant		*user;
+		struct s_userlist       *prev;
+		struct s_userlist       *next;
+	}                               t_userlist;
+
+	/** A doubly linked list of current teams with their users */
+	typedef struct                  s_teams {
+		char                    *team_name;
+		t_userlist              *users;
+		struct s_teams          *prev;
+		struct s_teams          *next;
+	}                               t_teams;
 	/** A world tile
 	* @var t_tile::ressources
 	* @brief The randomly generated ressource on a tile
@@ -115,7 +160,8 @@
 	typedef struct		s_tile {
 		t_ressources	ressources;
 		t_inhabitant	*trantorians;
-		int 		pos[2];
+		t_egg		*eggs;
+		int		pos[2];
 	}			t_tile;
 	/** The Trantor world
 	* @var t_world::tile
@@ -123,24 +169,13 @@
 	* @var t_world::dim
 	* @brief Dimensions of the world dim[0](x) dim[1](y)
 	*/
-	typedef struct 		s_world {
-		int		dim[2];
+	typedef struct		s_world {
+		int		sizeX;
+		int		sizeY;
+		t_teams		*teams;
 		t_tile		**tiles;
 	}			t_world;
 
-	/** For ITEMS access (improve usage and readability)
-	* @note glob var ITEM can be accessed by ITEMS[FOOD] or ITEMS[PHIRAS]
-	* @deprecated In fact this is useless as ITEMS is not a pointer
-	*/
-	enum	ITEMS_NAMES {
-		FOOD = 0,
-		SIBUR = 1,
-		PHIRAS = 2,
-		MENDIANE = 3,
-		THYSTAME = 4,
-		LINEMATE = 5,
-		DERAUMERE = 6
-	};
 	/** The items description / setting
 	* @note See server_src/trantor_setup/ressources_decl.c
 	*/

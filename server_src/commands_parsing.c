@@ -57,25 +57,26 @@ static char 	**get_args(char *cmd)
 * @note could add compilation macro for debug print_2darray() calls
 * but epitech norm insist on 20 line per function so ...
 */
-int	get_methods(char *req, int clifd)
+int	get_methods(char *req, int clifd, t_world *map)
 {
+	printf("get_methods: %s\n", req);
 	int index = 0;
 	char **cmds = get_commands(req);
 	char **args = NULL;
-	static t_teams *defchan = NULL;
+//	static t_teams *defchan = NULL;
 
-	defchan = !defchan ? init_default_teams() : defchan;
+//	defchan = !defchan ? init_default_teams() : defchan;
 	for (int j = 0; cmds[j]; ++j) {
 		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strstr(cmds[j], G_PROTOS[index]))) {
 				args = get_args(cmds[j]);
-				G_CMDS[index](args, clifd, defchan);
+				G_CMDS[index](args, clifd, map);
 				free_buffers(args);
 				break;
 			}
 		}
 	}
-	print_users_in_chans(defchan, index);
+//	print_users_in_chans(defchan, index);
 	free_buffers(cmds);
 	return ((index == REF_NB) ? (0) : (index));
 }

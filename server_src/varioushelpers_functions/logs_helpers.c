@@ -13,7 +13,7 @@
 * @param chanlist the teamss doubly linked list
 * @param index the received command index to avoid printing each
 * time a PING cmd is received (too much log ;))
-*/
+
 void	print_users_in_chans(t_teams *chanlist, int index)
 {
 	if (index)
@@ -22,10 +22,10 @@ void	print_users_in_chans(t_teams *chanlist, int index)
 		print_users(tmp->users);
 	}
 }
-
+*/
 /** Print users nick and real name stored in a t_userlist doubly linked list
 * @param liste the t_userlist to print
-*/
+
 void	print_users(t_userlist *list)
 {
 	printf("\t\tUSERS LIST :\n");
@@ -35,7 +35,7 @@ void	print_users(t_userlist *list)
 	}
 	printf("\n");
 }
-
+*/
 /** Construct the host:service string from struct infos
 * @note this is to avoid sprintf usage
 */

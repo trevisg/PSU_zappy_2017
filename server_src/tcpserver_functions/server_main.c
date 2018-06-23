@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <arpa/inet.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Set the new accept() client socket in epoll event list
 * for new client handling if connection succeed
@@ -24,12 +24,12 @@ static int	init_connection(t_serv *all, int *connected)
 	struct sockaddr *cliaddr = (struct sockaddr *)&addr;
 	char *okco = "Someone connect to me!\n";
 
-
 	all->conn_sock = accept(all->listen_sock, cliaddr, &addr_size);
 	if (all->conn_sock == -1) {
 		perror("initco: accept");
 	} else if (!(rt = set_clifd(all->conn_sock, all->epollfd, &all->ev))) {
 		fprintf(stdout, "\n./zappy_server: %s\n", okco);
+		dprintf(all->conn_sock, "> WELCOME\n");
 		*(connected) += 1;
 	}
 	return (rt);
@@ -51,7 +51,7 @@ static int 	events_handler(t_serv *all, int newfd)
 		sprintf(all->host, "%s", inet_ntoa(addr.sin_addr));
 		sprintf(all->service, "%d", ntohs(addr.sin_port));
 		if (all->nread && logthisevent('c', all)) {
-			get_methods(all->buf, newfd);
+			get_methods(all->buf, newfd, all->refmap);
 		} else {
 			logthisevent('d', all);
 		}
@@ -96,6 +96,9 @@ int	server(t_clargs *options)
 {
 	int rt = 0;
 	t_serv all;
+	all.refmap = get_world(options);
+	print_world(all.refmap);
+	print_teams(all.refmap->teams);
 
 	set_iface(&all.hints, &all.res, options->port);
 	all.listen_sock = set_sockfd(&all);
@@ -112,6 +115,7 @@ int	server(t_clargs *options)
 			rt = getactiveclients(&all);
 		}
 		close(all.listen_sock);
+		free_world(all.refmap, options);
 	}
 	return (rt);
 }

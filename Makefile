@@ -28,13 +28,13 @@ SERVER_SRCS	= varioushelpers_functions/time_handlers.c \
 		tcpserver_functions/server_init.c \
 		tcpserver_functions/server_main.c \
 		trantor_setup/ressources_decl.c \
+		trantor_setup/users_mgr.c \
+		trantor_setup/teams_mgr.c \
 		trantor_setup/world_creation.c \
 		commands_parsing.c \
-		lists_finders.c \
-		teams_list.c \
-		user_list.c \
-		rfc_cmds0.c \
-		rfc_cmds1.c \
+		print_fcts.c \
+		send_fcts/motion.c \
+		send_fcts/utils.c \
 		main.c
 
 SERVERSRC	= $(addprefix server_src/, $(SERVER_SRCS))
@@ -75,7 +75,7 @@ clocktest:
 
 maptest:
 		@printf "Debug map gen methods\n"
-		gcc server_src/world_creation.c server_src/ressources_decl.c \
+		gcc server_src/trantor_setup/world_creation.c server_src/trantor_setup/ressources_decl.c \
 		$(CFLAGS) -D MAPTEST -g3
 		@printf "Done.\nNow run with ./a.out X Y\n"
 

@@ -42,15 +42,15 @@ t_user	*find_user_by_fd(t_userlist *list, int clifd)
 
 /** Get the t_teams pointer by its name
 * @param list the teams list
-* @param team_name the resquested teams
+* @param channame the resquested teams
 * @return a t_teams pointer if exists , NULL otherwise
 */
-t_teams	*get_team_by_name(t_teams *list, char *team_name)
+t_teams	*get_team_by_name(t_teams *list, char *channame)
 {
 	t_teams *rt = NULL;
 
 	for (t_teams *tmp = list; tmp; tmp = tmp->next) {
-		if (!strcmp(tmp->team_name, team_name)) {
+		if (!strcmp(tmp->team_name, channame)) {
 			rt = tmp;
 			break;
 		}
