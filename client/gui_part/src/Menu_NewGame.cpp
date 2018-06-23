@@ -10,30 +10,28 @@
 MenuNewGame::MenuNewGame(int xsize, int ysize)
 {
 	newgamesize = sf::Vector2f(xsize, ysize);
-	newgamerect = sf::RectangleShape(newgamesize);
-	newgamerect.setFillColor(sf::Color::Blue);
-	newgamerect.setOutlineThickness(5);
-	newgamerect.setOutlineColor(sf::Color::Black);
-	newgamerect.setPosition(400, 140);
+	newgamebutton = sf::CircleShape(45.0);
+	newgamebutton.setFillColor(sf::Color::Black);
+	newgamebutton.setOutlineThickness(5);
+	newgamebutton.setOutlineColor(sf::Color::White);
+	newgamebutton.setPosition(920, 300);
 	if (!newgamefont.loadFromFile("assets/fonts/elasis.ttf")) {
 		fprintf(stderr, "Failed to load Settings font\n");
 	}
 	newgametext.setFont(newgamefont);
 	newgametext.setString("START");
-	newgametext.setCharacterSize(20);
-	newgametext.setFillColor(sf::Color::Red);
-	newgametext.setPosition(410, 140);
+	newgametext.setCharacterSize(15);
+	newgametext.setFillColor(sf::Color::White);
+	newgametext.setPosition(920, 330);
 	if (!soundbuff.loadFromFile("assets/sounds/menu/start-select.wav")) {
 		fprintf(stderr, "Failed to load select sound\n");
 	}
 	selectsound.setBuffer(soundbuff);
-	GameWindow 	game_wind;
-	game = &game_wind;
 }
 
-sf::RectangleShape	MenuNewGame::getNewGameRect()
+sf::CircleShape	MenuNewGame::getnewgamebutton()
 {
-	return (newgamerect);
+	return (newgamebutton);
 }
 
 sf::Text 		MenuNewGame::getNewGameText()
@@ -43,11 +41,13 @@ sf::Text 		MenuNewGame::getNewGameText()
 
 void			MenuNewGame::setNewGamePos(int xpos, int ypos)
 {
-	newgamerect.setPosition(xpos, ypos);
+	newgamebutton.setPosition(xpos, ypos);
 }
 
 GameWindow		*MenuNewGame::getGameWindow()
 {
+	GameWindow 	game_wind;
+	GameWindow *game = &game_wind;
 	selectsound.play();
 	return (game);
 }

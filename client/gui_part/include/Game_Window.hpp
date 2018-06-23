@@ -17,12 +17,16 @@ class	GameWindow
 {
 	public:
 		GameWindow();
-		bool start_me();
-		void setgamesound();
+		void _setgame_sound();
+		void _set_bg();
+		void _event_handler(sf::Event ev);
+		bool _start_me(int x_mapsize, int y_mapsize);
 	private:
-		sf::Music	gamemusic;
-		sf::SoundBuffer	soundbuff;
-		std::map<std::string, sf::Sound> gamesounds;
+		sf::Texture	_bg_texture;
+		sf::Sprite	_bg_sprite;
+		sf::Music	_gamemusic;
+		sf::SoundBuffer	_soundbuff;
+		std::map<std::string, sf::Sound> _gamesounds;
 };
 
 extern sf::RenderWindow gamewindow;
