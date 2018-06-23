@@ -58,19 +58,21 @@ void	Menu::mouse_click_handler(sf::Event::MouseButtonEvent ev,
 	sf::Vector2f worldPos = menuwindow.mapPixelToCoords(pixelPos);
 	sf::FloatRect newgamebounds = ngame->getnewgamebutton().getGlobalBounds();
 	sf::FloatRect optsbounds = opts->getOptsRect().getGlobalBounds();
-	bool start = newgamebounds.contains(worldPos.x, worldPos.y);
-	bool faa = optsbounds.contains(worldPos.x, worldPos.y);
+	bool start_game_click = newgamebounds.contains(worldPos.x, worldPos.y);
+	bool server_options_click = optsbounds.contains(worldPos.x, worldPos.y);
 
 	if (ev.button == sf::Mouse::Button::Left && opts) {
-		if (start) {
+		if (start_game_click) {
 			bgmusic.pause();
-			// menuwindow.close();
-			if (!(ngame->getGameWindow()->start_me(20, 20))) {
+			int x_mapsize = 5;
+			int y_mapsize = 5;
+			if (!(ngame->getGameWindow()->_start_me(x_mapsize,
+			y_mapsize))) {
 				bgmusic.play();
-				// get_menu();
 			}
+		} else if (server_options_click) {
+			std::cout << "Click on options\n";
 		}
-		printf("Click on options : %s\n", faa ? "true" : "false");
 	}
 }
 
@@ -112,8 +114,8 @@ void	Menu::draw_menu(MenuTitle *title, MenuSettings *opts,
 	menuwindow.draw(opts->getOptsText());
 	menuwindow.draw(opts->getServerHostSettingsRect());
 	menuwindow.draw(opts->getServerPortSettingsRect());
-	menuwindow.draw(ngame->getnewgamebutton());
-	menuwindow.draw(ngame->getNewGameText());
+	// menuwindow.draw(ngame->getnewgamebutton());
+	// menuwindow.draw(ngame->getNewGameText());
 	menuwindow.draw(title->get_menuTitleText());
 	menuwindow.draw(title->get_menuHelpText());
 }

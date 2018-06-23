@@ -20,7 +20,6 @@ class	MenuNewGame
 		GameWindow		*getGameWindow();
 		void 			setNewGamePos(int xpos, int ypos);
 	private:
-		GameWindow		*game;
 		sf::SoundBuffer		soundbuff;
 		sf::Sound		selectsound;
 		sf::Texture		newgametextures;
