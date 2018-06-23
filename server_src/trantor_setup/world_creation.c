@@ -51,6 +51,7 @@ static t_tile	**get_tiles(int x, int y)
 	int	j = 0;
 
 	if (tiles) {
+		srand(time(NULL));
 		for (i = 0; i < y; ++i) {
 			tiles[i] = malloc(sizeof(*tiles[i]) * x);
 			for (j = 0; j < x; ++j) {
@@ -70,6 +71,10 @@ t_world		*get_world(t_clargs *args)
 	t_world	*trantor = malloc(sizeof(*trantor));
 
 	if (trantor) {
+		trantor->sizeX = args->width;
+		trantor->sizeY = args->height;
+		trantor->teams = init_teams(args->teams_names);
+		trantor->teams = init_userlist(trantor->teams, args);
 		trantor->tiles = get_tiles(args->width, args->height);
 	}
 	return (trantor);

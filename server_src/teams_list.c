@@ -10,16 +10,16 @@
 
 /** Self explanatory
 * @param userlist the userlist to insert in the new teams element
-* @param team_name the new teams name
+* @param channame the new teams name
 */
-t_teams	*get_new_chan_list(t_userlist *userlist, char *team_name)
+t_teams	*get_new_chan_list(t_userlist *userlist, char *channame)
 {
 	t_teams *list = malloc(sizeof(*list));
 
 	if (list) {
 		memset(list, 0, sizeof(*list));
 		list->users = userlist;
-		strncpy(list->team_name, team_name, MAX_TEAM_NAME);
+		list->team_name = strdup(channame);
 		list->prev = NULL;
 		list->next = NULL;
 	}
@@ -48,15 +48,15 @@ void	*insert_back_teams(t_teams *head, t_teams *new)
 
 /** Remove a teams element from the doubly linked list
 * @param list the userlist to be updated
-* @param team_name the teams name to be deleted
+* @param channame the teams name to be deleted
 */
-void	remove_teams(t_teams *list, char *team_name)
+void	remove_teams(t_teams *list, char *channame)
 {
 	t_teams *tmp = list;
 
 	while (tmp->next != NULL)
 	{
-		if (!strcmp(tmp->team_name, team_name)) {
+		if (!strcmp(tmp->team_name, channame)) {
 			tmp->prev->next = tmp->next;
 			tmp->next->prev = tmp->prev;
 			free_userlist(tmp->users);
@@ -94,7 +94,7 @@ t_teams	*init_default_teams(void)
 	t_userlist *allusers = get_new_userlist(admin);
 
 	if (defchan && admin && allusers) {
-		strcpy(defchan->team_name, "DEFTEAM");
+		defchan->team_name = "#welcome";
 		defchan->users = allusers;
 		defchan->prev = NULL;
 		defchan->next = NULL;
