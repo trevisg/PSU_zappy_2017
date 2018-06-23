@@ -78,8 +78,8 @@ Include dependency graph for cl_args_parsing.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c__incl.png" border="0" usemap="#server__src_2commandline__args__handlers_2cl__args__parsing_8c" alt=""/></div>
 <map name="server__src_2commandline__args__handlers_2cl__args__parsing_8c" id="server__src_2commandline__args__handlers_2cl__args__parsing_8c">
-<area shape="rect" id="node4" href="server_8h.html" title="../../include/server.h" alt="" coords="244,109,383,136"/>
-<area shape="rect" id="node11" href="zappy__game_8h.html" title="zappy_game.h" alt="" coords="613,184,720,211"/>
+<area shape="rect" id="node4" href="server_8h.html" title="../../include/server.h" alt="" coords="281,109,420,136"/>
+<area shape="rect" id="node12" href="zappy__game_8h.html" title="zappy_game.h" alt="" coords="784,184,891,211"/>
 </map>
 </div>
 </div>
@@ -140,10 +140,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_aff45b113ce7872b0dc8d7a032b0b710b_icgraph.png" border="0" usemap="#cl__args__parsing_8c_aff45b113ce7872b0dc8d7a032b0b710b_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_aff45b113ce7872b0dc8d7a032b0b710b_icgraph" id="cl__args__parsing_8c_aff45b113ce7872b0dc8d7a032b0b710b_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="143,55,215,81"/>
-<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="263,55,313,81"/>
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="143,80,215,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="263,80,313,107"/>
 <area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="361,29,440,56"/>
-<area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="365,80,437,107"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="365,80,437,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="488,80,547,107"/>
 </map>
 </div>
 
@@ -199,10 +200,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph.png" border="0" usemap="#cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph" id="cl__args__parsing_8c_af7a46b13cda096511abe66b6a304a1ae_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="151,55,223,81"/>
-<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="271,55,321,81"/>
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="151,80,223,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="271,80,321,107"/>
 <area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="369,29,448,56"/>
-<area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="373,80,445,107"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="373,80,445,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="496,80,555,107"/>
 </map>
 </div>
 
@@ -254,50 +256,59 @@ NULL if errors </dd></dl>
 <div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="structt__clargs.html">t_clargs</a>        *args = <a class="code" href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47">set_default_args</a>();</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a>          *opts = <a class="code" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">set_opts</a>();</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">char</span>            *req = <a class="code" href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290">get_req</a>(ac, av);</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">char</span>            **cmd_args = NULL;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">char</span>            *token;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">char</span>            *saveptr1, *saveptr2;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">int</span>             index = 0;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (args &amp;&amp; req &amp;&amp; <a class="code" href="cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b">check_opts</a>(av)) {</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keywordflow">for</span> (; ; req = NULL) {</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        token = strtok_r(req, <span class="stringliteral">&quot;-&quot;</span>, &amp;saveptr1);</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                        <span class="keywordflow">if</span> (token == NULL) {</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                index = token[0];</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                cmd_args = <a class="code" href="cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae">get_cmdargs</a>(token, &amp;saveptr2);</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                cmd_args ? opts[index](cmd_args, args) : opts;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                cmd_args ? <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(cmd_args) : cmd_args;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                        }</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                }</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b">check_opts</a>(av) ? args : NULL);</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div><div class="ttc" id="cl__args__parsing_8c_html_a27cf687fc8b49a7330675e8f95cab290"><div class="ttname"><a href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290">get_req</a></div><div class="ttdeci">static char * get_req(unsigned int ac, char **av)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__parsing_8c_source.html#l00089">cl_args_parsing.c:89</a></div></div>
 <div class="ttc" id="cl__args__helpers_8c_html_a5d0ed2431dadc51ca65db27c5df01efd"><div class="ttname"><a href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">set_opts</a></div><div class="ttdeci">clargs * set_opts()</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00027">cl_args_helpers.c:27</a></div></div>
 <div class="ttc" id="cl__args__parsing_8c_html_aff45b113ce7872b0dc8d7a032b0b710b"><div class="ttname"><a href="cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b">check_opts</a></div><div class="ttdeci">static bool check_opts(char **av)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__parsing_8c_source.html#l00039">cl_args_parsing.c:39</a></div></div>
-<div class="ttc" id="structt__clargs_html"><div class="ttname"><a href="structt__clargs.html">t_clargs</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00084">server.h:84</a></div></div>
+<div class="ttc" id="structt__clargs_html"><div class="ttname"><a href="structt__clargs.html">t_clargs</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00086">server.h:86</a></div></div>
 <div class="ttc" id="cl__args__parsing_8c_html_af7a46b13cda096511abe66b6a304a1ae"><div class="ttname"><a href="cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae">get_cmdargs</a></div><div class="ttdeci">static char ** get_cmdargs(char *buff, char **saveptr)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__parsing_8c_source.html#l00064">cl_args_parsing.c:64</a></div></div>
 <div class="ttc" id="cl__args__helpers_8c_html_a253a684161dba8187c365bc97b217d56"><div class="ttname"><a href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a></div><div class="ttdeci">void free_buffers(char **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00014">cl_args_helpers.c:14</a></div></div>
-<div class="ttc" id="server_8h_html_a2f142533ce77a226c50d6f995a314a2e"><div class="ttname"><a href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a></div><div class="ttdeci">void *(* clargs)(char **, t_clargs *)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00141">server.h:141</a></div></div>
+<div class="ttc" id="server_8h_html_a2f142533ce77a226c50d6f995a314a2e"><div class="ttname"><a href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a></div><div class="ttdeci">void *(* clargs)(char **, t_clargs *)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00127">server.h:127</a></div></div>
 <div class="ttc" id="cl__args__parsing_8c_html_a03bade7f710b03f033a7438e83d8fd47"><div class="ttname"><a href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47">set_default_args</a></div><div class="ttdeci">static t_clargs * set_default_args()</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__parsing_8c_source.html#l00107">cl_args_parsing.c:107</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_cgraph.png" border="0" usemap="#cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_cgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_cgraph" id="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_cgraph">
-<area shape="rect" id="node2" href="cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b" title="check_opts" alt="" coords="140,5,229,32"/>
-<area shape="rect" id="node3" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="935,5,1026,32"/>
-<area shape="rect" id="node4" href="cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae" title="get_cmdargs" alt="" coords="136,208,233,235"/>
-<area shape="rect" id="node5" href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290" title="get_req" alt="" coords="152,259,217,285"/>
-<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="159,157,210,184"/>
-<area shape="rect" id="node28" href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47" title="set_default_args" alt="" coords="125,309,244,336"/>
-<area shape="rect" id="node29" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="149,385,221,412"/>
+<area shape="rect" id="node2" href="cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b" title="check_opts" alt="" coords="140,233,229,260"/>
+<area shape="rect" id="node3" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="935,461,1026,488"/>
+<area shape="rect" id="node4" href="cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae" title="get_cmdargs" alt="" coords="136,512,233,539"/>
+<area shape="rect" id="node5" href="cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290" title="get_req" alt="" coords="152,563,217,589"/>
+<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="159,284,210,311"/>
+<area shape="rect" id="node37" href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47" title="set_default_args" alt="" coords="125,613,244,640"/>
+<area shape="rect" id="node38" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd" title="set_opts" alt="" coords="149,664,221,691"/>
 <area shape="rect" id="node7" href="sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285" title="sig_handler" alt="" coords="299,183,387,209"/>
-<area shape="rect" id="node8" href="server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="314,132,373,159"/>
-<area shape="rect" id="node27" href="usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="315,233,372,260"/>
-<area shape="rect" id="node9" href="server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="462,157,537,184"/>
-<area shape="rect" id="node10" href="server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="456,208,543,235"/>
-<area shape="rect" id="node12" href="server__init_8c.html#a5cb15d408ef32c09c2485937503438ed" title="set_epoll" alt="" coords="462,259,537,285"/>
-<area shape="rect" id="node13" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="443,107,556,133"/>
-<area shape="rect" id="node11" href="server__init_8c.html#a381b88f843ed1ebdaa5b2a8ded74931b" title="prevent_reused" alt="" coords="604,208,715,235"/>
-<area shape="rect" id="node14" href="server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="605,157,714,184"/>
-<area shape="rect" id="node16" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="604,107,715,133"/>
-<area shape="rect" id="node15" href="server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500" title="set_clifd" alt="" coords="776,208,847,235"/>
-<area shape="rect" id="node17" href="logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="765,157,857,184"/>
-<area shape="rect" id="node19" href="commands__parsing_8c.html#ac5949d17278df5e1ada98dca25ccd961" title="get_methods" alt="" coords="763,107,860,133"/>
-<area shape="rect" id="node18" href="logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0" title="get_host_string" alt="" coords="925,259,1036,285"/>
-<area shape="rect" id="node20" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="925,56,1036,83"/>
-<area shape="rect" id="node21" href="teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="917,107,1045,133"/>
-<area shape="rect" id="node24" href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="945,157,1017,184"/>
-<area shape="rect" id="node25" href="logs__helpers_8c.html#aa850593a71a47d3dacf466ad78564298" title="print_users_in_chans" alt="" coords="908,208,1053,235"/>
-<area shape="rect" id="node22" href="user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="1110,81,1213,108"/>
-<area shape="rect" id="node23" href="user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="1101,132,1221,159"/>
-<area shape="rect" id="node26" href="logs__helpers_8c.html#a45c9c768c2486ac046ac242d3c46aadb" title="print_users" alt="" coords="1118,208,1205,235"/>
-<area shape="rect" id="node30" href="cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7" title="get_clientsNb" alt="" coords="292,284,395,311"/>
-<area shape="rect" id="node31" href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d" title="get_freq" alt="" coords="309,335,378,361"/>
-<area shape="rect" id="node32" href="cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c" title="get_height" alt="" coords="302,385,385,412"/>
-<area shape="rect" id="node33" href="cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed" title="get_port" alt="" coords="309,436,378,463"/>
-<area shape="rect" id="node34" href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb" title="get_teams" alt="" coords="302,487,385,513"/>
-<area shape="rect" id="node35" href="cl__flags_8c.html#af5fbca203e6e949739857574cecf5869" title="get_width" alt="" coords="304,537,383,564"/>
+<area shape="rect" id="node8" href="server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="314,284,373,311"/>
+<area shape="rect" id="node36" href="usage_8c.html#a9a05fb05f758a87628212c4bfc50c182" title="usage" alt="" coords="315,233,372,260"/>
+<area shape="rect" id="node9" href="world__creation_8c.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="460,56,539,83"/>
+<area shape="rect" id="node20" href="world__creation_8c.html#a1ffae906cc7307089cbf040f28abdcd0" title="free_world" alt="" coords="618,157,701,184"/>
+<area shape="rect" id="node21" href="print__fcts_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb" title="print_world" alt="" coords="457,360,542,387"/>
+<area shape="rect" id="node22" href="print__fcts_8c.html#a95174f824b39f738b3da128a651f0717" title="print_teams" alt="" coords="454,411,545,437"/>
+<area shape="rect" id="node23" href="server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="462,107,537,133"/>
+<area shape="rect" id="node24" href="server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="456,259,543,285"/>
+<area shape="rect" id="node26" href="server__init_8c.html#a5cb15d408ef32c09c2485937503438ed" title="set_epoll" alt="" coords="462,208,537,235"/>
+<area shape="rect" id="node27" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="443,309,556,336"/>
+<area shape="rect" id="node10" href="teams__mgr_8c.html#a1245d0770a4b2109e828eec9cbb7163c" title="init_teams" alt="" coords="618,107,701,133"/>
+<area shape="rect" id="node13" href="users__mgr_8c.html#a1946ad693e42c5dd6e9abd48729159ae" title="init_userlist" alt="" coords="615,5,703,32"/>
+<area shape="rect" id="node18" href="world__creation_8c.html#a6e9075cf51ee03ae102e4420fa3269de" title="get_tiles" alt="" coords="624,56,695,83"/>
+<area shape="rect" id="node11" href="teams__mgr_8c.html#a0864851cc28bb8b04795d3dc9c55dd09" title="get_new_team" alt="" coords="927,132,1034,159"/>
+<area shape="rect" id="node12" href="teams__mgr_8c.html#aa3bc2c460913b03b23b351cfdf38e477" title="add_team_back" alt="" coords="763,157,877,184"/>
+<area shape="rect" id="node14" href="users__mgr_8c.html#a54670de20ada793622a60f40004b858d" title="new_userlist" alt="" coords="773,5,867,32"/>
+<area shape="rect" id="node15" href="users__mgr_8c.html#a3cf83e57724cf5ad9983409de80fe02d" title="add_userlist" alt="" coords="935,5,1027,32"/>
+<area shape="rect" id="node16" href="users__mgr_8c.html#a4a5a2f7d1a7a2426150981d00e9882ad" title="new_user" alt="" coords="1084,5,1163,32"/>
+<area shape="rect" id="node17" href="users__mgr_8c.html#af1ed04ebdc9ed3d925315521be0762e0" title="get_first_inventory" alt="" coords="1211,5,1340,32"/>
+<area shape="rect" id="node19" href="world__creation_8c.html#a87320761bf5ee6dc2f660be75652c266" title="get_ressources" alt="" coords="765,56,875,83"/>
+<area shape="rect" id="node25" href="server__init_8c.html#a381b88f843ed1ebdaa5b2a8ded74931b" title="prevent_reused" alt="" coords="604,259,715,285"/>
+<area shape="rect" id="node28" href="server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="605,309,714,336"/>
+<area shape="rect" id="node30" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="604,360,715,387"/>
+<area shape="rect" id="node29" href="server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500" title="set_clifd" alt="" coords="785,309,855,336"/>
+<area shape="rect" id="node31" href="logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="774,360,866,387"/>
+<area shape="rect" id="node33" href="commands__parsing_8c.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="771,411,869,437"/>
+<area shape="rect" id="node32" href="logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0" title="get_host_string" alt="" coords="925,309,1036,336"/>
+<area shape="rect" id="node34" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="925,411,1036,437"/>
+<area shape="rect" id="node35" href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="945,360,1017,387"/>
+<area shape="rect" id="node39" href="cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7" title="get_clientsNb" alt="" coords="292,740,395,767"/>
+<area shape="rect" id="node40" href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d" title="get_freq" alt="" coords="309,791,378,817"/>
+<area shape="rect" id="node41" href="cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c" title="get_height" alt="" coords="302,537,385,564"/>
+<area shape="rect" id="node42" href="cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed" title="get_port" alt="" coords="309,588,378,615"/>
+<area shape="rect" id="node43" href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb" title="get_teams" alt="" coords="302,639,385,665"/>
+<area shape="rect" id="node44" href="cl__flags_8c.html#af5fbca203e6e949739857574cecf5869" title="get_width" alt="" coords="304,689,383,716"/>
 </map>
 </div>
 <div class="dynheader">
@@ -305,10 +316,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph.png" border="0" usemap="#cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph" id="cl__args__parsing_8c_a30e2e72e7d0d5f691caedcc1c3ea11b5_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="125,55,197,81"/>
-<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="245,55,296,81"/>
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="125,80,197,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="245,80,296,107"/>
 <area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="344,29,423,56"/>
-<area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="347,80,419,107"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="347,80,419,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="471,80,529,107"/>
 </map>
 </div>
 
@@ -364,10 +376,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph.png" border="0" usemap="#cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph" id="cl__args__parsing_8c_a27cf687fc8b49a7330675e8f95cab290_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="119,55,191,81"/>
-<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="239,55,289,81"/>
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="119,80,191,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="239,80,289,107"/>
 <area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="337,29,416,56"/>
-<area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="341,80,413,107"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="341,80,413,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="464,80,523,107"/>
 </map>
 </div>
 
@@ -399,20 +412,21 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="cl__args__parsing_8c_source.html#l00107">107</a> of file <a class="el" href="cl__args__parsing_8c_source.html">cl_args_parsing.c</a>.</p>
 
-<p class="reference">References <a class="el" href="server_8h_source.html#l00090">t_clargs::freq</a>.</p>
+<p class="reference">References <a class="el" href="server_8h_source.html#l00092">t_clargs::freq</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00127">get_opts()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="structt__clargs.html">t_clargs</a>        *args = malloc(<span class="keyword">sizeof</span>(*args));</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (args) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                args-&gt;<a class="code" href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">freq</a> = 100;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> (args);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div><div class="ttc" id="structt__clargs_html"><div class="ttname"><a href="structt__clargs.html">t_clargs</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00084">server.h:84</a></div></div>
-<div class="ttc" id="structt__clargs_html_afa11d0bffd6c1d845e4289d274ba9cd9"><div class="ttname"><a href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">t_clargs::freq</a></div><div class="ttdeci">int freq</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00090">server.h:90</a></div></div>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="structt__clargs.html">t_clargs</a>        *args = malloc(<span class="keyword">sizeof</span>(*args));</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (args) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                args-&gt;<a class="code" href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">freq</a> = 100;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> (args);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div><div class="ttc" id="structt__clargs_html"><div class="ttname"><a href="structt__clargs.html">t_clargs</a></div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00086">server.h:86</a></div></div>
+<div class="ttc" id="structt__clargs_html_afa11d0bffd6c1d845e4289d274ba9cd9"><div class="ttname"><a href="structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9">t_clargs::freq</a></div><div class="ttdeci">int freq</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00092">server.h:92</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph.png" border="0" usemap="#cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph" alt=""/></div>
 <map name="cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph" id="cl__args__parsing_8c_a03bade7f710b03f033a7438e83d8fd47_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="172,55,244,81"/>
-<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="292,55,343,81"/>
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="172,80,244,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="292,80,343,107"/>
 <area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="391,29,469,56"/>
-<area shape="rect" id="node5" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="394,80,466,107"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="394,80,466,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="517,80,576,107"/>
 </map>
 </div>
 

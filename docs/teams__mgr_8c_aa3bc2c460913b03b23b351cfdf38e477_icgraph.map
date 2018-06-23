@@ -1,0 +1,8 @@
+<map id="add_team_back" name="add_team_back">
+<area shape="rect" id="node2" href="$server_8h.html#a1245d0770a4b2109e828eec9cbb7163c" title="init_teams" alt="" coords="168,31,251,57"/>
+<area shape="rect" id="node3" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="299,31,377,57"/>
+<area shape="rect" id="node4" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="425,5,484,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="532,31,583,57"/>
+<area shape="rect" id="node6" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="631,31,703,57"/>
+<area shape="rect" id="node7" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="631,81,703,108"/>
+</map>

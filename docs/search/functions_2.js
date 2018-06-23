@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['events_5fhandler',['events_handler',['../server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5',1,'server_main.c']]]
+  ['check_5fopts',['check_opts',['../cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b',1,'cl_args_parsing.c']]]
 ];

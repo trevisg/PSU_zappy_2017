@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notices',['NOTICES',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84faa4c3e403340be8ad2c8b1a70534adb12',1,'server.h']]]
+  ['mendiane',['MENDIANE',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9',1,'zappy_game.h']]]
 ];

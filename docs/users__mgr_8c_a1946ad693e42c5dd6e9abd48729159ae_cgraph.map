@@ -1,0 +1,6 @@
+<map id="init_userlist" name="init_userlist">
+<area shape="rect" id="node2" href="$users__mgr_8c.html#a54670de20ada793622a60f40004b858d" title="new_userlist" alt="" coords="141,5,236,32"/>
+<area shape="rect" id="node3" href="$users__mgr_8c.html#a3cf83e57724cf5ad9983409de80fe02d" title="add_userlist" alt="" coords="284,5,376,32"/>
+<area shape="rect" id="node4" href="$users__mgr_8c.html#a4a5a2f7d1a7a2426150981d00e9882ad" title="new_user" alt="" coords="424,5,503,32"/>
+<area shape="rect" id="node5" href="$users__mgr_8c.html#af1ed04ebdc9ed3d925315521be0762e0" title="get_first_inventory" alt="" coords="551,5,680,32"/>
+</map>

@@ -67,6 +67,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -78,26 +79,37 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="zappy__game_8h__dep__incl.png" border="0" usemap="#include_2zappy__game_8hdep" alt=""/></div>
 <map name="include_2zappy__game_8hdep" id="include_2zappy__game_8hdep">
-<area shape="rect" id="node2" href="server_8h.html" title="include/server.h" alt="" coords="1607,87,1722,114"/>
-<area shape="rect" id="node21" href="ressources__decl_8c.html" title="server_src/trantor\l_setup/ressources_decl.c" alt="" coords="1746,80,1917,121"/>
+<area shape="rect" id="node2" href="server_8h.html" title="include/server.h" alt="" coords="1807,87,1922,114"/>
+<area shape="rect" id="node32" href="ressources__decl_8c.html" title="server_src/trantor\l_setup/ressources_decl.c" alt="" coords="1946,80,2117,121"/>
 <area shape="rect" id="node3" href="cl__args__helpers_8c.html" title="server_src/commandline\l_args_handlers/cl_args\l_helpers.c" alt="" coords="5,169,169,225"/>
 <area shape="rect" id="node4" href="cl__args__parsing_8c.html" title="server_src/commandline\l_args_handlers/cl_args\l_parsing.c" alt="" coords="193,169,357,225"/>
 <area shape="rect" id="node5" href="cl__flags__bis_8c.html" title="server_src/commandline\l_args_handlers/cl_flags_bis.c" alt="" coords="382,177,577,218"/>
 <area shape="rect" id="node6" href="commands__parsing_8c.html" title="server_src/commands\l_parsing.c" alt="" coords="601,177,752,218"/>
 <area shape="rect" id="node7" href="lists__finders_8c.html" title="server_src/lists_finders.c" alt="" coords="777,184,945,211"/>
 <area shape="rect" id="node8" href="main_8c.html" title="server_src/main.c" alt="" coords="969,184,1096,211"/>
-<area shape="rect" id="node9" href="rfc__cmds0_8c.html" title="server_src/rfc_cmds0.c" alt="" coords="1120,184,1279,211"/>
-<area shape="rect" id="node10" href="rfc__cmds1_8c.html" title="server_src/rfc_cmds1.c" alt="" coords="1303,184,1461,211"/>
-<area shape="rect" id="node11" href="server__decls_8c.html" title="server_src/tcpserver\l_functions/server_decls.c" alt="" coords="1486,177,1657,218"/>
-<area shape="rect" id="node12" href="server__init_8c.html" title="server_src/tcpserver\l_functions/server_init.c" alt="" coords="1681,177,1838,218"/>
-<area shape="rect" id="node13" href="server__main_8c.html" title="server_src/tcpserver\l_functions/server_main.c" alt="" coords="1862,177,2030,218"/>
-<area shape="rect" id="node14" href="teams__list_8c.html" title="server_src/teams_list.c" alt="" coords="2055,184,2213,211"/>
-<area shape="rect" id="node15" href="world__creation_8c.html" title="server_src/trantor\l_setup/world_creation.c" alt="" coords="2238,177,2398,218"/>
-<area shape="rect" id="node16" href="user__list_8c.html" title="server_src/user_list.c" alt="" coords="2422,184,2569,211"/>
-<area shape="rect" id="node17" href="logs__helpers_8c.html" title="server_src/varioushelpers\l_functions/logs_helpers.c" alt="" coords="2593,177,2763,218"/>
-<area shape="rect" id="node18" href="sig__handler_8c.html" title="server_src/varioushelpers\l_functions/sig_handler.c" alt="" coords="2787,177,2958,218"/>
-<area shape="rect" id="node19" href="time__handlers_8c.html" title="server_src/varioushelpers\l_functions/time_handlers.c" alt="" coords="2982,177,3161,218"/>
-<area shape="rect" id="node20" href="usage_8c.html" title="server_src/varioushelpers\l_functions/usage.c" alt="" coords="3185,177,3355,218"/>
+<area shape="rect" id="node9" href="print__fcts_8c.html" title="server_src/print_fcts.c" alt="" coords="1121,184,1273,211"/>
+<area shape="rect" id="node10" href="rfc__cmds0_8c.html" title="server_src/rfc_cmds0.c" alt="" coords="1297,184,1456,211"/>
+<area shape="rect" id="node11" href="rfc__cmds1_8c.html" title="server_src/rfc_cmds1.c" alt="" coords="1480,184,1639,211"/>
+<area shape="rect" id="node12" href="server__decls_8c.html" title="server_src/tcpserver\l_functions/server_decls.c" alt="" coords="1178,273,1349,315"/>
+<area shape="rect" id="node13" href="cmd__fcts_8h.html" title="include/cmd_fcts.h" alt="" coords="1715,184,1847,211"/>
+<area shape="rect" id="node21" href="server__init_8c.html" title="server_src/tcpserver\l_functions/server_init.c" alt="" coords="1871,177,2029,218"/>
+<area shape="rect" id="node22" href="server__main_8c.html" title="server_src/tcpserver\l_functions/server_main.c" alt="" coords="2053,177,2221,218"/>
+<area shape="rect" id="node23" href="teams__list_8c.html" title="server_src/teams_list.c" alt="" coords="2245,184,2404,211"/>
+<area shape="rect" id="node24" href="teams__mgr_8c.html" title="server_src/trantor\l_setup/teams_mgr.c" alt="" coords="2429,177,2570,218"/>
+<area shape="rect" id="node25" href="users__mgr_8c.html" title="server_src/trantor\l_setup/users_mgr.c" alt="" coords="2595,177,2732,218"/>
+<area shape="rect" id="node26" href="world__creation_8c.html" title="server_src/trantor\l_setup/world_creation.c" alt="" coords="2757,177,2917,218"/>
+<area shape="rect" id="node27" href="user__list_8c.html" title="server_src/user_list.c" alt="" coords="2941,184,3087,211"/>
+<area shape="rect" id="node28" href="logs__helpers_8c.html" title="server_src/varioushelpers\l_functions/logs_helpers.c" alt="" coords="3111,177,3282,218"/>
+<area shape="rect" id="node29" href="sig__handler_8c.html" title="server_src/varioushelpers\l_functions/sig_handler.c" alt="" coords="3306,177,3477,218"/>
+<area shape="rect" id="node30" href="time__handlers_8c.html" title="server_src/varioushelpers\l_functions/time_handlers.c" alt="" coords="3501,177,3679,218"/>
+<area shape="rect" id="node31" href="usage_8c.html" title="server_src/varioushelpers\l_functions/usage.c" alt="" coords="3703,177,3874,218"/>
+<area shape="rect" id="node14" href="cmd_8c.html" title="server_src/send_fcts\l/cmd.c" alt="" coords="1373,273,1517,315"/>
+<area shape="rect" id="node15" href="find__list_8c.html" title="server_src/send_fcts\l/find_list.c" alt="" coords="1541,273,1685,315"/>
+<area shape="rect" id="node16" href="game_8c.html" title="server_src/send_fcts\l/game.c" alt="" coords="1709,273,1853,315"/>
+<area shape="rect" id="node17" href="motion_8c.html" title="server_src/send_fcts\l/motion.c" alt="" coords="1877,273,2021,315"/>
+<area shape="rect" id="node18" href="player_8c.html" title="server_src/send_fcts\l/player.c" alt="" coords="2045,273,2189,315"/>
+<area shape="rect" id="node19" href="time_8c.html" title="server_src/send_fcts\l/time.c" alt="" coords="2213,273,2357,315"/>
+<area shape="rect" id="node20" href="utils_8c.html" title="server_src/send_fcts\l/utils.c" alt="" coords="2381,273,2525,315"/>
 </map>
 </div>
 </div>
@@ -111,9 +123,13 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__ressources.html">t_ressources</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__user.html">t_user</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__egg.html">t_egg</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__inhabitant.html">t_inhabitant</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__userlist.html">t_userlist</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__teams.html">t_teams</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__tile.html">t_tile</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,17 +151,36 @@ Macros</h2></td></tr>
 <tr class="memitem:ab3aae19d7f5ef86b69b55a19bcd62e06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zappy__game_8h.html#ab3aae19d7f5ef86b69b55a19bcd62e06">MAX_RAND</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:ab3aae19d7f5ef86b69b55a19bcd62e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a674150f75b8f2257222a8e18141b2662"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zappy__game_8h.html#a674150f75b8f2257222a8e18141b2662">EGG_STATE</a></td></tr>
+<tr class="separator:a674150f75b8f2257222a8e18141b2662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad802e9dfcc3e74e4b75d1c0f80fc4305"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb">ITEMS_NAMES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zappy__game_8h.html#ad802e9dfcc3e74e4b75d1c0f80fc4305">ITEMS_NAMES</a></td></tr>
+<tr class="separator:ad802e9dfcc3e74e4b75d1c0f80fc4305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:adc460053ab2088d3fe74b8b90a7a1c4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4c">ORIENTATION</a> { <a class="el" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4ca2c63acbe79d9f41ba6bb7766e9c37702">N</a> = 1, 
+<a class="el" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab199e021998d49b1f09338d8b9b18ecb">E</a> = 2, 
+<a class="el" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4caf1ce01387d2348f8b858721a7db81670">S</a> = 3, 
+<a class="el" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7">W</a> = 4
+ }</td></tr>
+<tr class="separator:adc460053ab2088d3fe74b8b90a7a1c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49df230b90c5cce83b453f33b95fc4c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a> { <a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a54cd67a1b8e9f285cac7720057e93288">IN_PROCESS</a> = 0, 
+<a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35">HATCHED</a> = 1, 
+<a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2">DEAD</a> = 2
+ }</td></tr>
+<tr class="separator:a49df230b90c5cce83b453f33b95fc4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138e2c58077212f0d595756095aa9ebb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb">ITEMS_NAMES</a> { <br />
-&#160;&#160;<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4">FOOD</a> = 0, 
-<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5">SIBUR</a> = 1, 
-<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82">PHIRAS</a> = 2, 
-<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9">MENDIANE</a> = 3, 
+&#160;&#160;<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</a> = -1, 
+<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4">FOOD</a> = 0, 
+<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1">DERAUMERE</a> = 1, 
+<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb">LINEMATE</a> = 2, 
 <br />
-&#160;&#160;<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185">THYSTAME</a> = 4, 
-<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb">LINEMATE</a> = 5, 
-<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1">DERAUMERE</a> = 6
+&#160;&#160;<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5">SIBUR</a> = 3, 
+<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9">MENDIANE</a> = 4, 
+<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82">PHIRAS</a> = 5, 
+<a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185">THYSTAME</a> = 6
 <br />
  }</td></tr>
 <tr class="separator:a138e2c58077212f0d595756095aa9ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,11 +293,68 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00018">18</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="teams__list_8c_source.html#l00015">get_new_chan_list()</a>, and <a class="el" href="teams_8c_source.html#l00024">send_team_names()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="teams_8c_source.html#l00024">send_team_names()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a674150f75b8f2257222a8e18141b2662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674150f75b8f2257222a8e18141b2662">&#9670;&nbsp;</a></span>EGG_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a> <a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00037">37</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+
+</div>
+</div>
+<a id="ad802e9dfcc3e74e4b75d1c0f80fc4305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad802e9dfcc3e74e4b75d1c0f80fc4305">&#9670;&nbsp;</a></span>ITEMS_NAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb">ITEMS_NAMES</a> <a class="el" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb">ITEMS_NAMES</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00052">52</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a49df230b90c5cce83b453f33b95fc4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49df230b90c5cce83b453f33b95fc4c6">&#9670;&nbsp;</a></span>EGG_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a49df230b90c5cce83b453f33b95fc4c6a54cd67a1b8e9f285cac7720057e93288"></a>IN_PROCESS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35"></a>HATCHED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2"></a>DEAD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00032">32</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                          {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a54cd67a1b8e9f285cac7720057e93288">IN_PROCESS</a> = 0,</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35">HATCHED</a> = 1,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2">DEAD</a> = 2</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        };</div><div class="ttc" id="zappy__game_8h_html_a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2"><div class="ttname"><a href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2">DEAD</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00035">zappy_game.h:35</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a49df230b90c5cce83b453f33b95fc4c6a54cd67a1b8e9f285cac7720057e93288"><div class="ttname"><a href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a54cd67a1b8e9f285cac7720057e93288">IN_PROCESS</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00033">zappy_game.h:33</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35"><div class="ttname"><a href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35">HATCHED</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00034">zappy_game.h:34</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a138e2c58077212f0d595756095aa9ebb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a138e2c58077212f0d595756095aa9ebb">&#9670;&nbsp;</a></span>ITEMS_NAMES</h2>
 
@@ -277,23 +369,52 @@ Variables</h2></td></tr>
 <p>For ITEMS access (improve usage and readability) </p><dl class="section note"><dt>Note</dt><dd>glob var ITEM can be accessed by ITEMS[FOOD] or ITEMS[PHIRAS] </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>In fact this is useless as ITEMS is not a pointer </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4"></a>FOOD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5"></a>SIBUR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82"></a>PHIRAS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9"></a>MENDIANE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185"></a>THYSTAME&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb"></a>LINEMATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d"></a>EMPTY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4"></a>FOOD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1"></a>DERAUMERE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb"></a>LINEMATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5"></a>SIBUR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9"></a>MENDIANE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82"></a>PHIRAS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185"></a>THYSTAME&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00135">135</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                            {</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4">FOOD</a> = 0,</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5">SIBUR</a> = 1,</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82">PHIRAS</a> = 2,</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9">MENDIANE</a> = 3,</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185">THYSTAME</a> = 4,</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb">LINEMATE</a> = 5,</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1">DERAUMERE</a> = 6</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        };</div><div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb">LINEMATE</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00141">zappy_game.h:141</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9">MENDIANE</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00139">zappy_game.h:139</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4">FOOD</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00136">zappy_game.h:136</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185">THYSTAME</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00140">zappy_game.h:140</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82">PHIRAS</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00138">zappy_game.h:138</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1">DERAUMERE</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00142">zappy_game.h:142</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5">SIBUR</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00137">zappy_game.h:137</a></div></div>
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00042">42</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                            {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</a> = -1,</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4">FOOD</a> = 0,</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1">DERAUMERE</a> = 1,</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb">LINEMATE</a> = 2,</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5">SIBUR</a> = 3,</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9">MENDIANE</a> = 4,</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82">PHIRAS</a> = 5,</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <a class="code" href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185">THYSTAME</a> = 6</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        };</div><div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb">LINEMATE</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00046">zappy_game.h:46</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9">MENDIANE</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00048">zappy_game.h:48</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4">FOOD</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00044">zappy_game.h:44</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185">THYSTAME</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00050">zappy_game.h:50</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82">PHIRAS</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00049">zappy_game.h:49</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00043">zappy_game.h:43</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbaf5641be4a6ed19b9d6bb816bfbe590e1">DERAUMERE</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00045">zappy_game.h:45</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5"><div class="ttname"><a href="zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba38d54bcfbd316bc737fa680e796e60d5">SIBUR</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00047">zappy_game.h:47</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adc460053ab2088d3fe74b8b90a7a1c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc460053ab2088d3fe74b8b90a7a1c4c">&#9670;&nbsp;</a></span>ORIENTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4c">ORIENTATION</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc460053ab2088d3fe74b8b90a7a1c4ca2c63acbe79d9f41ba6bb7766e9c37702"></a>N&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc460053ab2088d3fe74b8b90a7a1c4cab199e021998d49b1f09338d8b9b18ecb"></a>E&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc460053ab2088d3fe74b8b90a7a1c4caf1ce01387d2348f8b858721a7db81670"></a>S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7"></a>W&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00024">24</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <a class="code" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4ca2c63acbe79d9f41ba6bb7766e9c37702">N</a> = 1,</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <a class="code" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab199e021998d49b1f09338d8b9b18ecb">E</a> = 2,</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <a class="code" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4caf1ce01387d2348f8b858721a7db81670">S</a> = 3,</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <a class="code" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7">W</a> = 4</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        } <a class="code" href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4c">ORIENTATION</a>;</div><div class="ttc" id="zappy__game_8h_html_adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7"><div class="ttname"><a href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7">W</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00029">zappy_game.h:29</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_adc460053ab2088d3fe74b8b90a7a1c4ca2c63acbe79d9f41ba6bb7766e9c37702"><div class="ttname"><a href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4ca2c63acbe79d9f41ba6bb7766e9c37702">N</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00026">zappy_game.h:26</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_adc460053ab2088d3fe74b8b90a7a1c4c"><div class="ttname"><a href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4c">ORIENTATION</a></div><div class="ttdeci">ORIENTATION</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00024">zappy_game.h:24</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_adc460053ab2088d3fe74b8b90a7a1c4cab199e021998d49b1f09338d8b9b18ecb"><div class="ttname"><a href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab199e021998d49b1f09338d8b9b18ecb">E</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00027">zappy_game.h:27</a></div></div>
+<div class="ttc" id="zappy__game_8h_html_adc460053ab2088d3fe74b8b90a7a1c4caf1ce01387d2348f8b858721a7db81670"><div class="ttname"><a href="zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4caf1ce01387d2348f8b858721a7db81670">S</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00028">zappy_game.h:28</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -315,7 +436,7 @@ volatile type is here because theses values will constantly be updated as the ga
 
 <p class="definition">Definition at line <a class="el" href="ressources__decl_8c_source.html#l00013">13</a> of file <a class="el" href="ressources__decl_8c_source.html">ressources_decl.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="world__creation_8c_source.html#l00030">get_ressources()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="users__mgr_8c_source.html#l00010">get_first_inventory()</a>, and <a class="el" href="world__creation_8c_source.html#l00030">get_ressources()</a>.</p>
 
 </div>
 </div>

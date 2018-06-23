@@ -71,13 +71,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="server_8h_source.html">../../include/server.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cmd__fcts_8h_source.html">../../include/cmd_fcts.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for server_decls.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="server__decls_8c__incl.png" border="0" usemap="#server__src_2tcpserver__functions_2server__decls_8c" alt=""/></div>
 <map name="server__src_2tcpserver__functions_2server__decls_8c" id="server__src_2tcpserver__functions_2server__decls_8c">
-<area shape="rect" id="node2" href="server_8h.html" title="../../include/server.h" alt="" coords="244,95,383,121"/>
-<area shape="rect" id="node9" href="zappy__game_8h.html" title="zappy_game.h" alt="" coords="613,169,720,196"/>
+<area shape="rect" id="node2" href="server_8h.html" title="../../include/server.h" alt="" coords="355,169,493,196"/>
+<area shape="rect" id="node12" href="cmd__fcts_8h.html" title="../../include/cmd_fcts.h" alt="" coords="405,95,561,121"/>
+<area shape="rect" id="node11" href="zappy__game_8h.html" title="zappy_game.h" alt="" coords="784,244,891,271"/>
 </map>
 </div>
 </div>
@@ -87,7 +89,7 @@ Include dependency graph for server_decls.c:</div>
 Variables</h2></td></tr>
 <tr class="memitem:ae19e01ff7678899828036520edec313c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a> [<a class="el" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>]</td></tr>
 <tr class="separator:ae19e01ff7678899828036520edec313c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb29231b69e3767e187ffe5d5717b28"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="server_8h.html#aad1a6ebb0da853175fa1c6c60681f4f8">cmds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28">G_CMDS</a> [<a class="el" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>]</td></tr>
+<tr class="memitem:a7bb29231b69e3767e187ffe5d5717b28"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="server_8h.html#a839810bf07fd9d89e369c114f6b2c04d">cmds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28">G_CMDS</a> [<a class="el" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>]</td></tr>
 <tr class="separator:a7bb29231b69e3767e187ffe5d5717b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -98,19 +100,16 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="server_8h.html#aad1a6ebb0da853175fa1c6c60681f4f8">cmds</a> G_CMDS[<a class="el" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>]</td>
+          <td class="memname">const <a class="el" href="server_8h.html#a839810bf07fd9d89e369c114f6b2c04d">cmds</a> G_CMDS[<a class="el" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b">join</a>, <a class="code" href="rfc__cmds0_8c.html#a23fdd83885b302dd9c00fee36f135f75">nick</a>, <a class="code" href="rfc__cmds0_8c.html#a0f0d0e51f2d5d863cb8be57983ccedfb">ping</a>, <a class="code" href="rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430">user</a>, <a class="code" href="rfc__cmds0_8c.html#a1c74e8299ccc83fc44cb09ad41b2c67c">quit</a>, <a class="code" href="rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f">privmsg</a>,</div><div class="line">        NULL</div><div class="line">}</div><div class="ttc" id="rfc__cmds0_8c_html_a1c883dcd73a625782b2a8fe752af3430"><div class="ttname"><a href="rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430">user</a></div><div class="ttdeci">void * user(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds0_8c_source.html#l00083">rfc_cmds0.c:83</a></div></div>
-<div class="ttc" id="rfc__cmds0_8c_html_aaa1a67ad295a9fe0eceea86d7eb0d43b"><div class="ttname"><a href="rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b">join</a></div><div class="ttdeci">void * join(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds0_8c_source.html#l00019">rfc_cmds0.c:19</a></div></div>
-<div class="ttc" id="rfc__cmds0_8c_html_a1c74e8299ccc83fc44cb09ad41b2c67c"><div class="ttname"><a href="rfc__cmds0_8c.html#a1c74e8299ccc83fc44cb09ad41b2c67c">quit</a></div><div class="ttdeci">void * quit(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds0_8c_source.html#l00103">rfc_cmds0.c:103</a></div></div>
-<div class="ttc" id="rfc__cmds0_8c_html_a23fdd83885b302dd9c00fee36f135f75"><div class="ttname"><a href="rfc__cmds0_8c.html#a23fdd83885b302dd9c00fee36f135f75">nick</a></div><div class="ttdeci">void * nick(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds0_8c_source.html#l00048">rfc_cmds0.c:48</a></div></div>
-<div class="ttc" id="rfc__cmds0_8c_html_a0f0d0e51f2d5d863cb8be57983ccedfb"><div class="ttname"><a href="rfc__cmds0_8c.html#a0f0d0e51f2d5d863cb8be57983ccedfb">ping</a></div><div class="ttdeci">void * ping(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds0_8c_source.html#l00067">rfc_cmds0.c:67</a></div></div>
-<div class="ttc" id="rfc__cmds1_8c_html_a85a04f8d1928f599fa049e534f41377f"><div class="ttname"><a href="rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f">privmsg</a></div><div class="ttdeci">void * privmsg(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds1_8c_source.html#l00054">rfc_cmds1.c:54</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="motion_8c.html#aa8f9103baa90cea2e8b1d5e6126a7703">forward</a>, <a class="code" href="motion_8c.html#a597375155a0437319c10b259e9990687">right</a>, <a class="code" href="motion_8c.html#ab69d0223545aa80db9a15b0aa9a71479">left</a>,</div><div class="line">        NULL</div><div class="line">}</div><div class="ttc" id="motion_8c_html_a597375155a0437319c10b259e9990687"><div class="ttname"><a href="motion_8c.html#a597375155a0437319c10b259e9990687">right</a></div><div class="ttdeci">void * right(cmdargs args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="motion_8c_source.html#l00022">motion.c:22</a></div></div>
+<div class="ttc" id="motion_8c_html_ab69d0223545aa80db9a15b0aa9a71479"><div class="ttname"><a href="motion_8c.html#ab69d0223545aa80db9a15b0aa9a71479">left</a></div><div class="ttdeci">void * left(cmdargs args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="motion_8c_source.html#l00046">motion.c:46</a></div></div>
+<div class="ttc" id="motion_8c_html_aa8f9103baa90cea2e8b1d5e6126a7703"><div class="ttname"><a href="motion_8c.html#aa8f9103baa90cea2e8b1d5e6126a7703">forward</a></div><div class="ttdeci">void * forward(cmdargs args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="motion_8c_source.html#l00011">motion.c:11</a></div></div>
 </div><!-- fragment --><p>The functions pointers for the various RFC commands handlers </p>
 
-<p class="definition">Definition at line <a class="el" href="server__decls_8c_source.html#l00018">18</a> of file <a class="el" href="server__decls_8c_source.html">server_decls.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="server__decls_8c_source.html#l00019">19</a> of file <a class="el" href="server__decls_8c_source.html">server_decls.c</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00060">get_methods()</a>.</p>
 
@@ -127,9 +126,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="stringliteral">&quot;JOIN&quot;</span>, <span class="stringliteral">&quot;NICK&quot;</span>, <span class="stringliteral">&quot;PING&quot;</span>, <span class="stringliteral">&quot;USER&quot;</span>, <span class="stringliteral">&quot;QUIT&quot;</span>, <span class="stringliteral">&quot;PRIVMSG&quot;</span>,</div><div class="line">        NULL</div><div class="line">}</div></div><!-- fragment --><p>The 2D array containing the handled commands strings for comparison </p>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="stringliteral">&quot;FORWARD&quot;</span>, <span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;Left&quot;</span>,</div><div class="line">        NULL</div><div class="line">}</div></div><!-- fragment --><p>The 2D array containing the handled commands strings for comparison </p>
 
-<p class="definition">Definition at line <a class="el" href="server__decls_8c_source.html#l00012">12</a> of file <a class="el" href="server__decls_8c_source.html">server_decls.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="server__decls_8c_source.html#l00013">13</a> of file <a class="el" href="server__decls_8c_source.html">server_decls.c</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00060">get_methods()</a>.</p>
 

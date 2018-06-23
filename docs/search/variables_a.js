@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mendiane',['mendiane',['../structt__ressources.html#ab4fe5ada88960040d0fabcadbef7b454',1,'t_ressources']]],
-  ['mode',['mode',['../structt__log.html#acfec0e07dc912f8e9af8fe3c65a5d0d2',1,'t_log::mode()'],['../structt__user.html#a07771e89e3c3c41d675b9529c438fb2e',1,'t_user::mode()']]]
+  ['level',['level',['../structt__inhabitant.html#a4384563ff0c793088180f2723fa129f9',1,'t_inhabitant']]],
+  ['linemate',['linemate',['../structt__ressources.html#af2c88c497036aad8616ee0f67d133c2d',1,'t_ressources']]],
+  ['listen_5fsock',['listen_sock',['../structt__serv.html#ac9f24d41d8822f2c1b7df4362e18cad9',1,'t_serv']]]
 ];

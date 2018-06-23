@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['left',['LEFT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fadb45120aafd37a973140edee24708065',1,'server.h']]],
+  ['left',['LEFT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fadb45120aafd37a973140edee24708065',1,'LEFT():&#160;server.h'],['../motion_8c.html#ab69d0223545aa80db9a15b0aa9a71479',1,'left(cmdargs args, int clifd, t_world *map):&#160;motion.c'],['../cmd__fcts_8h.html#ab69d0223545aa80db9a15b0aa9a71479',1,'left(cmdargs args, int clifd, t_world *map):&#160;motion.c']]],
   ['level',['level',['../structt__inhabitant.html#a4384563ff0c793088180f2723fa129f9',1,'t_inhabitant']]],
   ['linemate',['linemate',['../structt__ressources.html#af2c88c497036aad8616ee0f67d133c2d',1,'t_ressources::linemate()'],['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb',1,'LINEMATE():&#160;zappy_game.h']]],
   ['listen_5fsock',['listen_sock',['../structt__serv.html#ac9f24d41d8822f2c1b7df4362e18cad9',1,'t_serv']]],

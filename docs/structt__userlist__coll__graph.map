@@ -1,3 +1,7 @@
 <map id="t_userlist" name="t_userlist">
-<area shape="rect" id="node2" href="$structt__user.html" title="t_user" alt="" coords="13,5,72,32"/>
+<area shape="rect" id="node2" href="$structt__inhabitant.html" title="t_inhabitant" alt="" coords="20,257,109,284"/>
+<area shape="rect" id="node3" href="$structt__egg.html" title="t_egg" alt="" coords="5,168,60,195"/>
+<area shape="rect" id="node4" href="$structt__ressources.html" title="t_ressources" alt="" coords="84,168,181,195"/>
+<area shape="rect" id="node5" href="$structt__stone.html" title="t_stone" alt="" coords="55,5,120,32"/>
+<area shape="rect" id="node6" href="$structt__food.html" title="t_food" alt="" coords="150,5,209,32"/>
 </map>

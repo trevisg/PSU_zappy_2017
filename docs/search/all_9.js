@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['join',['join',['../rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b',1,'join(cmdargs args, int clifd, t_teams *chans):&#160;rfc_cmds0.c'],['../server_8h.html#a4477b4240ca31860ac231bee92c92c63',1,'join(cmdargs args, int clifd, t_teams *chanlist):&#160;rfc_cmds0.c']]]
+  ['join',['join',['../rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b',1,'rfc_cmds0.c']]],
+  ['just_5fcollect',['just_collect',['../structt__inhabitant.html#a2c5cdbccd632bae23811b5bb69273b04',1,'t_inhabitant']]],
+  ['just_5fdrop',['just_drop',['../structt__inhabitant.html#a49bd51a8c1e6d2db18e744e8be15501d',1,'t_inhabitant']]]
 ];

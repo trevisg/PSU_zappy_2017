@@ -1,5 +1,5 @@
 <map id="find_user_by_fd" name="find_user_by_fd">
-<area shape="rect" id="node2" href="$server_8h.html#a4477b4240ca31860ac231bee92c92c63" title="join" alt="" coords="181,5,223,32"/>
-<area shape="rect" id="node3" href="$server_8h.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="168,56,236,83"/>
-<area shape="rect" id="node4" href="$server_8h.html#ad059e3df36d3bdbe1c25637c4612b95a" title="quit" alt="" coords="181,107,223,133"/>
+<area shape="rect" id="node2" href="$rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b" title="join" alt="" coords="181,5,223,32"/>
+<area shape="rect" id="node3" href="$rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="168,56,236,83"/>
+<area shape="rect" id="node4" href="$rfc__cmds0_8c.html#a1c74e8299ccc83fc44cb09ad41b2c67c" title="quit" alt="" coords="181,107,223,133"/>
 </map>

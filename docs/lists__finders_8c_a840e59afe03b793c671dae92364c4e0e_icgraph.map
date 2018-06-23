@@ -1,4 +1,4 @@
 <map id="get_team_by_name" name="get_team_by_name">
-<area shape="rect" id="node2" href="$server_8h.html#a4477b4240ca31860ac231bee92c92c63" title="join" alt="" coords="202,5,245,32"/>
-<area shape="rect" id="node3" href="$server_8h.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="189,56,257,83"/>
+<area shape="rect" id="node2" href="$rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b" title="join" alt="" coords="202,5,245,32"/>
+<area shape="rect" id="node3" href="$rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="189,56,257,83"/>
 </map>

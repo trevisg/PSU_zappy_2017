@@ -73,10 +73,11 @@ Collaboration diagram for t_tile:</div>
 <div class="dyncontent">
 <div class="center"><img src="structt__tile__coll__graph.png" border="0" usemap="#t__tile_coll__map" alt="Collaboration graph"/></div>
 <map name="t__tile_coll__map" id="t__tile_coll__map">
-<area shape="rect" id="node2" href="structt__inhabitant.html" title="t_inhabitant" alt="" coords="156,257,245,284"/>
-<area shape="rect" id="node3" href="structt__ressources.html" title="t_ressources" alt="" coords="35,168,132,195"/>
-<area shape="rect" id="node4" href="structt__stone.html" title="t_stone" alt="" coords="5,5,71,32"/>
-<area shape="rect" id="node5" href="structt__food.html" title="t_food" alt="" coords="101,5,159,32"/>
+<area shape="rect" id="node2" href="structt__egg.html" title="t_egg" alt="" coords="5,168,60,195"/>
+<area shape="rect" id="node3" href="structt__inhabitant.html" title="t_inhabitant" alt="" coords="60,257,149,284"/>
+<area shape="rect" id="node4" href="structt__ressources.html" title="t_ressources" alt="" coords="88,168,185,195"/>
+<area shape="rect" id="node5" href="structt__stone.html" title="t_stone" alt="" coords="59,5,124,32"/>
+<area shape="rect" id="node6" href="structt__food.html" title="t_food" alt="" coords="154,5,213,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -87,14 +88,34 @@ Data Fields</h2></td></tr>
 <tr class="separator:a28649d079c4f8a1d23849ce09ec3b137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a551226381eaee3671776d672b3961eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__inhabitant.html">t_inhabitant</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__tile.html#a551226381eaee3671776d672b3961eb0">trantorians</a></td></tr>
 <tr class="separator:a551226381eaee3671776d672b3961eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab14dc00c566f9a30f7728b5d92bad5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__egg.html">t_egg</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__tile.html#aab14dc00c566f9a30f7728b5d92bad5c">eggs</a></td></tr>
+<tr class="separator:aab14dc00c566f9a30f7728b5d92bad5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4045a0691e95401a31a1ad0fb0c651"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__tile.html#a5b4045a0691e95401a31a1ad0fb0c651">pos</a> [2]</td></tr>
 <tr class="memdesc:a5b4045a0691e95401a31a1ad0fb0c651"><td class="mdescLeft">&#160;</td><td class="mdescRight">The x,y style coord for a particular tile.  <a href="#a5b4045a0691e95401a31a1ad0fb0c651">More...</a><br /></td></tr>
 <tr class="separator:a5b4045a0691e95401a31a1ad0fb0c651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00115">115</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00160">160</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="aab14dc00c566f9a30f7728b5d92bad5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab14dc00c566f9a30f7728b5d92bad5c">&#9670;&nbsp;</a></span>eggs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__egg.html">t_egg</a>* t_tile::eggs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00163">163</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="find__list_8c_source.html#l00058">find_egg_on_tile()</a>.</p>
+
+</div>
+</div>
 <a id="a5b4045a0691e95401a31a1ad0fb0c651"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b4045a0691e95401a31a1ad0fb0c651">&#9670;&nbsp;</a></span>pos</h2>
 
@@ -109,7 +130,7 @@ Data Fields</h2></td></tr>
 
 <p>The x,y style coord for a particular tile. </p>
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00118">118</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00164">164</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 </div>
 </div>
@@ -128,9 +149,9 @@ Data Fields</h2></td></tr>
 <p>The randomly generated ressource on a tile. </p>
 <p>A world tile </p>
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00116">116</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00161">161</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="world__creation_8c_source.html#l00068">get_world()</a>, <a class="el" href="game_8c_source.html#l00020">send_map_content()</a>, and <a class="el" href="game_8c_source.html#l00039">send_tile_content()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="world__creation_8c_source.html#l00069">get_world()</a>, and <a class="el" href="print__fcts_8c_source.html#l00010">print_world()</a>.</p>
 
 </div>
 </div>
@@ -146,7 +167,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00117">117</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="zappy__game_8h_source.html#l00162">162</a> of file <a class="el" href="zappy__game_8h_source.html">zappy_game.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="time_8c_source.html#l00011">send_inc_start()</a>.</p>
 

@@ -2,6 +2,9 @@
 <area shape="rect" id="node2" href="$cmd_8c.html" title="server_src/send_fcts\l/cmd.c" alt="" coords="5,80,149,121"/>
 <area shape="rect" id="node3" href="$find__list_8c.html" title="server_src/send_fcts\l/find_list.c" alt="" coords="173,80,317,121"/>
 <area shape="rect" id="node4" href="$game_8c.html" title="server_src/send_fcts\l/game.c" alt="" coords="341,80,485,121"/>
-<area shape="rect" id="node5" href="$player_8c.html" title="server_src/send_fcts\l/player.c" alt="" coords="509,80,653,121"/>
-<area shape="rect" id="node6" href="$time_8c.html" title="server_src/send_fcts\l/time.c" alt="" coords="677,80,821,121"/>
+<area shape="rect" id="node5" href="$motion_8c.html" title="server_src/send_fcts\l/motion.c" alt="" coords="509,80,653,121"/>
+<area shape="rect" id="node6" href="$player_8c.html" title="server_src/send_fcts\l/player.c" alt="" coords="677,80,821,121"/>
+<area shape="rect" id="node7" href="$time_8c.html" title="server_src/send_fcts\l/time.c" alt="" coords="845,80,989,121"/>
+<area shape="rect" id="node8" href="$utils_8c.html" title="server_src/send_fcts\l/utils.c" alt="" coords="1013,80,1157,121"/>
+<area shape="rect" id="node9" href="$server__decls_8c.html" title="server_src/tcpserver\l_functions/server_decls.c" alt="" coords="1181,80,1352,121"/>
 </map>

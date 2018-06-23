@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['left',['LEFT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fadb45120aafd37a973140edee24708065',1,'server.h']]],
-  ['linemate',['LINEMATE',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba8c5241e45d7a43f38ab379e79e9466eb',1,'zappy_game.h']]],
-  ['look',['LOOK',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fafe748ae632925b534e23d1e296b4b82f',1,'server.h']]]
+  ['in_5fprocess',['IN_PROCESS',['../zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a54cd67a1b8e9f285cac7720057e93288',1,'zappy_game.h']]],
+  ['incantation',['INCANTATION',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faee95d3d1b19c2c5a63ace354d7728207',1,'server.h']]],
+  ['inventory',['INVENTORY',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faa6342d4e2db15fb13f0651aa0b9015c4',1,'server.h']]]
 ];
