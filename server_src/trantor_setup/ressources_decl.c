@@ -7,9 +7,7 @@
 
 #include "../../include/zappy_game.h"
 
-/** @note volatile type is here because theses values will constantly
-* be updated as the game runnin'
-*/
+/** The ITEMS base initialiasation, the other are just a memcpy of this */
 t_ressources	ITEMS = {
 	{"eatme", 0},
 	{"sibur", 0},

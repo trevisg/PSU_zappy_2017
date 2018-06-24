@@ -5,7 +5,7 @@
 ** teams mgr
 */
 
-#include "server.h"
+#include "../../include/server.h"
 
 t_teams *get_new_team(char *name)
 {
