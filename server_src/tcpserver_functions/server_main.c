@@ -9,12 +9,13 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <arpa/inet.h>
-#include "server.h"
+#include "../../include/server.h"
 
 /** Set the new accept() client socket in epoll event list
 * for new client handling if connection succeed
 * @param all the 'foure tout' server struct
 * @param args the argv from main to update child process name
+* @note respond WELCOME
 */
 static int	init_connection(t_serv *all, int *connected)
 {
