@@ -14,5 +14,5 @@ var searchData=
   ['is_5fuser_5fin_5fchan',['is_user_in_chan',['../lists__finders_8c.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_finders.c'],['../server_8h.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_finders.c']]],
   ['isco',['isco',['../structt__inhabitant.html#ac68b745cc66eb26ee2eb285bab851c0f',1,'t_inhabitant']]],
   ['items',['ITEMS',['../ressources__decl_8c.html#afa77ec604ea715cce2499edfbbc9eb24',1,'ITEMS():&#160;ressources_decl.c'],['../zappy__game_8h.html#afa77ec604ea715cce2499edfbbc9eb24',1,'ITEMS():&#160;ressources_decl.c']]],
-  ['items_5fnames',['ITEMS_NAMES',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb',1,'ITEMS_NAMES():&#160;zappy_game.h'],['../zappy__game_8h.html#ad802e9dfcc3e74e4b75d1c0f80fc4305',1,'ITEMS_NAMES():&#160;zappy_game.h']]]
+  ['items_5fnames',['ITEMS_NAMES',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb',1,'zappy_game.h']]]
 ];
