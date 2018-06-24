@@ -6,6 +6,8 @@
 #Test binaries
 a.out
 */a.out
+#Packages
+*.deb
 #Program binaries
 zappy_server
 zappy_client
