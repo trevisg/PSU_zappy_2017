@@ -19,6 +19,8 @@ SERVER		= zappy_server
 all:
 		cd server && $(MAKE)
 
+zappy_server:	all
+
 clean:
 		cd server && $(MAKE) clean
 
