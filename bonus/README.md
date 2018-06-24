@@ -1,4 +1,4 @@
-# **PSU_zappy_2017** {#mainpage}\| [Releases](https://github.com/trevisg/PSU_zappy_2017/releases)
+# PSU_zappy_2017 {#mainpage}
 
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/PSU_zappy/Lobby)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
@@ -33,7 +33,9 @@
 
 ## Install package :
 
--   see [this readme](bonus/pkgs/README.md)
+-   see [this readme](bonus/pkgs/README.md) to package yourself
+
+-   You could also check for the [Releases](https://github.com/trevisg/PSU_zappy_2017/releases)
 
 ## Documentation :
 
