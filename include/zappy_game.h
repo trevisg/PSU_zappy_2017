@@ -112,10 +112,14 @@
 		struct s_egg	*prev;
 	}			t_egg;
 	/** A typical Trantor inhabitant (also a game player)
+	* @var t_inhabitant::o
+	* @brief the current orientation of a player
 	* @var t_inhabitant::id
 	* @brief The unique player id
 	* @var t_inhabitant::ttl
 	* @brief The player TimeToLive (his life counter)
+	* @var t_inhabitant::isco
+	* @brief a boolean check for temp disconnections
 	* @var t_inhabitant::level
 	* @brief The incantation level (1->MAX_LEVEL)
 	* @var t_inhabitant::inventory
@@ -141,14 +145,30 @@
 		ITEMS_NAMES	just_collect;
 		char		team_name[MAX_TEAM_NAME];
 	}			t_inhabitant;
-	/** The doubly linked list of connected users */
+	/** The doubly linked list of connected users
+	* @var t_userlist::user
+	* @brief the trantorian player/user
+	* @var t_userlist::prev
+	* @brief the previous node in list
+	* @var t_userlist::next
+	* @brief the next node in list
+	*/
 	typedef struct                  s_userlist {
 		t_inhabitant		*user;
 		struct s_userlist       *prev;
 		struct s_userlist       *next;
 	}                               t_userlist;
 
-	/** A doubly linked list of current teams with their users */
+	/** A doubly linked list of current teams with their users
+	* @var t_teams::team_name
+	* @brief a t_inhabitant team name
+	* @var t_teams::users
+	* @brief the t_inhabitant list in this team
+	* @var t_teams::prev
+	* @brief the previous node in list
+	* @var t_teams::next
+	* @brief the next node in list
+	*/
 	typedef struct                  s_teams {
 		char                    *team_name;
 		t_userlist              *users;
