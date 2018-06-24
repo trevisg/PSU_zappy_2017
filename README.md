@@ -15,7 +15,7 @@
          __________________________________________
         --         Realized by Rm, Cc, Qb and Trevisg
         ----       Studio Asimov ltd
-        -----      -- bugs@devnull.org
+        -----      Sav -- bugs@neverread.devnull
 
 > Just another useless school project
 
