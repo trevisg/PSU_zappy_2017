@@ -9,7 +9,7 @@
 
 /** The ITEMS base initialiasation, the other are just a memcpy of this */
 t_ressources	ITEMS = {
-	{"eatme", 0},
+	{"food", 0},
 	{"sibur", 0},
 	{"phiras", 0},
 	{"mendiane", 0},

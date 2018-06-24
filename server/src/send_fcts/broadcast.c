@@ -7,7 +7,7 @@
 
 #include "cmd_fcts.h"
 
-void *r_team(cmdargs args, int clifd, t_world *map)
+void	*r_team(cmdargs args, int clifd, t_world *map)
 {
 	if (args[1] && strcmp(args[1], "graphical") == 0) {
 		map->graphical_fd = clifd;
@@ -22,7 +22,7 @@ void *r_team(cmdargs args, int clifd, t_world *map)
 	return map;
 }
 
-void *r_broadcast(cmdargs args, int clifd, t_world *map)
+void	*r_broadcast(cmdargs args, int clifd, t_world *map)
 {
 	if (!args[1])
 		return map;
@@ -35,5 +35,56 @@ void *r_broadcast(cmdargs args, int clifd, t_world *map)
 			}
 		}
 	}
+	return map;
+}
+
+void	*r_connect_nbr(cmdargs args, int clifd, t_world *map)
+{
+	args[0][0] = 'c';
+	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
+
+	dprintf(clifd, "%d\n", count_nb_empty(map->teams, player->team_name));
+	return map;
+}
+
+void	*r_take_obj(cmdargs args, int clifd, t_world *map)
+{
+	args[0][0] = 'c';
+	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
+	int x = player->curr_pos[0];
+	int y = player->curr_pos[1];
+	
+	printf("Player's food before:\t%d\n", player->inventory.food.qtt);
+	printf("Food on tile before:\t%d\n", map->tiles[x][y].ressources.food.qtt);
+	if (check_obj_on_map(map, x, y, args[1])) {
+		player = add_obj_to_player(player, args[1]);
+		del_obj_on_map(map, x, y, args[1]);
+		dprintf(clifd, "ok\n");
+	}
+	else
+		dprintf(clifd, "ko\n");
+	printf("Player's food after:\t%d\n", player->inventory.food.qtt);
+	printf("Food on tile after:\t%d\n", map->tiles[x][y].ressources.food.qtt);
+	return map;
+}
+
+void	*r_set_obj(cmdargs args, int clifd, t_world *map)
+{
+	args[0][0] = 'c';
+	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
+	int x = player->curr_pos[0];
+	int y = player->curr_pos[1];
+	
+	printf("Player's food before:\t%d\n", player->inventory.food.qtt);
+	printf("Food on tile before:\t%d\n", map->tiles[x][y].ressources.food.qtt);
+	if (check_obj_in_inv(player, args[1])) {
+		player = del_obj_from_player(player, args[1]);
+		add_obj_to_map(map, x, y, args[1]);
+		dprintf(clifd, "ok\n");
+	}
+	else
+		dprintf(clifd, "ko\n");
+	printf("Player's food after:\t%d\n", player->inventory.food.qtt);
+	printf("Food on tile after:\t%d\n", map->tiles[x][y].ressources.food.qtt);
 	return map;
 }

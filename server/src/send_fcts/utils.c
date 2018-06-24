@@ -7,7 +7,7 @@
 
 #include "cmd_fcts.h"
 
-void move(t_inhabitant *player, t_world *map)
+void	move(t_inhabitant *player, t_world *map)
 {
 	switch (player->o) {
 	case N:
@@ -37,7 +37,7 @@ void move(t_inhabitant *player, t_world *map)
 	}
 }
 
-int assign_player(char *team_name, t_teams *teams, int clifd)
+int	assign_player(char *team_name, t_teams *teams, int clifd)
 {
 	int exist = false;
 
@@ -56,7 +56,7 @@ int assign_player(char *team_name, t_teams *teams, int clifd)
 	return exist;
 }
 
-int count_nb_empty(t_teams *teams, char *team_name)
+int	count_nb_empty(t_teams *teams, char *team_name)
 {
 	int nb_empty = 0;
 
@@ -69,4 +69,47 @@ int count_nb_empty(t_teams *teams, char *team_name)
 		}
 	}
 	return nb_empty;
+}
+
+void	*add_obj_to_player(t_inhabitant *player, char *obj_name)
+{
+	t_stone *stones[6] = {&player->inventory.sibur,
+			      &player->inventory.phiras,
+			      &player->inventory.mendiane,
+			      &player->inventory.thystame,
+			      &player->inventory.linemate,
+			      &player->inventory.deraumere};
+	
+	if (strcmp(player->inventory.food.name, obj_name) == 0) {
+		player->inventory.food.qtt += 1;
+	}
+	for (int i = 0; i < 6; i++) {
+		if (strcmp(stones[i]->name, obj_name) == 0) {
+			stones[i]->qtt += 1;
+			break;
+		}
+	}
+	return player;
+}
+
+int check_obj_on_map(t_world *map, int x, int y, char *obj_name)
+{
+	t_stone *stones[6] = {&map->tiles[x][y].ressources.sibur,
+			      &map->tiles[x][y].ressources.phiras,
+			      &map->tiles[x][y].ressources.mendiane,
+			      &map->tiles[x][y].ressources.thystame,
+			      &map->tiles[x][y].ressources.linemate,
+			      &map->tiles[x][y].ressources.deraumere};
+	for (int i = 0; i < 6; i++) {
+		if (strcmp(stones[i]->name, obj_name) == 0) {
+			if (stones[i]->qtt > 0)
+				return true;
+		}
+	}
+	if (strcmp(map->tiles[x][y].ressources.food.name, obj_name) == 0) {
+		printf("There is food on this tile\n");
+		if (map->tiles[x][y].ressources.food.qtt > 0)
+			return true;
+	}
+	return false;
 }

@@ -37,6 +37,7 @@ srcS	= varioushelpers_functions/time_handlers.c \
 		send_fcts/find_list.c \
 		send_fcts/motion.c \
 		send_fcts/utils.c \
+		send_fcts/utils2.c \
 		main.c
 
 SERVERSRC	= $(addprefix src/, $(srcS))
