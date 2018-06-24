@@ -1,7 +1,18 @@
-# **PSU_zappy_2017**
+# **PSU_zappy_2017** \| [Releases](https://github.com/trevisg/PSU_zappy_2017/releases)
 
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/PSU_zappy/Lobby)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
+
+      ______
+     |___  /
+        / / __ _ _ __  _ __  _   _
+       / / / _` | '_ \| '_ \| | | |
+      / /_| (_| | |_) | |_) | |_| |
+     /_____\__,_| .__/| .__/ \__, |
+                | |   | |     __/ |
+                |_|   |_|    |___/
+    --         Realized by Trevisg, Rm, Cc and Qb
+    ---        School Year 2017
 
 > Just another useless school project
 
@@ -24,4 +35,4 @@
 
 ## Remarks :
 
--   **Epitech students** , don't be timid pass by the chat to say hello , thanks or whatever after cloning this WIP project ;) (Si le toeic vous pose soucis, pas de probléme je parle francais aussi )
+-   **Epitech students** , don't be timid pass by the chat to say hello , thanks or whatever after cloning this (always) WIP project ;)
