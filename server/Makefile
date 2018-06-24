@@ -33,6 +33,8 @@ srcS	= varioushelpers_functions/time_handlers.c \
 		trantor_setup/world_creation.c \
 		commands_parsing.c \
 		print_fcts.c \
+		send_fcts/broadcast.c \
+		send_fcts/find_list.c \
 		send_fcts/motion.c \
 		send_fcts/utils.c \
 		main.c
