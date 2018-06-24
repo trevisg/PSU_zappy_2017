@@ -32,7 +32,7 @@ var searchData=
   ['server_5fdecls_2ec',['server_decls.c',['../server__decls_8c.html',1,'']]],
   ['server_5finit_2ec',['server_init.c',['../server__init_8c.html',1,'']]],
   ['server_5fmain_2ec',['server_main.c',['../server__main_8c.html',1,'']]],
-  ['service',['service',['../structt__serv.html#aee509c3823199bf9f0ad285a718260bd',1,'t_serv']]],
+  ['service',['service',['../structt__serv.html#a2f305e0125282618c509c3a74ad89ab3',1,'t_serv']]],
   ['set',['set',['../structt__log.html#ac07514e66fd21d577e21fafffcd51e06',1,'t_log']]],
   ['set_5fclifd',['set_clifd',['../server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500',1,'set_clifd(int clisock, int epollfd, struct epoll_event *ev):&#160;server_init.c'],['../server_8h.html#aa9bc3ff8e7f409540f85b3cc97636500',1,'set_clifd(int clisock, int epollfd, struct epoll_event *ev):&#160;server_init.c']]],
   ['set_5fdefault_5fargs',['set_default_args',['../cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47',1,'cl_args_parsing.c']]],

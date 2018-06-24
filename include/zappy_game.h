@@ -21,25 +21,32 @@
 	/** For ramdom generation of world ressources */
 	#define MAX_RAND 5
 
+	/** X Y position */
+	typedef enum	POS
+	{
+		X = 0,
+		Y = 1
+	}		POS;
+	/** Orientation state of a t_inhabitant */
 	typedef enum	ORIENTATION
 	{
 		N = 1,
 		E = 2,
 		S = 3,
 		W = 4
-	} ORIENTATION;
-	/* State of evolution of an egg */
-	enum	EGG_STATE {
+	}		ORIENTATION;
+	/** Evolution state of an egg */
+	typedef enum	EGG_STATE
+	{
 		IN_PROCESS = 0,
 		HATCHED = 1,
 		DEAD = 2
-	};
-	typedef enum EGG_STATE EGG_STATE;
+	} 		EGG_STATE;
 	/** For ITEMS access (improve usage and readability)
 	* @note glob var ITEM can be accessed by ITEMS[FOOD] or ITEMS[PHIRAS]
 	* @deprecated In fact this is useless as ITEMS is not a pointer
 	*/
-	enum	ITEMS_NAMES {
+	typedef enum	ITEMS_NAMES {
 		EMPTY = -1,
 		FOOD = 0,
 		DERAUMERE = 1,
@@ -48,8 +55,7 @@
 		MENDIANE = 4,
 		PHIRAS = 5,
 		THYSTAME = 6
-	};
-	typedef enum ITEMS_NAMES ITEMS_NAMES;
+	}	ITEMS_NAMES;
 	/** The stone ressources needed by the trantorians
 	* to do an incantation
 	* @var t_stone::name
@@ -122,18 +128,18 @@
 	* @brief The reference to the t_user associated
 	*/
 	typedef struct		s_inhabitant {
-		int		clifd;
-		unsigned int	isco;
+		ORIENTATION	o;
 		unsigned int	id;
 		double		ttl;
+		unsigned int	isco;
 		unsigned int	level;
-		t_ressources	inventory;
-		int		curr_pos[2];
-		char		team_name[MAX_TEAM_NAME];
-		ORIENTATION	o;
-		ITEMS_NAMES	just_drop;
-		ITEMS_NAMES	just_collect;
+		int		clifd;
 		t_egg		*eggs;
+		t_ressources	inventory;
+		ITEMS_NAMES	just_drop;
+		int		curr_pos[2];
+		ITEMS_NAMES	just_collect;
+		char		team_name[MAX_TEAM_NAME];
 	}			t_inhabitant;
 	/** The doubly linked list of connected users */
 	typedef struct                  s_userlist {
@@ -167,7 +173,7 @@
 	* @var t_world::tile
 	* @brief The world consist off a 2d array of t_tile (s)
 	* @var t_world::dim
-	* @brief Dimensions of the world dim[0](x) dim[1](y)
+	* @brief Dimensions of the world dim[X] & dim[Y]
 	*/
 	typedef struct		s_world {
 		int		sizeX;

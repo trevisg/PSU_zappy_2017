@@ -17,5 +17,5 @@ var searchData=
   ['free_5fteams_5flist',['free_teams_list',['../teams__list_8c.html#abf2b4bcd5fc41752e639d8e0498877f3',1,'teams_list.c']]],
   ['free_5fuserlist',['free_userlist',['../user__list_8c.html#af00c364b53de2b369d1ba7339975afa0',1,'user_list.c']]],
   ['free_5fworld',['free_world',['../world__creation_8c.html#a1ffae906cc7307089cbf040f28abdcd0',1,'free_world(t_world *trantor, t_clargs *args):&#160;world_creation.c'],['../server_8h.html#a1ffae906cc7307089cbf040f28abdcd0',1,'free_world(t_world *trantor, t_clargs *args):&#160;world_creation.c']]],
-  ['freq',['freq',['../structt__clargs.html#afa11d0bffd6c1d845e4289d274ba9cd9',1,'t_clargs']]]
+  ['freq',['freq',['../structt__clargs.html#a34cbf7b74d19f2ab505e28305a5289bb',1,'t_clargs']]]
 ];
