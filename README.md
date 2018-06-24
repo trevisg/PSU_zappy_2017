@@ -3,16 +3,19 @@
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/PSU_zappy/Lobby)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
 
-      ______
-     |___  /
-        / / __ _ _ __  _ __  _   _
-       / / / _` | '_ \| '_ \| | | |
-      / /_| (_| | |_) | |_) | |_| |
-     /_____\__,_| .__/| .__/ \__, |
-                | |   | |     __/ |
-                |_|   |_|    |___/
-    --         Realized by Trevisg, Rm, Cc and Qb
-    ---        School Year 2017
+         Our____
+         |___  /
+            / / __ _ _ __  _ __  _   _
+           / / / _` | '_ \| '_ \| | | |
+          / /_| (_| | |_) | |_) | |_| |
+         /_____\__,_| .__/| .__/ \__, |
+                    | |   | |     __/ |
+                    | |   | |    |___/ Network Game
+                    |_|   |_|
+         __________________________________________
+        --         Realized by Rm, Cc, Qb and Trevisg
+        ----       Studio Asimov ltd
+        -----      -- bugs@devnull.org
 
 > Just another useless school project
 
@@ -28,11 +31,15 @@
 
 -   Enjoy
 
+## Install package :
+
+-   see [this readme](bonus/pkgs/README.md)
+
 ## Documentation :
 
 -   A [quick write up](bonus/ZAPPY_CMDS.md) with server commands could be found on the bonus directory
 -   U'll find the complete documentation hosted at [this page](https://trevisg.github.io/PSU_zappy_2017/)
 
-## Remarks :
+## Various :
 
 -   **Epitech students** , don't be timid pass by the chat to say hello , thanks or whatever after cloning this (always) WIP project ;)
