@@ -18,6 +18,7 @@ SERVER		= zappy_server
 
 all:
 		cd server && $(MAKE)
+		mv server/zappy_server .
 
 zappy_server:	all
 
