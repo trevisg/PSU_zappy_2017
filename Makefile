@@ -34,11 +34,11 @@ doc:
 
 package-deb:
 		make re && make clean && \
- 		cp zappy_server pkgs/deb/zappy-server/usr/local/bin
-		$(DPKGDEB) --build pkgs/deb/zappy-server
+ 		cp zappy_server bonus/pkgs/deb/zappy-server/usr/local/bin
+		$(DPKGDEB) --build bonus/pkgs/deb/zappy-server
 
 install-deb:
 		@printf "Installing zappy-server binary in /usr/local/bin\n"
-		sudo dpkg -i pkgs/deb/zappy-server.deb
+		sudo dpkg -i bonus/pkgs/deb/zappy-server.deb
 
 .PHONY:		all clean fclean re doc server package-deb install-deb
