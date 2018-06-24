@@ -36,3 +36,37 @@ void move(t_inhabitant *player, t_world *map)
 		break;
 	}
 }
+
+int assign_player(char *team_name, t_teams *teams, int clifd)
+{
+	int exist = false;
+
+	for (t_teams *tmpt = teams; tmpt; tmpt = tmpt->next) {
+		if (strcmp(team_name, tmpt->team_name) == 0) {
+			for (t_userlist *tmpu = tmpt->users; tmpu; tmpu = tmpu->next) {
+				if (!tmpu->user->isco) {
+					exist = true;
+					tmpu->user->clifd = clifd;
+					tmpu->user->isco = true;
+					break;
+				}
+			}
+		}
+	}
+	return exist;
+}
+
+int count_nb_empty(t_teams *teams, char *team_name)
+{
+	int nb_empty = 0;
+
+	for (t_teams *tmpt = teams; tmpt; tmpt = tmpt->next) {
+		if (strcmp(team_name, tmpt->team_name) == 0) {
+			for (t_userlist *tmpu = tmpt->users; tmpu; tmpu = tmpu->next) {
+				if (!tmpu->user->isco)
+					nb_empty++;
+			}
+		}
+	}
+	return nb_empty;
+}
