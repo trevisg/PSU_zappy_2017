@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['x',['x',['../egg_8c.html#a6150e0515f7202e2fb518f7206ed97dc',1,'x():&#160;egg.c'],['../zappy__game_8h.html#ad5bd5cf46662b1bd6f954b8ac62f3d79a58833a3110c570fb05130d40c365d1e4',1,'X():&#160;zappy_game.h']]]
+  ['w',['W',['../zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7',1,'zappy_game.h']]],
+  ['width',['width',['../structt__clargs.html#a39262a3ca77f31c8c1f3f3de046a369f',1,'t_clargs']]],
+  ['world_5fcreation_2ec',['world_creation.c',['../world__creation_8c.html',1,'']]]
 ];
