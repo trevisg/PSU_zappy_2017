@@ -13,7 +13,7 @@ var searchData=
   ['t_5fuserlist',['t_userlist',['../structt__userlist.html',1,'']]],
   ['t_5fworld',['t_world',['../structt__world.html',1,'']]],
   ['take_5fobject',['TAKE_OBJECT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fadec4a7d078a679b35881588f8d9309d3',1,'server.h']]],
-  ['team_5fname',['team_name',['../structt__inhabitant.html#ac36c745a9ba662164b67bfdc378c3a1d',1,'t_inhabitant::team_name()'],['../structt__teams.html#abe8ea877220de9aa452879af8eafa6fd',1,'t_teams::team_name()']]],
+  ['team_5fname',['team_name',['../structt__inhabitant.html#ac36c745a9ba662164b67bfdc378c3a1d',1,'t_inhabitant::team_name()'],['../structt__teams.html#a303ffb9c04deceb3471cd0ef93c13160',1,'t_teams::team_name()']]],
   ['teams',['teams',['../structt__world.html#a9c53639afff86dda89959bbb1e81bc9c',1,'t_world::teams()'],['../egg_8c.html#a55c4946dc7c43b5a2c8ed4b120cc428d',1,'teams():&#160;egg.c']]],
   ['teams_2ec',['teams.c',['../teams_8c.html',1,'']]],
   ['teams_5flist_2ec',['teams_list.c',['../teams__list_8c.html',1,'']]],

@@ -12,7 +12,7 @@ var searchData=
   ['insert_5fback_5fuser',['insert_back_user',['../user__list_8c.html#a2b16f778b01689e31ef5530b66d41390',1,'user_list.c']]],
   ['inventory',['inventory',['../structt__inhabitant.html#af22dff03db052a7b6c58a0bbcedd307e',1,'t_inhabitant::inventory()'],['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faa6342d4e2db15fb13f0651aa0b9015c4',1,'INVENTORY():&#160;server.h']]],
   ['is_5fuser_5fin_5fchan',['is_user_in_chan',['../lists__finders_8c.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_finders.c'],['../server_8h.html#a89a3ecace723ab3c2e85b151eb031dc7',1,'is_user_in_chan(int clifd, t_teams *chans):&#160;lists_finders.c']]],
-  ['isco',['isco',['../structt__inhabitant.html#ac68b745cc66eb26ee2eb285bab851c0f',1,'t_inhabitant']]],
+  ['isco',['isco',['../structt__inhabitant.html#a583d383201f7b56b9f1d1988ab6e1f2e',1,'t_inhabitant']]],
   ['items',['ITEMS',['../ressources__decl_8c.html#afa77ec604ea715cce2499edfbbc9eb24',1,'ITEMS():&#160;ressources_decl.c'],['../zappy__game_8h.html#afa77ec604ea715cce2499edfbbc9eb24',1,'ITEMS():&#160;ressources_decl.c']]],
   ['items_5fnames',['ITEMS_NAMES',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebb',1,'zappy_game.h']]]
 ];
