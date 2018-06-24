@@ -1,0 +1,21 @@
+Package: zappy-server
+Version: 0.0.390
+Section: network
+Priority: optional
+Architecture: amd64
+Depends:
+Suggests: netcat
+Conflicts: zappy_server
+Replaces: zappy_server
+Installed-Size: 76
+Maintainer: Trevis Gulby <trevisgulby@protonmail.ch>
+Description: This game is network game between trantorian teams on a
+ trantor style map. This a the server part
+ .
+  This package contains the zappy_server binary and manual page.
+ (if someone generate them with doxygen and cp them at some /usr/local/man)
+ .
+ The nature of this software means that any bugs could cause
+ massive data loss. While there are no known bugs at the moment,
+ they could exist, so please back up all important files before
+ running it, and do so at your own risk.
