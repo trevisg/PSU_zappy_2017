@@ -59,13 +59,10 @@ static char 	**get_args(char *cmd)
 */
 int	get_methods(char *req, int clifd, t_world *map)
 {
-	printf("get_methods: %s\n", req);
 	int index = 0;
 	char **cmds = get_commands(req);
 	char **args = NULL;
-//	static t_teams *defchan = NULL;
 
-//	defchan = !defchan ? init_default_teams() : defchan;
 	for (int j = 0; cmds[j]; ++j) {
 		for (index = 0; G_PROTOS[index]; ++index) {
 			if ((strstr(cmds[j], G_PROTOS[index]))) {
@@ -76,7 +73,6 @@ int	get_methods(char *req, int clifd, t_world *map)
 			}
 		}
 	}
-//	print_users_in_chans(defchan, index);
 	free_buffers(cmds);
 	return ((index == REF_NB) ? (0) : (index));
 }

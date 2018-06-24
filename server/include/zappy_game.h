@@ -178,14 +178,11 @@
 	/** A world tile
 	* @var t_tile::ressources
 	* @brief The randomly generated ressource on a tile
-	* @var t_tile::trantorian
-	* @brief Is there any trantorian(s) on a tile ?
 	* @var t_tile::pos
 	* @brief The x,y style coord for a particular tile
 	*/
 	typedef struct		s_tile {
 		t_ressources	ressources;
-		t_inhabitant	*trantorians;
 		t_egg		*eggs;
 		int		pos[2];
 	}			t_tile;
@@ -198,6 +195,7 @@
 	typedef struct		s_world {
 		int		sizeX;
 		int		sizeY;
+		int             graphical_fd;
 		t_teams		*teams;
 		t_tile		**tiles;
 	}			t_world;

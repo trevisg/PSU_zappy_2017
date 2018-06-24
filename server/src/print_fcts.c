@@ -23,7 +23,7 @@ void		print_teams(t_teams *teams)
 	for (t_teams *tmpt = teams; tmpt; tmpt = tmpt->next) {
 		printf("%s\n", tmpt->team_name);
 		for (t_userlist *tmpu = tmpt->users; tmpu; tmpu = tmpu->next) {
-			printf("%d[%s]: X=%d Y=%d %d %d %d %d %d %d %d ttl:%f\t",
+			printf("%d[%s]: X=%d Y=%d %d %d %d %d %d %d %d ttl:%f\n",
 			       tmpu->user->id, tmpu->user->team_name,
 			       tmpu->user->curr_pos[0], tmpu->user->curr_pos[1],
 			       tmpu->user->inventory.food.qtt,
