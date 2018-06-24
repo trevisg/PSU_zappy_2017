@@ -11,12 +11,12 @@
 
 /** The 2D array containing the handled commands strings for comparison  */
 const char *G_PROTOS[REF_NB] = {
-	"FORWARD", "Right", "Left",
+	"Forward", "Right", "Left", "Team", "Inventory", "Broadcast",
 	NULL
 };
 
 /** The functions pointers for the various RFC commands handlers */
 const cmds G_CMDS[REF_NB] = {
-	forward, right, left,
+	r_forward, r_right, r_left, r_team, r_inventory, r_broadcast,
 	NULL
 };

@@ -58,7 +58,7 @@
 		FORWARD, RIGHT, LEFT,
 		LOOK, INVENTORY, BROADCAST_TEXT,
 		CONNECT_NBR, FORK, EJECT,
-		TAKE_OBJECT, SET_OBJECT, INCANTATION
+		TAKE_OBJECT, SET_OBJECT, INCANTATION, TEAM
 	};
 
 	/** Future login handler filepath (to be set in a .conf file)
@@ -210,7 +210,7 @@
 				t_userlist *head);
 	t_userlist	*new_userlist(int nb_players, t_clargs *args, char *team_name);
 	t_teams		*init_userlist(t_teams *teams, t_clargs *args);
-
+	/** @note see server_src/list_helpers.c */
 	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
 	unsigned int	get_size(cmdargs args);

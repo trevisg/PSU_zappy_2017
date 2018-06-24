@@ -1,4 +1,3 @@
-
 /*
 ** EPITECH PROJECT, 2018
 ** Zappy
@@ -11,12 +10,22 @@
 
 	#include "server.h"
 
-	/** send_fcts/motion.c */
-	void *forward(cmdargs args, int clifd, t_world *map);
-	void *right(cmdargs args, int clifd, t_world *map);
-	void *left(cmdargs args, int clifd, t_world *map);
+	/** see send_fcts/motion.c */
+	void *r_forward(cmdargs args, int clifd, t_world *map);
+	void *r_right(cmdargs args, int clifd, t_world *map);
+	void *r_left(cmdargs args, int clifd, t_world *map);
+	void *r_inventory(cmdargs args, int clifd, t_world *map);
+	/** see send_fcts/broadcast.c */
+	void *r_team(cmdargs args, int clifd, t_world *map);
+	void *r_broadcast(cmdargs args, int clifd, t_world *map);
+	/** see send_fcts/utils.c */
+	void move(t_inhabitant *player, t_world *map);
+	int assign_player(char *team_name, t_teams *teams, int clifd);
+	int count_nb_empty(t_teams *teams, char *team_name);
+	/* send_fcts/find_list.c */
+	t_inhabitant *find_player_by_fd(t_teams *teams, int clifd);
 
-	#ifdef CMD_ALL
+	#ifdef CMD_GUI
 		/** see send_fcts/game.c */
 	void *send_game_end(cmdargs args, int clifd, t_teams *teams);
 	void *send_map_size(cmdargs args, int clifd, t_teams *teams);
@@ -56,6 +65,6 @@
 	t_egg *find_egg_on_tile(t_tile *tile, t_user *layer);
 	t_egg *find_egg_state(t_user *user, EGG_STATE state);
 
-	#endif /* !CMD_ALL */
+	#endif /* !CMD_GUI */
 
 #endif /* !CMD_FCTS_H_ */
