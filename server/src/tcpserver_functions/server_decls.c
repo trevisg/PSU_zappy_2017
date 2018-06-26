@@ -35,3 +35,21 @@ const cmds G_CMDS[REF_NB] = {
 	r_set_obj,
 	NULL
 };
+
+/** The 2D array containing the graphical client to server methods name
+* for comparison
+*/
+const char *G_GRAPH_PROTO[REF_NB] = {
+	"GET /mapsize",
+	"GET /teamnames",
+	"POST /team_detail&team=",
+	NULL
+};
+
+/** The functions pointers for the various RFC commands handlers */
+const cmds G_GRAPH_CMDS[REF_NB] = {
+	g_mapsize,
+	g_teams_names,
+	g_team_detail,
+	NULL
+};
