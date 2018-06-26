@@ -171,18 +171,26 @@
 	/** Main Zappy Protocol methods function pointer
 	* @note see src/server_decls.c
 	*/
-	typedef void *(*cmds)(cmdargs args, int clifd, t_world *map);
+	typedef void *(*cmds)(char **args, int clifd, t_world *map);
 	/** The flags 'gatherer' function pointer
 	* @note see src/cl_args_helpers.c
 	*/
 	typedef void *(*clargs)(char **, t_clargs *);
 
-	/** The object prototype mapping the methods name
+	/** The object prototype mapping the IA methods names
 	* @note see src/server_decls.c
 	*/
 	extern const char *G_PROTOS[REF_NB];
-	/** The global pointer for subject commands methods */
+	/** The object prototype mapping the Graphical methods names
+	* @note see src/server_decls.c
+	*/
+	extern const char *G_GRAPH_PROTO[REF_NB];
+	/** The global pointer for IA <--> server commands methods */
 	extern const cmds G_CMDS[REF_NB];
+	/** The global pointer for Graphical client <--> server
+	* commands methods
+	*/
+	extern const cmds G_GRAPH_CMDS[REF_NB];
 
 	/** @note see src/inits.c */
 	int		set_sockfd(t_serv *all);
