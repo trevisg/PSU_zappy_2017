@@ -15,10 +15,7 @@
 void	*get_port(char **port, t_clargs *args)
 {
 	int rt = 0;
-	#ifdef CLDBG
-		printf("\t\t%s\n", "get_port()");
-		print_2d(port);
-	#endif
+
 	args->port = strdup(port[1]);
 	rt = atoi(port[1]);
 	return (rt >= 1024 ? args : NULL);
@@ -30,10 +27,6 @@ void	*get_port(char **port, t_clargs *args)
 */
 void	*get_width(char **width, t_clargs *args)
 {
-	#ifdef CLDBG
-		printf("\t\t%s\n", "get_width()");
-		print_2d(width);
-	#endif
 	args->width = atoi(width[1]);
 	return (args->width >= 0 ? args : NULL);
 }
@@ -44,10 +37,6 @@ void	*get_width(char **width, t_clargs *args)
 */
 void	*get_height(char **height, t_clargs *args)
 {
-	#ifdef CLDBG
-		printf("\t%s\n", "get_height ouh yeah!");
-		print_2d(height);
-	#endif
 	args->height = atoi(height[1]);
 	return (args->height >= 0 ? args : NULL);
 }
