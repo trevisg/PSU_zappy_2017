@@ -12,8 +12,6 @@ var searchData=
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['ref_5fnb',['REF_NB',['../server_8h.html#a9880cfe1f4eb3140da2095fd081282f5',1,'server.h']]],
   ['refmap',['refmap',['../structt__serv.html#a7f75ca428ce08d75168884eabb0f343e',1,'t_serv']]],
-  ['remove_5fteams',['remove_teams',['../teams__list_8c.html#af3fe52c79c167c58efbf529bf96796e1',1,'teams_list.c']]],
-  ['remove_5fuser',['remove_user',['../user__list_8c.html#a4b707a3b8d0f77075ea567c4718c4c06',1,'user_list.c']]],
   ['res',['res',['../structt__serv.html#ad657e49223c7aecd7183fc2702a12a34',1,'t_serv']]],
   ['ressources',['ressources',['../structt__tile.html#a28649d079c4f8a1d23849ce09ec3b137',1,'t_tile']]],
   ['ressources_5fdecl_2ec',['ressources_decl.c',['../ressources__decl_8c.html',1,'']]],
