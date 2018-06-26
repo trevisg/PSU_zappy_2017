@@ -90,6 +90,7 @@ static char	*get_req(unsigned int ac, char **av)
 {
 	char	*req = malloc(2048);
 	unsigned int size = 0;
+	uint 	req_size = 0;
 
 	memset(req, 0, 2048);
 	if (ac >= 10 && req) {
@@ -98,7 +99,9 @@ static char	*get_req(unsigned int ac, char **av)
 			size != ac - 1 ? strcat(req, " ") : req;
 		}
 	}
-	return (strlen(req) ? req : NULL);
+	req_size = strlen(req);
+	req_size <= 0 ? free(req) : req;
+	return (req_size <= 0 ? NULL : req);
 }
 
 /** Set default params for frequency argument
@@ -119,7 +122,7 @@ static t_clargs		*set_default_args()
 * @param av the 2d char array from main()
 * @return args the storage struct
 * @return NULL if errors
-* @todo  1. Consider refactoring / splitting this function as it's 2 lines above
+* @todo  1. Consider refactoring / splitting this function as it's 4 lines above
 * the 20's authorized. Variables are also uncorrectly declared.
 * solution ? do a 'trash bin struct' for all args and catch them all !
 * 2. Add free() for all the malloc'ed buffers
@@ -127,12 +130,13 @@ static t_clargs		*set_default_args()
 t_clargs		*get_opts(int ac, char **av)
 {
 	t_clargs	*args = set_default_args();
-	clargs		*opts = set_opts();
 	char 		*req = get_req(ac, av);
-	char 		**cmd_args = NULL;
-	char 		*token;
+	clargs		*opts = set_opts();
 	char		*saveptr1, *saveptr2;
+	char 		**cmd_args = NULL;
+	char		*req_save = req;
 	int		index = 0;
+	char 		*token;
 
 	if (args && req && check_opts(av)) {
 		for (; ; req = NULL) {
@@ -147,7 +151,8 @@ t_clargs		*get_opts(int ac, char **av)
 			}
 		}
 	}
-	return (check_opts(av) ? args : NULL);
+	return (check_opts(av) ? clean_exit(args, opts, req_save) :
+		error_exit(args, opts, req_save));
 }
 
 #ifdef CLTEST
@@ -158,9 +163,11 @@ int	main(int ac, char **av)
 
 	if (!(args = get_opts(ac, av))) {
 		fprintf(stderr, "%s\n", "Bogus args RTFM");
+		free_opts(args);
 		rt = 84;
 	} else {
 		print_clargs(args);
+		free_opts(args);
 	}
 	return (rt);
 }

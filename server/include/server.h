@@ -274,7 +274,10 @@
 	t_clargs	*get_opts(int ac, char **av);
 	/** @note see src/cl_args_helpers.c */
 	clargs		*set_opts();
+	void		free_opts(t_clargs *opts);
 	void		free_buffers(char **buffer);
+	void		*clean_exit(t_clargs *args, clargs *opts, char *req_save);
+	void		*error_exit(t_clargs *args, clargs *opts, char *req_save);
 	/** @note see src/signal_handler.c */
 	void		sig_handler(int signo);
 	/** @note see src/usage.c */

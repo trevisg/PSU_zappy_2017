@@ -8,6 +8,34 @@
 #include <stdlib.h>
 #include "../../include/server.h"
 
+void		*error_exit(t_clargs *args, clargs *opts, char *req_save)
+{
+	free(args);
+	free(opts);
+	free(req_save);
+	return NULL;
+}
+
+void		*clean_exit(t_clargs *args, clargs *opts, char *req_save)
+{
+	free(opts);
+	free(req_save);
+	return args;
+}
+
+
+/** Free the t_clargs structure
+* @param opts the structure
+*/
+void	free_opts(t_clargs *opts)
+{
+	if (opts) {
+		free(opts->port);
+		free_buffers(opts->teams_names);
+		free(opts);
+	}
+}
+
 /** Free the token list
 * @param buffer the 2D array to be free'd
 */
