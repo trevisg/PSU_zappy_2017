@@ -20,8 +20,10 @@ int		main(int ac, char **av)
 	if ((params = get_opts(ac, av))) {
 		signal(SIGINT, sig_handler);
 		rt = server(params);
+		free_opts(params);
 	} else {
 		usage(av[0]);
+		free_opts(params);
 		rt = 84;
 	}
 	return (rt);
