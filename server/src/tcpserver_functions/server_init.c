@@ -5,15 +5,14 @@
 ** Server listening socket and interface init
 */
 
-#include "../../include/server.h"
 #include <unistd.h>
 #include <stdlib.h>
-// #include <fcntl.h>
 #include <sys/types.h>
+#include "../../include/server.h"
 
 /** Add the new client file descriptor in struct epoll_event structure
 * for polling their events
-* @NOTE read [this](https://bit.ly/2gOr7gr) medium blog post on 'epoll madness'
+* @todo read [this](https://bit.ly/2gOr7gr) medium blog post on 'epoll madness'
 */
 int	set_clifd(int clisock, int epollfd, struct epoll_event *ev)
 {
@@ -55,6 +54,7 @@ int	set_iface(adrinf *hints, adrinf **res, const char *port)
 * - declare an epoll fd with epoll_create()
 * - set event handling to EPOLLIN (check ```man epoll```)
 * - register server listening fd on ev structure
+* @param all the foure tout structure
 */
 int	set_epoll(t_serv *all)
 {
