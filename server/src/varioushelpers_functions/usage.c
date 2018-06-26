@@ -17,6 +17,6 @@ void 	usage(char *progname)
 	printf("\theight\t\tis the height of the world\n");
 	printf("\tnameX\t\tis the name of the team X\n");
 	printf("\tclientNb\tis the number of authorized client per team\n");
-	printf("\tclientNb\tis the reciprocal of time unit for execution ");
+	printf("\tfreq\t\tis the reciprocal of time unit for execution ");
 	printf("of actions\n");
 }
