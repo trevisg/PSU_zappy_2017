@@ -38,35 +38,42 @@ bool	Network::connect_to(std::string server_host, std::string server_port)
 	return (rt > 0 ? true : false);
 }
 
+std::vector<std::string>	Network::get_teamnames()
+{
+	std::vector<std::string> teams;
+	std::string req("GET /teamnames\n");
+	write(_client_socket, req.c_str(), req.size());
+	listen_up();
+	while (!_queue.empty()) {
+		teams.emplace_back(_queue.front());
+		_queue.pop();
+	}
+	return (teams);
+}
+
 bool	Network::listen_up()
 {
 	int r_size = 0;
-	static uint queue_size;
+	std::string s;
+	std::regex r("[a-z]+");
 
 	memset(_server_resp, 0, MAX_RESP);
 	while ((r_size = read(_client_socket, _server_resp, MAX_RESP)) > 0) {
-		std::cout << r_size << '\n';
 		if (r_size) {
-			_map[queue_size] = std::string(_server_resp);
-			queue_size += 1;
+			s = _server_resp;
+			for (std::sregex_iterator i = std::sregex_iterator(s.begin(), s.end(), r);
+			i != std::sregex_iterator(); ++i) {
+				std::smatch m = *i;
+				_queue.push(m.str());
+			}
 			break;
-		} else {
-			queue_size = 0;
+		} else
 			break;
-		}
 	}
 	return (r_size > 0 ? true : false);
 }
 
 std::string	Network::get_lastbuffer()
 {
-	uint i = 0;
-	std::string::size_type pos = 0;
-
-	for (; i < _map.size(); ++i) {
-		while ((pos = _map[i].find ("\n", pos)) != std::string::npos) {
-			_map[i].erase (pos, 1);
-		}
-	}
-	return _map[i - 1];
+	return _queue.front();
 }

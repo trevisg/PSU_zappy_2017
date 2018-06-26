@@ -9,7 +9,11 @@
 # define NETWORK_CLIENT_HPP_
 
 #include <map>
+#include <queue>
+#include <vector>
 #include <string>
+#include <regex>
+#include <string.h>
 #include <cstdio>
 #include <cstring>
 #include <iostream>
@@ -28,6 +32,7 @@ class	Network {
 		Network();
 		~Network();
 		bool listen_up();
+		std::vector<std::string> get_teamnames();
 		bool connect_to(std::string server_host,
 		std::string server_port);
 		std::string get_lastbuffer();
@@ -36,7 +41,7 @@ class	Network {
 		int _client_socket;
 		char _server_resp[MAX_RESP];
 		char _server_host[MAX_HOSTNAME];
-		std::map<int, std::string> _map;
+		std::queue<std::string> _queue;
 		struct sockaddr_in _client_address;
 		const struct sockaddr *_addr;
 
