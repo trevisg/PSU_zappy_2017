@@ -21,6 +21,7 @@ GUICLIENT_SRCS	=  Zappy_gui.cpp \
 		Menu_Settings.cpp \
 		Menu_NewGame.cpp \
 		Game_Window.cpp \
+		Network_Client.cpp \
 		Menu.cpp
 
 GUICLIENTSRC	= $(addprefix src/, $(GUICLIENT_SRCS))
@@ -39,6 +40,12 @@ testgame:
 		@printf "Debug game window methods\n"
 		g++ src/Game_Window.cpp $(CPPFLAGS) $(LDFLAGS) -D TESTGAME
 		@printf "Done.\nNow run with ./a.out x y (map size)\n"
+
+testnetwork:
+		@printf "Debug network client methods\n"
+		g++ $(CPPFLAGS) $(LDFLAGS) src/Network_Client.cpp \
+ 		tests/Network_Client_tests.cpp
+		@printf "Done.\nNow run with ./a.out\n"
 
 fclean: 	clean
 		$(RM) $(GUICLIENT)
