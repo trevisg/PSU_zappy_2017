@@ -5,7 +5,6 @@
 ** Zappy server command line arguments parsing and storage (helpers)
 */
 
-#include <stdlib.h>
 #include "server.h"
 
 void		*error_exit(t_clargs *args, clargs *opts, char *req_save)
