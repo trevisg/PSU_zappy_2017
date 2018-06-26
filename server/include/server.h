@@ -44,11 +44,10 @@
 	/** Maximal size for a client host port */
 	#define NI_MAXSERV 32
 	/** Argument format typedef as per subject request
-	* @note Useless typedef came from a deprecated method, but hey too lazy
-	* to rename all
+	* @note Useless typedef came from a deprecated method
 	*/
 	typedef char ** cmdargs;
-	/** Yess useless so mandatory */
+
 	#define EVER ;;
 
 	/** Only here for code clarity and lisibility
