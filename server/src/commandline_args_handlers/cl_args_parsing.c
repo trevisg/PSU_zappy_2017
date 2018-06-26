@@ -12,7 +12,7 @@
 #if defined(CLTEST) || defined(CLDBG)
 static void	print_2d(char **buff)
 {
-	for(int i = 0; buff[i]; ++i) {
+	for(int i = 0; buff[i] != NULL; ++i) {
 		printf("\tbuff[%d]: [%s]\n", i, buff[i]);
 	}
 	printf("\n");
@@ -119,10 +119,10 @@ static t_clargs		*set_default_args()
 * @param av the 2d char array from main()
 * @return args the storage struct
 * @return NULL if errors
-* @note consider refactoring / splitting this function as it's 2 lines above
-* the 20's authorized by this silly/f**ing norm. Variables are also uncorrectly
-* declared. We also could do a 'trash bin struct' for all args
-* @todo fix this bogus function, error handling is not working
+* @todo  1. Consider refactoring / splitting this function as it's 2 lines above
+* the 20's authorized. Variables are also uncorrectly declared.
+* solution ? do a 'trash bin struct' for all args and catch them all !
+* 2. Add free() for all the malloc'ed buffers
 */
 t_clargs		*get_opts(int ac, char **av)
 {
