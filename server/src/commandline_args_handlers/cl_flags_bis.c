@@ -15,14 +15,16 @@
 void	*get_teams(char **teams, t_clargs *args)
 {
 	unsigned int size = 0;
+
 	#ifdef CLDBG
-		printf("\t%s\n", "get_teams ouh yeah!");
 		print_2d(teams);
 	#endif
 	args->teams_names = malloc(MAXTEAMS);
+	memset(args->teams_names, 0, MAXTEAMS);
 	for (size = 1; teams[size]; ++size) {
 		args->teams_names[size - 1] = strdup(teams[size]);
 	}
+	args->teams_names[size] = NULL;
 	return (size > 0 ? args : NULL);
 }
 
