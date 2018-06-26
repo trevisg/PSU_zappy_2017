@@ -63,7 +63,8 @@ re:		fclean all
 
 cltest:
 		@printf "Debug server command line args handler\n"
-		gcc src/commandline_args_handlers/*.c $(CFLAGS) \
+		gcc $(CFLAGS) src/commandline_args_handlers/*.c  \
+		tests/GetOpts_tests.c \
  		-D CLTEST -g3
 		@printf "Done.\nNow run with ./a.out [see subject for args]\n"
 
