@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Get -n flag, the teams name
 * @param teams the received argument to flag

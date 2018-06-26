@@ -5,7 +5,7 @@
 ** Zappy server source file
 */
 
-#include "../../include/server.h"
+#include "server.h"
 
 void 	usage(char *progname)
 {

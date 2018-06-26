@@ -6,7 +6,7 @@
 */
 
 #include <assert.h>
-#include "../include/server.h"
+#include "server.h"
 
 static void	print_2d(char **buff)
 {

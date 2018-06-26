@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Check if all flags are present in command line arguments from main()
 * @param av the 2D char array from main()

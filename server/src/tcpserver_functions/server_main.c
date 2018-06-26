@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <arpa/inet.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Set the new accept() client socket in epoll event list
 * for new client handling if connection succeed

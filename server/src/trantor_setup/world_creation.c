@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Free the t_world ptr with the 2D t_tile array inside
 * @param trantor the world pointer to be freed

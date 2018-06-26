@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Get -p flag, the requested listening port for server
 * @param port the received argument to flag

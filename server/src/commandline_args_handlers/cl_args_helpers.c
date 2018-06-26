@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../../include/server.h"
+#include "server.h"
 
 void		*error_exit(t_clargs *args, clargs *opts, char *req_save)
 {

@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include "../../include/server.h"
+#include "server.h"
 
 /** Add the new client file descriptor in struct epoll_event structure
 * for polling their events

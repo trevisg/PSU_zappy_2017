@@ -5,7 +5,7 @@
 ** print map && teams
 */
 
-#include "../../include/server.h"
+#include "server.h"
 
 void            print_world(t_world *map)
 {

@@ -6,7 +6,7 @@
 */
 
 #include <signal.h>
-#include "../include/server.h"
+#include "server.h"
 
 /** Self explanatory (here is the main())
 * @param ac the number of received args
