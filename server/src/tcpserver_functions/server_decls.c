@@ -6,7 +6,6 @@
 ** for commands settings see methodsXX.c files
 */
 
-#include "../../include/server.h"
 #include "../../include/cmd_fcts.h"
 
 /** The 2D array containing the handled commands strings for comparison  */
