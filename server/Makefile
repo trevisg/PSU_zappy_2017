@@ -19,6 +19,7 @@ CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 srcS	= varioushelpers_functions/time_handlers.c \
 		varioushelpers_functions/logs_helpers.c \
 		varioushelpers_functions/sig_handler.c \
+		varioushelpers_functions/print_items.c \
 		varioushelpers_functions/usage.c \
 		commandline_args_handlers/cl_args_helpers.c \
 		commandline_args_handlers/cl_args_parsing.c \
@@ -28,16 +29,15 @@ srcS	= varioushelpers_functions/time_handlers.c \
 		tcpserver_functions/server_init.c \
 		tcpserver_functions/server_main.c \
 		trantor_setup/ressources_decl.c \
+		trantor_setup/world_creation.c \
 		trantor_setup/users_mgr.c \
 		trantor_setup/teams_mgr.c \
-		trantor_setup/world_creation.c \
-		commands_parsing.c \
-		print_fcts.c \
 		send_fcts/broadcast.c \
 		send_fcts/find_list.c \
 		send_fcts/motion.c \
 		send_fcts/utils.c \
 		send_fcts/utils2.c \
+		commands_parsing.c \
 		main.c
 
 SERVERSRC	= $(addprefix src/, $(srcS))
