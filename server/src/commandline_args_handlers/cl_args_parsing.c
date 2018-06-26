@@ -9,28 +9,6 @@
 #include <stdbool.h>
 #include "../../include/server.h"
 
-#if defined(CLTEST) || defined(CLDBG)
-static void	print_2d(char **buff)
-{
-	for(int i = 0; buff[i] != NULL; ++i) {
-		printf("\tbuff[%d]: [%s]\n", i, buff[i]);
-	}
-	printf("\n");
-}
-
-static void	print_clargs(t_clargs *args)
-{
-	printf("%s\n", "t_clargs *args :");
-	printf("Server port [%s]\n", args->port);
-	printf("Map width [%d]\n", args->width);
-	printf("Map height [%d]\n", args->height);
-	printf("Teams names :\n");
-	print_2d(args->teams_names);
-	printf("Max players per team [%d]\n", args->clientsNb);
-	printf("Frequency [%d]\n", args->freq);
-}
-#endif
-
 /** Check if all flags are present in command line arguments from main()
 * @param av the 2D char array from main()
 * @return true if all flags are presents
@@ -154,21 +132,3 @@ t_clargs		*get_opts(int ac, char **av)
 	return (check_opts(av) ? clean_exit(args, opts, req_save) :
 		error_exit(args, opts, req_save));
 }
-
-#ifdef CLTEST
-int	main(int ac, char **av)
-{
-	int rt = 0;
-	t_clargs *args = NULL;
-
-	if (!(args = get_opts(ac, av))) {
-		fprintf(stderr, "%s\n", "Bogus args RTFM");
-		free_opts(args);
-		rt = 84;
-	} else {
-		print_clargs(args);
-		free_opts(args);
-	}
-	return (rt);
-}
-#endif
