@@ -37,6 +37,7 @@ srcS	= varioushelpers_functions/time_handlers.c \
 		send_fcts/motion.c \
 		send_fcts/utils.c \
 		send_fcts/utils2.c \
+		send_fcts/g_commands.c \
 		commands_parsing.c \
 		main.c
 
