@@ -1,4 +1,4 @@
-# PSU_zappy_2017 {#mainpage}
+# PSU_zappy_2017 | <a href="https://github.com/trevisg/PSU_zappy_2017/releases/tag/untagged-8c7c73170711aa5fb109">Releases</a> {#mainpage}
 
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/PSU_zappy/Lobby)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
@@ -17,7 +17,7 @@
         ----       Studio Asimov ltd
         -----      Sav -- bugs@neverread.devnull
 
-> A AI vs themselves network game in C & C++
+> A AI vs themselves network game in C & C++ <a href="https://github.com/trevisg/PSU_zappy_2017"> on github</a>
 
 ## Usage :
 

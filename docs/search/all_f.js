@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['psu_5fzappy_5f2017',['PSU_zappy_2017',['../index.html',1,'']]],
+  ['psu_5fzappy_5f2017_20_7c_20_3ca_20href_3d_22https_3a_2f_2fgithub_2ecom_2ftrevisg_2fpsu_5fzappy_5f2017_2freleases_2ftag_2funtagged_2d8c7c73170711aa5fb109_22_3ereleases_3c_2fa_3e',['PSU_zappy_2017 | &lt;a href=&quot;https://github.com/trevisg/PSU_zappy_2017/releases/tag/untagged-8c7c73170711aa5fb109&quot;&gt;Releases&lt;/a&gt;',['../index.html',1,'']]],
   ['phiras',['phiras',['../structt__ressources.html#a8aa63bbb246c447ade18e1e62a56a2c7',1,'t_ressources::phiras()'],['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82',1,'PHIRAS():&#160;zappy_game.h']]],
   ['ping',['ping',['../rfc__cmds0_8c.html#a0f0d0e51f2d5d863cb8be57983ccedfb',1,'rfc_cmds0.c']]],
   ['player_2ec',['player.c',['../player_8c.html',1,'']]],
