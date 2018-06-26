@@ -6,5 +6,6 @@ var searchData=
   ['user_5flist_2ec',['user_list.c',['../user__list_8c.html',1,'']]],
   ['users',['users',['../structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880',1,'t_teams']]],
   ['users_5fmgr_2ec',['users_mgr.c',['../users__mgr_8c.html',1,'']]],
-  ['utils_2ec',['utils.c',['../utils_8c.html',1,'']]]
+  ['utils_2ec',['utils.c',['../utils_8c.html',1,'']]],
+  ['utils2_2ec',['utils2.c',['../utils2_8c.html',1,'']]]
 ];

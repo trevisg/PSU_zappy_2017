@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['check_5fobj_5fin_5finv',['check_obj_in_inv',['../utils2_8c.html#a5f261a3a175264c022c6f1a47177237c',1,'check_obj_in_inv(t_inhabitant *player, char *obj_name):&#160;utils2.c'],['../cmd__fcts_8h.html#a5f261a3a175264c022c6f1a47177237c',1,'check_obj_in_inv(t_inhabitant *player, char *obj_name):&#160;utils2.c']]],
+  ['check_5fobj_5fon_5fmap',['check_obj_on_map',['../utils_8c.html#a6d94440e67d094049d074af7a8a7ee37',1,'check_obj_on_map(t_world *map, int x, int y, char *obj_name):&#160;utils.c'],['../cmd__fcts_8h.html#a6d94440e67d094049d074af7a8a7ee37',1,'check_obj_on_map(t_world *map, int x, int y, char *obj_name):&#160;utils.c']]],
   ['check_5fopts',['check_opts',['../cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b',1,'cl_args_parsing.c']]],
   ['cl_5fargs_5fhelpers_2ec',['cl_args_helpers.c',['../cl__args__helpers_8c.html',1,'']]],
   ['cl_5fargs_5fparsing_2ec',['cl_args_parsing.c',['../cl__args__parsing_8c.html',1,'']]],
@@ -15,5 +17,6 @@ var searchData=
   ['commands_5fparsing_2ec',['commands_parsing.c',['../commands__parsing_8c.html',1,'']]],
   ['conn_5fsock',['conn_sock',['../structt__serv.html#a6bdf522531cf7f1c8dd80f7044590122',1,'t_serv']]],
   ['connect_5fnbr',['CONNECT_NBR',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fa9728dded679ea70d39e905ace6a7c9cf',1,'server.h']]],
+  ['count_5fnb_5fempty',['count_nb_empty',['../utils_8c.html#af1a01876c13aaeb3cd985681e3518b4c',1,'count_nb_empty(t_teams *teams, char *team_name):&#160;utils.c'],['../cmd__fcts_8h.html#af1a01876c13aaeb3cd985681e3518b4c',1,'count_nb_empty(t_teams *teams, char *team_name):&#160;utils.c']]],
   ['curr_5fpos',['curr_pos',['../structt__inhabitant.html#a0e2021f265a71f22a47be369c54e2d86',1,'t_inhabitant']]]
 ];

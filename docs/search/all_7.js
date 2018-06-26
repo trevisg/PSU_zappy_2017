@@ -13,7 +13,6 @@ var searchData=
   ['get_5fheight',['get_height',['../cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c',1,'get_height(char **height, t_clargs *args):&#160;cl_flags.c'],['../server_8h.html#a3ea4530e0397932b35cde078235aa56c',1,'get_height(char **height, t_clargs *args):&#160;cl_flags.c']]],
   ['get_5fhost_5fstring',['get_host_string',['../logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0',1,'logs_helpers.c']]],
   ['get_5fmethods',['get_methods',['../commands__parsing_8c.html#a68520138c8931ae45e9abb2a6433c06a',1,'get_methods(char *req, int clifd, t_world *map):&#160;commands_parsing.c'],['../server_8h.html#a68520138c8931ae45e9abb2a6433c06a',1,'get_methods(char *req, int clifd, t_world *map):&#160;commands_parsing.c']]],
-  ['get_5fnbr_5fby_5flevel',['get_nbr_by_level',['../find__list_8c.html#adfc01cd0e9e0541889768cc67bff0b5a',1,'find_list.c']]],
   ['get_5fnew_5fchan_5flist',['get_new_chan_list',['../teams__list_8c.html#a502d66bd7955b127bcb41fbb0c23667b',1,'teams_list.c']]],
   ['get_5fnew_5fteam',['get_new_team',['../teams__mgr_8c.html#a0864851cc28bb8b04795d3dc9c55dd09',1,'get_new_team(char *name):&#160;teams_mgr.c'],['../server_8h.html#a0864851cc28bb8b04795d3dc9c55dd09',1,'get_new_team(char *name):&#160;teams_mgr.c']]],
   ['get_5fnew_5fuser',['get_new_user',['../user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0',1,'user_list.c']]],
@@ -29,5 +28,6 @@ var searchData=
   ['get_5ftime',['get_time',['../time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab',1,'time_handlers.c']]],
   ['get_5fwidth',['get_width',['../cl__flags_8c.html#af5fbca203e6e949739857574cecf5869',1,'get_width(char **width, t_clargs *args):&#160;cl_flags.c'],['../server_8h.html#af5fbca203e6e949739857574cecf5869',1,'get_width(char **width, t_clargs *args):&#160;cl_flags.c']]],
   ['get_5fworld',['get_world',['../world__creation_8c.html#a45a079803a87adc3a172025e7eded81d',1,'get_world(t_clargs *args):&#160;world_creation.c'],['../server_8h.html#a45a079803a87adc3a172025e7eded81d',1,'get_world(t_clargs *args):&#160;world_creation.c']]],
-  ['getactiveclients',['getactiveclients',['../server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd',1,'server_main.c']]]
+  ['getactiveclients',['getactiveclients',['../server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd',1,'server_main.c']]],
+  ['graphical_5ffd',['graphical_fd',['../structt__world.html#ad9036bf79b6e1e91128a8932c62c8501',1,'t_world']]]
 ];

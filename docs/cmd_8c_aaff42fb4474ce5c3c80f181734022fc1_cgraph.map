@@ -1,0 +1,7 @@
+<map id="send_res_collect" name="send_res_collect">
+<area shape="rect" id="node2" href="$rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430" title="user" alt="" coords="173,81,220,108"/>
+<area shape="rect" id="node3" href="$user__list_8c.html#ace045c243817cc0c9885bdf3b41263c0" title="get_new_user" alt="" coords="277,5,380,32"/>
+<area shape="rect" id="node4" href="$user__list_8c.html#a1cf3d818bc2607cb0f69c043dba3c039" title="get_new_userlist" alt="" coords="269,56,389,83"/>
+<area shape="rect" id="node5" href="$lists__finders_8c.html#a5c9b2cd4523b5cc43326163d534225d9" title="get_size" alt="" coords="293,107,364,133"/>
+<area shape="rect" id="node6" href="$user__list_8c.html#a2b16f778b01689e31ef5530b66d41390" title="insert_back_user" alt="" coords="268,157,389,184"/>
+</map>

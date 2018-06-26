@@ -1,0 +1,6 @@
+<map id="r_set_obj" name="r_set_obj">
+<area shape="rect" id="node2" href="$utils2_8c.html#a9924307f765bd3c92afef4cda0d2f89f" title="add_obj_to_map" alt="" coords="139,5,256,32"/>
+<area shape="rect" id="node3" href="$utils2_8c.html#a5f261a3a175264c022c6f1a47177237c" title="check_obj_in_inv" alt="" coords="136,56,259,83"/>
+<area shape="rect" id="node4" href="$utils2_8c.html#a504e56197d8da98d043d352832da40d1" title="del_obj_from_player" alt="" coords="128,107,267,133"/>
+<area shape="rect" id="node5" href="$find__list_8c.html#a124ce3d51d705a4e9e1bab1cb2b8d29f" title="find_player_by_fd" alt="" coords="135,157,259,184"/>
+</map>

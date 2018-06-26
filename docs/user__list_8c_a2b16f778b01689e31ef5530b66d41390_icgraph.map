@@ -1,9 +1,9 @@
 <map id="insert_back_user" name="insert_back_user">
 <area shape="rect" id="node2" href="$rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b" title="join" alt="" coords="177,56,219,83"/>
 <area shape="rect" id="node3" href="$rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430" title="user" alt="" coords="175,107,221,133"/>
-<area shape="rect" id="node4" href="$egg_8c.html#a1d8253c7ee78f7acf111962489051c28" title="send_egg_death" alt="" coords="271,5,388,32"/>
-<area shape="rect" id="node5" href="$egg_8c.html#a8cb98edb1e27260238810bffec84a43e" title="send_egg_hatch" alt="" coords="271,56,388,83"/>
-<area shape="rect" id="node6" href="$teams_8c.html#a3835dbf2a480c07b38561e569da92de9" title="send_expulsion" alt="" coords="273,107,385,133"/>
-<area shape="rect" id="node7" href="$cmd_8c.html#a367c7fb840a45d9f90cafd8fa3785f15" title="send_res_collect" alt="" coords="269,157,389,184"/>
-<area shape="rect" id="node8" href="$cmd_8c.html#ae0d4f64c616f6a68e648350b632e1ab6" title="send_res_drop" alt="" coords="276,208,383,235"/>
+<area shape="rect" id="node4" href="$egg_8c.html#a9019cefcb9955f86d3f1db85bd4ac152" title="send_egg_death" alt="" coords="271,5,388,32"/>
+<area shape="rect" id="node5" href="$egg_8c.html#a3c2162a181ab731b25815b3ccd531d27" title="send_egg_hatch" alt="" coords="271,56,388,83"/>
+<area shape="rect" id="node6" href="$teams_8c.html#abcf086826db6e9ab249fb146591e9de8" title="send_expulsion" alt="" coords="273,107,385,133"/>
+<area shape="rect" id="node7" href="$cmd_8c.html#aaff42fb4474ce5c3c80f181734022fc1" title="send_res_collect" alt="" coords="269,157,389,184"/>
+<area shape="rect" id="node8" href="$cmd_8c.html#a794a7dff14f47fef9407a083f3551645" title="send_res_drop" alt="" coords="276,208,383,235"/>
 </map>

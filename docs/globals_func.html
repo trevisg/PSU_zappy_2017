@@ -24,7 +24,7 @@
    <div id="projectname">PSU_zappy_2017
    &#160;<span id="projectnumber">0.0.250</span>
    </div>
-   <div id="projectbrief">Yet another useless but mandatory EPITECH project</div>
+   <div id="projectbrief">A PC AI vs themselves network game in C &amp; C++</div>
   </td>
  </tr>
  </tbody>
@@ -63,6 +63,14 @@ $(function() {
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>add_obj_to_map()
+: <a class="el" href="utils2_8c.html#a9924307f765bd3c92afef4cda0d2f89f">utils2.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a9924307f765bd3c92afef4cda0d2f89f">cmd_fcts.h</a>
+</li>
+<li>add_obj_to_player()
+: <a class="el" href="cmd__fcts_8h.html#a77a835e84cc9da9595cda68c474fee1b">cmd_fcts.h</a>
+, <a class="el" href="utils_8c.html#a77a835e84cc9da9595cda68c474fee1b">utils.c</a>
+</li>
 <li>add_team_back()
 : <a class="el" href="teams__mgr_8c.html#aa3bc2c460913b03b23b351cfdf38e477">teams_mgr.c</a>
 , <a class="el" href="server_8h.html#aa3bc2c460913b03b23b351cfdf38e477">server.h</a>
@@ -70,6 +78,10 @@ $(function() {
 <li>add_userlist()
 : <a class="el" href="users__mgr_8c.html#a3cf83e57724cf5ad9983409de80fe02d">users_mgr.c</a>
 , <a class="el" href="server_8h.html#a3cf83e57724cf5ad9983409de80fe02d">server.h</a>
+</li>
+<li>assign_player()
+: <a class="el" href="cmd__fcts_8h.html#a4905767359e1891ae7ce89da051daacd">cmd_fcts.h</a>
+, <a class="el" href="utils_8c.html#a4905767359e1891ae7ce89da051daacd">utils.c</a>
 </li>
 </ul>
 
@@ -82,8 +94,32 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>check_obj_in_inv()
+: <a class="el" href="utils2_8c.html#a5f261a3a175264c022c6f1a47177237c">utils2.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a5f261a3a175264c022c6f1a47177237c">cmd_fcts.h</a>
+</li>
+<li>check_obj_on_map()
+: <a class="el" href="cmd__fcts_8h.html#a6d94440e67d094049d074af7a8a7ee37">cmd_fcts.h</a>
+, <a class="el" href="utils_8c.html#a6d94440e67d094049d074af7a8a7ee37">utils.c</a>
+</li>
 <li>check_opts()
 : <a class="el" href="cl__args__parsing_8c.html#aff45b113ce7872b0dc8d7a032b0b710b">cl_args_parsing.c</a>
+</li>
+<li>count_nb_empty()
+: <a class="el" href="utils_8c.html#af1a01876c13aaeb3cd985681e3518b4c">utils.c</a>
+, <a class="el" href="cmd__fcts_8h.html#af1a01876c13aaeb3cd985681e3518b4c">cmd_fcts.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
+<li>del_obj_from_player()
+: <a class="el" href="utils2_8c.html#a504e56197d8da98d043d352832da40d1">utils2.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a504e56197d8da98d043d352832da40d1">cmd_fcts.h</a>
+</li>
+<li>del_obj_on_map()
+: <a class="el" href="utils2_8c.html#a99f6f96641b41d3811ba060812dafa59">utils2.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a99f6f96641b41d3811ba060812dafa59">cmd_fcts.h</a>
 </li>
 </ul>
 
@@ -96,14 +132,9 @@ $(function() {
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
-<li>find_egg_on_tile()
-: <a class="el" href="find__list_8c.html#af745c270310d8d1199e4d38e4e9dab96">find_list.c</a>
-</li>
-<li>find_egg_state()
-: <a class="el" href="find__list_8c.html#abbc7ca817fffc27aa144fa18d851c527">find_list.c</a>
-</li>
-<li>find_player_by_id()
-: <a class="el" href="find__list_8c.html#a8543484aca37b2205ae2e224e91aeba8">find_list.c</a>
+<li>find_player_by_fd()
+: <a class="el" href="find__list_8c.html#a124ce3d51d705a4e9e1bab1cb2b8d29f">find_list.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a124ce3d51d705a4e9e1bab1cb2b8d29f">cmd_fcts.h</a>
 </li>
 <li>find_user_by_fd()
 : <a class="el" href="lists__finders_8c.html#a0195cd48a4c52a9624a811825cef8afb">lists_finders.c</a>
@@ -111,19 +142,12 @@ $(function() {
 <li>find_user_by_name()
 : <a class="el" href="lists__finders_8c.html#a7ebf668b9cfc31f3b29114dfed75c0ad">lists_finders.c</a>
 </li>
-<li>find_user_in_teams()
-: <a class="el" href="find__list_8c.html#acd187da9c982bdcd9e7b547c9fe44d0e">find_list.c</a>
-</li>
 <li>for()
-: <a class="el" href="egg_8c.html#a208a5d9f5731dba47bde476e6cb569ec">egg.c</a>
-</li>
-<li>forward()
-: <a class="el" href="motion_8c.html#aa8f9103baa90cea2e8b1d5e6126a7703">motion.c</a>
-, <a class="el" href="cmd__fcts_8h.html#aa8f9103baa90cea2e8b1d5e6126a7703">cmd_fcts.h</a>
+: <a class="el" href="egg_8c.html#a26b53ae08684c44e684f0556182c5862">egg.c</a>
 </li>
 <li>free_buffers()
-: <a class="el" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">cl_args_helpers.c</a>
-, <a class="el" href="server_8h.html#a253a684161dba8187c365bc97b217d56">server.h</a>
+: <a class="el" href="server_8h.html#a253a684161dba8187c365bc97b217d56">server.h</a>
+, <a class="el" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">cl_args_helpers.c</a>
 </li>
 <li>free_teams_list()
 : <a class="el" href="teams__list_8c.html#abf2b4bcd5fc41752e639d8e0498877f3">teams_list.c</a>
@@ -174,9 +198,6 @@ $(function() {
 : <a class="el" href="commands__parsing_8c.html#a68520138c8931ae45e9abb2a6433c06a">commands_parsing.c</a>
 , <a class="el" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a">server.h</a>
 </li>
-<li>get_nbr_by_level()
-: <a class="el" href="find__list_8c.html#adfc01cd0e9e0541889768cc67bff0b5a">find_list.c</a>
-</li>
 <li>get_new_chan_list()
 : <a class="el" href="teams__list_8c.html#a502d66bd7955b127bcb41fbb0c23667b">teams_list.c</a>
 </li>
@@ -209,12 +230,12 @@ $(function() {
 , <a class="el" href="server_8h.html#a5c9b2cd4523b5cc43326163d534225d9">server.h</a>
 </li>
 <li>get_team_by_name()
-: <a class="el" href="lists__finders_8c.html#a840e59afe03b793c671dae92364c4e0e">lists_finders.c</a>
-, <a class="el" href="server_8h.html#a840e59afe03b793c671dae92364c4e0e">server.h</a>
+: <a class="el" href="server_8h.html#a840e59afe03b793c671dae92364c4e0e">server.h</a>
+, <a class="el" href="lists__finders_8c.html#a840e59afe03b793c671dae92364c4e0e">lists_finders.c</a>
 </li>
 <li>get_teams()
-: <a class="el" href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb">cl_flags_bis.c</a>
-, <a class="el" href="server_8h.html#a434f4fa9452d570e766cdc09e16179fb">server.h</a>
+: <a class="el" href="server_8h.html#a434f4fa9452d570e766cdc09e16179fb">server.h</a>
+, <a class="el" href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb">cl_flags_bis.c</a>
 </li>
 <li>get_tiles()
 : <a class="el" href="world__creation_8c.html#a6e9075cf51ee03ae102e4420fa3269de">world_creation.c</a>
@@ -227,8 +248,8 @@ $(function() {
 , <a class="el" href="server_8h.html#af5fbca203e6e949739857574cecf5869">server.h</a>
 </li>
 <li>get_world()
-: <a class="el" href="world__creation_8c.html#a45a079803a87adc3a172025e7eded81d">world_creation.c</a>
-, <a class="el" href="server_8h.html#a45a079803a87adc3a172025e7eded81d">server.h</a>
+: <a class="el" href="server_8h.html#a45a079803a87adc3a172025e7eded81d">server.h</a>
+, <a class="el" href="world__creation_8c.html#a45a079803a87adc3a172025e7eded81d">world_creation.c</a>
 </li>
 <li>getactiveclients()
 : <a class="el" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd">server_main.c</a>
@@ -244,8 +265,8 @@ $(function() {
 : <a class="el" href="teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec">teams_list.c</a>
 </li>
 <li>init_teams()
-: <a class="el" href="teams__mgr_8c.html#a1245d0770a4b2109e828eec9cbb7163c">teams_mgr.c</a>
-, <a class="el" href="server_8h.html#a1245d0770a4b2109e828eec9cbb7163c">server.h</a>
+: <a class="el" href="server_8h.html#a1245d0770a4b2109e828eec9cbb7163c">server.h</a>
+, <a class="el" href="teams__mgr_8c.html#a1245d0770a4b2109e828eec9cbb7163c">teams_mgr.c</a>
 </li>
 <li>init_userlist()
 : <a class="el" href="users__mgr_8c.html#a1946ad693e42c5dd6e9abd48729159ae">users_mgr.c</a>
@@ -258,8 +279,8 @@ $(function() {
 : <a class="el" href="user__list_8c.html#a2b16f778b01689e31ef5530b66d41390">user_list.c</a>
 </li>
 <li>is_user_in_chan()
-: <a class="el" href="lists__finders_8c.html#a89a3ecace723ab3c2e85b151eb031dc7">lists_finders.c</a>
-, <a class="el" href="server_8h.html#a89a3ecace723ab3c2e85b151eb031dc7">server.h</a>
+: <a class="el" href="server_8h.html#a89a3ecace723ab3c2e85b151eb031dc7">server.h</a>
+, <a class="el" href="lists__finders_8c.html#a89a3ecace723ab3c2e85b151eb031dc7">lists_finders.c</a>
 </li>
 </ul>
 
@@ -272,10 +293,6 @@ $(function() {
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
-<li>left()
-: <a class="el" href="motion_8c.html#ab69d0223545aa80db9a15b0aa9a71479">motion.c</a>
-, <a class="el" href="cmd__fcts_8h.html#ab69d0223545aa80db9a15b0aa9a71479">cmd_fcts.h</a>
-</li>
 <li>logthisevent()
 : <a class="el" href="logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49">logs_helpers.c</a>
 , <a class="el" href="server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49">server.h</a>
@@ -288,7 +305,8 @@ $(function() {
 : <a class="el" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f">main.c</a>
 </li>
 <li>move()
-: <a class="el" href="utils_8c.html#ac109e59008c32c4f367cab03e273ca2f">utils.c</a>
+: <a class="el" href="cmd__fcts_8h.html#ac109e59008c32c4f367cab03e273ca2f">cmd_fcts.h</a>
+, <a class="el" href="utils_8c.html#ac109e59008c32c4f367cab03e273ca2f">utils.c</a>
 </li>
 </ul>
 
@@ -299,8 +317,8 @@ $(function() {
 , <a class="el" href="server_8h.html#a4a5a2f7d1a7a2426150981d00e9882ad">server.h</a>
 </li>
 <li>new_userlist()
-: <a class="el" href="users__mgr_8c.html#a54670de20ada793622a60f40004b858d">users_mgr.c</a>
-, <a class="el" href="server_8h.html#a54670de20ada793622a60f40004b858d">server.h</a>
+: <a class="el" href="server_8h.html#a54670de20ada793622a60f40004b858d">server.h</a>
+, <a class="el" href="users__mgr_8c.html#a54670de20ada793622a60f40004b858d">users_mgr.c</a>
 </li>
 <li>nick()
 : <a class="el" href="rfc__cmds0_8c.html#a23fdd83885b302dd9c00fee36f135f75">rfc_cmds0.c</a>
@@ -316,12 +334,12 @@ $(function() {
 : <a class="el" href="server__init_8c.html#a381b88f843ed1ebdaa5b2a8ded74931b">server_init.c</a>
 </li>
 <li>print_teams()
-: <a class="el" href="print__fcts_8c.html#a95174f824b39f738b3da128a651f0717">print_fcts.c</a>
-, <a class="el" href="server_8h.html#a95174f824b39f738b3da128a651f0717">server.h</a>
+: <a class="el" href="server_8h.html#a95174f824b39f738b3da128a651f0717">server.h</a>
+, <a class="el" href="print__fcts_8c.html#a95174f824b39f738b3da128a651f0717">print_fcts.c</a>
 </li>
 <li>print_world()
-: <a class="el" href="print__fcts_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb">print_fcts.c</a>
-, <a class="el" href="server_8h.html#ae9a1eceba5e05f4d45bb89657de3c7fb">server.h</a>
+: <a class="el" href="server_8h.html#ae9a1eceba5e05f4d45bb89657de3c7fb">server.h</a>
+, <a class="el" href="print__fcts_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb">print_fcts.c</a>
 </li>
 <li>privmsg()
 : <a class="el" href="rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f">rfc_cmds1.c</a>
@@ -337,105 +355,137 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>r_broadcast()
+: <a class="el" href="broadcast_8c.html#a1ec7fb62ed6de667355d382645cbf7ca">broadcast.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a1ec7fb62ed6de667355d382645cbf7ca">cmd_fcts.h</a>
+</li>
+<li>r_connect_nbr()
+: <a class="el" href="cmd__fcts_8h.html#a50b5295987bced83983cc53a261aeb16">cmd_fcts.h</a>
+, <a class="el" href="broadcast_8c.html#a50b5295987bced83983cc53a261aeb16">broadcast.c</a>
+</li>
+<li>r_forward()
+: <a class="el" href="motion_8c.html#ae0b175c18fa02629959e910c383fa53f">motion.c</a>
+, <a class="el" href="cmd__fcts_8h.html#ae0b175c18fa02629959e910c383fa53f">cmd_fcts.h</a>
+</li>
+<li>r_inventory()
+: <a class="el" href="cmd__fcts_8h.html#a1d7b0c0c021d99b17d1e33cc58eefe4f">cmd_fcts.h</a>
+, <a class="el" href="motion_8c.html#a1d7b0c0c021d99b17d1e33cc58eefe4f">motion.c</a>
+</li>
+<li>r_left()
+: <a class="el" href="motion_8c.html#a1b22c76e3ad495ccba0cc78f9c9f0c42">motion.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a1b22c76e3ad495ccba0cc78f9c9f0c42">cmd_fcts.h</a>
+</li>
+<li>r_right()
+: <a class="el" href="motion_8c.html#acdf19d0f050d9f8274ca33e28917e038">motion.c</a>
+, <a class="el" href="cmd__fcts_8h.html#acdf19d0f050d9f8274ca33e28917e038">cmd_fcts.h</a>
+</li>
+<li>r_set_obj()
+: <a class="el" href="broadcast_8c.html#a773f788210bf767ab8a2b8ca3b548f62">broadcast.c</a>
+, <a class="el" href="cmd__fcts_8h.html#a773f788210bf767ab8a2b8ca3b548f62">cmd_fcts.h</a>
+</li>
+<li>r_take_obj()
+: <a class="el" href="broadcast_8c.html#aed91730230e02f56e9ea84e3b5b58c4a">broadcast.c</a>
+, <a class="el" href="cmd__fcts_8h.html#aed91730230e02f56e9ea84e3b5b58c4a">cmd_fcts.h</a>
+</li>
+<li>r_team()
+: <a class="el" href="cmd__fcts_8h.html#afd9b3ac53689fe20b48b326167674a9d">cmd_fcts.h</a>
+, <a class="el" href="broadcast_8c.html#afd9b3ac53689fe20b48b326167674a9d">broadcast.c</a>
+</li>
 <li>remove_teams()
 : <a class="el" href="teams__list_8c.html#af3fe52c79c167c58efbf529bf96796e1">teams_list.c</a>
 </li>
 <li>remove_user()
 : <a class="el" href="user__list_8c.html#a4b707a3b8d0f77075ea567c4718c4c06">user_list.c</a>
 </li>
-<li>right()
-: <a class="el" href="motion_8c.html#a597375155a0437319c10b259e9990687">motion.c</a>
-, <a class="el" href="cmd__fcts_8h.html#a597375155a0437319c10b259e9990687">cmd_fcts.h</a>
-</li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>send_broadcast()
-: <a class="el" href="teams_8c.html#ac2ab092d4fbb889602171d18d9561223">teams.c</a>
+: <a class="el" href="teams_8c.html#abcb061ec65f8813b4f8abf869b6ab600">teams.c</a>
 </li>
 <li>send_cmd_params()
-: <a class="el" href="cmd_8c.html#a45a4579df7f770cf52fbbf2d817eaa0c">cmd.c</a>
+: <a class="el" href="cmd_8c.html#a72ea10c76996bce148e6c93fee4fff76">cmd.c</a>
 </li>
 <li>send_cmd_unknow()
-: <a class="el" href="cmd_8c.html#a1ceff05f49fe201d101be603e0700d77">cmd.c</a>
+: <a class="el" href="cmd_8c.html#aefd30ec01d51ac4b34206fa18cf62718">cmd.c</a>
 </li>
 <li>send_egg_death()
-: <a class="el" href="egg_8c.html#a1d8253c7ee78f7acf111962489051c28">egg.c</a>
+: <a class="el" href="egg_8c.html#a9019cefcb9955f86d3f1db85bd4ac152">egg.c</a>
 </li>
 <li>send_egg_hatch()
-: <a class="el" href="egg_8c.html#a8cb98edb1e27260238810bffec84a43e">egg.c</a>
+: <a class="el" href="egg_8c.html#a3c2162a181ab731b25815b3ccd531d27">egg.c</a>
 </li>
 <li>send_egg_laid()
-: <a class="el" href="egg_8c.html#a45ea5362f7671e799d9232bff9ac3d1b">egg.c</a>
+: <a class="el" href="egg_8c.html#ae5a92e1a14d512e903315055121a856b">egg.c</a>
 </li>
 <li>send_egg_lay()
-: <a class="el" href="egg_8c.html#a1d329120819f7a6f061239573b988257">egg.c</a>
+: <a class="el" href="egg_8c.html#a6d24df91f883c9c78ef1debf31d341a3">egg.c</a>
 </li>
 <li>send_expulsion()
-: <a class="el" href="teams_8c.html#a3835dbf2a480c07b38561e569da92de9">teams.c</a>
+: <a class="el" href="teams_8c.html#abcf086826db6e9ab249fb146591e9de8">teams.c</a>
 </li>
 <li>send_game_end()
-: <a class="el" href="game_8c.html#ab05f06a751abec77132a6c33570a9388">game.c</a>
+: <a class="el" href="game_8c.html#a1591612ebe4a27cfa3f7624c6e523f1d">game.c</a>
 </li>
 <li>send_inc_end()
-: <a class="el" href="time_8c.html#a2a2178ee2dde112fd09cd95a50a0e7a9">time.c</a>
+: <a class="el" href="time_8c.html#a2a7102f5799a6053c44fa38310c9b67f">time.c</a>
 </li>
 <li>send_inc_start()
-: <a class="el" href="time_8c.html#a3cc28257b3cc89252bc69f9605743670">time.c</a>
+: <a class="el" href="time_8c.html#ae4c61112af0789561b34b4f4cb1dfc1a">time.c</a>
 </li>
 <li>send_map_content()
-: <a class="el" href="game_8c.html#a342ce46019dcfa0bee0981b3e741d095">game.c</a>
+: <a class="el" href="game_8c.html#a09e414c4f626c1324db616a69a064e34">game.c</a>
 </li>
 <li>send_map_size()
-: <a class="el" href="game_8c.html#a27982bd328166fa12e9da7061abd643b">game.c</a>
+: <a class="el" href="game_8c.html#a15b11eb7ac7522ea738f7d0ceaafe896">game.c</a>
 </li>
 <li>send_msg()
-: <a class="el" href="cmd_8c.html#a877b8246d98ef1239d808ed5dd87783a">cmd.c</a>
+: <a class="el" href="cmd_8c.html#a91d124c85d4bc6532e26eb6bda61f5cd">cmd.c</a>
 </li>
 <li>send_player_death()
-: <a class="el" href="player_8c.html#af2d203555a0a852844f7c558107e443e">player.c</a>
+: <a class="el" href="player_8c.html#abffec7fc9ee6090cf41803d27f328fd3">player.c</a>
 </li>
 <li>send_player_from_egg()
-: <a class="el" href="teams_8c.html#aff0183f5dbca68401a14890b8a05a38a">teams.c</a>
+: <a class="el" href="teams_8c.html#a0857f45fed58d36ab229a72adbc4a5a3">teams.c</a>
 </li>
 <li>send_player_inv()
-: <a class="el" href="player_8c.html#a8f67dfcaba0bea6e705cc279f32aaf03">player.c</a>
+: <a class="el" href="player_8c.html#a681d49df6a595dd41866e430252bdc9b">player.c</a>
 </li>
 <li>send_player_join()
-: <a class="el" href="player_8c.html#a9eeee15eb254151be288fe8294abd4bf">player.c</a>
+: <a class="el" href="player_8c.html#a406ab0903991d2b65b387d7889508477">player.c</a>
 </li>
 <li>send_player_lv()
-: <a class="el" href="player_8c.html#a2fc867fdff9a7ed572df61bd44a0aa4a">player.c</a>
+: <a class="el" href="player_8c.html#a519114a2513c2b102dabab724beec4c1">player.c</a>
 </li>
 <li>send_player_pos()
-: <a class="el" href="player_8c.html#a51ab7192567249e1a15cec41b9ef037b">player.c</a>
+: <a class="el" href="player_8c.html#a13e016e01ed1dccf5c6d6e82da2e572d">player.c</a>
 </li>
 <li>send_res_collect()
-: <a class="el" href="cmd_8c.html#a367c7fb840a45d9f90cafd8fa3785f15">cmd.c</a>
+: <a class="el" href="cmd_8c.html#aaff42fb4474ce5c3c80f181734022fc1">cmd.c</a>
 </li>
 <li>send_res_drop()
-: <a class="el" href="cmd_8c.html#ae0d4f64c616f6a68e648350b632e1ab6">cmd.c</a>
+: <a class="el" href="cmd_8c.html#a794a7dff14f47fef9407a083f3551645">cmd.c</a>
 </li>
 <li>send_team_names()
-: <a class="el" href="teams_8c.html#a8794df0929afe36f9ce83b46152204e4">teams.c</a>
+: <a class="el" href="teams_8c.html#aafdede80f2fbcb2555d8ec7f9b06176f">teams.c</a>
 </li>
 <li>send_tile_content()
-: <a class="el" href="game_8c.html#ae2e6b95f24694adcb39ce553abc96314">game.c</a>
+: <a class="el" href="game_8c.html#a76cd9b28e2ec4dd4f6743e4784a75c41">game.c</a>
 </li>
 <li>send_time_modif()
-: <a class="el" href="time_8c.html#aa6e0a09871d04d2f332e0876d8e99f54">time.c</a>
+: <a class="el" href="time_8c.html#a26300b68678d340294316112cb9298d3">time.c</a>
 </li>
 <li>send_time_unit()
-: <a class="el" href="time_8c.html#a40fe20504702e8d01b7f4b93e621e31c">time.c</a>
+: <a class="el" href="time_8c.html#a5245f73180cd9ebea8cc9f07b81d3626">time.c</a>
 </li>
 <li>server()
 : <a class="el" href="server__main_8c.html#a520962dfbb3f1db337f798e6335d8e32">server_main.c</a>
 , <a class="el" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32">server.h</a>
 </li>
 <li>set_clifd()
-: <a class="el" href="server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500">server_init.c</a>
-, <a class="el" href="server_8h.html#aa9bc3ff8e7f409540f85b3cc97636500">server.h</a>
+: <a class="el" href="server_8h.html#aa9bc3ff8e7f409540f85b3cc97636500">server.h</a>
+, <a class="el" href="server__init_8c.html#aa9bc3ff8e7f409540f85b3cc97636500">server_init.c</a>
 </li>
 <li>set_default_args()
 : <a class="el" href="cl__args__parsing_8c.html#a03bade7f710b03f033a7438e83d8fd47">cl_args_parsing.c</a>
@@ -445,20 +495,20 @@ $(function() {
 , <a class="el" href="server_8h.html#a5cb15d408ef32c09c2485937503438ed">server.h</a>
 </li>
 <li>set_iface()
-: <a class="el" href="server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf">server_init.c</a>
-, <a class="el" href="server_8h.html#a3802a71fa34e93cb1d85f919914f5abf">server.h</a>
+: <a class="el" href="server_8h.html#a3802a71fa34e93cb1d85f919914f5abf">server.h</a>
+, <a class="el" href="server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf">server_init.c</a>
 </li>
 <li>set_opts()
-: <a class="el" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">cl_args_helpers.c</a>
-, <a class="el" href="server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd">server.h</a>
+: <a class="el" href="server_8h.html#a5d0ed2431dadc51ca65db27c5df01efd">server.h</a>
+, <a class="el" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">cl_args_helpers.c</a>
 </li>
 <li>set_sockfd()
-: <a class="el" href="server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02">server_init.c</a>
-, <a class="el" href="server_8h.html#a1f61d16ccfab82b21ca40ce23feb7c02">server.h</a>
+: <a class="el" href="server_8h.html#a1f61d16ccfab82b21ca40ce23feb7c02">server.h</a>
+, <a class="el" href="server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02">server_init.c</a>
 </li>
 <li>sig_handler()
-: <a class="el" href="sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285">sig_handler.c</a>
-, <a class="el" href="server_8h.html#a4f31a6fd48ee5d4579ae4aaaa3cae285">server.h</a>
+: <a class="el" href="server_8h.html#a4f31a6fd48ee5d4579ae4aaaa3cae285">server.h</a>
+, <a class="el" href="sig__handler_8c.html#a4f31a6fd48ee5d4579ae4aaaa3cae285">sig_handler.c</a>
 </li>
 </ul>
 

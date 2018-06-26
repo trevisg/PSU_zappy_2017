@@ -24,7 +24,7 @@
    <div id="projectname">PSU_zappy_2017
    &#160;<span id="projectnumber">0.0.250</span>
    </div>
-   <div id="projectbrief">Yet another useless but mandatory EPITECH project</div>
+   <div id="projectbrief">A PC AI vs themselves network game in C &amp; C++</div>
   </td>
  </tr>
  </tbody>
@@ -86,161 +86,18 @@ Include dependency graph for find_list.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acd187da9c982bdcd9e7b547c9fe44d0e"><td class="memItemLeft" align="right" valign="top">t_user *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="find__list_8c.html#acd187da9c982bdcd9e7b547c9fe44d0e">find_user_in_teams</a> (<a class="el" href="structt__teams.html">t_teams</a> *<a class="el" href="egg_8c.html#a55c4946dc7c43b5a2c8ed4b120cc428d">teams</a>, int clifd)</td></tr>
-<tr class="separator:acd187da9c982bdcd9e7b547c9fe44d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8543484aca37b2205ae2e224e91aeba8"><td class="memItemLeft" align="right" valign="top">t_user *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="find__list_8c.html#a8543484aca37b2205ae2e224e91aeba8">find_player_by_id</a> (<a class="el" href="structt__teams.html">t_teams</a> *<a class="el" href="egg_8c.html#a55c4946dc7c43b5a2c8ed4b120cc428d">teams</a>, unsigned int id)</td></tr>
-<tr class="separator:a8543484aca37b2205ae2e224e91aeba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc01cd0e9e0541889768cc67bff0b5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="find__list_8c.html#adfc01cd0e9e0541889768cc67bff0b5a">get_nbr_by_level</a> (int level)</td></tr>
-<tr class="separator:adfc01cd0e9e0541889768cc67bff0b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af745c270310d8d1199e4d38e4e9dab96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__egg.html">t_egg</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="find__list_8c.html#af745c270310d8d1199e4d38e4e9dab96">find_egg_on_tile</a> (<a class="el" href="structt__tile.html">t_tile</a> *<a class="el" href="egg_8c.html#a29f569dfc0c379c878dc58ee5da3a30a">tile</a>, t_user *layer)</td></tr>
-<tr class="separator:af745c270310d8d1199e4d38e4e9dab96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbc7ca817fffc27aa144fa18d851c527"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__egg.html">t_egg</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="find__list_8c.html#abbc7ca817fffc27aa144fa18d851c527">find_egg_state</a> (t_user *<a class="el" href="rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430">user</a>, <a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a> state)</td></tr>
-<tr class="separator:abbc7ca817fffc27aa144fa18d851c527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124ce3d51d705a4e9e1bab1cb2b8d29f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__inhabitant.html">t_inhabitant</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="find__list_8c.html#a124ce3d51d705a4e9e1bab1cb2b8d29f">find_player_by_fd</a> (<a class="el" href="structt__teams.html">t_teams</a> *teams, int clifd)</td></tr>
+<tr class="separator:a124ce3d51d705a4e9e1bab1cb2b8d29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af745c270310d8d1199e4d38e4e9dab96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af745c270310d8d1199e4d38e4e9dab96">&#9670;&nbsp;</a></span>find_egg_on_tile()</h2>
+<a id="a124ce3d51d705a4e9e1bab1cb2b8d29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124ce3d51d705a4e9e1bab1cb2b8d29f">&#9670;&nbsp;</a></span>find_player_by_fd()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__egg.html">t_egg</a>* find_egg_on_tile </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__tile.html">t_tile</a> *&#160;</td>
-          <td class="paramname"><em>tile</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">t_user *&#160;</td>
-          <td class="paramname"><em>layer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="find__list_8c_source.html#l00058">58</a> of file <a class="el" href="find__list_8c_source.html">find_list.c</a>.</p>
-
-<p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00189">t_tile::eggs</a>, <a class="el" href="zappy__game_8h_source.html#l00110">t_egg::id_droper</a>, and <a class="el" href="zappy__game_8h_source.html#l00111">t_egg::next</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="structt__egg.html">t_egg</a> *tmpe;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        </div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (tmpe = tile-&gt;<a class="code" href="structt__tile.html#aab14dc00c566f9a30f7728b5d92bad5c">eggs</a>; tmpe; tmpe = tmpe-&gt;<a class="code" href="structt__egg.html#afc8929e5c1b881c697d48999e97d6497">next</a>) {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> (tmpe-&gt;<a class="code" href="structt__egg.html#a6618d0b0940233ef5bc1edfaad6122e0">id_droper</a> == layer-&gt;refplayer-&gt;id)</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> tmpe;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div><div class="ttc" id="structt__egg_html_afc8929e5c1b881c697d48999e97d6497"><div class="ttname"><a href="structt__egg.html#afc8929e5c1b881c697d48999e97d6497">t_egg::next</a></div><div class="ttdeci">struct s_egg * next</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00111">zappy_game.h:111</a></div></div>
-<div class="ttc" id="structt__tile_html_aab14dc00c566f9a30f7728b5d92bad5c"><div class="ttname"><a href="structt__tile.html#aab14dc00c566f9a30f7728b5d92bad5c">t_tile::eggs</a></div><div class="ttdeci">t_egg * eggs</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00189">zappy_game.h:189</a></div></div>
-<div class="ttc" id="structt__egg_html_a6618d0b0940233ef5bc1edfaad6122e0"><div class="ttname"><a href="structt__egg.html#a6618d0b0940233ef5bc1edfaad6122e0">t_egg::id_droper</a></div><div class="ttdeci">unsigned int id_droper</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00110">zappy_game.h:110</a></div></div>
-<div class="ttc" id="structt__egg_html"><div class="ttname"><a href="structt__egg.html">t_egg</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00107">zappy_game.h:107</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="abbc7ca817fffc27aa144fa18d851c527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbc7ca817fffc27aa144fa18d851c527">&#9670;&nbsp;</a></span>find_egg_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structt__egg.html">t_egg</a>* find_egg_state </td>
-          <td>(</td>
-          <td class="paramtype">t_user *&#160;</td>
-          <td class="paramname"><em>user</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6">EGG_STATE</a>&#160;</td>
-          <td class="paramname"><em>state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="find__list_8c_source.html#l00070">70</a> of file <a class="el" href="find__list_8c_source.html">find_list.c</a>.</p>
-
-<p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00043">DEAD</a>, <a class="el" href="zappy__game_8h_source.html#l00109">t_egg::ev</a>, <a class="el" href="zappy__game_8h_source.html#l00042">HATCHED</a>, and <a class="el" href="zappy__game_8h_source.html#l00111">t_egg::next</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="egg_8c_source.html#l00054">send_egg_death()</a>, and <a class="el" href="egg_8c_source.html#l00041">send_egg_hatch()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="structt__egg.html">t_egg</a> *tmpe;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (tmpe = <a class="code" href="rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430">user</a>-&gt;refplayer-&gt;eggs; tmpe; tmpe = tmpe-&gt;<a class="code" href="structt__egg.html#afc8929e5c1b881c697d48999e97d6497">next</a>) {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">if</span> (tmpe-&gt;<a class="code" href="structt__egg.html#a3746b8ea49009ba314864fd9a52193a1">ev</a> == <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35">HATCHED</a> &amp;&amp; state == <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35">HATCHED</a>)</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span> (tmpe-&gt;<a class="code" href="structt__egg.html#a3746b8ea49009ba314864fd9a52193a1">ev</a> == <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2">DEAD</a> &amp;&amp; state == <a class="code" href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2">DEAD</a>)</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> tmpe;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div><div class="ttc" id="rfc__cmds0_8c_html_a1c883dcd73a625782b2a8fe752af3430"><div class="ttname"><a href="rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430">user</a></div><div class="ttdeci">void * user(cmdargs args, int clifd, t_teams *chans)</div><div class="ttdef"><b>Definition:</b> <a href="rfc__cmds0_8c_source.html#l00083">rfc_cmds0.c:83</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2"><div class="ttname"><a href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a11fd9ca455f92c69c084484d5cd803c2">DEAD</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00043">zappy_game.h:43</a></div></div>
-<div class="ttc" id="structt__egg_html_a3746b8ea49009ba314864fd9a52193a1"><div class="ttname"><a href="structt__egg.html#a3746b8ea49009ba314864fd9a52193a1">t_egg::ev</a></div><div class="ttdeci">EGG_STATE ev</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00109">zappy_game.h:109</a></div></div>
-<div class="ttc" id="zappy__game_8h_html_a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35"><div class="ttname"><a href="zappy__game_8h.html#a49df230b90c5cce83b453f33b95fc4c6a73dabcfa21bab6e6c612746a9b30be35">HATCHED</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00042">zappy_game.h:42</a></div></div>
-<div class="ttc" id="structt__egg_html_afc8929e5c1b881c697d48999e97d6497"><div class="ttname"><a href="structt__egg.html#afc8929e5c1b881c697d48999e97d6497">t_egg::next</a></div><div class="ttdeci">struct s_egg * next</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00111">zappy_game.h:111</a></div></div>
-<div class="ttc" id="structt__egg_html"><div class="ttname"><a href="structt__egg.html">t_egg</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00107">zappy_game.h:107</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="find__list_8c_abbc7ca817fffc27aa144fa18d851c527_icgraph.png" border="0" usemap="#find__list_8c_abbc7ca817fffc27aa144fa18d851c527_icgraph" alt=""/></div>
-<map name="find__list_8c_abbc7ca817fffc27aa144fa18d851c527_icgraph" id="find__list_8c_abbc7ca817fffc27aa144fa18d851c527_icgraph">
-<area shape="rect" id="node2" href="egg_8c.html#a1d8253c7ee78f7acf111962489051c28" title="send_egg_death" alt="" coords="160,5,277,32"/>
-<area shape="rect" id="node3" href="egg_8c.html#a8cb98edb1e27260238810bffec84a43e" title="send_egg_hatch" alt="" coords="160,56,277,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8543484aca37b2205ae2e224e91aeba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8543484aca37b2205ae2e224e91aeba8">&#9670;&nbsp;</a></span>find_player_by_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">t_user* find_player_by_id </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structt__teams.html">t_teams</a> *&#160;</td>
-          <td class="paramname"><em>teams</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="find__list_8c_source.html#l00024">24</a> of file <a class="el" href="find__list_8c_source.html">find_list.c</a>.</p>
-
-<p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00136">t_inhabitant::id</a>, <a class="el" href="zappy__game_8h_source.html#l00159">t_userlist::next</a>, <a class="el" href="zappy__game_8h_source.html#l00176">t_teams::next</a>, <a class="el" href="zappy__game_8h_source.html#l00157">t_userlist::user</a>, and <a class="el" href="zappy__game_8h_source.html#l00174">t_teams::users</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="player_8c_source.html#l00053">send_player_inv()</a>, and <a class="el" href="player_8c_source.html#l00043">send_player_lv()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="structt__teams.html">t_teams</a> *tmpt;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="structt__userlist.html">t_userlist</a> *tmpu;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span> (tmpt = teams; tmpt; tmpt = tmpt-&gt;<a class="code" href="structt__teams.html#abd45fc90e37934853b34ce0c8444738e">next</a>) {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">for</span> (tmpu = teams-&gt;<a class="code" href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">users</a>; tmpu; tmpu = tmpu-&gt;<a class="code" href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">next</a>) {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        <span class="keywordflow">if</span> (tmpu-&gt;<a class="code" href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">user</a>-&gt;refplayer-&gt;<a class="code" href="structt__inhabitant.html#a1b0c6947fc0b6e2372a2b579fcc5d602">id</a> == <span class="keywordtype">id</span>)</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                <span class="keywordflow">return</span> tmpu-&gt;<a class="code" href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">user</a>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> NULL;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="structt__teams_html_a4fd5434dcebcd3b369bfcd9dbed44880"><div class="ttname"><a href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">t_teams::users</a></div><div class="ttdeci">t_userlist * users</div><div class="ttdoc">the t_inhabitant list in this team </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00174">zappy_game.h:174</a></div></div>
-<div class="ttc" id="structt__teams_html"><div class="ttname"><a href="structt__teams.html">t_teams</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00172">zappy_game.h:172</a></div></div>
-<div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00156">zappy_game.h:156</a></div></div>
-<div class="ttc" id="structt__teams_html_abd45fc90e37934853b34ce0c8444738e"><div class="ttname"><a href="structt__teams.html#abd45fc90e37934853b34ce0c8444738e">t_teams::next</a></div><div class="ttdeci">struct s_teams * next</div><div class="ttdoc">the next node in list </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00176">zappy_game.h:176</a></div></div>
-<div class="ttc" id="structt__userlist_html_af0fe946d87b868ea250805ce87ea637e"><div class="ttname"><a href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">t_userlist::user</a></div><div class="ttdeci">t_inhabitant * user</div><div class="ttdoc">the trantorian player/user </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00157">zappy_game.h:157</a></div></div>
-<div class="ttc" id="structt__inhabitant_html_a1b0c6947fc0b6e2372a2b579fcc5d602"><div class="ttname"><a href="structt__inhabitant.html#a1b0c6947fc0b6e2372a2b579fcc5d602">t_inhabitant::id</a></div><div class="ttdeci">unsigned int id</div><div class="ttdoc">The unique player id. </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00136">zappy_game.h:136</a></div></div>
-<div class="ttc" id="structt__userlist_html_a4e8bdbbe18cff8a66f537fc38e71b212"><div class="ttname"><a href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdoc">the next node in list </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00159">zappy_game.h:159</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="find__list_8c_a8543484aca37b2205ae2e224e91aeba8_icgraph.png" border="0" usemap="#find__list_8c_a8543484aca37b2205ae2e224e91aeba8_icgraph" alt=""/></div>
-<map name="find__list_8c_a8543484aca37b2205ae2e224e91aeba8_icgraph" id="find__list_8c_a8543484aca37b2205ae2e224e91aeba8_icgraph">
-<area shape="rect" id="node2" href="player_8c.html#a8f67dfcaba0bea6e705cc279f32aaf03" title="send_player_inv" alt="" coords="176,5,292,32"/>
-<area shape="rect" id="node3" href="player_8c.html#a2fc867fdff9a7ed572df61bd44a0aa4a" title="send_player_lv" alt="" coords="179,56,289,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="acd187da9c982bdcd9e7b547c9fe44d0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd187da9c982bdcd9e7b547c9fe44d0e">&#9670;&nbsp;</a></span>find_user_in_teams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">t_user* find_user_in_teams </td>
+          <td class="memname"><a class="el" href="structt__inhabitant.html">t_inhabitant</a>* find_player_by_fd </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__teams.html">t_teams</a> *&#160;</td>
           <td class="paramname"><em>teams</em>, </td>
@@ -259,12 +116,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="find__list_8c_source.html#l00010">10</a> of file <a class="el" href="find__list_8c_source.html">find_list.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="find__list_8c_source.html#l00011">11</a> of file <a class="el" href="find__list_8c_source.html">find_list.c</a>.</p>
 
 <p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00140">t_inhabitant::clifd</a>, <a class="el" href="zappy__game_8h_source.html#l00159">t_userlist::next</a>, <a class="el" href="zappy__game_8h_source.html#l00176">t_teams::next</a>, <a class="el" href="zappy__game_8h_source.html#l00157">t_userlist::user</a>, and <a class="el" href="zappy__game_8h_source.html#l00174">t_teams::users</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="teams_8c_source.html#l00059">send_broadcast()</a>, <a class="el" href="egg_8c_source.html#l00054">send_egg_death()</a>, <a class="el" href="egg_8c_source.html#l00041">send_egg_hatch()</a>, <a class="el" href="teams_8c_source.html#l00044">send_expulsion()</a>, <a class="el" href="time_8c_source.html#l00040">send_inc_end()</a>, <a class="el" href="time_8c_source.html#l00011">send_inc_start()</a>, <a class="el" href="player_8c_source.html#l00029">send_player_pos()</a>, <a class="el" href="cmd_8c_source.html#l00024">send_res_collect()</a>, and <a class="el" href="cmd_8c_source.html#l00010">send_res_drop()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="structt__teams.html">t_teams</a> *tmpt;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="structt__userlist.html">t_userlist</a> *tmpu;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        </div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">for</span> (tmpt = teams; tmpt; tmpt = tmpt-&gt;<a class="code" href="structt__teams.html#abd45fc90e37934853b34ce0c8444738e">next</a>) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="keywordflow">for</span> (tmpu = teams-&gt;<a class="code" href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">users</a>; tmpu; tmpu = tmpu-&gt;<a class="code" href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">next</a>) {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                        <span class="keywordflow">if</span> (tmpu-&gt;<a class="code" href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">user</a>-&gt;<a class="code" href="structt__inhabitant.html#a93402231cd6ddbff8adafe2c6524dad6">clifd</a> == clifd)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                <span class="keywordflow">return</span> tmpu-&gt;<a class="code" href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">user</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> NULL;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="ttc" id="structt__teams_html_a4fd5434dcebcd3b369bfcd9dbed44880"><div class="ttname"><a href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">t_teams::users</a></div><div class="ttdeci">t_userlist * users</div><div class="ttdoc">the t_inhabitant list in this team </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00174">zappy_game.h:174</a></div></div>
+<p class="reference">Referenced by <a class="el" href="broadcast_8c_source.html#l00041">r_connect_nbr()</a>, <a class="el" href="motion_8c_source.html#l00011">r_forward()</a>, <a class="el" href="motion_8c_source.html#l00069">r_inventory()</a>, <a class="el" href="motion_8c_source.html#l00045">r_left()</a>, <a class="el" href="motion_8c_source.html#l00021">r_right()</a>, <a class="el" href="broadcast_8c_source.html#l00071">r_set_obj()</a>, and <a class="el" href="broadcast_8c_source.html#l00050">r_take_obj()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="structt__teams.html">t_teams</a> *tmpt;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="structt__userlist.html">t_userlist</a> *tmpu;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">for</span> (tmpt = teams; tmpt; tmpt = tmpt-&gt;<a class="code" href="structt__teams.html#abd45fc90e37934853b34ce0c8444738e">next</a>) {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keywordflow">for</span> (tmpu = teams-&gt;<a class="code" href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">users</a>; tmpu; tmpu = tmpu-&gt;<a class="code" href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">next</a>) {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                        <span class="keywordflow">if</span> (tmpu-&gt;<a class="code" href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">user</a>-&gt;<a class="code" href="structt__inhabitant.html#a93402231cd6ddbff8adafe2c6524dad6">clifd</a> == clifd)</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                <span class="keywordflow">return</span> tmpu-&gt;<a class="code" href="structt__userlist.html#af0fe946d87b868ea250805ce87ea637e">user</a>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> NULL;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="ttc" id="structt__teams_html_a4fd5434dcebcd3b369bfcd9dbed44880"><div class="ttname"><a href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">t_teams::users</a></div><div class="ttdeci">t_userlist * users</div><div class="ttdoc">the t_inhabitant list in this team </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00174">zappy_game.h:174</a></div></div>
 <div class="ttc" id="structt__inhabitant_html_a93402231cd6ddbff8adafe2c6524dad6"><div class="ttname"><a href="structt__inhabitant.html#a93402231cd6ddbff8adafe2c6524dad6">t_inhabitant::clifd</a></div><div class="ttdeci">int clifd</div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00140">zappy_game.h:140</a></div></div>
 <div class="ttc" id="structt__teams_html"><div class="ttname"><a href="structt__teams.html">t_teams</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00172">zappy_game.h:172</a></div></div>
 <div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00156">zappy_game.h:156</a></div></div>
@@ -274,47 +131,15 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="find__list_8c_acd187da9c982bdcd9e7b547c9fe44d0e_icgraph.png" border="0" usemap="#find__list_8c_acd187da9c982bdcd9e7b547c9fe44d0e_icgraph" alt=""/></div>
-<map name="find__list_8c_acd187da9c982bdcd9e7b547c9fe44d0e_icgraph" id="find__list_8c_acd187da9c982bdcd9e7b547c9fe44d0e_icgraph">
-<area shape="rect" id="node2" href="teams_8c.html#ac2ab092d4fbb889602171d18d9561223" title="send_broadcast" alt="" coords="191,5,305,32"/>
-<area shape="rect" id="node3" href="egg_8c.html#a1d8253c7ee78f7acf111962489051c28" title="send_egg_death" alt="" coords="189,56,307,83"/>
-<area shape="rect" id="node4" href="egg_8c.html#a8cb98edb1e27260238810bffec84a43e" title="send_egg_hatch" alt="" coords="189,107,307,133"/>
-<area shape="rect" id="node5" href="teams_8c.html#a3835dbf2a480c07b38561e569da92de9" title="send_expulsion" alt="" coords="192,157,304,184"/>
-<area shape="rect" id="node6" href="time_8c.html#a2a2178ee2dde112fd09cd95a50a0e7a9" title="send_inc_end" alt="" coords="197,208,299,235"/>
-<area shape="rect" id="node7" href="time_8c.html#a3cc28257b3cc89252bc69f9605743670" title="send_inc_start" alt="" coords="195,259,301,285"/>
-<area shape="rect" id="node8" href="player_8c.html#a51ab7192567249e1a15cec41b9ef037b" title="send_player_pos" alt="" coords="188,309,308,336"/>
-<area shape="rect" id="node9" href="cmd_8c.html#a367c7fb840a45d9f90cafd8fa3785f15" title="send_res_collect" alt="" coords="188,360,308,387"/>
-<area shape="rect" id="node10" href="cmd_8c.html#ae0d4f64c616f6a68e648350b632e1ab6" title="send_res_drop" alt="" coords="195,411,301,437"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="adfc01cd0e9e0541889768cc67bff0b5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfc01cd0e9e0541889768cc67bff0b5a">&#9670;&nbsp;</a></span>get_nbr_by_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int get_nbr_by_level </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="find__list_8c_source.html#l00038">38</a> of file <a class="el" href="find__list_8c_source.html">find_list.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="time_8c_source.html#l00011">send_inc_start()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> nbr;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (level == 1)</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                nbr = 1;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (level == 2 || level == 3)</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                nbr = 2;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (level == 4 || level == 5)</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                nbr = 4;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (level == 6 || level == 7)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                nbr = 6;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                nbr = 0;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> nbr;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="find__list_8c_adfc01cd0e9e0541889768cc67bff0b5a_icgraph.png" border="0" usemap="#find__list_8c_adfc01cd0e9e0541889768cc67bff0b5a_icgraph" alt=""/></div>
-<map name="find__list_8c_adfc01cd0e9e0541889768cc67bff0b5a_icgraph" id="find__list_8c_adfc01cd0e9e0541889768cc67bff0b5a_icgraph">
-<area shape="rect" id="node2" href="time_8c.html#a3cc28257b3cc89252bc69f9605743670" title="send_inc_start" alt="" coords="173,5,280,32"/>
+<div class="center"><img src="find__list_8c_a124ce3d51d705a4e9e1bab1cb2b8d29f_icgraph.png" border="0" usemap="#find__list_8c_a124ce3d51d705a4e9e1bab1cb2b8d29f_icgraph" alt=""/></div>
+<map name="find__list_8c_a124ce3d51d705a4e9e1bab1cb2b8d29f_icgraph" id="find__list_8c_a124ce3d51d705a4e9e1bab1cb2b8d29f_icgraph">
+<area shape="rect" id="node2" href="cmd__fcts_8h.html#a50b5295987bced83983cc53a261aeb16" title="r_connect_nbr" alt="" coords="177,5,281,32"/>
+<area shape="rect" id="node3" href="cmd__fcts_8h.html#ae0b175c18fa02629959e910c383fa53f" title="r_forward" alt="" coords="191,56,267,83"/>
+<area shape="rect" id="node4" href="cmd__fcts_8h.html#a1d7b0c0c021d99b17d1e33cc58eefe4f" title="r_inventory" alt="" coords="186,107,273,133"/>
+<area shape="rect" id="node5" href="cmd__fcts_8h.html#a1b22c76e3ad495ccba0cc78f9c9f0c42" title="r_left" alt="" coords="204,157,255,184"/>
+<area shape="rect" id="node6" href="cmd__fcts_8h.html#acdf19d0f050d9f8274ca33e28917e038" title="r_right" alt="" coords="200,208,259,235"/>
+<area shape="rect" id="node7" href="cmd__fcts_8h.html#a773f788210bf767ab8a2b8ca3b548f62" title="r_set_obj" alt="" coords="192,259,267,285"/>
+<area shape="rect" id="node8" href="cmd__fcts_8h.html#aed91730230e02f56e9ea84e3b5b58c4a" title="r_take_obj" alt="" coords="188,309,271,336"/>
 </map>
 </div>
 

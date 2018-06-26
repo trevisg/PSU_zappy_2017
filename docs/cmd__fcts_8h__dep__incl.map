@@ -1,10 +1,12 @@
 <map id="server/include/cmd_fcts.h" name="server/include/cmd_fcts.h">
-<area shape="rect" id="node2" href="$cmd_8c.html" title="server/src/send_fcts\l/cmd.c" alt="" coords="5,95,147,136"/>
-<area shape="rect" id="node3" href="$find__list_8c.html" title="server/src/send_fcts\l/find_list.c" alt="" coords="171,95,312,136"/>
-<area shape="rect" id="node4" href="$game_8c.html" title="server/src/send_fcts\l/game.c" alt="" coords="336,95,477,136"/>
-<area shape="rect" id="node5" href="$motion_8c.html" title="server/src/send_fcts\l/motion.c" alt="" coords="501,95,643,136"/>
-<area shape="rect" id="node6" href="$player_8c.html" title="server/src/send_fcts\l/player.c" alt="" coords="667,95,808,136"/>
-<area shape="rect" id="node7" href="$time_8c.html" title="server/src/send_fcts\l/time.c" alt="" coords="832,95,973,136"/>
-<area shape="rect" id="node8" href="$utils_8c.html" title="server/src/send_fcts\l/utils.c" alt="" coords="997,95,1139,136"/>
-<area shape="rect" id="node9" href="$server__decls_8c.html" title="server/src/tcpserver\l_functions/server_decls.c" alt="" coords="1163,95,1333,136"/>
+<area shape="rect" id="node2" href="$broadcast_8c.html" title="server/src/send_fcts\l/broadcast.c" alt="" coords="5,95,147,136"/>
+<area shape="rect" id="node3" href="$cmd_8c.html" title="server/src/send_fcts\l/cmd.c" alt="" coords="171,95,312,136"/>
+<area shape="rect" id="node4" href="$find__list_8c.html" title="server/src/send_fcts\l/find_list.c" alt="" coords="336,95,477,136"/>
+<area shape="rect" id="node5" href="$game_8c.html" title="server/src/send_fcts\l/game.c" alt="" coords="501,95,643,136"/>
+<area shape="rect" id="node6" href="$motion_8c.html" title="server/src/send_fcts\l/motion.c" alt="" coords="667,95,808,136"/>
+<area shape="rect" id="node7" href="$player_8c.html" title="server/src/send_fcts\l/player.c" alt="" coords="832,95,973,136"/>
+<area shape="rect" id="node8" href="$time_8c.html" title="server/src/send_fcts\l/time.c" alt="" coords="997,95,1139,136"/>
+<area shape="rect" id="node9" href="$utils_8c.html" title="server/src/send_fcts\l/utils.c" alt="" coords="1163,95,1304,136"/>
+<area shape="rect" id="node10" href="$utils2_8c.html" title="server/src/send_fcts\l/utils2.c" alt="" coords="1328,95,1469,136"/>
+<area shape="rect" id="node11" href="$server__decls_8c.html" title="server/src/tcpserver\l_functions/server_decls.c" alt="" coords="1493,95,1664,136"/>
 </map>

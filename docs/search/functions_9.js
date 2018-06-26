@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main.c']]],
-  ['move',['move',['../utils_8c.html#ac109e59008c32c4f367cab03e273ca2f',1,'utils.c']]]
+  ['logthisevent',['logthisevent',['../logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49',1,'logthisevent(const char etype, t_serv *all):&#160;logs_helpers.c'],['../server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49',1,'logthisevent(const char etype, t_serv *all):&#160;logs_helpers.c']]]
 ];

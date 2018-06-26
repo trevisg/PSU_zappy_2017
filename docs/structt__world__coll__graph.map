@@ -1,10 +1,10 @@
 <map id="t_world" name="t_world">
-<area shape="rect" id="node2" href="$structt__teams.html" title="t_teams" alt="" coords="11,436,80,463"/>
-<area shape="rect" id="node3" href="$structt__userlist.html" title="t_userlist" alt="" coords="5,347,80,373"/>
-<area shape="rect" id="node4" href="$structt__inhabitant.html" title="t_inhabitant" alt="" coords="21,257,110,284"/>
-<area shape="rect" id="node9" href="$structt__tile.html" title="t_tile" alt="" coords="119,347,169,373"/>
-<area shape="rect" id="node5" href="$structt__egg.html" title="t_egg" alt="" coords="217,168,271,195"/>
-<area shape="rect" id="node6" href="$structt__ressources.html" title="t_ressources" alt="" coords="77,168,174,195"/>
-<area shape="rect" id="node7" href="$structt__stone.html" title="t_stone" alt="" coords="47,5,113,32"/>
-<area shape="rect" id="node8" href="$structt__food.html" title="t_food" alt="" coords="143,5,201,32"/>
+<area shape="rect" id="node2" href="$structt__teams.html" title="t_teams" alt="" coords="52,436,122,463"/>
+<area shape="rect" id="node3" href="$structt__userlist.html" title="t_userlist" alt="" coords="44,347,119,373"/>
+<area shape="rect" id="node4" href="$structt__inhabitant.html" title="t_inhabitant" alt="" coords="22,257,112,284"/>
+<area shape="rect" id="node5" href="$structt__egg.html" title="t_egg" alt="" coords="18,168,73,195"/>
+<area shape="rect" id="node9" href="$structt__tile.html" title="t_tile" alt="" coords="136,257,187,284"/>
+<area shape="rect" id="node6" href="$structt__ressources.html" title="t_ressources" alt="" coords="110,168,208,195"/>
+<area shape="rect" id="node7" href="$structt__stone.html" title="t_stone" alt="" coords="81,5,146,32"/>
+<area shape="rect" id="node8" href="$structt__food.html" title="t_food" alt="" coords="176,5,235,32"/>
 </map>
