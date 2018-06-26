@@ -213,55 +213,12 @@
 	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
 	unsigned int	get_size(cmdargs args);
-
-	/** See src/trantor_setup/world_creation */
+	/** @note see src/trantor_setup/world_creation */
 	t_world		*get_world(t_clargs *args);
 	void		free_world(t_world *trantor, t_clargs *args);
-	/* Print objects see src/print_fcts.c*/
+	/** @note Print objects see src/print_fcts.c*/
 	void            print_world(t_world *map);
 	void            print_teams(t_teams *teams);
-
-	#ifdef WITH_IRC
-
-		void		print_users(t_userlist *list);
-		void		print_users_in_chans(t_teams *chanlist,
-				int index);
-		/** @note see src/client_list.c */
-		t_userlist	*get_new_userlist(t_user *usr);
-		void		print_users(t_userlist *liste);
-		void		free_userlist(t_userlist *list);
-		void		*remove_user(t_userlist *list, int clifd);
-		t_user		*get_new_user(int clifd, cmdargs usercmd);
-		void		*insert_back_user(t_userlist *head,
-				t_userlist *nuser);
-		/** @note see src/teams_list.c */
-		t_teams		*init_default_teams(void);
-		void		free_teams_list(t_teams *list);
-		t_teams		*get_new_chan_list(t_userlist *userlist,
-				char *);
-		void		remove_teams(t_teams *list, char *channame);
-		void		*insert_back_teams(t_teams *head,
-				t_teams *chan);
-		/** @note see src/list_helpers.c */
-		t_user		*find_user_by_fd(t_userlist *list, int clifd);
-		t_user		*find_user_by_name(const char *name,
-				t_userlist *usrs);
-		/** @note see @file src/rfc_cmds0.c */
-		void		*join(cmdargs args, int clifd,
-				t_teams *chanlist);
-		void		*nick(cmdargs args, int clifd,
-				t_teams *chanlist);
-		void		*ping(cmdargs args, int clifd,
-				t_teams *chanlist);
-		void		*user(cmdargs args, int clifd,
-				t_teams *chanlist);
-		void		*quit(cmdargs args, int clifd,
-				t_teams *chanlist);
-		/** @note see src/rfc_cmds1.c */
-		void		*privmsg(cmdargs args, int clifd,
-				t_teams *chans);
-	#endif /* !WITH_IRC */
-
 	/** @note See src/cl_flags.c */
 	void		*get_port(char **port, t_clargs *args);
 	void		*get_width(char **width, t_clargs *args);
