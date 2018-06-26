@@ -1,4 +1,9 @@
 langage: c
+git:
+  lfs_skip_smudge: true
+before_install:
+  - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
+  - git lfs pull
 script: make zappy_server && make clean
 notifications:
   webhooks:
