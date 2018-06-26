@@ -23,6 +23,26 @@ void	GameWindow::_setgame_sound()
 
 }
 
+void	DrawTrantorian(sf::Vector2f pos, sf::Vector2f tile_size)
+{
+	sf::RectangleShape the_player(tile_size);
+	sf::Texture		player_texture;
+
+	if (!player_texture.loadFromFile("assets/textures/trantorian.png")) {
+		fprintf(stderr, "Failed to load player texture\n");
+		gamewindow.close();
+	}
+	sf::Color outline(155,89,182 ,1);
+	sf::Color fillcolor(103,58,183);
+
+	the_player.setFillColor(fillcolor);
+	the_player.setOutlineThickness(3);
+	the_player.setOutlineColor(sf::Color::Black);
+	the_player.setPosition(pos);
+	the_player.setTexture(&player_texture);
+	gamewindow.draw(the_player);
+}
+
 void 	DrawTile(sf::Vector2f pos, sf::Vector2f tile_size)
 {
 	sf::RectangleShape the_tile(tile_size);
@@ -48,7 +68,9 @@ void 	DrawBoard(int x_size, int y_size)
 		for (int j = 0; j < x_size; ++j) {
 			xpos = (gamewindow.getSize().x / 2) - ((x_size * 40) / 2  - (j * 40));
 			DrawTile(sf::Vector2f(xpos, ypos), tile_size);
+			DrawTrantorian(sf::Vector2f(xpos, ypos), sf::Vector2f(40,40));
 		}
+
 	}
 
 }
