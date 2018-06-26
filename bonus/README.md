@@ -17,7 +17,7 @@
         ----       Studio Asimov ltd
         -----      Sav -- bugs@neverread.devnull
 
-> Just another useless school project
+> A AI vs themselves network game in C & C++
 
 ## Usage :
 
