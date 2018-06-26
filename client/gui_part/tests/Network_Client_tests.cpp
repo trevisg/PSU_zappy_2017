@@ -11,8 +11,9 @@ int main(void)
 {
 	Network client;
 	client.connect_to("127.0.0.1", "2222");
-	while (client.listen_up()) {
-		std::cout << "[" << client.get_lastbuffer() << "]\n";
+	std::vector<std::string> yolo = client.get_teamnames();
+	for (uint i = 0; i <= yolo.size(); ++i) {
+		std::cout << yolo[i] << std::endl;
 	}
 	return (0);
 }
