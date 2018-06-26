@@ -9,6 +9,7 @@ var searchData=
   ['empty',['EMPTY',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d',1,'zappy_game.h']]],
   ['epollfd',['epollfd',['../structt__serv.html#a140238d268c6660418c744b5d782985f',1,'t_serv']]],
   ['errlog',['errlog',['../structt__log.html#a5a62ab56fc81e156e3faee2900b06b2f',1,'t_log']]],
+  ['error_5fexit',['error_exit',['../cl__args__helpers_8c.html#a1e00b6dd51519b3868a5e45de75a7148',1,'error_exit(t_clargs *args, clargs *opts, char *req_save):&#160;cl_args_helpers.c'],['../server_8h.html#a1e00b6dd51519b3868a5e45de75a7148',1,'error_exit(t_clargs *args, clargs *opts, char *req_save):&#160;cl_args_helpers.c']]],
   ['errors',['ERRORS',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84fa3dd2c95c6f5060be15bf596d2a012034',1,'server.h']]],
   ['ev',['ev',['../structt__serv.html#aa78362995f05bf5562a4224ebec055ba',1,'t_serv::ev()'],['../structt__egg.html#a3746b8ea49009ba314864fd9a52193a1',1,'t_egg::ev()']]],
   ['events',['events',['../structt__serv.html#a99cdc31a7e5638afeff98af5b3c4dd34',1,'t_serv']]],

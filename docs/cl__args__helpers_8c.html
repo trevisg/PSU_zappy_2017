@@ -86,12 +86,118 @@ Include dependency graph for cl_args_helpers.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1e00b6dd51519b3868a5e45de75a7148"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl__args__helpers_8c.html#a1e00b6dd51519b3868a5e45de75a7148">error_exit</a> (<a class="el" href="structt__clargs.html">t_clargs</a> *args, <a class="el" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *opts, char *req_save)</td></tr>
+<tr class="separator:a1e00b6dd51519b3868a5e45de75a7148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af146b83c23dcd0258626fdd6d302e741"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl__args__helpers_8c.html#af146b83c23dcd0258626fdd6d302e741">clean_exit</a> (<a class="el" href="structt__clargs.html">t_clargs</a> *args, <a class="el" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *opts, char *req_save)</td></tr>
+<tr class="separator:af146b83c23dcd0258626fdd6d302e741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63917f32d86fb1cf13f6216ca4226141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl__args__helpers_8c.html#a63917f32d86fb1cf13f6216ca4226141">free_opts</a> (<a class="el" href="structt__clargs.html">t_clargs</a> *opts)</td></tr>
+<tr class="separator:a63917f32d86fb1cf13f6216ca4226141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a253a684161dba8187c365bc97b217d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a> (char **buffer)</td></tr>
 <tr class="separator:a253a684161dba8187c365bc97b217d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d0ed2431dadc51ca65db27c5df01efd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl__args__helpers_8c.html#a5d0ed2431dadc51ca65db27c5df01efd">set_opts</a> ()</td></tr>
 <tr class="separator:a5d0ed2431dadc51ca65db27c5df01efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af146b83c23dcd0258626fdd6d302e741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af146b83c23dcd0258626fdd6d302e741">&#9670;&nbsp;</a></span>clean_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* clean_exit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__clargs.html">t_clargs</a> *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *&#160;</td>
+          <td class="paramname"><em>opts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>req_save</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00019">19</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00108">get_opts()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        free(opts);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        free(req_save);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> args;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cl__args__helpers_8c_af146b83c23dcd0258626fdd6d302e741_icgraph.png" border="0" usemap="#cl__args__helpers_8c_af146b83c23dcd0258626fdd6d302e741_icgraph" alt=""/></div>
+<map name="cl__args__helpers_8c_af146b83c23dcd0258626fdd6d302e741_icgraph" id="cl__args__helpers_8c_af146b83c23dcd0258626fdd6d302e741_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="135,80,207,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="255,80,305,107"/>
+<area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="353,29,432,56"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="357,80,429,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="480,80,539,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e00b6dd51519b3868a5e45de75a7148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e00b6dd51519b3868a5e45de75a7148">&#9670;&nbsp;</a></span>error_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* error_exit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__clargs.html">t_clargs</a> *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *&#160;</td>
+          <td class="paramname"><em>opts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>req_save</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00011">11</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00108">get_opts()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        free(args);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        free(opts);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        free(req_save);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> NULL;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cl__args__helpers_8c_a1e00b6dd51519b3868a5e45de75a7148_icgraph.png" border="0" usemap="#cl__args__helpers_8c_a1e00b6dd51519b3868a5e45de75a7148_icgraph" alt=""/></div>
+<map name="cl__args__helpers_8c_a1e00b6dd51519b3868a5e45de75a7148_icgraph" id="cl__args__helpers_8c_a1e00b6dd51519b3868a5e45de75a7148_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="129,80,201,107"/>
+<area shape="rect" id="node3" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="249,80,300,107"/>
+<area shape="rect" id="node4" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="348,29,427,56"/>
+<area shape="rect" id="node6" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="351,80,423,107"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="475,80,533,107"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a253a684161dba8187c365bc97b217d56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a253a684161dba8187c365bc97b217d56">&#9670;&nbsp;</a></span>free_buffers()</h2>
 
@@ -114,22 +220,62 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00014">14</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00042">42</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00060">get_methods()</a>, and <a class="el" href="cl__args__parsing_8c_source.html#l00127">get_opts()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">int</span> i;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">for</span> (i = 0; buffer[i]; ++i) {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                free(buffer[i]);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        free(buffer);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+<p class="reference">Referenced by <a class="el" href="cl__args__helpers_8c_source.html#l00030">free_opts()</a>, <a class="el" href="commands__parsing_8c_source.html#l00060">get_methods()</a>, and <a class="el" href="cl__args__parsing_8c_source.html#l00108">get_opts()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> i;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span> (i = 0; buffer[i]; ++i) {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                free(buffer[i]);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        free(buffer);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cl__args__helpers_8c_a253a684161dba8187c365bc97b217d56_icgraph.png" border="0" usemap="#cl__args__helpers_8c_a253a684161dba8187c365bc97b217d56_icgraph" alt=""/></div>
 <map name="cl__args__helpers_8c_a253a684161dba8187c365bc97b217d56_icgraph" id="cl__args__helpers_8c_a253a684161dba8187c365bc97b217d56_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="144,100,241,127"/>
-<area shape="rect" id="node7" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="818,155,890,181"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="289,97,400,124"/>
-<area shape="rect" id="node4" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="448,96,561,123"/>
-<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="609,96,668,123"/>
-<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="716,96,767,123"/>
-<area shape="rect" id="node8" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="815,29,893,56"/>
-<area shape="rect" id="node9" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="818,80,890,107"/>
+<area shape="rect" id="node2" href="server_8h.html#a63917f32d86fb1cf13f6216ca4226141" title="free_opts" alt="" coords="155,5,231,32"/>
+<area shape="rect" id="node3" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="144,56,241,83"/>
+<area shape="rect" id="node10" href="server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="309,107,381,133"/>
+<area shape="rect" id="node4" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="289,56,400,83"/>
+<area shape="rect" id="node5" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="448,56,561,83"/>
+<area shape="rect" id="node6" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="609,56,668,83"/>
+<area shape="rect" id="node7" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="716,107,767,133"/>
+<area shape="rect" id="node8" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="815,56,893,83"/>
+<area shape="rect" id="node9" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="818,107,890,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63917f32d86fb1cf13f6216ca4226141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63917f32d86fb1cf13f6216ca4226141">&#9670;&nbsp;</a></span>free_opts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_opts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__clargs.html">t_clargs</a> *&#160;</td>
+          <td class="paramname"><em>opts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Free the <a class="el" href="structt__clargs.html">t_clargs</a> structure </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opts</td><td>the structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00030">30</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
+
+<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00042">free_buffers()</a>, <a class="el" href="server_8h_source.html#l00103">t_clargs::port</a>, and <a class="el" href="server_8h_source.html#l00106">t_clargs::teams_names</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (opts) {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                free(opts-&gt;<a class="code" href="structt__clargs.html#ac284ea8d8038f0b8d33aaddaed7ba200">port</a>);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(opts-&gt;<a class="code" href="structt__clargs.html#a912f604527fad6466804c2a570297e5a">teams_names</a>);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                free(opts);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="cl__args__helpers_8c_html_a253a684161dba8187c365bc97b217d56"><div class="ttname"><a href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a></div><div class="ttdeci">void free_buffers(char **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00042">cl_args_helpers.c:42</a></div></div>
+<div class="ttc" id="structt__clargs_html_ac284ea8d8038f0b8d33aaddaed7ba200"><div class="ttname"><a href="structt__clargs.html#ac284ea8d8038f0b8d33aaddaed7ba200">t_clargs::port</a></div><div class="ttdeci">char * port</div><div class="ttdoc">the server listening port </div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00103">server.h:103</a></div></div>
+<div class="ttc" id="structt__clargs_html_a912f604527fad6466804c2a570297e5a"><div class="ttname"><a href="structt__clargs.html#a912f604527fad6466804c2a570297e5a">t_clargs::teams_names</a></div><div class="ttdeci">char ** teams_names</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00106">server.h:106</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cl__args__helpers_8c_a63917f32d86fb1cf13f6216ca4226141_cgraph.png" border="0" usemap="#cl__args__helpers_8c_a63917f32d86fb1cf13f6216ca4226141_cgraph" alt=""/></div>
+<map name="cl__args__helpers_8c_a63917f32d86fb1cf13f6216ca4226141_cgraph" id="cl__args__helpers_8c_a63917f32d86fb1cf13f6216ca4226141_cgraph">
+<area shape="rect" id="node2" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="129,5,220,32"/>
 </map>
 </div>
 
@@ -151,17 +297,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The flags 'gatherer' initialiser </p><dl class="section return"><dt>Returns</dt><dd>opts the flags function pointer malloc'ed and assigned </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00027">27</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cl__args__helpers_8c_source.html#l00055">55</a> of file <a class="el" href="cl__args__helpers_8c_source.html">cl_args_helpers.c</a>.</p>
 
-<p class="reference">References <a class="el" href="cl__flags__bis_8c_source.html#l00035">get_clientsNb()</a>, <a class="el" href="cl__flags__bis_8c_source.html#l00049">get_freq()</a>, <a class="el" href="cl__flags_8c_source.html#l00045">get_height()</a>, <a class="el" href="cl__flags_8c_source.html#l00015">get_port()</a>, <a class="el" href="cl__flags__bis_8c_source.html#l00015">get_teams()</a>, and <a class="el" href="cl__flags_8c_source.html#l00031">get_width()</a>.</p>
+<p class="reference">References <a class="el" href="cl__flags__bis_8c_source.html#l00032">get_clientsNb()</a>, <a class="el" href="cl__flags__bis_8c_source.html#l00042">get_freq()</a>, <a class="el" href="cl__flags_8c_source.html#l00045">get_height()</a>, <a class="el" href="cl__flags_8c_source.html#l00015">get_port()</a>, <a class="el" href="cl__flags__bis_8c_source.html#l00015">get_teams()</a>, and <a class="el" href="cl__flags_8c_source.html#l00031">get_width()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00127">get_opts()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *opts = malloc(<span class="keyword">sizeof</span>(<a class="code" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a>) * <span class="charliteral">&#39;z&#39;</span>);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        opts[<span class="charliteral">&#39;p&#39;</span>] = <a class="code" href="cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed">get_port</a>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        opts[<span class="charliteral">&#39;x&#39;</span>] = <a class="code" href="cl__flags_8c.html#af5fbca203e6e949739857574cecf5869">get_width</a>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        opts[<span class="charliteral">&#39;y&#39;</span>] = <a class="code" href="cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c">get_height</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        opts[<span class="charliteral">&#39;n&#39;</span>] = <a class="code" href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb">get_teams</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        opts[<span class="charliteral">&#39;c&#39;</span>] = <a class="code" href="cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7">get_clientsNb</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        opts[<span class="charliteral">&#39;f&#39;</span>] = <a class="code" href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d">get_freq</a>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> (opts);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div><div class="ttc" id="cl__flags__bis_8c_html_a434f4fa9452d570e766cdc09e16179fb"><div class="ttname"><a href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb">get_teams</a></div><div class="ttdeci">void * get_teams(char **teams, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags__bis_8c_source.html#l00015">cl_flags_bis.c:15</a></div></div>
+<p class="reference">Referenced by <a class="el" href="cl__args__parsing_8c_source.html#l00108">get_opts()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a> *opts = malloc(<span class="keyword">sizeof</span>(<a class="code" href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a>) * <span class="charliteral">&#39;z&#39;</span>);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        opts[<span class="charliteral">&#39;p&#39;</span>] = <a class="code" href="cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed">get_port</a>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        opts[<span class="charliteral">&#39;x&#39;</span>] = <a class="code" href="cl__flags_8c.html#af5fbca203e6e949739857574cecf5869">get_width</a>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        opts[<span class="charliteral">&#39;y&#39;</span>] = <a class="code" href="cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c">get_height</a>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        opts[<span class="charliteral">&#39;n&#39;</span>] = <a class="code" href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb">get_teams</a>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        opts[<span class="charliteral">&#39;c&#39;</span>] = <a class="code" href="cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7">get_clientsNb</a>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        opts[<span class="charliteral">&#39;f&#39;</span>] = <a class="code" href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d">get_freq</a>;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> (opts);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div><div class="ttc" id="cl__flags__bis_8c_html_a434f4fa9452d570e766cdc09e16179fb"><div class="ttname"><a href="cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb">get_teams</a></div><div class="ttdeci">void * get_teams(char **teams, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags__bis_8c_source.html#l00015">cl_flags_bis.c:15</a></div></div>
 <div class="ttc" id="cl__flags_8c_html_a3ea4530e0397932b35cde078235aa56c"><div class="ttname"><a href="cl__flags_8c.html#a3ea4530e0397932b35cde078235aa56c">get_height</a></div><div class="ttdeci">void * get_height(char **height, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags_8c_source.html#l00045">cl_flags.c:45</a></div></div>
 <div class="ttc" id="cl__flags_8c_html_af5fbca203e6e949739857574cecf5869"><div class="ttname"><a href="cl__flags_8c.html#af5fbca203e6e949739857574cecf5869">get_width</a></div><div class="ttdeci">void * get_width(char **width, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags_8c_source.html#l00031">cl_flags.c:31</a></div></div>
-<div class="ttc" id="cl__flags__bis_8c_html_ab6a86c8cb20c084c9f07c06841e9114d"><div class="ttname"><a href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d">get_freq</a></div><div class="ttdeci">void * get_freq(char **freq, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags__bis_8c_source.html#l00049">cl_flags_bis.c:49</a></div></div>
+<div class="ttc" id="cl__flags__bis_8c_html_ab6a86c8cb20c084c9f07c06841e9114d"><div class="ttname"><a href="cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d">get_freq</a></div><div class="ttdeci">void * get_freq(char **freq, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags__bis_8c_source.html#l00042">cl_flags_bis.c:42</a></div></div>
 <div class="ttc" id="cl__flags_8c_html_ab01a1e2057ed7de1aa23abff3ae0b0ed"><div class="ttname"><a href="cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed">get_port</a></div><div class="ttdeci">void * get_port(char **port, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags_8c_source.html#l00015">cl_flags.c:15</a></div></div>
-<div class="ttc" id="cl__flags__bis_8c_html_a7594cec69e8dc7da322bdc98b258f7e7"><div class="ttname"><a href="cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7">get_clientsNb</a></div><div class="ttdeci">void * get_clientsNb(char **clientsNb, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags__bis_8c_source.html#l00035">cl_flags_bis.c:35</a></div></div>
+<div class="ttc" id="cl__flags__bis_8c_html_a7594cec69e8dc7da322bdc98b258f7e7"><div class="ttname"><a href="cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7">get_clientsNb</a></div><div class="ttdeci">void * get_clientsNb(char **clientsNb, t_clargs *args)</div><div class="ttdef"><b>Definition:</b> <a href="cl__flags__bis_8c_source.html#l00032">cl_flags_bis.c:32</a></div></div>
 <div class="ttc" id="server_8h_html_a2f142533ce77a226c50d6f995a314a2e"><div class="ttname"><a href="server_8h.html#a2f142533ce77a226c50d6f995a314a2e">clargs</a></div><div class="ttdeci">void *(* clargs)(char **, t_clargs *)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00178">server.h:178</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

@@ -8,6 +8,7 @@ var searchData=
   ['cl_5fflags_2ec',['cl_flags.c',['../cl__flags_8c.html',1,'']]],
   ['cl_5fflags_5fbis_2ec',['cl_flags_bis.c',['../cl__flags__bis_8c.html',1,'']]],
   ['clargs',['clargs',['../server_8h.html#a2f142533ce77a226c50d6f995a314a2e',1,'server.h']]],
+  ['clean_5fexit',['clean_exit',['../cl__args__helpers_8c.html#af146b83c23dcd0258626fdd6d302e741',1,'clean_exit(t_clargs *args, clargs *opts, char *req_save):&#160;cl_args_helpers.c'],['../server_8h.html#af146b83c23dcd0258626fdd6d302e741',1,'clean_exit(t_clargs *args, clargs *opts, char *req_save):&#160;cl_args_helpers.c']]],
   ['clientsnb',['clientsNb',['../structt__clargs.html#a861cd81b5043acc62d6dbf023aec12f6',1,'t_clargs']]],
   ['clifd',['clifd',['../structt__inhabitant.html#a93402231cd6ddbff8adafe2c6524dad6',1,'t_inhabitant']]],
   ['cmd_2ec',['cmd.c',['../cmd_8c.html',1,'']]],

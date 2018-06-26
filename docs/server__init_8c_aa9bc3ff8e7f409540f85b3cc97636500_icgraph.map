@@ -1,9 +1,8 @@
 <map id="set_clifd" name="set_clifd">
-<area shape="rect" id="node2" href="$server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="124,117,233,144"/>
-<area shape="rect" id="node3" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="281,117,395,144"/>
-<area shape="rect" id="node4" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="443,117,501,144"/>
-<area shape="rect" id="node5" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="549,80,600,107"/>
-<area shape="rect" id="node6" href="$server_8h.html#a30e2e72e7d0d5f691caedcc1c3ea11b5" title="get_opts" alt="" coords="651,29,723,56"/>
-<area shape="rect" id="node7" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="651,80,723,107"/>
-<area shape="rect" id="node8" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="648,155,727,181"/>
+<area shape="rect" id="node2" href="$server__main_8c.html#a3c19262b2a0e7c830a0ce54cabd02400" title="init_connection" alt="" coords="124,55,233,81"/>
+<area shape="rect" id="node3" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="281,55,395,81"/>
+<area shape="rect" id="node4" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="443,55,501,81"/>
+<area shape="rect" id="node5" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="549,29,600,56"/>
+<area shape="rect" id="node6" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="651,5,723,32"/>
+<area shape="rect" id="node7" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="648,80,727,107"/>
 </map>
