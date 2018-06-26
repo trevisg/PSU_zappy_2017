@@ -17,8 +17,6 @@ var searchData=
   ['res',['res',['../structt__serv.html#ad657e49223c7aecd7183fc2702a12a34',1,'t_serv']]],
   ['ressources',['ressources',['../structt__tile.html#a28649d079c4f8a1d23849ce09ec3b137',1,'t_tile']]],
   ['ressources_5fdecl_2ec',['ressources_decl.c',['../ressources__decl_8c.html',1,'']]],
-  ['rfc_5fcmds0_2ec',['rfc_cmds0.c',['../rfc__cmds0_8c.html',1,'']]],
-  ['rfc_5fcmds1_2ec',['rfc_cmds1.c',['../rfc__cmds1_8c.html',1,'']]],
   ['right',['RIGHT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faec8379af7490bb9eaaf579cf17876f38',1,'server.h']]],
   ['rp',['rp',['../structt__serv.html#a172abde1b7146a00a16c6368ab4fa724',1,'t_serv']]]
 ];

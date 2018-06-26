@@ -22,8 +22,8 @@
 <area shape="rect" id="node20" href="$world__creation_8c.html#a1ffae906cc7307089cbf040f28abdcd0" title="free_world" alt="" coords="541,636,623,663"/>
 <area shape="rect" id="node21" href="$world__creation_8c.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="380,825,459,852"/>
 <area shape="rect" id="node32" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="363,497,476,524"/>
-<area shape="rect" id="node41" href="$print__fcts_8c.html#a95174f824b39f738b3da128a651f0717" title="print_teams" alt="" coords="374,649,465,676"/>
-<area shape="rect" id="node42" href="$print__fcts_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb" title="print_world" alt="" coords="377,700,462,727"/>
+<area shape="rect" id="node41" href="$print__items_8c.html#a95174f824b39f738b3da128a651f0717" title="print_teams" alt="" coords="374,649,465,676"/>
+<area shape="rect" id="node42" href="$print__items_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb" title="print_world" alt="" coords="377,700,462,727"/>
 <area shape="rect" id="node43" href="$server__init_8c.html#a5cb15d408ef32c09c2485937503438ed" title="set_epoll" alt="" coords="382,751,457,777"/>
 <area shape="rect" id="node44" href="$server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="382,447,457,473"/>
 <area shape="rect" id="node45" href="$server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="376,548,463,575"/>

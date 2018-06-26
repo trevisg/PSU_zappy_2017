@@ -31,8 +31,8 @@
 <area shape="rect" id="node22" href="$cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb" title="get_teams" alt="" coords="738,689,821,716"/>
 <area shape="rect" id="node23" href="$cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7" title="get_clientsNb" alt="" coords="728,740,831,767"/>
 <area shape="rect" id="node24" href="$cl__flags__bis_8c.html#ab6a86c8cb20c084c9f07c06841e9114d" title="get_freq" alt="" coords="745,791,814,817"/>
-<area shape="rect" id="node32" href="$print__fcts_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb" title="print_world" alt="" coords="574,132,659,159"/>
-<area shape="rect" id="node33" href="$print__fcts_8c.html#a95174f824b39f738b3da128a651f0717" title="print_teams" alt="" coords="571,183,662,209"/>
+<area shape="rect" id="node32" href="$print__items_8c.html#ae9a1eceba5e05f4d45bb89657de3c7fb" title="print_world" alt="" coords="574,132,659,159"/>
+<area shape="rect" id="node33" href="$print__items_8c.html#a95174f824b39f738b3da128a651f0717" title="print_teams" alt="" coords="571,183,662,209"/>
 <area shape="rect" id="node34" href="$server__init_8c.html#a3802a71fa34e93cb1d85f919914f5abf" title="set_iface" alt="" coords="579,233,654,260"/>
 <area shape="rect" id="node35" href="$server__init_8c.html#a1f61d16ccfab82b21ca40ce23feb7c02" title="set_sockfd" alt="" coords="573,284,660,311"/>
 <area shape="rect" id="node37" href="$server__init_8c.html#a5cb15d408ef32c09c2485937503438ed" title="set_epoll" alt="" coords="579,335,654,361"/>

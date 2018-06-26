@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['del_5fobj_5ffrom_5fplayer',['del_obj_from_player',['../utils2_8c.html#a504e56197d8da98d043d352832da40d1',1,'del_obj_from_player(t_inhabitant *player, char *obj_name):&#160;utils2.c'],['../cmd__fcts_8h.html#a504e56197d8da98d043d352832da40d1',1,'del_obj_from_player(t_inhabitant *player, char *obj_name):&#160;utils2.c']]],
-  ['del_5fobj_5fon_5fmap',['del_obj_on_map',['../utils2_8c.html#a99f6f96641b41d3811ba060812dafa59',1,'del_obj_on_map(t_world *map, int x, int y, char *obj_name):&#160;utils2.c'],['../cmd__fcts_8h.html#a99f6f96641b41d3811ba060812dafa59',1,'del_obj_on_map(t_world *map, int x, int y, char *obj_name):&#160;utils2.c']]]
+  ['error_5fexit',['error_exit',['../cl__args__helpers_8c.html#a1e00b6dd51519b3868a5e45de75a7148',1,'error_exit(t_clargs *args, clargs *opts, char *req_save):&#160;cl_args_helpers.c'],['../server_8h.html#a1e00b6dd51519b3868a5e45de75a7148',1,'error_exit(t_clargs *args, clargs *opts, char *req_save):&#160;cl_args_helpers.c']]],
+  ['events_5fhandler',['events_handler',['../server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5',1,'server_main.c']]]
 ];

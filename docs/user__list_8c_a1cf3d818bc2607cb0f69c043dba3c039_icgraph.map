@@ -1,10 +1,3 @@
 <map id="get_new_userlist" name="get_new_userlist">
 <area shape="rect" id="node2" href="$teams__list_8c.html#a646f87dbabdf8181f4ba0a05e740fbec" title="init_default_teams" alt="" coords="173,5,301,32"/>
-<area shape="rect" id="node3" href="$rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b" title="join" alt="" coords="216,56,259,83"/>
-<area shape="rect" id="node4" href="$rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430" title="user" alt="" coords="214,107,261,133"/>
-<area shape="rect" id="node5" href="$egg_8c.html#a9019cefcb9955f86d3f1db85bd4ac152" title="send_egg_death" alt="" coords="351,5,468,32"/>
-<area shape="rect" id="node6" href="$egg_8c.html#a3c2162a181ab731b25815b3ccd531d27" title="send_egg_hatch" alt="" coords="351,56,468,83"/>
-<area shape="rect" id="node7" href="$teams_8c.html#abcf086826db6e9ab249fb146591e9de8" title="send_expulsion" alt="" coords="353,107,465,133"/>
-<area shape="rect" id="node8" href="$cmd_8c.html#aaff42fb4474ce5c3c80f181734022fc1" title="send_res_collect" alt="" coords="349,157,469,184"/>
-<area shape="rect" id="node9" href="$cmd_8c.html#a794a7dff14f47fef9407a083f3551645" title="send_res_drop" alt="" coords="356,208,463,235"/>
 </map>

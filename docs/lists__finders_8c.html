@@ -137,21 +137,9 @@ NULL pointer if nothing found </dd></dl>
 <p class="definition">Definition at line <a class="el" href="lists__finders_8c_source.html#l00030">30</a> of file <a class="el" href="lists__finders_8c_source.html">lists_finders.c</a>.</p>
 
 <p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00159">t_userlist::next</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00019">join()</a>, <a class="el" href="rfc__cmds1_8c_source.html#l00054">privmsg()</a>, and <a class="el" href="rfc__cmds0_8c_source.html#l00103">quit()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        t_user *usr = NULL;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *tmp = list; tmp; tmp = tmp-&gt;<a class="code" href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">next</a>) {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span> (tmp-&gt;user-&gt;clifd == clifd) {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        usr = tmp-&gt;user;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> (usr);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00156">zappy_game.h:156</a></div></div>
 <div class="ttc" id="structt__userlist_html_a4e8bdbbe18cff8a66f537fc38e71b212"><div class="ttname"><a href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdoc">the next node in list </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00159">zappy_game.h:159</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="lists__finders_8c_a0195cd48a4c52a9624a811825cef8afb_icgraph.png" border="0" usemap="#lists__finders_8c_a0195cd48a4c52a9624a811825cef8afb_icgraph" alt=""/></div>
-<map name="lists__finders_8c_a0195cd48a4c52a9624a811825cef8afb_icgraph" id="lists__finders_8c_a0195cd48a4c52a9624a811825cef8afb_icgraph">
-<area shape="rect" id="node2" href="rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b" title="join" alt="" coords="181,5,223,32"/>
-<area shape="rect" id="node3" href="rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="168,56,236,83"/>
-<area shape="rect" id="node4" href="rfc__cmds0_8c.html#a1c74e8299ccc83fc44cb09ad41b2c67c" title="quit" alt="" coords="181,107,223,133"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ebf668b9cfc31f3b29114dfed75c0ad"></a>
@@ -189,19 +177,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="lists__finders_8c_source.html#l00076">76</a> of file <a class="el" href="lists__finders_8c_source.html">lists_finders.c</a>.</p>
 
 <p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00159">t_userlist::next</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rfc__cmds1_8c_source.html#l00054">privmsg()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        t_user *needle = NULL;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *foo = usrs; foo; foo = foo-&gt;<a class="code" href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">next</a>) {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">if</span> (!strcmp(name, foo-&gt;user-&gt;nick) ||</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                !strcmp(name, foo-&gt;user-&gt;rname)) {</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        needle = foo-&gt;user;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> (needle);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div><div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00156">zappy_game.h:156</a></div></div>
 <div class="ttc" id="structt__userlist_html_a4e8bdbbe18cff8a66f537fc38e71b212"><div class="ttname"><a href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdoc">the next node in list </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00159">zappy_game.h:159</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="lists__finders_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph.png" border="0" usemap="#lists__finders_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph" alt=""/></div>
-<map name="lists__finders_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph" id="lists__finders_8c_a7ebf668b9cfc31f3b29114dfed75c0ad_icgraph">
-<area shape="rect" id="node2" href="rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="188,5,256,32"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5c9b2cd4523b5cc43326163d534225d9"></a>
@@ -222,22 +200,7 @@ Here is the caller graph for this function:</div>
 <p>Get the size of a 2d Array </p><dl class="section return"><dt>Returns</dt><dd>i the size of the cmdargs 2d char *array </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="lists__finders_8c_source.html#l00014">14</a> of file <a class="el" href="lists__finders_8c_source.html">lists_finders.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00083">user()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">while</span> (args[i]) {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                ++i;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> (i);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="lists__finders_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph.png" border="0" usemap="#lists__finders_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph" alt=""/></div>
-<map name="lists__finders_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph" id="lists__finders_8c_a5c9b2cd4523b5cc43326163d534225d9_icgraph">
-<area shape="rect" id="node2" href="rfc__cmds0_8c.html#a1c883dcd73a625782b2a8fe752af3430" title="user" alt="" coords="124,107,171,133"/>
-<area shape="rect" id="node3" href="cmd_8c.html#a794a7dff14f47fef9407a083f3551645" title="send_res_drop" alt="" coords="225,5,332,32"/>
-<area shape="rect" id="node4" href="cmd_8c.html#aaff42fb4474ce5c3c80f181734022fc1" title="send_res_collect" alt="" coords="219,56,339,83"/>
-<area shape="rect" id="node5" href="egg_8c.html#a3c2162a181ab731b25815b3ccd531d27" title="send_egg_hatch" alt="" coords="220,107,337,133"/>
-<area shape="rect" id="node6" href="egg_8c.html#a9019cefcb9955f86d3f1db85bd4ac152" title="send_egg_death" alt="" coords="220,157,337,184"/>
-<area shape="rect" id="node7" href="teams_8c.html#abcf086826db6e9ab249fb146591e9de8" title="send_expulsion" alt="" coords="223,208,335,235"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">while</span> (args[i]) {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                ++i;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> (i);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a840e59afe03b793c671dae92364c4e0e"></a>
@@ -277,20 +240,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="lists__finders_8c_source.html#l00048">48</a> of file <a class="el" href="lists__finders_8c_source.html">lists_finders.c</a>.</p>
 
 <p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00176">t_teams::next</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00019">join()</a>, and <a class="el" href="rfc__cmds1_8c_source.html#l00054">privmsg()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="structt__teams.html">t_teams</a> *rt = NULL;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__teams.html">t_teams</a> *tmp = list; tmp; tmp = tmp-&gt;<a class="code" href="structt__teams.html#abd45fc90e37934853b34ce0c8444738e">next</a>) {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span> (!strcmp(tmp-&gt;team_name, channame)) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        rt = tmp;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> (rt);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div><div class="ttc" id="structt__teams_html"><div class="ttname"><a href="structt__teams.html">t_teams</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00172">zappy_game.h:172</a></div></div>
 <div class="ttc" id="structt__teams_html_abd45fc90e37934853b34ce0c8444738e"><div class="ttname"><a href="structt__teams.html#abd45fc90e37934853b34ce0c8444738e">t_teams::next</a></div><div class="ttdeci">struct s_teams * next</div><div class="ttdoc">the next node in list </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00176">zappy_game.h:176</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="lists__finders_8c_a840e59afe03b793c671dae92364c4e0e_icgraph.png" border="0" usemap="#lists__finders_8c_a840e59afe03b793c671dae92364c4e0e_icgraph" alt=""/></div>
-<map name="lists__finders_8c_a840e59afe03b793c671dae92364c4e0e_icgraph" id="lists__finders_8c_a840e59afe03b793c671dae92364c4e0e_icgraph">
-<area shape="rect" id="node2" href="rfc__cmds0_8c.html#aaa1a67ad295a9fe0eceea86d7eb0d43b" title="join" alt="" coords="202,5,245,32"/>
-<area shape="rect" id="node3" href="rfc__cmds1_8c.html#a85a04f8d1928f599fa049e534f41377f" title="privmsg" alt="" coords="189,56,257,83"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a89a3ecace723ab3c2e85b151eb031dc7"></a>
@@ -322,21 +274,11 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="lists__finders_8c_source.html#l00061">61</a> of file <a class="el" href="lists__finders_8c_source.html">lists_finders.c</a>.</p>
 
 <p class="reference">References <a class="el" href="zappy__game_8h_source.html#l00159">t_userlist::next</a>, <a class="el" href="zappy__game_8h_source.html#l00173">t_teams::team_name</a>, and <a class="el" href="zappy__game_8h_source.html#l00174">t_teams::users</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rfc__cmds0_8c_source.html#l00103">quit()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structt__userlist.html">t_userlist</a> *usrs = chans-&gt;<a class="code" href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">users</a>; usrs; usrs = usrs-&gt;<a class="code" href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">next</a>) {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">if</span> (clifd == usrs-&gt;user-&gt;clifd) {</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        printf(<span class="stringliteral">&quot;Chan name [%s] Is in list ? [%s]\n&quot;</span>,</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        chans-&gt;<a class="code" href="structt__teams.html#a303ffb9c04deceb3471cd0ef93c13160">team_name</a>, usrs-&gt;user-&gt;nick);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        usrs-&gt;user-&gt;isco = <span class="keyword">false</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> (1);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div><div class="ttc" id="structt__teams_html_a4fd5434dcebcd3b369bfcd9dbed44880"><div class="ttname"><a href="structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880">t_teams::users</a></div><div class="ttdeci">t_userlist * users</div><div class="ttdoc">the t_inhabitant list in this team </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00174">zappy_game.h:174</a></div></div>
 <div class="ttc" id="structt__userlist_html"><div class="ttname"><a href="structt__userlist.html">t_userlist</a></div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00156">zappy_game.h:156</a></div></div>
 <div class="ttc" id="structt__teams_html_a303ffb9c04deceb3471cd0ef93c13160"><div class="ttname"><a href="structt__teams.html#a303ffb9c04deceb3471cd0ef93c13160">t_teams::team_name</a></div><div class="ttdeci">char * team_name</div><div class="ttdoc">a t_inhabitant team name </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00173">zappy_game.h:173</a></div></div>
 <div class="ttc" id="structt__userlist_html_a4e8bdbbe18cff8a66f537fc38e71b212"><div class="ttname"><a href="structt__userlist.html#a4e8bdbbe18cff8a66f537fc38e71b212">t_userlist::next</a></div><div class="ttdeci">struct s_userlist * next</div><div class="ttdoc">the next node in list </div><div class="ttdef"><b>Definition:</b> <a href="zappy__game_8h_source.html#l00159">zappy_game.h:159</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="lists__finders_8c_a89a3ecace723ab3c2e85b151eb031dc7_icgraph.png" border="0" usemap="#lists__finders_8c_a89a3ecace723ab3c2e85b151eb031dc7_icgraph" alt=""/></div>
-<map name="lists__finders_8c_a89a3ecace723ab3c2e85b151eb031dc7_icgraph" id="lists__finders_8c_a89a3ecace723ab3c2e85b151eb031dc7_icgraph">
-<area shape="rect" id="node2" href="rfc__cmds0_8c.html#a1c74e8299ccc83fc44cb09ad41b2c67c" title="quit" alt="" coords="169,5,212,32"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
