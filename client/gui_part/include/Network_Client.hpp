@@ -33,6 +33,9 @@ class	Network {
 		~Network();
 		std::vector<std::string>	_get(std::string req);
 		std::map<std::string, int>	_get_mapsize();
+		std::vector<std::map<std::string, std::string>>
+						_get_team_members(
+						std::string teamname);
 		bool 				_connect_to(
 						std::string server_host,
 						std::string server_port);
