@@ -31,12 +31,16 @@ class	Network {
 	public:
 		Network();
 		~Network();
-		bool listen_up();
-		std::vector<std::string> get_teamnames();
-		bool connect_to(std::string server_host,
-		std::string server_port);
-		std::string get_lastbuffer();
+		std::vector<std::string>	_get(std::string req);
+		std::map<std::string, int>	_get_mapsize();
+		std::vector<std::map<std::string, std::string>>
+						_get_team_members(
+						std::string teamname);
+		bool 				_connect_to(
+						std::string server_host,
+						std::string server_port);
 	private:
+		bool _listen_up();
 		uint _server_port;
 		int _client_socket;
 		char _server_resp[MAX_RESP];
