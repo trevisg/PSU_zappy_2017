@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** PSU_zappy_2017
 ** File description:
-** zappy_server graphical client <-> server commands g_mapsize
+** zappy_server graphical client <-> server commands
 */
 
 #include "../../include/cmd_fcts.h"
