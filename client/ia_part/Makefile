@@ -12,7 +12,7 @@ DOXYGEN		= doxygen
 RM      	= rm -f
 
 CPPFLAGS	+= -I./include -I../commons/include  \
-		-Wall -Werror -Wextra -std=gnu++17
+		-Wall -Werror -Wextra -std=gnu++14
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
