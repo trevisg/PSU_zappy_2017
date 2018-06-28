@@ -1,7 +1,7 @@
 langage: c
 git:
   lfs_skip_smudge: true
-script: make zappy_server && make clean
+script: make && make clean
 notifications:
   webhooks:
     urls:
