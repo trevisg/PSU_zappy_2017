@@ -16,17 +16,31 @@ DPKGDEB		= dpkg-deb
 
 SERVER		= zappy_server
 
+CLIENT		= zappy_ai
+
 all:
 		cd server && $(MAKE)
 		mv server/zappy_server .
+		cd client/ia_part/ && $(MAKE)
+		mv client/ia_part/zappy_ai .
+server:
+		cd server && $(MAKE)
+		mv server/zappy_server .
 
-zappy_server:	all
+client:
+		cd client/ia_part && $(MAKE)
+		mv client/ia_part/zappy_ai .
+
+zappy_server:	server
+
+zappy_ai:	client
 
 clean:
 		cd server && $(MAKE) clean
 
 fclean: 	clean
 		cd server && $(MAKE) fclean
+		cd client/ia_part/ && $(MAKE) fclean
 
 re:		fclean all
 
