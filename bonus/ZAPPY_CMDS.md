@@ -1,4 +1,4 @@
-# Zappy IAClient to Server protocol
+# Zappy AIClient to Server protocol
 
 |            Actions           |      Command     | Time limit |                    Response                   |
 | :--------------------------: | :--------------: | :--------: | :-------------------------------------------: |
