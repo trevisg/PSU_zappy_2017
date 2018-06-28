@@ -4,6 +4,7 @@ var searchData=
   ['send_5fbroadcast',['send_broadcast',['../teams_8c.html#abcb061ec65f8813b4f8abf869b6ab600',1,'teams.c']]],
   ['send_5fcmd_5fparams',['send_cmd_params',['../cmd_8c.html#a72ea10c76996bce148e6c93fee4fff76',1,'cmd.c']]],
   ['send_5fcmd_5funknow',['send_cmd_unknow',['../cmd_8c.html#aefd30ec01d51ac4b34206fa18cf62718',1,'cmd.c']]],
+  ['send_5fdetails',['send_details',['../g__commands_8c.html#aaab6d718736ece1f20dac0875533d54a',1,'g_commands.c']]],
   ['send_5fegg_5fdeath',['send_egg_death',['../egg_8c.html#a9019cefcb9955f86d3f1db85bd4ac152',1,'egg.c']]],
   ['send_5fegg_5fhatch',['send_egg_hatch',['../egg_8c.html#a3c2162a181ab731b25815b3ccd531d27',1,'egg.c']]],
   ['send_5fegg_5flaid',['send_egg_laid',['../egg_8c.html#ae5a92e1a14d512e903315055121a856b',1,'egg.c']]],

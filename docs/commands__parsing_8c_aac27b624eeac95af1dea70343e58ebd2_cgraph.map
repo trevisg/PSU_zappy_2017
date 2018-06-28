@@ -1,0 +1,4 @@
+<map id="run_graph_cmd" name="run_graph_cmd">
+<area shape="rect" id="node2" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="164,5,255,32"/>
+<area shape="rect" id="node3" href="$commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7" title="get_args" alt="" coords="173,56,245,83"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="get_args" name="get_args">
+<area shape="rect" id="node2" href="$commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2" title="run_graph_cmd" alt="" coords="125,29,236,56"/>
+<area shape="rect" id="node10" href="$commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad" title="run_ia_cmd" alt="" coords="136,80,225,107"/>
+<area shape="rect" id="node3" href="$server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="284,55,381,81"/>
+<area shape="rect" id="node4" href="$server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="429,55,540,81"/>
+<area shape="rect" id="node5" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="588,55,701,81"/>
+<area shape="rect" id="node6" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="749,55,808,81"/>
+<area shape="rect" id="node7" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="856,80,907,107"/>
+<area shape="rect" id="node8" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="955,29,1033,56"/>
+<area shape="rect" id="node9" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="958,80,1030,107"/>
+</map>

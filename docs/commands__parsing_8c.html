@@ -70,14 +70,14 @@ $(function() {
 <div class="title">commands_parsing.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="server_8h_source.html">server.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="server_8h_source.html">../include/server.h</a>&quot;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for commands_parsing.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="commands__parsing_8c__incl.png" border="0" usemap="#server_2src_2commands__parsing_8c" alt=""/></div>
 <map name="server_2src_2commands__parsing_8c" id="server_2src_2commands__parsing_8c">
-<area shape="rect" id="node2" href="server_8h.html" title="server.h" alt="" coords="447,95,516,121"/>
+<area shape="rect" id="node2" href="server_8h.html" title="../include/server.h" alt="" coords="418,95,545,121"/>
 <area shape="rect" id="node11" href="zappy__game_8h.html" title="zappy_game.h" alt="" coords="696,169,803,196"/>
 </map>
 </div>
@@ -88,14 +88,18 @@ Include dependency graph for commands_parsing.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:ae88af3c7c8c827d710efa585d851a414"><td class="memItemLeft" align="right" valign="top">static char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414">get_commands</a> (char *req)</td></tr>
 <tr class="separator:ae88af3c7c8c827d710efa585d851a414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7cc037b9642ffd85e521546772eceae"><td class="memItemLeft" align="right" valign="top">static char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae">get_args</a> (char *cmd)</td></tr>
-<tr class="separator:ad7cc037b9642ffd85e521546772eceae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad860c217e20f06e4089c68d4ebfa6c7"><td class="memItemLeft" align="right" valign="top">static char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7">get_args</a> (char *cmd, const char *sep)</td></tr>
+<tr class="separator:aad860c217e20f06e4089c68d4ebfa6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd4bf69b06bf00d9c14bc866b1d5cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad">run_ia_cmd</a> (char *cmd, int clifd, <a class="el" href="structt__world.html">t_world</a> *<a class="el" href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a>)</td></tr>
+<tr class="separator:a5cd4bf69b06bf00d9c14bc866b1d5cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac27b624eeac95af1dea70343e58ebd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2">run_graph_cmd</a> (char *cmd, int clifd, <a class="el" href="structt__world.html">t_world</a> *<a class="el" href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a>)</td></tr>
+<tr class="separator:aac27b624eeac95af1dea70343e58ebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68520138c8931ae45e9abb2a6433c06a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands__parsing_8c.html#a68520138c8931ae45e9abb2a6433c06a">get_methods</a> (char *req, int clifd, <a class="el" href="structt__world.html">t_world</a> *<a class="el" href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a>)</td></tr>
 <tr class="separator:a68520138c8931ae45e9abb2a6433c06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad7cc037b9642ffd85e521546772eceae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7cc037b9642ffd85e521546772eceae">&#9670;&nbsp;</a></span>get_args()</h2>
+<a id="aad860c217e20f06e4089c68d4ebfa6c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad860c217e20f06e4089c68d4ebfa6c7">&#9670;&nbsp;</a></span>get_args()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,8 +111,18 @@ Functions</h2></td></tr>
           <td class="memname">static char** get_args </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -128,20 +142,22 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="server_8h_source.html#l00037">MAXARGS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00060">get_methods()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">char</span> *token = NULL;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">char</span> **tkns = malloc(<a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> * <span class="keyword">sizeof</span>(*tkns));</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (tkns) {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                memset(tkns, 0, <span class="keyword">sizeof</span>(*tkns) * <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                token = strtok(cmd, <span class="stringliteral">&quot; :&quot;</span>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">while</span> (token) {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        tkns[i] = strdup(token);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        token = strtok(NULL, <span class="stringliteral">&quot; :&quot;</span>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                        i = i &lt;= <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> ? i + 1 : i;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (tkns);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div><div class="ttc" id="server_8h_html_a41101847771d39a4f0a7f9395061c629"><div class="ttname"><a href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a></div><div class="ttdeci">#define MAXARGS</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00037">server.h:37</a></div></div>
+<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00078">run_graph_cmd()</a>, and <a class="el" href="commands__parsing_8c_source.html#l00057">run_ia_cmd()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">char</span> *token = NULL;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">char</span> **tkns = malloc(<a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> * <span class="keyword">sizeof</span>(*tkns));</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (tkns) {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                memset(tkns, 0, <span class="keyword">sizeof</span>(*tkns) * <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                token = strtok(cmd, sep);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">while</span> (token) {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        tkns[i] = strdup(token);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        token = strtok(NULL, sep);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                        i = i &lt;= <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> ? i + 1 : i;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (tkns);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div><div class="ttc" id="server_8h_html_a41101847771d39a4f0a7f9395061c629"><div class="ttname"><a href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a></div><div class="ttdeci">#define MAXARGS</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00037">server.h:37</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="commands__parsing_8c_ad7cc037b9642ffd85e521546772eceae_icgraph.png" border="0" usemap="#commands__parsing_8c_ad7cc037b9642ffd85e521546772eceae_icgraph" alt=""/></div>
-<map name="commands__parsing_8c_ad7cc037b9642ffd85e521546772eceae_icgraph" id="commands__parsing_8c_ad7cc037b9642ffd85e521546772eceae_icgraph">
-<area shape="rect" id="node2" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="125,55,223,81"/>
-<area shape="rect" id="node3" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="271,55,381,81"/>
-<area shape="rect" id="node4" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="429,55,543,81"/>
-<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="591,55,649,81"/>
-<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="697,80,748,107"/>
-<area shape="rect" id="node7" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="796,29,875,56"/>
-<area shape="rect" id="node8" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="799,80,871,107"/>
+<div class="center"><img src="commands__parsing_8c_aad860c217e20f06e4089c68d4ebfa6c7_icgraph.png" border="0" usemap="#commands__parsing_8c_aad860c217e20f06e4089c68d4ebfa6c7_icgraph" alt=""/></div>
+<map name="commands__parsing_8c_aad860c217e20f06e4089c68d4ebfa6c7_icgraph" id="commands__parsing_8c_aad860c217e20f06e4089c68d4ebfa6c7_icgraph">
+<area shape="rect" id="node2" href="commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2" title="run_graph_cmd" alt="" coords="125,29,236,56"/>
+<area shape="rect" id="node10" href="commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad" title="run_ia_cmd" alt="" coords="136,80,225,107"/>
+<area shape="rect" id="node3" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="284,55,381,81"/>
+<area shape="rect" id="node4" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="429,55,540,81"/>
+<area shape="rect" id="node5" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="588,55,701,81"/>
+<area shape="rect" id="node6" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="749,55,808,81"/>
+<area shape="rect" id="node7" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="856,80,907,107"/>
+<area shape="rect" id="node8" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="955,29,1033,56"/>
+<area shape="rect" id="node9" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="958,80,1030,107"/>
 </map>
 </div>
 
@@ -181,8 +197,8 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="server_8h_source.html#l00037">MAXARGS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00060">get_methods()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">char</span> *cmd = NULL;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">char</span> **<a class="code" href="server_8h.html#a839810bf07fd9d89e369c114f6b2c04d">cmds</a> = malloc(<a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> * <span class="keyword">sizeof</span>(*cmds));</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (cmds) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                memset(cmds, 0, <span class="keyword">sizeof</span>(*cmds) * <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                cmd = strtok(req, <span class="stringliteral">&quot;\r\n&quot;</span>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">while</span> (cmd) {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        cmds[i] = strdup(cmd);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        cmd = strtok(NULL, <span class="stringliteral">&quot;\r\n&quot;</span>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        i = i &lt;= <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> ? i + 1 : i;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> (cmds);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div><div class="ttc" id="server_8h_html_a839810bf07fd9d89e369c114f6b2c04d"><div class="ttname"><a href="server_8h.html#a839810bf07fd9d89e369c114f6b2c04d">cmds</a></div><div class="ttdeci">void *(* cmds)(cmdargs args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00174">server.h:174</a></div></div>
+<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00099">get_methods()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">char</span> *cmd = NULL;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">char</span> **<a class="code" href="server_8h.html#a02ef3c6ace48ea36f0bad1051b000959">cmds</a> = malloc(<a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> * <span class="keyword">sizeof</span>(*cmds));</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (cmds) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                memset(cmds, 0, <span class="keyword">sizeof</span>(*cmds) * <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                cmd = strtok(req, <span class="stringliteral">&quot;\r\n&quot;</span>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">while</span> (cmd) {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        cmds[i] = strdup(cmd);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        cmd = strtok(NULL, <span class="stringliteral">&quot;\r\n&quot;</span>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        i = i &lt;= <a class="code" href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a> ? i + 1 : i;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> (cmds);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div><div class="ttc" id="server_8h_html_a02ef3c6ace48ea36f0bad1051b000959"><div class="ttname"><a href="server_8h.html#a02ef3c6ace48ea36f0bad1051b000959">cmds</a></div><div class="ttdeci">void *(* cmds)(char **args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00174">server.h:174</a></div></div>
 <div class="ttc" id="server_8h_html_a41101847771d39a4f0a7f9395061c629"><div class="ttname"><a href="server_8h.html#a41101847771d39a4f0a7f9395061c629">MAXARGS</a></div><div class="ttdeci">#define MAXARGS</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00037">server.h:37</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -241,27 +257,27 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>could add compilation macro for debug print_2darray() calls but epitech norm insist on 20 line per function so ... </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="commands__parsing_8c_source.html#l00060">60</a> of file <a class="el" href="commands__parsing_8c_source.html">commands_parsing.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands__parsing_8c_source.html#l00099">99</a> of file <a class="el" href="commands__parsing_8c_source.html">commands_parsing.c</a>.</p>
 
-<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00041">free_buffers()</a>, <a class="el" href="server__decls_8c_source.html#l00026">G_CMDS</a>, <a class="el" href="server__decls_8c_source.html#l00012">G_PROTOS</a>, <a class="el" href="commands__parsing_8c_source.html#l00036">get_args()</a>, <a class="el" href="commands__parsing_8c_source.html#l00015">get_commands()</a>, <a class="el" href="egg_8c_source.html#l00018">map</a>, and <a class="el" href="server_8h_source.html#l00026">REF_NB</a>.</p>
+<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00041">free_buffers()</a>, <a class="el" href="commands__parsing_8c_source.html#l00015">get_commands()</a>, <a class="el" href="server_8h_source.html#l00026">REF_NB</a>, <a class="el" href="commands__parsing_8c_source.html#l00078">run_graph_cmd()</a>, and <a class="el" href="commands__parsing_8c_source.html#l00057">run_ia_cmd()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="server__main_8c_source.html#l00043">events_handler()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">int</span> index = 0;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">char</span> **<a class="code" href="server_8h.html#a839810bf07fd9d89e369c114f6b2c04d">cmds</a> = <a class="code" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414">get_commands</a>(req);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">char</span> **args = NULL;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; cmds[j]; ++j) {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">for</span> (index = 0; <a class="code" href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a>[index]; ++index) {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        <span class="keywordflow">if</span> ((strstr(cmds[j], <a class="code" href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a>[index]))) {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                args = <a class="code" href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae">get_args</a>(cmds[j]);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                <a class="code" href="server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28">G_CMDS</a>[index](args, clifd, <a class="code" href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a>);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(args);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(cmds);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> ((index == <a class="code" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>) ? (0) : (index));</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div><div class="ttc" id="server__decls_8c_html_a7bb29231b69e3767e187ffe5d5717b28"><div class="ttname"><a href="server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28">G_CMDS</a></div><div class="ttdeci">const cmds G_CMDS[REF_NB]</div><div class="ttdef"><b>Definition:</b> <a href="server__decls_8c_source.html#l00026">server_decls.c:26</a></div></div>
-<div class="ttc" id="commands__parsing_8c_html_ad7cc037b9642ffd85e521546772eceae"><div class="ttname"><a href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae">get_args</a></div><div class="ttdeci">static char ** get_args(char *cmd)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00036">commands_parsing.c:36</a></div></div>
-<div class="ttc" id="commands__parsing_8c_html_ae88af3c7c8c827d710efa585d851a414"><div class="ttname"><a href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414">get_commands</a></div><div class="ttdeci">static char ** get_commands(char *req)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00015">commands_parsing.c:15</a></div></div>
-<div class="ttc" id="egg_8c_html_a00b3192dc2ad7ae86facdc2c0b8d7a96"><div class="ttname"><a href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a></div><div class="ttdeci">return map</div><div class="ttdef"><b>Definition:</b> <a href="egg_8c_source.html#l00018">egg.c:18</a></div></div>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">int</span> index = 0;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">char</span> **<a class="code" href="server_8h.html#a02ef3c6ace48ea36f0bad1051b000959">cmds</a> = <a class="code" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414">get_commands</a>(req);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; cmds[j]; ++j) {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <a class="code" href="commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad">run_ia_cmd</a>(cmds[j], clifd, map);</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <a class="code" href="commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2">run_graph_cmd</a>(cmds[j], clifd, map);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(cmds);</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> ((index == <a class="code" href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a>) ? (0) : (index));</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div><div class="ttc" id="commands__parsing_8c_html_ae88af3c7c8c827d710efa585d851a414"><div class="ttname"><a href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414">get_commands</a></div><div class="ttdeci">static char ** get_commands(char *req)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00015">commands_parsing.c:15</a></div></div>
 <div class="ttc" id="server_8h_html_a9880cfe1f4eb3140da2095fd081282f5"><div class="ttname"><a href="server_8h.html#a9880cfe1f4eb3140da2095fd081282f5">REF_NB</a></div><div class="ttdeci">#define REF_NB</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00026">server.h:26</a></div></div>
-<div class="ttc" id="server_8h_html_a839810bf07fd9d89e369c114f6b2c04d"><div class="ttname"><a href="server_8h.html#a839810bf07fd9d89e369c114f6b2c04d">cmds</a></div><div class="ttdeci">void *(* cmds)(cmdargs args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00174">server.h:174</a></div></div>
 <div class="ttc" id="cl__args__helpers_8c_html_a253a684161dba8187c365bc97b217d56"><div class="ttname"><a href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a></div><div class="ttdeci">void free_buffers(char **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00041">cl_args_helpers.c:41</a></div></div>
-<div class="ttc" id="server__decls_8c_html_ae19e01ff7678899828036520edec313c"><div class="ttname"><a href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a></div><div class="ttdeci">const char * G_PROTOS[REF_NB]</div><div class="ttdef"><b>Definition:</b> <a href="server__decls_8c_source.html#l00012">server_decls.c:12</a></div></div>
+<div class="ttc" id="server_8h_html_a02ef3c6ace48ea36f0bad1051b000959"><div class="ttname"><a href="server_8h.html#a02ef3c6ace48ea36f0bad1051b000959">cmds</a></div><div class="ttdeci">void *(* cmds)(char **args, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="server_8h_source.html#l00174">server.h:174</a></div></div>
+<div class="ttc" id="commands__parsing_8c_html_aac27b624eeac95af1dea70343e58ebd2"><div class="ttname"><a href="commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2">run_graph_cmd</a></div><div class="ttdeci">void run_graph_cmd(char *cmd, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00078">commands_parsing.c:78</a></div></div>
+<div class="ttc" id="commands__parsing_8c_html_a5cd4bf69b06bf00d9c14bc866b1d5cad"><div class="ttname"><a href="commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad">run_ia_cmd</a></div><div class="ttdeci">void run_ia_cmd(char *cmd, int clifd, t_world *map)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00057">commands_parsing.c:57</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="commands__parsing_8c_a68520138c8931ae45e9abb2a6433c06a_cgraph.png" border="0" usemap="#commands__parsing_8c_a68520138c8931ae45e9abb2a6433c06a_cgraph" alt=""/></div>
 <map name="commands__parsing_8c_a68520138c8931ae45e9abb2a6433c06a_cgraph" id="commands__parsing_8c_a68520138c8931ae45e9abb2a6433c06a_cgraph">
-<area shape="rect" id="node2" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="161,5,251,32"/>
-<area shape="rect" id="node3" href="commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="170,56,242,83"/>
-<area shape="rect" id="node4" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="151,107,261,133"/>
+<area shape="rect" id="node2" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="309,23,400,50"/>
+<area shape="rect" id="node3" href="commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="151,125,261,151"/>
+<area shape="rect" id="node4" href="commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2" title="run_graph_cmd" alt="" coords="151,23,261,50"/>
+<area shape="rect" id="node6" href="commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad" title="run_ia_cmd" alt="" coords="161,74,251,101"/>
+<area shape="rect" id="node5" href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7" title="get_args" alt="" coords="319,74,391,101"/>
 </map>
 </div>
 <div class="dynheader">
@@ -275,6 +291,157 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node5" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="577,80,628,107"/>
 <area shape="rect" id="node6" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="676,29,755,56"/>
 <area shape="rect" id="node7" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="679,80,751,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aac27b624eeac95af1dea70343e58ebd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac27b624eeac95af1dea70343e58ebd2">&#9670;&nbsp;</a></span>run_graph_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void run_graph_cmd </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clifd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__world.html">t_world</a> *&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Run command for Graphical client type </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>to check for </td></tr>
+    <tr><td class="paramname">clifd</td><td>the client file descriptor to read on </td></tr>
+    <tr><td class="paramname">map</td><td>the <a class="el" href="structt__world.html">t_world</a> trantor map </td></tr>
+    <tr><td class="paramname">index</td><td>the </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="commands__parsing_8c_source.html#l00078">78</a> of file <a class="el" href="commands__parsing_8c_source.html">commands_parsing.c</a>.</p>
+
+<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00041">free_buffers()</a>, <a class="el" href="server__decls_8c_source.html#l00050">G_GRAPH_CMDS</a>, <a class="el" href="server__decls_8c_source.html#l00042">G_GRAPH_PROTO</a>, <a class="el" href="commands__parsing_8c_source.html#l00036">get_args()</a>, and <a class="el" href="egg_8c_source.html#l00018">map</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00099">get_methods()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">char</span> **args = NULL;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">int</span> index = 0;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">for</span> (index = 0; <a class="code" href="server__decls_8c.html#a9aed00cffc13606fc19605a85517d972">G_GRAPH_PROTO</a>[index]; ++index) {</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">if</span> ((strstr(cmd, <a class="code" href="server__decls_8c.html#a9aed00cffc13606fc19605a85517d972">G_GRAPH_PROTO</a>[index]))) {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        args = <a class="code" href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7">get_args</a>(cmd, <span class="stringliteral">&quot; /&amp;=&quot;</span>);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        <a class="code" href="server__decls_8c.html#a36e4336fd5757fdac6bc8eb2a775c64a">G_GRAPH_CMDS</a>[index](args, clifd, <a class="code" href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a>);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(args);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div><div class="ttc" id="egg_8c_html_a00b3192dc2ad7ae86facdc2c0b8d7a96"><div class="ttname"><a href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a></div><div class="ttdeci">return map</div><div class="ttdef"><b>Definition:</b> <a href="egg_8c_source.html#l00018">egg.c:18</a></div></div>
+<div class="ttc" id="cl__args__helpers_8c_html_a253a684161dba8187c365bc97b217d56"><div class="ttname"><a href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a></div><div class="ttdeci">void free_buffers(char **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00041">cl_args_helpers.c:41</a></div></div>
+<div class="ttc" id="server__decls_8c_html_a9aed00cffc13606fc19605a85517d972"><div class="ttname"><a href="server__decls_8c.html#a9aed00cffc13606fc19605a85517d972">G_GRAPH_PROTO</a></div><div class="ttdeci">const char * G_GRAPH_PROTO[REF_NB]</div><div class="ttdef"><b>Definition:</b> <a href="server__decls_8c_source.html#l00042">server_decls.c:42</a></div></div>
+<div class="ttc" id="server__decls_8c_html_a36e4336fd5757fdac6bc8eb2a775c64a"><div class="ttname"><a href="server__decls_8c.html#a36e4336fd5757fdac6bc8eb2a775c64a">G_GRAPH_CMDS</a></div><div class="ttdeci">const cmds G_GRAPH_CMDS[REF_NB]</div><div class="ttdef"><b>Definition:</b> <a href="server__decls_8c_source.html#l00050">server_decls.c:50</a></div></div>
+<div class="ttc" id="commands__parsing_8c_html_aad860c217e20f06e4089c68d4ebfa6c7"><div class="ttname"><a href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7">get_args</a></div><div class="ttdeci">static char ** get_args(char *cmd, const char *sep)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00036">commands_parsing.c:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_cgraph.png" border="0" usemap="#commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_cgraph" alt=""/></div>
+<map name="commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_cgraph" id="commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_cgraph">
+<area shape="rect" id="node2" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="164,5,255,32"/>
+<area shape="rect" id="node3" href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7" title="get_args" alt="" coords="173,56,245,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_icgraph.png" border="0" usemap="#commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_icgraph" alt=""/></div>
+<map name="commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_icgraph" id="commands__parsing_8c_aac27b624eeac95af1dea70343e58ebd2_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="164,55,261,81"/>
+<area shape="rect" id="node3" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="309,55,420,81"/>
+<area shape="rect" id="node4" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="468,55,581,81"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="629,55,688,81"/>
+<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="736,80,787,107"/>
+<area shape="rect" id="node7" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="835,29,913,56"/>
+<area shape="rect" id="node8" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="838,80,910,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5cd4bf69b06bf00d9c14bc866b1d5cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd4bf69b06bf00d9c14bc866b1d5cad">&#9670;&nbsp;</a></span>run_ia_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void run_ia_cmd </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clifd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__world.html">t_world</a> *&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Run command for AI client type </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the 2D char array containing the request splitted by spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="commands__parsing_8c_source.html#l00057">57</a> of file <a class="el" href="commands__parsing_8c_source.html">commands_parsing.c</a>.</p>
+
+<p class="reference">References <a class="el" href="cl__args__helpers_8c_source.html#l00041">free_buffers()</a>, <a class="el" href="server__decls_8c_source.html#l00026">G_CMDS</a>, <a class="el" href="server__decls_8c_source.html#l00012">G_PROTOS</a>, <a class="el" href="commands__parsing_8c_source.html#l00036">get_args()</a>, and <a class="el" href="egg_8c_source.html#l00018">map</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands__parsing_8c_source.html#l00099">get_methods()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">char</span> **args = NULL;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        uint index = 0;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (index = 0; <a class="code" href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a>[index]; ++index) {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> ((strstr(cmd, <a class="code" href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a>[index]))) {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        args = <a class="code" href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7">get_args</a>(cmd, <span class="stringliteral">&quot; :&quot;</span>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        <a class="code" href="server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28">G_CMDS</a>[index](args, clifd, <a class="code" href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a>);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        <a class="code" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a>(args);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div><div class="ttc" id="server__decls_8c_html_a7bb29231b69e3767e187ffe5d5717b28"><div class="ttname"><a href="server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28">G_CMDS</a></div><div class="ttdeci">const cmds G_CMDS[REF_NB]</div><div class="ttdef"><b>Definition:</b> <a href="server__decls_8c_source.html#l00026">server_decls.c:26</a></div></div>
+<div class="ttc" id="egg_8c_html_a00b3192dc2ad7ae86facdc2c0b8d7a96"><div class="ttname"><a href="egg_8c.html#a00b3192dc2ad7ae86facdc2c0b8d7a96">map</a></div><div class="ttdeci">return map</div><div class="ttdef"><b>Definition:</b> <a href="egg_8c_source.html#l00018">egg.c:18</a></div></div>
+<div class="ttc" id="cl__args__helpers_8c_html_a253a684161dba8187c365bc97b217d56"><div class="ttname"><a href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56">free_buffers</a></div><div class="ttdeci">void free_buffers(char **buffer)</div><div class="ttdef"><b>Definition:</b> <a href="cl__args__helpers_8c_source.html#l00041">cl_args_helpers.c:41</a></div></div>
+<div class="ttc" id="server__decls_8c_html_ae19e01ff7678899828036520edec313c"><div class="ttname"><a href="server__decls_8c.html#ae19e01ff7678899828036520edec313c">G_PROTOS</a></div><div class="ttdeci">const char * G_PROTOS[REF_NB]</div><div class="ttdef"><b>Definition:</b> <a href="server__decls_8c_source.html#l00012">server_decls.c:12</a></div></div>
+<div class="ttc" id="commands__parsing_8c_html_aad860c217e20f06e4089c68d4ebfa6c7"><div class="ttname"><a href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7">get_args</a></div><div class="ttdeci">static char ** get_args(char *cmd, const char *sep)</div><div class="ttdef"><b>Definition:</b> <a href="commands__parsing_8c_source.html#l00036">commands_parsing.c:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_cgraph.png" border="0" usemap="#commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_cgraph" alt=""/></div>
+<map name="commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_cgraph" id="commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_cgraph">
+<area shape="rect" id="node2" href="cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="143,5,233,32"/>
+<area shape="rect" id="node3" href="commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7" title="get_args" alt="" coords="152,56,224,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_icgraph.png" border="0" usemap="#commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_icgraph" alt=""/></div>
+<map name="commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_icgraph" id="commands__parsing_8c_a5cd4bf69b06bf00d9c14bc866b1d5cad_icgraph">
+<area shape="rect" id="node2" href="server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="143,55,240,81"/>
+<area shape="rect" id="node3" href="server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="288,55,399,81"/>
+<area shape="rect" id="node4" href="server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="447,55,560,81"/>
+<area shape="rect" id="node5" href="server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="608,55,667,81"/>
+<area shape="rect" id="node6" href="main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="715,80,765,107"/>
+<area shape="rect" id="node7" href="server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="813,29,892,56"/>
+<area shape="rect" id="node8" href="time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="817,80,889,107"/>
 </map>
 </div>
 

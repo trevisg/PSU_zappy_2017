@@ -1,0 +1,9 @@
+<map id="run_ia_cmd" name="run_ia_cmd">
+<area shape="rect" id="node2" href="$server_8h.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="143,55,240,81"/>
+<area shape="rect" id="node3" href="$server__main_8c.html#a2670d42dbeb0847c84fde9c005a58ab5" title="events_handler" alt="" coords="288,55,399,81"/>
+<area shape="rect" id="node4" href="$server__main_8c.html#ab4a2d0a680c3d7d7ce499f65c84e4dcd" title="getactiveclients" alt="" coords="447,55,560,81"/>
+<area shape="rect" id="node5" href="$server_8h.html#a520962dfbb3f1db337f798e6335d8e32" title="server" alt="" coords="608,55,667,81"/>
+<area shape="rect" id="node6" href="$main_8c.html#a0c99d968a34e803d378692bde2e3f18f" title="main" alt="" coords="715,80,765,107"/>
+<area shape="rect" id="node7" href="$server_8h.html#a45a079803a87adc3a172025e7eded81d" title="get_world" alt="" coords="813,29,892,56"/>
+<area shape="rect" id="node8" href="$time__handlers_8c.html#a62269bdc0bb4875a8560b11b7b5ffcab" title="get_time" alt="" coords="817,80,889,107"/>
+</map>

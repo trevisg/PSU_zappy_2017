@@ -16,5 +16,7 @@ var searchData=
   ['ressources',['ressources',['../structt__tile.html#a28649d079c4f8a1d23849ce09ec3b137',1,'t_tile']]],
   ['ressources_5fdecl_2ec',['ressources_decl.c',['../ressources__decl_8c.html',1,'']]],
   ['right',['RIGHT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faec8379af7490bb9eaaf579cf17876f38',1,'server.h']]],
-  ['rp',['rp',['../structt__serv.html#a172abde1b7146a00a16c6368ab4fa724',1,'t_serv']]]
+  ['rp',['rp',['../structt__serv.html#a172abde1b7146a00a16c6368ab4fa724',1,'t_serv']]],
+  ['run_5fgraph_5fcmd',['run_graph_cmd',['../commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2',1,'commands_parsing.c']]],
+  ['run_5fia_5fcmd',['run_ia_cmd',['../commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad',1,'commands_parsing.c']]]
 ];

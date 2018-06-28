@@ -1,8 +1,10 @@
 <map id="events_handler" name="events_handler">
-<area shape="rect" id="node2" href="$commands__parsing_8c.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="164,69,261,96"/>
-<area shape="rect" id="node6" href="$logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="167,132,259,159"/>
-<area shape="rect" id="node3" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="319,5,410,32"/>
-<area shape="rect" id="node4" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="329,56,401,83"/>
-<area shape="rect" id="node5" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="309,107,420,133"/>
-<area shape="rect" id="node7" href="$logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0" title="get_host_string" alt="" coords="309,157,420,184"/>
+<area shape="rect" id="node2" href="$commands__parsing_8c.html#a68520138c8931ae45e9abb2a6433c06a" title="get_methods" alt="" coords="164,77,261,104"/>
+<area shape="rect" id="node8" href="$logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49" title="logthisevent" alt="" coords="167,153,259,180"/>
+<area shape="rect" id="node3" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="468,27,559,53"/>
+<area shape="rect" id="node4" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="309,77,420,104"/>
+<area shape="rect" id="node5" href="$commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2" title="run_graph_cmd" alt="" coords="309,27,420,53"/>
+<area shape="rect" id="node7" href="$commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad" title="run_ia_cmd" alt="" coords="320,128,409,155"/>
+<area shape="rect" id="node6" href="$commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7" title="get_args" alt="" coords="477,103,549,129"/>
+<area shape="rect" id="node9" href="$logs__helpers_8c.html#a2bcab2bec250f4df132d9cfc8fa070f0" title="get_host_string" alt="" coords="309,179,420,205"/>
 </map>

@@ -1,9 +1,15 @@
 var searchData=
 [
   ['g_5fcmds',['G_CMDS',['../server__decls_8c.html#a7bb29231b69e3767e187ffe5d5717b28',1,'G_CMDS():&#160;server_decls.c'],['../server_8h.html#a7bb29231b69e3767e187ffe5d5717b28',1,'G_CMDS():&#160;server_decls.c']]],
+  ['g_5fcommands_2ec',['g_commands.c',['../g__commands_8c.html',1,'']]],
+  ['g_5fgraph_5fcmds',['G_GRAPH_CMDS',['../server__decls_8c.html#a36e4336fd5757fdac6bc8eb2a775c64a',1,'G_GRAPH_CMDS():&#160;server_decls.c'],['../server_8h.html#a36e4336fd5757fdac6bc8eb2a775c64a',1,'G_GRAPH_CMDS():&#160;server_decls.c']]],
+  ['g_5fgraph_5fproto',['G_GRAPH_PROTO',['../server__decls_8c.html#a9aed00cffc13606fc19605a85517d972',1,'G_GRAPH_PROTO():&#160;server_decls.c'],['../server_8h.html#a9aed00cffc13606fc19605a85517d972',1,'G_GRAPH_PROTO():&#160;server_decls.c']]],
+  ['g_5fmapsize',['g_mapsize',['../g__commands_8c.html#a2920d1c59590a3fe7629fb6922dc185a',1,'g_mapsize(char **args, int clifd, t_world *map):&#160;g_commands.c'],['../cmd__fcts_8h.html#a2920d1c59590a3fe7629fb6922dc185a',1,'g_mapsize(char **args, int clifd, t_world *map):&#160;g_commands.c']]],
   ['g_5fprotos',['G_PROTOS',['../server__decls_8c.html#ae19e01ff7678899828036520edec313c',1,'G_PROTOS():&#160;server_decls.c'],['../server_8h.html#ae19e01ff7678899828036520edec313c',1,'G_PROTOS():&#160;server_decls.c']]],
+  ['g_5fteam_5fdetail',['g_team_detail',['../g__commands_8c.html#a5a6891ca72d98722fcb5b551457eb600',1,'g_team_detail(char **args, int clifd, t_world *map):&#160;g_commands.c'],['../cmd__fcts_8h.html#a5a6891ca72d98722fcb5b551457eb600',1,'g_team_detail(char **args, int clifd, t_world *map):&#160;g_commands.c']]],
+  ['g_5fteams_5fnames',['g_teams_names',['../g__commands_8c.html#a5ee02bd1dcd871abec0133b175743a9b',1,'g_teams_names(char **args, int clifd, t_world *map):&#160;g_commands.c'],['../cmd__fcts_8h.html#a5ee02bd1dcd871abec0133b175743a9b',1,'g_teams_names(char **args, int clifd, t_world *map):&#160;g_commands.c']]],
   ['game_2ec',['game.c',['../game_8c.html',1,'']]],
-  ['get_5fargs',['get_args',['../commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae',1,'commands_parsing.c']]],
+  ['get_5fargs',['get_args',['../commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7',1,'commands_parsing.c']]],
   ['get_5fclientsnb',['get_clientsNb',['../cl__flags__bis_8c.html#a7594cec69e8dc7da322bdc98b258f7e7',1,'get_clientsNb(char **clientsNb, t_clargs *args):&#160;cl_flags_bis.c'],['../server_8h.html#a7594cec69e8dc7da322bdc98b258f7e7',1,'get_clientsNb(char **clientsNb, t_clargs *args):&#160;cl_flags_bis.c']]],
   ['get_5fcmdargs',['get_cmdargs',['../cl__args__parsing_8c.html#af7a46b13cda096511abe66b6a304a1ae',1,'cl_args_parsing.c']]],
   ['get_5fcommands',['get_commands',['../commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414',1,'commands_parsing.c']]],

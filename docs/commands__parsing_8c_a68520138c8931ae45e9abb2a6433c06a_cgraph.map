@@ -1,5 +1,7 @@
 <map id="get_methods" name="get_methods">
-<area shape="rect" id="node2" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="161,5,251,32"/>
-<area shape="rect" id="node3" href="$commands__parsing_8c.html#ad7cc037b9642ffd85e521546772eceae" title="get_args" alt="" coords="170,56,242,83"/>
-<area shape="rect" id="node4" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="151,107,261,133"/>
+<area shape="rect" id="node2" href="$cl__args__helpers_8c.html#a253a684161dba8187c365bc97b217d56" title="free_buffers" alt="" coords="309,23,400,50"/>
+<area shape="rect" id="node3" href="$commands__parsing_8c.html#ae88af3c7c8c827d710efa585d851a414" title="get_commands" alt="" coords="151,125,261,151"/>
+<area shape="rect" id="node4" href="$commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2" title="run_graph_cmd" alt="" coords="151,23,261,50"/>
+<area shape="rect" id="node6" href="$commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad" title="run_ia_cmd" alt="" coords="161,74,251,101"/>
+<area shape="rect" id="node5" href="$commands__parsing_8c.html#aad860c217e20f06e4089c68d4ebfa6c7" title="get_args" alt="" coords="319,74,391,101"/>
 </map>
