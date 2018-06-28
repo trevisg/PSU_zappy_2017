@@ -32,6 +32,7 @@ class	Network {
 		Network();
 		~Network();
 		std::map<std::string, std::string>	look();
+		std::map<std::string, std::string>	forward();
 		bool 					listen_up();
 		std::vector<std::string>		get_teamnames();
 		std::string				get_lastbuffer();

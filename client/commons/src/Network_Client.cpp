@@ -54,7 +54,27 @@ std::vector<std::string>	Network::get_teamnames()
 std::map<std::string, std::string> Network::look()
 {
 	std::map<std::string, std::string> rt;
-	rt["foo"] = "Work in progress";
+	std::string req("Look\n");
+	write(_client_socket, req.c_str(), req.size());
+	listen_up();
+	// listen_up();
+	while (!_queue.empty()) {
+		std::cout << _queue.front() << std::endl;
+		_queue.pop();
+	}
+	return (rt);
+}
+
+std::map<std::string, std::string> Network::forward()
+{
+	std::map<std::string, std::string> rt;
+	std::string req("Forward\n");
+	write(_client_socket, req.c_str(), req.size());
+	listen_up();
+	while (!_queue.empty()) {
+		_queue.front();
+		_queue.pop();
+	}
 	return (rt);
 }
 
@@ -89,7 +109,7 @@ bool	Network::listen_up()
 {
 	int r_size = 0;
 	std::string s;
-	std::regex r("[a-z0-9]+");
+	std::regex r("[a-z0-9,]+");
 
 	memset(_server_resp, 0, MAX_RESP);
 	while ((r_size = read(_client_socket, _server_resp, MAX_RESP)) > 0) {
