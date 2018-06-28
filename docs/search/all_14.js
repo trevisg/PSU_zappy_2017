@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['usage',['usage',['../usage_8c.html#a9a05fb05f758a87628212c4bfc50c182',1,'usage(char *progname):&#160;usage.c'],['../server_8h.html#a9a05fb05f758a87628212c4bfc50c182',1,'usage(char *progname):&#160;usage.c']]],
-  ['usage_2ec',['usage.c',['../usage_8c.html',1,'']]],
-  ['user',['user',['../structt__userlist.html#af0fe946d87b868ea250805ce87ea637e',1,'t_userlist']]],
-  ['users',['users',['../structt__teams.html#a4fd5434dcebcd3b369bfcd9dbed44880',1,'t_teams']]],
-  ['users_5fmgr_2ec',['users_mgr.c',['../users__mgr_8c.html',1,'']]],
-  ['utils_2ec',['utils.c',['../utils_8c.html',1,'']]],
-  ['utils2_2ec',['utils2.c',['../utils2_8c.html',1,'']]]
+  ['w',['W',['../zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7',1,'zappy_game.h']]],
+  ['width',['width',['../structt__clargs.html#a39262a3ca77f31c8c1f3f3de046a369f',1,'t_clargs']]],
+  ['world_5fcreation_2ec',['world_creation.c',['../world__creation_8c.html',1,'']]]
 ];

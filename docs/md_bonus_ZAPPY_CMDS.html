@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSU_zappy_2017: _**Zappy protocol**_</title>
+<title>PSU_zappy_2017: Zappy IAClient to Server protocol</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,51 +61,38 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">_**Zappy protocol**_ </div>  </div>
+<div class="title">Zappy IAClient to Server protocol </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><ul>
-<li>Please find here the zappy protocol commands</li>
-</ul>
-<table class="doxtable">
+<div class="textblock"><table class="doxtable">
 <tr>
 <th align="center">Actions </th><th align="center">Command </th><th align="center">Time limit </th><th align="center">Response  </th></tr>
 <tr>
-<td align="center">Move up on tile </td><td align="center">Forward </td><td align="center">7/f </td><td align="center">ok </td></tr>
+<td align="center">Move up on tile </td><td align="center"><code>Forward</code> </td><td align="center">7/f </td><td align="center">ok </td></tr>
 <tr>
-<td align="center">Turn 90° right </td><td align="center">Right </td><td align="center">7/f </td><td align="center">ok </td></tr>
+<td align="center">Turn 90° right </td><td align="center"><code>Right</code> </td><td align="center">7/f </td><td align="center">ok </td></tr>
 <tr>
-<td align="center">Turn 90° left </td><td align="center">Left </td><td align="center">7/f </td><td align="center">ok </td></tr>
+<td align="center">Turn 90° left </td><td align="center"><code>Left</code> </td><td align="center">7/f </td><td align="center">ok </td></tr>
 <tr>
-<td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td></tr>
+<td align="center">Look around </td><td align="center"><code>Look</code> </td><td align="center">7/f </td><td align="center">[tile1,tile2...] </td></tr>
 <tr>
-<td align="center">Look around </td><td align="center">Look </td><td align="center">7/f </td><td align="center">[tile1,tile2...] </td></tr>
+<td align="center">Inventory </td><td align="center"><code>Inventory</code> </td><td align="center">1/f </td><td align="center">[linemate <em>n</em>, sibur <em>n</em>] </td></tr>
 <tr>
-<td align="center">Inventory </td><td align="center">Inventory </td><td align="center">1/f </td><td align="center">[linemate <em>n</em>, sibur <em>n</em>] </td></tr>
+<td align="center">Broadcast text </td><td align="center">[Broadcast text] </td><td align="center">7/f </td><td align="center">ok </td></tr>
 <tr>
-<td align="center">Broadcast text </td><td align="center">Broadcast text </td><td align="center">7/f </td><td align="center">ok </td></tr>
+<td align="center">Number of team unused slot </td><td align="center"><code>Connect_nbr</code> </td><td align="center">- </td><td align="center">value </td></tr>
 <tr>
-<td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td></tr>
+<td align="center">Fork a player </td><td align="center"><code>Fork</code> </td><td align="center">42/f </td><td align="center">ok </td></tr>
 <tr>
-<td align="center">Number of team unused slot </td><td align="center">Connect_nbr </td><td align="center">- </td><td align="center">value </td></tr>
-<tr>
-<td align="center">Fork a player </td><td align="center">Fork </td><td align="center">42/f </td><td align="center">ok </td></tr>
-<tr>
-<td align="center">Eject players from this tile </td><td align="center">Eject </td><td align="center">7/f </td><td align="center">ok/ko </td></tr>
+<td align="center">Eject players from this tile </td><td align="center"><code>Eject</code> </td><td align="center">7/f </td><td align="center">ok/ko </td></tr>
 <tr>
 <td align="center">Death of a player </td><td align="center">- </td><td align="center">- </td><td align="center">dead </td></tr>
 <tr>
-<td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td></tr>
+<td align="center">Take object </td><td align="center"><code>Take object</code> </td><td align="center">7/f </td><td align="center">ok/ko </td></tr>
 <tr>
-<td align="center">Take object </td><td align="center">Take object </td><td align="center">7/f </td><td align="center">ok/ko </td></tr>
+<td align="center">Set object down </td><td align="center"><code>Set object</code> </td><td align="center">7/f </td><td align="center">ok/ko </td></tr>
 <tr>
-<td align="center">Set object down </td><td align="center">Set object </td><td align="center">7/f </td><td align="center">ok/ko </td></tr>
-<tr>
-<td align="center">Start incantation </td><td align="center">Incantation </td><td align="center">300/f </td><td align="center">Elevation underway'\n'Current level: <em>k</em> /ko </td></tr>
-<tr>
-<td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td><td align="center">**--------&mdash;** </td></tr>
-<tr>
-<td align="center">None </td><td align="center">Foobar(bad command) </td><td align="center">- </td><td align="center">ko </td></tr>
+<td align="center">Start incantation </td><td align="center"><code>Incantation</code> </td><td align="center">300/f </td><td align="center">Elevation underway'\n'Current level: <em>k</em> /ko </td></tr>
 </table>
 <h3>Requirements</h3>
 <ul>
