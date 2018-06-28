@@ -11,7 +11,6 @@ void	*r_team(cmdargs args, int clifd, t_world *map)
 {
 	if (args[1] && strcmp(args[1], "graphical") == 0) {
 		map->graphical_fd = clifd;
-		dprintf(clifd, "GRAPHICAL SOCKET\n");
 	} else if (args[1] && assign_player(args[1], map->teams, clifd)) {
 		dprintf(clifd, "%d\n%d %d\n",
 			count_nb_empty(map->teams, args[1]),
@@ -53,7 +52,7 @@ void	*r_take_obj(cmdargs args, int clifd, t_world *map)
 	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
 	int x = player->curr_pos[0];
 	int y = player->curr_pos[1];
-	
+
 	printf("Player's food before:\t%d\n", player->inventory.food.qtt);
 	printf("Food on tile before:\t%d\n", map->tiles[x][y].ressources.food.qtt);
 	if (check_obj_on_map(map, x, y, args[1])) {
@@ -74,7 +73,7 @@ void	*r_set_obj(cmdargs args, int clifd, t_world *map)
 	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
 	int x = player->curr_pos[0];
 	int y = player->curr_pos[1];
-	
+
 	printf("Player's food before:\t%d\n", player->inventory.food.qtt);
 	printf("Food on tile before:\t%d\n", map->tiles[x][y].ressources.food.qtt);
 	if (check_obj_in_inv(player, args[1])) {
