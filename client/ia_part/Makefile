@@ -5,7 +5,7 @@
 ## Makefile for zappy client
 ##
 
-CC      	= g++
+CC      	= clang++
 
 DOXYGEN		= doxygen
 
