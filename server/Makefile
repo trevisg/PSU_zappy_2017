@@ -38,6 +38,7 @@ srcS	= varioushelpers_functions/time_handlers.c \
 		send_fcts/utils.c \
 		send_fcts/utils2.c \
 		send_fcts/g_commands.c \
+		send_fcts/ai_commands.c \
 		commands_parsing.c \
 		main.c
 

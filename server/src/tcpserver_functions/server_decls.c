@@ -14,25 +14,17 @@ const char *G_PROTOS[REF_NB] = {
 	"Right",
 	"Left",
 	"Team",
-	"Inventory",
-	"Broadcast",
-	"Connect_nbr",
-	"Take",
-	"Set",
+	"Look",
 	NULL
 };
 
 /** The functions pointers for the various RFC commands handlers */
 const cmds G_CMDS[REF_NB] = {
-	r_forward,
-	r_right,
-	r_left,
+	ai_forward,
+	ai_right,
+	ai_left,
 	r_team,
-	r_inventory,
-	r_broadcast,
-	r_connect_nbr,
-	r_take_obj,
-	r_set_obj,
+	ai_look,
 	NULL
 };
 
