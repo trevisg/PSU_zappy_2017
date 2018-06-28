@@ -11,5 +11,6 @@ a.out
 #Program binaries
 zappy_server
 zappy_client
+zappy_ai
 #IDE settings
 .vscode
