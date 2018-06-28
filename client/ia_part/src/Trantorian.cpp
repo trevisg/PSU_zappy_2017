@@ -78,7 +78,6 @@ bool	Trantorian::run(std::string team_name)
 			std::cerr << "state : " << "SEARCHING\n";
 			std::cerr << "send -->look \n";
 			resp = _client.look();
-			std::cerr << "Receive : " << resp["foo"] << "\n";
 			curr_state = MOOVING;
 			if (cnt >= 126) {
 				exit(EXIT_FAILURE);
@@ -89,6 +88,8 @@ bool	Trantorian::run(std::string team_name)
 			std::cerr << "Send Forward on trantor map \n";
 			std::cerr << "Note : we're still on level [";
 			std::cerr << _level << "]\n";
+			std::cerr << "send -->Forward \n";
+			resp = _client.forward();
 			curr_state = SEARCHING;
 		}
 		std::cerr << "TTl: " << cnt << "s\n";
