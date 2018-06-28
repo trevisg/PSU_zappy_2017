@@ -5,14 +5,14 @@
 ## Makefile for zappy client
 ##
 
-CC      	= clang++
+CC      	= g++
 
 DOXYGEN		= doxygen
 
 RM      	= rm -f
 
 CPPFLAGS	+= -I./include -I../commons/include  \
-		-Wall -Werror -Wextra -std=gnu++11
+		-Wall -Werror -Wextra -std=gnu++17
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
