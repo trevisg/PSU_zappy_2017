@@ -1,27 +1,20 @@
-# _**Zappy protocol**_
+# Zappy IAClient to Server protocol
 
--   Please find here the zappy protocol commands
-
-|            Actions           |       Command       |    Time limit   |                    Response                   |
-| :--------------------------: | :-----------------: | :-------------: | :-------------------------------------------: |
-|        Move up on tile       |       Forward       |       7/f       |                       ok                      |
-|        Turn 90° right        |        Right        |       7/f       |                       ok                      |
-|         Turn 90° left        |         Left        |       7/f       |                       ok                      |
-|        **-----------**       |   **-----------**   | **-----------** |                **-----------**                |
-|          Look around         |         Look        |       7/f       |                [tile1,tile2...]               |
-|           Inventory          |      Inventory      |       1/f       |           \[linemate _n_, sibur _n_]          |
-|        Broadcast text        |    Broadcast text   |       7/f       |                       ok                      |
-|        **-----------**       |   **-----------**   | **-----------** |                **-----------**                |
-|  Number of team unused slot  |     Connect_nbr     |        -        |                     value                     |
-|         Fork a player        |         Fork        |       42/f      |                       ok                      |
-| Eject players from this tile |        Eject        |       7/f       |                     ok/ko                     |
-|       Death of a player      |          -          |        -        |                      dead                     |
-|        **-----------**       |   **-----------**   | **-----------** |                **-----------**                |
-|          Take object         |     Take object     |       7/f       |                     ok/ko                     |
-|        Set object down       |      Set object     |       7/f       |                     ok/ko                     |
-|       Start incantation      |     Incantation     |      300/f      | Elevation underway'\\n'Current level: _k_ /ko |
-|        **-----------**       |   **-----------**   | **-----------** |                **-----------**                |
-|             None             | Foobar(bad command) |        -        |                       ko                      |
+|            Actions           |      Command     | Time limit |                    Response                   |
+| :--------------------------: | :--------------: | :--------: | :-------------------------------------------: |
+|        Move up on tile       |     `Forward`    |     7/f    |                       ok                      |
+|        Turn 90° right        |      `Right`     |     7/f    |                       ok                      |
+|         Turn 90° left        |      `Left`      |     7/f    |                       ok                      |
+|          Look around         |      `Look`      |     7/f    |                [tile1,tile2...]               |
+|           Inventory          |    `Inventory`   |     1/f    |           \[linemate _n_, sibur _n_]          |
+|        Broadcast text        | [Broadcast text] |     7/f    |                       ok                      |
+|  Number of team unused slot  |   `Connect_nbr`  |      -     |                     value                     |
+|         Fork a player        |      `Fork`      |    42/f    |                       ok                      |
+| Eject players from this tile |      `Eject`     |     7/f    |                     ok/ko                     |
+|       Death of a player      |         -        |      -     |                      dead                     |
+|          Take object         |   `Take object`  |     7/f    |                     ok/ko                     |
+|        Set object down       |   `Set object`   |     7/f    |                     ok/ko                     |
+|       Start incantation      |   `Incantation`  |    300/f   | Elevation underway'\\n'Current level: _k_ /ko |
 
 ### Requirements
 

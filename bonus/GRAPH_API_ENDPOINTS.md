@@ -1,4 +1,4 @@
-# _ Zappy  **GraphClient to Server** protocol_
+# Zappy GraphClient to Server protocol
 
 ## Get game **map size**
 
