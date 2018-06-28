@@ -2,8 +2,8 @@ langage: c
 git:
   lfs_skip_smudge: true
 before_install:
-   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-   - sudo apt update
+   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+   - sudo apt update -y
    - sudo apt install -y g++-6
    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 script: make && make clean
