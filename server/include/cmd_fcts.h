@@ -14,12 +14,12 @@
 	/** see send_fcts/ai_commands.c */
 	void		*ai_look(char **args, int clifd, t_world *map);
 	void		*ai_forward(char **args, int clifd, t_world *map);
-	void		*ai_left(char **cmdargs, int clifd, t_world *map);
-	void		*ai_right(char **cmdargs, int clifd, t_world *map);
+	void		*ai_left(char **args, int clifd, t_world *map);
+	void		*ai_right(char **args, int clifd, t_world *map);
 
 
 	/** see send_fcts/broadcast.c */
-	void		*r_team(cmdargs args, int clifd, t_world *map);
+	void		*r_team(char **args, int clifd, t_world *map);
 
 	/** see send_fcts/utils.c */
 	int		assign_player(char *team_name, t_teams *teams, int clifd);
