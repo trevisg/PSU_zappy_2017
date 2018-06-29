@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['phiras',['PHIRAS',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba5580e70ebf42665014dca5cfdaa11b82',1,'zappy_game.h']]]
+  ['right',['RIGHT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faec8379af7490bb9eaaf579cf17876f38',1,'server.h']]]
 ];

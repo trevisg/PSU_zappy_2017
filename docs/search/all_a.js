@@ -7,5 +7,5 @@ var searchData=
   ['logs_5fhelpers_2ec',['logs_helpers.c',['../logs__helpers_8c.html',1,'']]],
   ['logthisevent',['logthisevent',['../logs__helpers_8c.html#a7e2903ce4461ed71cf294dd675bd4c49',1,'logthisevent(const char etype, t_serv *all):&#160;logs_helpers.c'],['../server_8h.html#a7e2903ce4461ed71cf294dd675bd4c49',1,'logthisevent(const char etype, t_serv *all):&#160;logs_helpers.c']]],
   ['look',['LOOK',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fafe748ae632925b534e23d1e296b4b82f',1,'server.h']]],
-  ['lpaths',['LPATHS',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84f',1,'server.h']]]
+  ['looking_5fpos',['looking_pos',['../ai__commands_8c.html#ad10b85123124ffdcb3148e1e276e656b',1,'ai_commands.c']]]
 ];

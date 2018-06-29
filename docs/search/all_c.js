@@ -8,6 +8,5 @@ var searchData=
   ['nfds',['nfds',['../structt__serv.html#a7b5878e105d4dffb4c82f54ea947d6b6',1,'t_serv']]],
   ['ni_5fmaxhost',['NI_MAXHOST',['../server_8h.html#aebc53e498b2434654a1d44070d9ccd40',1,'server.h']]],
   ['ni_5fmaxserv',['NI_MAXSERV',['../server_8h.html#aefdeadf85356cc2fa0870d86a6055eb1',1,'server.h']]],
-  ['notices',['NOTICES',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84faa4c3e403340be8ad2c8b1a70534adb12',1,'server.h']]],
   ['nread',['nread',['../structt__serv.html#ace5f02b9101bdb1b26c362dce1e4e5c9',1,'t_serv']]]
 ];

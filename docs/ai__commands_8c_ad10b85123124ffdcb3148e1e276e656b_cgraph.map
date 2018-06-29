@@ -1,0 +1,6 @@
+<map id="looking_pos" name="looking_pos">
+<area shape="rect" id="node2" href="$ai__commands_8c.html#a6b857ba11c70f63f88bd7916b5a5e983" title="set_east" alt="" coords="147,5,219,32"/>
+<area shape="rect" id="node3" href="$ai__commands_8c.html#ab2891a15870fc5e914717d9e6d582fb8" title="set_north" alt="" coords="145,56,221,83"/>
+<area shape="rect" id="node4" href="$ai__commands_8c.html#a6db0270ea63791cb02b00eb31bacbd6a" title="set_south" alt="" coords="144,107,223,133"/>
+<area shape="rect" id="node5" href="$ai__commands_8c.html#a27c1cc337e13e6c61342c279d54dfea9" title="set_west" alt="" coords="146,157,221,184"/>
+</map>

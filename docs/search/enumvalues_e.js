@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['take_5fobject',['TAKE_OBJECT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fadec4a7d078a679b35881588f8d9309d3',1,'server.h']]],
-  ['team',['TEAM',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fa897dca2818b7cc4f96684a871e3e2bf1',1,'server.h']]],
-  ['thystame',['THYSTAME',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbae4ec89137c3adb98896a1beead6cf185',1,'zappy_game.h']]]
+  ['w',['W',['../zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab722ceeb601c72cd78fbd35f3581fdf7',1,'zappy_game.h']]]
 ];

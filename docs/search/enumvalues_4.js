@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['e',['E',['../zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4cab199e021998d49b1f09338d8b9b18ecb',1,'zappy_game.h']]],
-  ['eject',['EJECT',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581fa3eeb798a9fa67d65223be9c20d6b8261',1,'server.h']]],
-  ['empty',['EMPTY',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba2f0d18fc0d0fa4a6cd92dc328501874d',1,'zappy_game.h']]],
-  ['errors',['ERRORS',['../server_8h.html#adcc3dd03f6be8a8011d83677b20ea84fa3dd2c95c6f5060be15bf596d2a012034',1,'server.h']]]
+  ['food',['FOOD',['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4',1,'zappy_game.h']]],
+  ['fork',['FORK',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faeb5838b12f5849b4544c2d9d10dc6548',1,'server.h']]],
+  ['forward',['FORWARD',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faa26736999186daf8146f809e863712a1',1,'server.h']]]
 ];

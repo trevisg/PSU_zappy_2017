@@ -1,0 +1,6 @@
+<map id="r_take_obj" name="r_take_obj">
+<area shape="rect" id="node2" href="$utils_8c.html#a77a835e84cc9da9595cda68c474fee1b" title="add_obj_to_player" alt="" coords="140,5,267,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a6d94440e67d094049d074af7a8a7ee37" title="check_obj_on_map" alt="" coords="136,56,271,83"/>
+<area shape="rect" id="node4" href="$utils2_8c.html#a99f6f96641b41d3811ba060812dafa59" title="del_obj_on_map" alt="" coords="145,107,261,133"/>
+<area shape="rect" id="node5" href="$find__list_8c.html#a124ce3d51d705a4e9e1bab1cb2b8d29f" title="find_player_by_fd" alt="" coords="141,157,265,184"/>
+</map>

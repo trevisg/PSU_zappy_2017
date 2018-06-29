@@ -1,14 +1,11 @@
 var searchData=
 [
-  ['r_5fbroadcast',['r_broadcast',['../broadcast_8c.html#a1ec7fb62ed6de667355d382645cbf7ca',1,'r_broadcast(cmdargs args, int clifd, t_world *map):&#160;broadcast.c'],['../cmd__fcts_8h.html#a1ec7fb62ed6de667355d382645cbf7ca',1,'r_broadcast(cmdargs args, int clifd, t_world *map):&#160;broadcast.c']]],
-  ['r_5fconnect_5fnbr',['r_connect_nbr',['../broadcast_8c.html#a50b5295987bced83983cc53a261aeb16',1,'r_connect_nbr(cmdargs args, int clifd, t_world *map):&#160;broadcast.c'],['../cmd__fcts_8h.html#a50b5295987bced83983cc53a261aeb16',1,'r_connect_nbr(cmdargs args, int clifd, t_world *map):&#160;broadcast.c']]],
-  ['r_5fforward',['r_forward',['../motion_8c.html#ae0b175c18fa02629959e910c383fa53f',1,'r_forward(cmdargs args, int clifd, t_world *map):&#160;motion.c'],['../cmd__fcts_8h.html#ae0b175c18fa02629959e910c383fa53f',1,'r_forward(cmdargs args, int clifd, t_world *map):&#160;motion.c']]],
-  ['r_5finventory',['r_inventory',['../motion_8c.html#a1d7b0c0c021d99b17d1e33cc58eefe4f',1,'r_inventory(cmdargs args, int clifd, t_world *map):&#160;motion.c'],['../cmd__fcts_8h.html#a1d7b0c0c021d99b17d1e33cc58eefe4f',1,'r_inventory(cmdargs args, int clifd, t_world *map):&#160;motion.c']]],
-  ['r_5fleft',['r_left',['../motion_8c.html#a1b22c76e3ad495ccba0cc78f9c9f0c42',1,'r_left(cmdargs args, int clifd, t_world *map):&#160;motion.c'],['../cmd__fcts_8h.html#a1b22c76e3ad495ccba0cc78f9c9f0c42',1,'r_left(cmdargs args, int clifd, t_world *map):&#160;motion.c']]],
-  ['r_5fright',['r_right',['../motion_8c.html#acdf19d0f050d9f8274ca33e28917e038',1,'r_right(cmdargs args, int clifd, t_world *map):&#160;motion.c'],['../cmd__fcts_8h.html#acdf19d0f050d9f8274ca33e28917e038',1,'r_right(cmdargs args, int clifd, t_world *map):&#160;motion.c']]],
-  ['r_5fset_5fobj',['r_set_obj',['../broadcast_8c.html#a773f788210bf767ab8a2b8ca3b548f62',1,'r_set_obj(cmdargs args, int clifd, t_world *map):&#160;broadcast.c'],['../cmd__fcts_8h.html#a773f788210bf767ab8a2b8ca3b548f62',1,'r_set_obj(cmdargs args, int clifd, t_world *map):&#160;broadcast.c']]],
-  ['r_5ftake_5fobj',['r_take_obj',['../broadcast_8c.html#aed91730230e02f56e9ea84e3b5b58c4a',1,'r_take_obj(cmdargs args, int clifd, t_world *map):&#160;broadcast.c'],['../cmd__fcts_8h.html#aed91730230e02f56e9ea84e3b5b58c4a',1,'r_take_obj(cmdargs args, int clifd, t_world *map):&#160;broadcast.c']]],
-  ['r_5fteam',['r_team',['../broadcast_8c.html#afd9b3ac53689fe20b48b326167674a9d',1,'r_team(cmdargs args, int clifd, t_world *map):&#160;broadcast.c'],['../cmd__fcts_8h.html#afd9b3ac53689fe20b48b326167674a9d',1,'r_team(cmdargs args, int clifd, t_world *map):&#160;broadcast.c']]],
+  ['r_5fbroadcast',['r_broadcast',['../broadcast_8c.html#a62e543c3179e70fd85888bda574b5293',1,'broadcast.c']]],
+  ['r_5fconnect_5fnbr',['r_connect_nbr',['../broadcast_8c.html#aadc3b9b40e49036a3be9bda36eb693e3',1,'broadcast.c']]],
+  ['r_5finventory',['r_inventory',['../motion_8c.html#ab360d8bb7fcaa61016dffd85b23779db',1,'motion.c']]],
+  ['r_5fset_5fobj',['r_set_obj',['../broadcast_8c.html#ae9e7d21e1bc9f7bdc994c33d5b7bc9fd',1,'broadcast.c']]],
+  ['r_5ftake_5fobj',['r_take_obj',['../broadcast_8c.html#a28540ae8352195efeef58610fa274a0c',1,'broadcast.c']]],
+  ['r_5fteam',['r_team',['../broadcast_8c.html#a022a2365670504129a980b1d96bfd301',1,'r_team(char **args, int clifd, t_world *map):&#160;broadcast.c'],['../cmd__fcts_8h.html#a022a2365670504129a980b1d96bfd301',1,'r_team(char **args, int clifd, t_world *map):&#160;broadcast.c']]],
   ['run_5fgraph_5fcmd',['run_graph_cmd',['../commands__parsing_8c.html#aac27b624eeac95af1dea70343e58ebd2',1,'commands_parsing.c']]],
   ['run_5fia_5fcmd',['run_ia_cmd',['../commands__parsing_8c.html#a5cd4bf69b06bf00d9c14bc866b1d5cad',1,'commands_parsing.c']]]
 ];

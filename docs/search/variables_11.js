@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['service',['service',['../structt__serv.html#a2f305e0125282618c509c3a74ad89ab3',1,'t_serv']]],
-  ['set',['set',['../structt__log.html#ac07514e66fd21d577e21fafffcd51e06',1,'t_log']]],
-  ['sibur',['sibur',['../structt__ressources.html#a9d0d21c8cca0c04566b7a12dbd7b829f',1,'t_ressources']]],
-  ['sizex',['sizeX',['../structt__world.html#a90fc1f62e2e44133fc707dfe2b17e093',1,'t_world']]],
-  ['sizey',['sizeY',['../structt__world.html#a1d7f4cd395bb1ac86eba99209ea5e32a',1,'t_world']]]
+  ['team_5fname',['team_name',['../structt__inhabitant.html#ac36c745a9ba662164b67bfdc378c3a1d',1,'t_inhabitant::team_name()'],['../structt__teams.html#a303ffb9c04deceb3471cd0ef93c13160',1,'t_teams::team_name()']]],
+  ['teams',['teams',['../structt__world.html#a9c53639afff86dda89959bbb1e81bc9c',1,'t_world']]],
+  ['teams_5fnames',['teams_names',['../structt__clargs.html#a912f604527fad6466804c2a570297e5a',1,'t_clargs']]],
+  ['thystame',['thystame',['../structt__ressources.html#a439864a0b778707d8583161892c8cfe4',1,'t_ressources']]],
+  ['tile',['tile',['../egg_8c.html#a29f569dfc0c379c878dc58ee5da3a30a',1,'egg.c']]],
+  ['tiles',['tiles',['../structt__world.html#aa363f8f1028c8a0f60ca3c48f65d8a6c',1,'t_world']]],
+  ['ttl',['ttl',['../structt__inhabitant.html#a1760506e1cf8684f3e7bd8c031689391',1,'t_inhabitant']]]
 ];

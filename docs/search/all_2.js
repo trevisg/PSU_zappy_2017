@@ -13,7 +13,6 @@ var searchData=
   ['clifd',['clifd',['../structt__inhabitant.html#a93402231cd6ddbff8adafe2c6524dad6',1,'t_inhabitant']]],
   ['cmd_2ec',['cmd.c',['../cmd_8c.html',1,'']]],
   ['cmd_5ffcts_2eh',['cmd_fcts.h',['../cmd__fcts_8h.html',1,'']]],
-  ['cmdargs',['cmdargs',['../server_8h.html#acfbe918d8821ff3d1d8dc2c90bb8f6a2',1,'server.h']]],
   ['cmds',['CMDS',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581f',1,'CMDS():&#160;server.h'],['../server_8h.html#a02ef3c6ace48ea36f0bad1051b000959',1,'cmds():&#160;server.h']]],
   ['commands_5fparsing_2ec',['commands_parsing.c',['../commands__parsing_8c.html',1,'']]],
   ['conn_5fsock',['conn_sock',['../structt__serv.html#a6bdf522531cf7f1c8dd80f7044590122',1,'t_serv']]],

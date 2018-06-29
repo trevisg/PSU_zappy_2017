@@ -13,7 +13,6 @@ var searchData=
   ['maxargsize',['MAXARGSIZE',['../server_8h.html#ab0122c358494825a5050009adfff9fc0',1,'server.h']]],
   ['maxteams',['MAXTEAMS',['../server_8h.html#a62fc18737cc14ec9c2e3efb1bdbf6f04',1,'server.h']]],
   ['mendiane',['mendiane',['../structt__ressources.html#ab4fe5ada88960040d0fabcadbef7b454',1,'t_ressources::mendiane()'],['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebba52a4fda632b2e9f5d1472ba2190218f9',1,'MENDIANE():&#160;zappy_game.h']]],
-  ['mode',['mode',['../structt__log.html#acfec0e07dc912f8e9af8fe3c65a5d0d2',1,'t_log']]],
   ['motion_2ec',['motion.c',['../motion_8c.html',1,'']]],
-  ['move',['move',['../utils_8c.html#ac109e59008c32c4f367cab03e273ca2f',1,'move(t_inhabitant *player, t_world *map):&#160;utils.c'],['../cmd__fcts_8h.html#ac109e59008c32c4f367cab03e273ca2f',1,'move(t_inhabitant *player, t_world *map):&#160;utils.c']]]
+  ['move',['move',['../utils_8c.html#ac109e59008c32c4f367cab03e273ca2f',1,'utils.c']]]
 ];
