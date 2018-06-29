@@ -7,7 +7,7 @@
 
 #include "cmd_fcts.h"
 
-void *r_inventory(cmdargs args, int clifd, t_world *map)
+void *r_inventory(char **args, int clifd, t_world *map)
 {
 	args[0][0] = 'c';
 	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
