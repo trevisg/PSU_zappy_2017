@@ -10,7 +10,7 @@
 Trantorian::Trantorian(std::string server_port, std::string server_host) :
 _server_port(server_port), _server_host(server_host)
 {
-	_level = 0;
+	_level = 1;
 }
 
 Trantorian::~Trantorian()
@@ -42,13 +42,6 @@ void 	log_drop( std::map<std::string, std::string> resp,
 bool	Trantorian::run(std::string team_name)
 {
 	bool rt = false;
-	enum STATE {
-		DROPPING = 0,
-		MOOVING = 1,
-		SEARCHING = 2,
-		STONE_COLLECT = 3,
-		FOOD_COLLECT = 4
-	};
 	static STATE curr_state;
 	static uint cnt;
 	std::vector<int> map_size;
@@ -77,10 +70,15 @@ bool	Trantorian::run(std::string team_name)
 		if (curr_state == SEARCHING) {
 			std::cerr << "state : " << "SEARCHING\n";
 			std::cerr << "send -->look \n";
-			resp = _client.look();
+			std::vector<std::string> v = _client.look();
 			curr_state = MOOVING;
-			if (cnt >= 126) {
-				exit(EXIT_FAILURE);
+			for (uint popo = 0; popo != v.size(); ++popo) {
+				std::cout << "[" << v[popo]
+				<< "]" << std::endl;
+			}
+			if (cnt >= 30) {
+				std::cerr << "No more life exiting..\n";
+				kill(getpid(), SIGINT);
 			}
 		}
 		if (curr_state == MOOVING) {
