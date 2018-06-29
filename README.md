@@ -42,10 +42,10 @@
 
 ## Overview :
 
-* Click on the below gif to see a running capture of zappy_server && zappy_ai working together
+* Show a running capture of zappy_server && zappy_ai working together
 
-* <img src="https://github.com/trevisg/PSU_zappy_2017/raw/graphClient/bonus/dummy_aiZappy0.0.600.gif"
-     alt="Markdown Monster icon"
+* <img src="https://github.com/trevisg/PSU_zappy_2017/raw/master/bonus/dummy_aiZappy0.0.600.gif"
+     alt="As of release 0.0.600 "
      style="float: left; margin-right: 10px; margin-bottom: 10px; width: 300px;
      height: 200px"
 />
