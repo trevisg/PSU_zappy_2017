@@ -19,11 +19,6 @@
 
 > A AI vs themselves network game in C & C++ <a href="https://github.com/trevisg/PSU_zappy_2017"> on github</a>
 
-<img src="https://github.com/trevisg/PSU_zappy_2017/raw/graphClient/bonus/dummy_aiZappy0.0.600.gif"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;"
-/>
-
 ## Usage :
 
 -   `make zappy_server && make clean` to build
@@ -46,6 +41,12 @@
 
 -   A [quick write up](bonus/ZAPPY_CMDS.md) with server commands could be found on the bonus directory
 -   U'll find the complete documentation hosted at [this page](https://trevisg.github.io/PSU_zappy_2017/)
+
+## Overview :
+<img src="https://github.com/trevisg/PSU_zappy_2017/raw/graphClient/bonus/dummy_aiZappy0.0.600.gif"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px; margin-bottom: 10px"
+/>
 
 ## Various :
 
