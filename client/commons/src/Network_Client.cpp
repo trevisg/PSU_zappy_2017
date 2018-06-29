@@ -51,15 +51,14 @@ std::vector<std::string>	Network::get_teamnames()
 	return (teams);
 }
 
-std::map<std::string, std::string> Network::look()
+std::vector<std::string> Network::look()
 {
-	std::map<std::string, std::string> rt;
+	std::vector<std::string> rt;
 	std::string req("Look\n");
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
-	// listen_up();
 	while (!_queue.empty()) {
-		std::cout << _queue.front() << std::endl;
+		rt.emplace_back(_queue.front());
 		_queue.pop();
 	}
 	return (rt);
@@ -72,7 +71,6 @@ std::map<std::string, std::string> Network::forward()
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	while (!_queue.empty()) {
-		_queue.front();
 		_queue.pop();
 	}
 	return (rt);

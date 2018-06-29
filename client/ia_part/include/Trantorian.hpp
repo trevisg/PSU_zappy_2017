@@ -9,6 +9,7 @@
 # define TRANTORIAN_HPP_
 
 #include <iostream>
+#include <signal.h>
 #include <string>
 #include <map>
 #include "../../commons/include/Network_Client.hpp"
@@ -17,6 +18,15 @@ enum {
 	X = 0,
 	Y = 1
 };
+
+typedef enum  {
+	DROPPING = 0,
+	FORKING = 1,
+	MOOVING = 2,
+	SEARCHING = 3,
+	STONE_COLLECT = 4,
+	FOOD_COLLECT = 5
+}	STATE;
 
 class Trantorian
 {
