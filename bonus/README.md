@@ -43,11 +43,11 @@
 -   U'll find the complete documentation hosted at [this page](https://trevisg.github.io/PSU_zappy_2017/)
 
 ## Overview :
-<img src="https://github.com/trevisg/PSU_zappy_2017/raw/graphClient/bonus/dummy_aiZappy0.0.600.gif"
+
+* Click on the below gif to see a running capture of zappy_server && zappy_ai working together
+
+* <img src="https://github.com/trevisg/PSU_zappy_2017/raw/graphClient/bonus/dummy_aiZappy0.0.600.gif"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px; margin-bottom: 10px"
+     style="float: left; margin-right: 10px; margin-bottom: 10px; width: 300px;
+     height: 200px"
 />
-
-## Various :
-
--   **Epitech students** , don't be timid pass by the chat to say hello , thanks or whatever after cloning this (always) WIP project ;)
