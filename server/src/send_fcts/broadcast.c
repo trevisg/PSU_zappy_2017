@@ -7,7 +7,7 @@
 
 #include "cmd_fcts.h"
 
-void	*r_team(cmdargs args, int clifd, t_world *map)
+void	*r_team(char ** args, int clifd, t_world *map)
 {
 	if (args[1] && strcmp(args[1], "graphical") == 0) {
 		map->graphical_fd = clifd;
@@ -21,7 +21,7 @@ void	*r_team(cmdargs args, int clifd, t_world *map)
 	return map;
 }
 
-void	*r_broadcast(cmdargs args, int clifd, t_world *map)
+void	*r_broadcast(char ** args, int clifd, t_world *map)
 {
 	if (!args[1])
 		return map;
@@ -37,7 +37,7 @@ void	*r_broadcast(cmdargs args, int clifd, t_world *map)
 	return map;
 }
 
-void	*r_connect_nbr(cmdargs args, int clifd, t_world *map)
+void	*r_connect_nbr(char ** args, int clifd, t_world *map)
 {
 	args[0][0] = 'c';
 	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
@@ -46,7 +46,7 @@ void	*r_connect_nbr(cmdargs args, int clifd, t_world *map)
 	return map;
 }
 
-void	*r_take_obj(cmdargs args, int clifd, t_world *map)
+void	*r_take_obj(char ** args, int clifd, t_world *map)
 {
 	args[0][0] = 'c';
 	t_inhabitant *player = find_player_by_fd(map->teams, clifd);
@@ -67,7 +67,7 @@ void	*r_take_obj(cmdargs args, int clifd, t_world *map)
 	return map;
 }
 
-void	*r_set_obj(cmdargs args, int clifd, t_world *map)
+void	*r_set_obj(char ** args, int clifd, t_world *map)
 {
 	args[0][0] = 'c';
 	t_inhabitant *player = find_player_by_fd(map->teams, clifd);

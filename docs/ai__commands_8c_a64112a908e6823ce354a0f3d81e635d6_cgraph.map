@@ -1,0 +1,10 @@
+<map id="target_zone" name="target_zone">
+<area shape="rect" id="node2" href="$ai__commands_8c.html#ad6cf2a21bd51c243d8fb804cf5d9b43d" title="is_tile_to_look" alt="" coords="150,31,255,57"/>
+<area shape="rect" id="node3" href="$ai__commands_8c.html#ad10b85123124ffdcb3148e1e276e656b" title="looking_pos" alt="" coords="157,81,248,108"/>
+<area shape="rect" id="node8" href="$ai__commands_8c.html#a0a041cc06744f9e57b152c75ac4e4780" title="print_cell" alt="" coords="165,132,240,159"/>
+<area shape="rect" id="node9" href="$ai__commands_8c.html#abf2a98dd46a7de8ec0ceb2b7717c95ba" title="send_tilecontent" alt="" coords="144,183,261,209"/>
+<area shape="rect" id="node4" href="$ai__commands_8c.html#a6b857ba11c70f63f88bd7916b5a5e983" title="set_east" alt="" coords="313,5,385,32"/>
+<area shape="rect" id="node5" href="$ai__commands_8c.html#ab2891a15870fc5e914717d9e6d582fb8" title="set_north" alt="" coords="311,56,387,83"/>
+<area shape="rect" id="node6" href="$ai__commands_8c.html#a6db0270ea63791cb02b00eb31bacbd6a" title="set_south" alt="" coords="309,107,388,133"/>
+<area shape="rect" id="node7" href="$ai__commands_8c.html#a27c1cc337e13e6c61342c279d54dfea9" title="set_west" alt="" coords="311,157,386,184"/>
+</map>

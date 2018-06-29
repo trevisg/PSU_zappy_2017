@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orientation',['ORIENTATION',['../zappy__game_8h.html#adc460053ab2088d3fe74b8b90a7a1c4c',1,'zappy_game.h']]]
+  ['pos',['POS',['../zappy__game_8h.html#ad5bd5cf46662b1bd6f954b8ac62f3d79',1,'zappy_game.h']]]
 ];

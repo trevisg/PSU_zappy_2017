@@ -7,6 +7,11 @@
 
 #include "../../include/cmd_fcts.h"
 
+/** Chained list helper function to find a user in all t_teams by its clifd
+* @param clifd the message sender unique identifier
+* @param temps the t_world::teams containing all the teams and their users
+* @return user the requested t_inhabitant pointer
+*/
 static t_inhabitant	*get_user(int clifd, t_teams *temps)
 {
 	t_inhabitant *user = NULL;
@@ -33,7 +38,25 @@ void		print_cell(int y, int x, t_inhabitant *usr)
 	&& x == usr->curr_pos[X]) ? "X]" : ".]");
 }
 
+uint		is_tile_to_look(int **to_look, int i, int j)
+{
+	uint rt = ((to_look[0][X] == j && to_look[0][Y] == i)
+	|| (to_look[1][X] == j && to_look[1][Y] == i)
+	|| (to_look[2][X] == j && to_look[2][Y] == i))
+	? true : false;
 
+	return (rt);
+}
+
+/** Helper for ai_look and ai_forward functions, return an int array containing
+* the 'viewable' tiles for a Level 1 player, ** handle ORIENTATION::N **
+* positions.
+* @param to_look the positions to be set
+* @param playerx the player X position
+* @param playery the player Y position
+* @param level the player current level
+* @return to_look the int array `look north side` tiles coordinates
+*/
 int		**set_north(int **to_look, int playerx, int playery, int level)
 {
 	to_look[0][Y] = playery - level;
@@ -45,6 +68,15 @@ int		**set_north(int **to_look, int playerx, int playery, int level)
 	return (to_look);
 }
 
+/** Helper for ai_look and ai_forward functions, return an int array containing
+* the 'viewable' tiles for a Level 1 player, ** handle ORIENTATION::S **
+* positions.
+* @param to_look the positions to be set
+* @param playerx the player X position
+* @param playery the player Y position
+* @param level the player current level
+* @return to_look the int array `look south side` tiles coordinates
+*/
 int		**set_south(int **to_look, int playerx, int playery, int level)
 {
 	to_look[0][Y] = playery + level;
@@ -56,6 +88,15 @@ int		**set_south(int **to_look, int playerx, int playery, int level)
 	return (to_look);
 }
 
+/** Helper for ai_look and ai_forward functions, return an int array containing
+* the 'viewable' tiles for a Level 1 player, ** handle ORIENTATION::E **
+* positions.
+* @param to_look the positions to be set
+* @param playerx the player X position
+* @param playery the player Y position
+* @param level the player current level
+* @return to_look the int array `look east side` tiles coordinates
+*/
 int		**set_east(int **to_look, int playerx, int playery, int level)
 {
 	to_look[0][Y] = playery;
@@ -67,6 +108,15 @@ int		**set_east(int **to_look, int playerx, int playery, int level)
 	return (to_look);
 }
 
+/** Helper for ai_look and ai_forward functions, return an int array containing
+* the 'viewable' tiles for a Level 1 player, ** handle ORIENTATION::W **
+* positions.
+* @param to_look the positions to be set
+* @param playerx the player X position
+* @param playery the player Y position
+* @param level the player current level
+* @return to_look the int array `look west side` tiles coordinates
+*/
 int		**set_west(int **to_look, int playerx, int playery, int level)
 {
 	to_look[0][Y] = playery;
@@ -78,6 +128,12 @@ int		**set_west(int **to_look, int playerx, int playery, int level)
 	return (to_look);
 }
 
+/** Helper function to ai_look() and ai_forward() methods,
+* compute the tiles positions according to player level and orientation
+* @param level the player current level
+* @param playerx the player x position
+* @param playery the player y position
+*/
 int		**looking_pos(int level, int playerx, int playery,
 		ORIENTATION o)
 {
@@ -103,6 +159,38 @@ int		**looking_pos(int level, int playerx, int playery,
 	return (to_look);
 }
 
+/** Simple utils function to tp the player if he reach a map side when
+* ai_forward()
+* @param to_look the computed player new position stored in to_look[0] X,Y
+* @param usr the t_inhabitant::curr_pos to update
+* @param map the map and its size
+*/
+void		get_teleport(int **to_look, t_inhabitant *usr, int *msize)
+{
+	switch (usr->o) {
+		case N:
+		if ((to_look[0][Y] < 0))
+			usr->curr_pos[Y] = msize[X];
+		break;
+		case E:
+		if ((to_look[0][X] >= msize[X]))
+			usr->curr_pos[X] = 0;
+		break;
+		case S:
+		if ((to_look[0][Y] >= 5))
+			usr->curr_pos[Y] = 0;
+		break;
+		case W:
+		if ((to_look[0][X]) < 0)
+			usr->curr_pos[X] = msize[X];
+		break;
+	}
+}
+
+/** Helper function to send a s_tile content to a user when ai_look()
+* @param tile the requested tile
+* @param clifd the client socket to send content on
+*/
 void		send_tilecontent(t_tile tile, int clifd)
 {
 	dprintf(clifd, "%s",
@@ -119,54 +207,62 @@ void		send_tilecontent(t_tile tile, int clifd)
 	tile.ressources.linemate.qtt ? "lynemate" : "");
 }
 
-uint		is_tile_to_look(int **to_look, int i, int j)
-{
-	uint rt = ((to_look[0][X] == j && to_look[0][Y] == i)
-	|| (to_look[1][X] == j && to_look[1][Y] == i)
-	|| (to_look[2][X] == j && to_look[2][Y] == i))
-	? true : false;
-
-	return (rt);
-}
-
-void		target_zone(t_inhabitant *usr, t_tile **map, int dims[], int clifd)
+/** Additional function for ai_look() method, iterate on map and send
+* 'user viewable' tiles content
+* @note this function also print a meaningfull 2D representation of the running
+* AI client moove
+* @param usr the t_inhabitant client
+* @param map the t_world::map
+* @params dims dirty hack to have map size x and y in one variable
+*/
+void		target_zone(t_inhabitant *usr, t_tile **map, int dims[])
 {
 	int	**to_look = looking_pos(usr->level, usr->curr_pos[X],
 			usr->curr_pos[Y], usr->o);
 
-	dprintf(clifd, "[");
+	dprintf(usr->clifd, "[");
 	for (int i = 0; i != dims[Y]; ++i) {
 		for (int j = 0; j != dims[X]; ++j) {
 			print_cell(i, j, usr);
 			if (i == usr->curr_pos[Y] && j == usr->curr_pos[X])
-				dprintf(clifd, "player,");
+				dprintf(usr->clifd, "player,");
 			if (is_tile_to_look(to_look, i, j)){
 				printf("%s", "* ");
-				send_tilecontent(map[i][j], clifd);
-				dprintf(clifd, ", ");
+				send_tilecontent(map[i][j], usr->clifd);
+				dprintf(usr->clifd, ", ");
 			} else
 				printf("  ");
 		}
 		printf("\n\n");
 	}
-	dprintf(clifd, "]\n");
+	dprintf(usr->clifd, "]\n");
 }
 
-void		*ai_look(char **cmdargs, int clifd, t_world *map)
+/** The `Look` method implementation
+* @param cmdargs the unusued Look command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+*/
+void		*ai_look(char **args, int clifd, t_world *map)
 {
 	t_inhabitant *usr = get_user(clifd, map->teams);
 	int pos[] = { map->sizeX, map->sizeY };
-	if (cmdargs[0]) {
-		target_zone(usr, map->tiles, pos, clifd);
+	if (args[0]) {
+		target_zone(usr, map->tiles, pos);
 	}
 	return (map);
 }
 
-void	*ai_right(char **cmdargs, int clifd, t_world *map)
+/** The `Right` method implementation
+* @param cmdargs the unusued Right command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+*/
+void	*ai_right(char **args, int clifd, t_world *map)
 {
 	t_inhabitant *usr = get_user(clifd, map->teams);
 
-	printf("%s : \n", cmdargs[0]);
+	printf("%s : \n", args[0]);
 	switch (usr->o) {
 		case N:
 		usr->o = E;
@@ -185,11 +281,16 @@ void	*ai_right(char **cmdargs, int clifd, t_world *map)
 	return (map);
 }
 
-void	*ai_left(char **cmdargs, int clifd, t_world *map)
+/** The `Left` method implementation
+* @param cmdargs the unusued Left command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+*/
+void	*ai_left(char **args, int clifd, t_world *map)
 {
 	t_inhabitant *usr = get_user(clifd, map->teams);
 
-	printf("%s : \n", cmdargs[0]);
+	printf("%s : \n", args[0]);
 	switch (usr->o) {
 		case N:
 		usr->o = W;
@@ -208,22 +309,26 @@ void	*ai_left(char **cmdargs, int clifd, t_world *map)
 	return (map);
 }
 
-void		*ai_forward(char **cmdargs, int clifd, t_world *map)
+/** The `Forward` method implementation
+* @param cmdargs the unusued Forward command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+*/
+void			*ai_forward(char **args, int clifd, t_world *map)
 {
-	t_inhabitant *usr = get_user(clifd, map->teams);
-	int	**to_look = looking_pos(usr->level, usr->curr_pos[X],
-			usr->curr_pos[Y], usr->o);
+	int		msize[] = { map->sizeX, map->sizeY };
+	t_inhabitant 	*usr = get_user(clifd, map->teams);
+	int		**to_look = looking_pos(usr->level, usr->curr_pos[X],
+					usr->curr_pos[Y], usr->o);
 
-	printf("%s : \n", cmdargs[0]);
+	printf("%s : \n", args[0]);
 	if ((to_look[0][X] >= 0 &&to_look[0][X] <= map->sizeX) &&
 	(to_look[0][Y] >= 0 && to_look[0][Y] <= map->sizeX)) {
 		usr->curr_pos[X] = to_look[0][X];
 		usr->curr_pos[Y] = to_look[0][Y];
-		dprintf(clifd, "ok\n");
 	} else {
-		printf("Unreachable position %d,%d\n",
-		to_look[0][X], to_look[0][Y]);
-		dprintf(clifd, "ko\n");
+		get_teleport(to_look, usr, msize);
 	}
+	dprintf(clifd, "ok\n");
 	return (map);
 }

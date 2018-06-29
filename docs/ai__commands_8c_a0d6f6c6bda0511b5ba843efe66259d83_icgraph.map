@@ -1,0 +1,6 @@
+<map id="get_user" name="get_user">
+<area shape="rect" id="node2" href="$cmd__fcts_8h.html#a808c86577637983ad753ab11b84ddf86" title="ai_forward" alt="" coords="125,5,208,32"/>
+<area shape="rect" id="node3" href="$cmd__fcts_8h.html#ac2cc0a5de08c5654f25170704ce7804a" title="ai_left" alt="" coords="138,56,195,83"/>
+<area shape="rect" id="node4" href="$cmd__fcts_8h.html#a3301729cca2f51f013dc24574727f19c" title="ai_look" alt="" coords="135,107,198,133"/>
+<area shape="rect" id="node5" href="$cmd__fcts_8h.html#afab6c9f3865cc927da1bdf51ca138bc6" title="ai_right" alt="" coords="135,157,199,184"/>
+</map>

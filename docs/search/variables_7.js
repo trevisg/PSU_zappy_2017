@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['height',['height',['../structt__clargs.html#a5f57272328baf5ad3d8f2056db49905a',1,'t_clargs']]],
-  ['hints',['hints',['../structt__serv.html#a0d341504acbfb145f9c5e358e5803ad9',1,'t_serv']]],
-  ['host',['host',['../structt__serv.html#a696ebf45d1535667326e8869cb6f6b7e',1,'t_serv']]]
+  ['id',['id',['../structt__egg.html#a561c42c7c560941c6c5e62d4f587b79a',1,'t_egg::id()'],['../structt__inhabitant.html#a1b0c6947fc0b6e2372a2b579fcc5d602',1,'t_inhabitant::id()']]],
+  ['id_5fdroper',['id_droper',['../structt__egg.html#a6618d0b0940233ef5bc1edfaad6122e0',1,'t_egg']]],
+  ['inventory',['inventory',['../structt__inhabitant.html#af22dff03db052a7b6c58a0bbcedd307e',1,'t_inhabitant']]],
+  ['isco',['isco',['../structt__inhabitant.html#a583d383201f7b56b9f1d1988ab6e1f2e',1,'t_inhabitant']]],
+  ['items',['ITEMS',['../ressources__decl_8c.html#afa77ec604ea715cce2499edfbbc9eb24',1,'ITEMS():&#160;ressources_decl.c'],['../zappy__game_8h.html#afa77ec604ea715cce2499edfbbc9eb24',1,'ITEMS():&#160;ressources_decl.c']]]
 ];

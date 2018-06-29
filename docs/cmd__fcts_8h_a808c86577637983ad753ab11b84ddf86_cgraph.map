@@ -1,0 +1,9 @@
+<map id="ai_forward" name="ai_forward">
+<area shape="rect" id="node2" href="$ai__commands_8c.html#a1ff0173a28ef823523661a2cb2c5a3c6" title="get_teleport" alt="" coords="136,5,227,32"/>
+<area shape="rect" id="node3" href="$ai__commands_8c.html#a0d6f6c6bda0511b5ba843efe66259d83" title="get_user" alt="" coords="145,56,217,83"/>
+<area shape="rect" id="node4" href="$ai__commands_8c.html#ad10b85123124ffdcb3148e1e276e656b" title="looking_pos" alt="" coords="136,107,227,133"/>
+<area shape="rect" id="node5" href="$ai__commands_8c.html#ab2891a15870fc5e914717d9e6d582fb8" title="set_north" alt="" coords="276,31,352,57"/>
+<area shape="rect" id="node6" href="$ai__commands_8c.html#a6b857ba11c70f63f88bd7916b5a5e983" title="set_east" alt="" coords="278,81,350,108"/>
+<area shape="rect" id="node7" href="$ai__commands_8c.html#a6db0270ea63791cb02b00eb31bacbd6a" title="set_south" alt="" coords="275,132,353,159"/>
+<area shape="rect" id="node8" href="$ai__commands_8c.html#a27c1cc337e13e6c61342c279d54dfea9" title="set_west" alt="" coords="277,183,351,209"/>
+</map>

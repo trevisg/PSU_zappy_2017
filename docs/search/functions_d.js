@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usage',['usage',['../usage_8c.html#a9a05fb05f758a87628212c4bfc50c182',1,'usage(char *progname):&#160;usage.c'],['../server_8h.html#a9a05fb05f758a87628212c4bfc50c182',1,'usage(char *progname):&#160;usage.c']]]
+  ['target_5fzone',['target_zone',['../ai__commands_8c.html#a64112a908e6823ce354a0f3d81e635d6',1,'ai_commands.c']]]
 ];

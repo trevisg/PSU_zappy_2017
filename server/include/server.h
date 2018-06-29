@@ -43,10 +43,6 @@
 	#define NI_MAXHOST 1025
 	/** Maximal size for a client host port */
 	#define NI_MAXSERV 32
-	/** Argument format typedef as per subject request
-	* @note Useless typedef came from a deprecated method
-	*/
-	typedef char ** cmdargs;
 
 	#define EVER ;;
 
@@ -59,31 +55,6 @@
 		CONNECT_NBR, FORK, EJECT,
 		TAKE_OBJECT, SET_OBJECT, INCANTATION, TEAM
 	};
-
-	/** Future login handler filepath (to be set in a .conf file)
-	* @note : not yet implemented
-	*/
-	enum  LPATHS {
-		ACCESS,
-		ERRORS,
-		NOTICES
-	};
-
-	/** The logger methods structure with files pointer
-	* and timestamp variables
-	* @note not yet implemented
-	* @todo create all methods to write to log file instead
-	* stdout or stderr
-	*/
-	typedef struct			s_log {
-		FILE			*errlog;
-		FILE			*accesslog;
-		char			*timestmp;
-		time_t			timeval;
-		mode_t			*set;
-		mode_t			mode;
-		mode_t			dir_mode;
-	}				t_log;
 
 	/** Used to store command line args
 	* @var t_clargs::port
@@ -220,7 +191,7 @@
 	/** @note see server_src/list_helpers.c */
 	t_teams		*get_team_by_name(t_teams *list, char *channame);
 	unsigned int	is_user_in_chan(int clifd, t_teams *chans);
-	unsigned int	get_size(cmdargs args);
+	unsigned int	get_size(char **args);
 	/** @note see src/trantor_setup/world_creation */
 	t_world		*get_world(t_clargs *args);
 	void		free_world(t_world *trantor, t_clargs *args);

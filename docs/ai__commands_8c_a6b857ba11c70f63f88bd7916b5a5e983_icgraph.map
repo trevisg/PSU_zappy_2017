@@ -1,0 +1,6 @@
+<map id="set_east" name="set_east">
+<area shape="rect" id="node2" href="$ai__commands_8c.html#ad10b85123124ffdcb3148e1e276e656b" title="looking_pos" alt="" coords="125,31,216,57"/>
+<area shape="rect" id="node3" href="$cmd__fcts_8h.html#a808c86577637983ad753ab11b84ddf86" title="ai_forward" alt="" coords="268,5,351,32"/>
+<area shape="rect" id="node4" href="$ai__commands_8c.html#a64112a908e6823ce354a0f3d81e635d6" title="target_zone" alt="" coords="264,56,355,83"/>
+<area shape="rect" id="node5" href="$cmd__fcts_8h.html#a3301729cca2f51f013dc24574727f19c" title="ai_look" alt="" coords="403,56,465,83"/>
+</map>
