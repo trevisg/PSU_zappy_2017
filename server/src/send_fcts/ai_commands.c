@@ -32,10 +32,27 @@ static t_inhabitant	*get_user(int clifd, t_teams *temps)
 	return (user);
 }
 
-void		print_cell(int y, int x, t_inhabitant *usr)
+void		print_cell(int y, int x, t_inhabitant *usr, t_teams *teams)
 {
-	printf("%d:%d[%s", y, x, (usr && y == usr->curr_pos[Y]
-	&& x == usr->curr_pos[X]) ? "X]" : ".]");
+	printf("%d:%d[%s", x, y, (usr && y == usr->curr_pos[Y]
+	&& x == usr->curr_pos[X]) ? "X" : "");
+	/** Starting iterate over teams */
+	for (t_teams *tmp = teams; tmp; tmp = tmp->next) {
+		/** Locate the usr teammates */
+		if (!strcmp(tmp->team_name, usr->team_name)) {
+			/** Is there a teammate on this tile ? */
+			for (t_userlist *tpm = teams->users;
+				tpm; tpm = tpm->next) {
+				printf("%s", (tpm->user->curr_pos[Y] == y
+				&& tpm->user->curr_pos[X] == x)
+				&& (tpm->user->curr_pos[Y] != usr->curr_pos[Y]
+				&& tpm->user->curr_pos[X] != usr->curr_pos[X]) ?
+				"o," : "");
+			}
+			printf("%s", "]");
+			break;
+		}
+	}
 }
 
 uint		is_tile_to_look(int **to_look, int i, int j)
@@ -169,7 +186,7 @@ void		get_teleport(int **to_look, t_inhabitant *usr, int *msize)
 {
 	switch (usr->o) {
 		case N:
-		if ((to_look[0][Y] < 0))
+		if ((to_look[0][Y] <= 0))
 			usr->curr_pos[Y] = msize[X];
 		break;
 		case E:
@@ -181,7 +198,7 @@ void		get_teleport(int **to_look, t_inhabitant *usr, int *msize)
 			usr->curr_pos[Y] = 0;
 		break;
 		case W:
-		if ((to_look[0][X]) < 0)
+		if ((to_look[0][X]) <= 0)
 			usr->curr_pos[X] = msize[X];
 		break;
 	}
@@ -215,7 +232,7 @@ void		send_tilecontent(t_tile tile, int clifd)
 * @param map the t_world::map
 * @params dims dirty hack to have map size x and y in one variable
 */
-void		target_zone(t_inhabitant *usr, t_tile **map, int dims[])
+void		target_zone(t_inhabitant *usr, t_world *map, int dims[])
 {
 	int	**to_look = looking_pos(usr->level, usr->curr_pos[X],
 			usr->curr_pos[Y], usr->o);
@@ -223,12 +240,12 @@ void		target_zone(t_inhabitant *usr, t_tile **map, int dims[])
 	dprintf(usr->clifd, "[");
 	for (int i = 0; i != dims[Y]; ++i) {
 		for (int j = 0; j != dims[X]; ++j) {
-			print_cell(i, j, usr);
+			print_cell(i, j, usr, map->teams);
 			if (i == usr->curr_pos[Y] && j == usr->curr_pos[X])
 				dprintf(usr->clifd, "player,");
 			if (is_tile_to_look(to_look, i, j)){
 				printf("%s", "* ");
-				send_tilecontent(map[i][j], usr->clifd);
+				send_tilecontent(map->tiles[i][j], usr->clifd);
 				dprintf(usr->clifd, ", ");
 			} else
 				printf("  ");
@@ -248,7 +265,7 @@ void		*ai_look(char **args, int clifd, t_world *map)
 	t_inhabitant *usr = get_user(clifd, map->teams);
 	int pos[] = { map->sizeX, map->sizeY };
 	if (args[0]) {
-		target_zone(usr, map->tiles, pos);
+		target_zone(usr, map, pos);
 	}
 	return (map);
 }
