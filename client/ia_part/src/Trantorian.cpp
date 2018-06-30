@@ -7,6 +7,11 @@
 
 #include "../include/Trantorian.hpp"
 
+#define TTL 126
+#define EXIT_MAX_PLAYER 84
+#define EVER ;;
+#define Frequency(f) sleep(f);
+
 Trantorian::Trantorian(std::string server_port, std::string server_host) :
 _server_port(server_port), _server_host(server_host)
 {
@@ -25,10 +30,6 @@ bool	Trantorian::check_co()
 	return (rt);
 }
 
-#define EXIT_MAX_PLAYER 84
-#define EVER ;;
-#define Frequency(f) sleep(f);
-
 void 	log_drop( std::map<std::string, std::string> resp,
 		std::vector<int> map_size, std::string team_name)
 {
@@ -37,6 +38,40 @@ void 	log_drop( std::map<std::string, std::string> resp,
 	std::cout << "Note : Still have ["
 	<< resp["PLAYER_CREDIT"] << "] trantorians to drop "
 	<< "for team [\"" << team_name << "\"]\n";
+}
+
+static void	do_search(std::vector<std::string>  res,uint  cnt)
+{
+	std::cerr << "state : " << "SEARCHING\n";
+	std::cerr << "send -->look \n";
+	std::cerr << "Receive :\n";
+	for (uint i = 0; i != res.size(); ++i) {
+		std::cerr << "[" << res[i] << "]\n";
+	}
+	if (cnt >= TTL) {
+		std::cerr << "No more life exiting..\n";
+		kill(getpid(), SIGINT);
+	}
+}
+
+static void	do_fork(Network _client)
+{
+	_client.fork();
+	if (fork() == 0) {
+		/// where in child
+	} else {
+
+	}
+
+}
+
+void	do_moove(int _level)
+{
+	std::cerr << "state : " << "MOOVING\n";
+	std::cerr << "Send Forward on trantor map \n";
+	std::cerr << "Note : we're still on level [";
+	std::cerr << _level << "]\n";
+	std::cerr << "send -->Forward \n";
 }
 
 bool	Trantorian::run(std::string team_name)
@@ -68,29 +103,22 @@ bool	Trantorian::run(std::string team_name)
 			exit(EXIT_MAX_PLAYER);
 		}
 		if (curr_state == SEARCHING) {
-			std::cerr << "state : " << "SEARCHING\n";
-			std::cerr << "send -->look \n";
-			std::vector<std::string> v = _client.look();
+			std::vector<std::string> res = _client.look();
+			do_search(res, cnt);
 			curr_state = MOOVING;
-			for (uint popo = 0; popo != v.size(); ++popo) {
-				std::cout << "[" << v[popo]
-				<< "]" << std::endl;
-			}
-			if (cnt >= 30) {
-				std::cerr << "No more life exiting..\n";
-				kill(getpid(), SIGINT);
-			}
 		}
 		if (curr_state == MOOVING) {
-			std::cerr << "state : " << "MOOVING\n";
-			std::cerr << "Send Forward on trantor map \n";
-			std::cerr << "Note : we're still on level [";
-			std::cerr << _level << "]\n";
-			std::cerr << "send -->Forward \n";
+			std::map<std::string, std::string> resp;
 			resp = _client.forward();
+			do_moove(_level);
 			curr_state = SEARCHING;
 		}
-		std::cerr << "TTl: " << cnt << "s\n";
+		if (curr_state == FORKING) {
+			std::vector<std::string> resp;
+			resp = _client.fork();
+			curr_state = SEARCHING;
+		}
+		std::cerr << "TimeTolive: " << TTL - cnt << "s\n";
 	}
 	return (rt);
 }
