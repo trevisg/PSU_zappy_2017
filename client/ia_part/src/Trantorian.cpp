@@ -54,15 +54,13 @@ static void	do_search(std::vector<std::string>  res,uint  cnt)
 	}
 }
 
-static void	do_fork(Network _client)
+static void	do_fork()
 {
-	_client.fork();
 	if (fork() == 0) {
 		/// where in child
 	} else {
-
+		/// where back in parent
 	}
-
 }
 
 void	do_moove(int _level)
@@ -116,6 +114,7 @@ bool	Trantorian::run(std::string team_name)
 		if (curr_state == FORKING) {
 			std::vector<std::string> resp;
 			resp = _client.fork();
+			do_fork();
 			curr_state = SEARCHING;
 		}
 		std::cerr << "TimeTolive: " << TTL - cnt << "s\n";
