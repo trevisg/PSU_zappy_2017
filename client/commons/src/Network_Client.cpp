@@ -76,6 +76,15 @@ std::map<std::string, std::string> Network::forward()
 	return (rt);
 }
 
+std::vector<std::string>		Network::fork()
+{
+	std::vector<std::string> res;
+	std::string req("Fork");
+	write(_client_socket, req.c_str(), req.size());
+	listen_up();
+	return (res);
+}
+
 std::map<std::string, std::string>	Network::get_map_dimension(
 					std::string team_name)
 {
