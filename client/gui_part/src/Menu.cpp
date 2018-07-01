@@ -102,6 +102,10 @@ void 	Menu::event_handler(MenuSettings *opts, MenuNewGame *ngame)
 			mouse_click_handler(event.mouseButton, opts, ngame);
 		} else if (event.type == sf::Event::TextEntered) {
 			text_entered_handler(event, opts);
+		} else if (event.type == sf::Event::Resized) {
+			sf::FloatRect visibleArea(0, 0, event.size.width,
+							event.size.height);
+			menuwindow.setView(sf::View(visibleArea));
 		}
 	}
 }
