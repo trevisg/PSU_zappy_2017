@@ -40,7 +40,7 @@ void 	log_drop( std::map<std::string, std::string> resp,
 	<< "for team [\"" << team_name << "\"]\n";
 }
 
-static void	do_search(std::vector<std::string>  res,uint  cnt)
+void	Trantorian::_do_search(std::vector<std::string>  res, uint  cnt)
 {
 	std::cerr << "state : " << "SEARCHING\n";
 	std::cerr << "send -->look \n";
@@ -54,12 +54,18 @@ static void	do_search(std::vector<std::string>  res,uint  cnt)
 	}
 }
 
-static void	do_fork()
+void	Trantorian::_do_fork()
 {
+	static uint childs;
+
+	childs += 1;
 	if (fork() == 0) {
-		/// where in child
-	} else {
-		/// where back in parent
+		std::cerr << " Where in child n°" << childs << '\n';
+		Trantorian ia_player(_server_port, _server_host);
+		bool check = ia_player.check_co();
+		if (check) {
+			ia_player.run(_team_name);
+		}
 	}
 }
 
@@ -72,20 +78,47 @@ void	do_moove(int _level)
 	std::cerr << "send -->Forward \n";
 }
 
+void 	print_state(uint cnt, STATE value)
+{
+
+	std::cerr << "State : ";
+	switch (value) {
+		case DROPPING:
+		std::cerr << "DROPPING\n";
+		break;
+		case FORKING:
+		std::cerr << "FORKING\n";
+		break;
+		case MOOVING:
+		std::cerr << "MOOVING\n";
+		break;
+		case SEARCHING:
+		std::cerr << "SEARCHING\n";
+		break;
+		case PICKING_FOOD:
+		std::cerr << "PICKING_FOOD\n";
+		break;
+		case PICKING_STONE:
+		std::cerr << "PICKING_STONE\n";
+		break;
+	}
+	std::cerr << "TimeTolive: " << TTL - cnt << "s\n";
+}
+
 bool	Trantorian::run(std::string team_name)
 {
 	bool rt = false;
-	static STATE curr_state;
-	static uint cnt;
+	STATE curr_state = DROPPING;
+	static uint cnt = 0;
 	std::vector<int> map_size;
 	std::map<std::string, std::string> resp;
 
+	_team_name = team_name;
 	for (EVER) {
 		Frequency(1);
-		cnt += 1;
-		_team_name = team_name;
-		resp = cnt == 1 ?  _client.get_map_dimension(_team_name) : resp;
-		curr_state = cnt == 1 ? DROPPING : curr_state;
+		++cnt;
+		resp = curr_state == DROPPING ?
+			_client.get_map_dimension(_team_name) : resp;
 		if (resp.find("x") != resp.end()
 		&& resp.find("y") != resp.end()
 		&& resp.find("PLAYER_CREDIT") != resp.end()
@@ -102,22 +135,22 @@ bool	Trantorian::run(std::string team_name)
 		}
 		if (curr_state == SEARCHING) {
 			std::vector<std::string> res = _client.look();
-			do_search(res, cnt);
+			_do_search(res, cnt);
 			curr_state = MOOVING;
 		}
 		if (curr_state == MOOVING) {
 			std::map<std::string, std::string> resp;
 			resp = _client.forward();
 			do_moove(_level);
-			curr_state = SEARCHING;
+			curr_state = cnt == 30 ? FORKING : SEARCHING;
 		}
 		if (curr_state == FORKING) {
 			std::vector<std::string> resp;
 			resp = _client.fork();
-			do_fork();
+			_do_fork();
 			curr_state = SEARCHING;
 		}
-		std::cerr << "TimeTolive: " << TTL - cnt << "s\n";
+		print_state(cnt, curr_state);
 	}
 	return (rt);
 }
