@@ -23,7 +23,7 @@ var searchData=
   ['get_5fport',['get_port',['../cl__flags_8c.html#ab01a1e2057ed7de1aa23abff3ae0b0ed',1,'get_port(char **port, t_clargs *args):&#160;cl_flags.c'],['../server_8h.html#ab01a1e2057ed7de1aa23abff3ae0b0ed',1,'get_port(char **port, t_clargs *args):&#160;cl_flags.c']]],
   ['get_5freq',['get_req',['../cl__args__parsing_8c.html#a27cf687fc8b49a7330675e8f95cab290',1,'cl_args_parsing.c']]],
   ['get_5fressources',['get_ressources',['../world__creation_8c.html#a87320761bf5ee6dc2f660be75652c266',1,'world_creation.c']]],
-  ['get_5fsize',['get_size',['../server_8h.html#ace7ee0ba12372383f8fde13f88c5b1a1',1,'server.h']]],
+  ['get_5fsize',['get_size',['../print__items_8c.html#a604187b602f2efc80cc70ccdcae78e8d',1,'get_size(char **args):&#160;print_items.c'],['../server_8h.html#ace7ee0ba12372383f8fde13f88c5b1a1',1,'get_size(char **args):&#160;print_items.c']]],
   ['get_5fteam_5fby_5fname',['get_team_by_name',['../server_8h.html#a840e59afe03b793c671dae92364c4e0e',1,'server.h']]],
   ['get_5fteams',['get_teams',['../cl__flags__bis_8c.html#a434f4fa9452d570e766cdc09e16179fb',1,'get_teams(char **teams, t_clargs *args):&#160;cl_flags_bis.c'],['../server_8h.html#a434f4fa9452d570e766cdc09e16179fb',1,'get_teams(char **teams, t_clargs *args):&#160;cl_flags_bis.c']]],
   ['get_5fteleport',['get_teleport',['../ai__commands_8c.html#a1ff0173a28ef823523661a2cb2c5a3c6',1,'ai_commands.c']]],

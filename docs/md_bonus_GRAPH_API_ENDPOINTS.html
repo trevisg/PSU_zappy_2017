@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSU_zappy_2017: Zappy GraphClient to Server protocol</title>
+<title>PSU_zappy_2017: # GRAPHClient to Server (JSON Restfull-API)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,23 +61,37 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Zappy GraphClient to Server protocol </div>  </div>
+<div class="title"># GRAPHClient to Server (JSON Restfull-API) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>Get game <b>map size</b></h2>
+<div class="textblock"><table class="doxtable">
+<tr>
+<th align="center">Request </th><th align="center">Response </th><th align="center">Curl example  </th></tr>
+<tr>
+<td align="center"><code>GET /mapsize</code> </td><td align="center"><code>{"mapsize": {"x": XX, "y": XX}}\n</code></td><td align="center"><code>curl -s -X GET <a href="http://127.0.0.1:2222/mapsize">http://127.0.0.1:2222/mapsize</a></code> </td></tr>
+<tr>
+<td align="center"><code>GET /teamnames</code> </td><td align="center"><code>{ "teams": ["XX","XX",..]}\n</code> </td><td align="center"><code>curl -s -X GET <a href="http://127.0.0.1:2222/teamnames">http://127.0.0.1:2222/teamnames</a></code> </td></tr>
+<tr>
+<td align="center"><code>POST /team_detail&amp;team=XX</code> </td><td align="center"><code>{ "XX": [{"id": xx, "x": xx, "y": xx, "ttl": xx }, {...}]}</code> </td><td align="center"><code>curl -s -X POST <a href="http://127.0.0.1:2222/team_detail&team=XX">http://127.0.0.1:2222/team_detail&amp;team=XX</a></code> </td></tr>
+</table>
+<h2>Get game <b>map size</b></h2>
 <ul>
 <li>Send <code>GET /mapsize</code></li>
 <li>Receive <code>{ mapsize: {x: XX, y: XX} }</code></li>
+<li>With curl : <code>curl -s -X GET <a href="http://127.0.0.1:2222/mapsize">http://127.0.0.1:2222/mapsize</a></code></li>
 </ul>
 <h2>Get players <b>teams names</b></h2>
 <ul>
 <li>Send <code>GET /teamnames</code></li>
 <li>Receive <code>{ teams: [XX,XX ...] }</code></li>
+<li>With curl : <code>curl -s -X GET <a href="http://127.0.0.1:2222/teamnames">http://127.0.0.1:2222/teamnames</a></code></li>
 </ul>
 <h2>Get a team <b>details</b></h2>
 <ul>
 <li>Send <code>POST /team_detail&amp;team=</code> + <b>[the team name]</b></li>
-<li>Receive <code>{ "teamname": { [id: xx, x: xx, y: xx, ttl: xx ], [..], [..] } }</code> </li>
+<li>Receive <code>{ "teamname": { [id: xx, x: xx, y: xx, ttl: xx ], [..], [..] } }</code></li>
+<li>With curl : <code>curl -s -X POST <a href="http://127.0.0.1:2222/team_detail&team=XX">http://127.0.0.1:2222/team_detail&amp;team=XX</a></code></li>
+<li>Note : *(replace XX with a real team name)* </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
