@@ -12,5 +12,6 @@ a.out
 zappy_server
 zappy_client
 zappy_ai
+zappy_gui
 #IDE settings
 .vscode
