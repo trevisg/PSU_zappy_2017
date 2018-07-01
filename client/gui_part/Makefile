@@ -9,22 +9,20 @@ CC      	= g++
 
 RM      	= rm -f
 
-CPPFLAGS	+= -I./include -Wall -Werror -Wextra
+CPPFLAGS	+= -I./include -I../commons/include -Wall -Werror -Wextra
 
 LDFLAGS		+= -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 
 CRITFLAGS	= -Wall -Werror -Wextra -lcriterion -coverage
 
 ## Sources and rules for GUI client
-GUICLIENT_SRCS	=  Zappy_gui.cpp \
-		Menu_Title.cpp \
-		Menu_Settings.cpp \
-		Menu_NewGame.cpp \
-		Game_Window.cpp \
-		Network_Client.cpp \
-		Menu.cpp
-
-GUICLIENTSRC	= $(addprefix src/, $(GUICLIENT_SRCS))
+GUICLIENT_SRCS	= ../commons/src/Network_Client.cpp \
+		src/Zappy_gui.cpp \
+		src/Menu_Title.cpp \
+		src/Menu_Settings.cpp \
+		src/Menu_NewGame.cpp \
+		src/Game_Window.cpp \
+		src/Menu.cpp
 
 #Binary name
 
@@ -34,11 +32,12 @@ GUICLIENT	= zappy_gui
 all:		$(GUICLIENT)
 
 $(GUICLIENT):
-		$(CC) $(CFLAGS) $(LDFLAGS) $(GUICLIENTSRC) -o $(GUICLIENT)
+		$(CC) $(CFLAGS) $(LDFLAGS) $(GUICLIENT_SRCS) -o $(GUICLIENT)
 
 testgame:
 		@printf "Debug game window methods\n"
-		g++ src/Game_Window.cpp $(CPPFLAGS) $(LDFLAGS) -D TESTGAME
+		g++ src/Game_Window.cpp ../commons/src/Network_Client.cpp \
+		$(CPPFLAGS) $(LDFLAGS) -D TESTGAME
 		@printf "Done.\nNow run with ./a.out x y (map size)\n"
 
 testnetwork:

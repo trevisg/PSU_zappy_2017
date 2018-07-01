@@ -7,6 +7,16 @@
 
 #include "server.h"
 
+uint		get_size(char **args)
+{
+	uint size = 0;
+
+	while (args[size]) {
+		++size;
+	}
+	return (size);
+}
+
 void            print_world(t_world *map)
 {
 	for (int i = 0; i < map->sizeX; i++) {

@@ -15,6 +15,7 @@ const char *G_PROTOS[REF_NB] = {
 	"Left",
 	"Team",
 	"Look",
+	"Fork",
 	NULL
 };
 
@@ -25,6 +26,7 @@ const cmds G_CMDS[REF_NB] = {
 	ai_left,
 	r_team,
 	ai_look,
+	ai_fork,
 	NULL
 };
 

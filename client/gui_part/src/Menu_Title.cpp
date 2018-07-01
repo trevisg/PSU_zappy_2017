@@ -40,7 +40,6 @@ MenuTitle::MenuTitle(int xpos, int ypos)
 	menuhelptext.setString(menuhelpstring);
 	menuhelptext.setFillColor(sf::Color::White);
 	menuhelptext.setPosition(220, 800);
-
 }
 
 sf::Text	MenuTitle::get_menuTitleText()

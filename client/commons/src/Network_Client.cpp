@@ -45,7 +45,9 @@ std::vector<std::string>	Network::get_teamnames()
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	while (!_queue.empty()) {
-		teams.emplace_back(_queue.front());
+		if (_queue.front() != "teamnames") {
+			teams.emplace_back(_queue.front());
+		}
 		_queue.pop();
 	}
 	return (teams);
@@ -74,6 +76,15 @@ std::map<std::string, std::string> Network::forward()
 		_queue.pop();
 	}
 	return (rt);
+}
+
+std::vector<std::string>		Network::fork()
+{
+	std::vector<std::string> res;
+	std::string req("Fork");
+	write(_client_socket, req.c_str(), req.size());
+	listen_up();
+	return (res);
 }
 
 std::map<std::string, std::string>	Network::get_map_dimension(
@@ -107,7 +118,7 @@ bool	Network::listen_up()
 {
 	int r_size = 0;
 	std::string s;
-	std::regex r("[a-z0-9,]+");
+	std::regex r("[a-z0-9,\"]+");
 
 	memset(_server_resp, 0, MAX_RESP);
 	while ((r_size = read(_client_socket, _server_resp, MAX_RESP)) > 0) {

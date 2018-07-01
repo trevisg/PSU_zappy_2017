@@ -7,6 +7,9 @@
 
 #include "../include/Trantorian.hpp"
 
+/** Dummy print usage function
+* @param progname the programm name
+*/
 void	usage(const char *progname)
 {
 	std::cerr << "USAGE: " << progname << " -p port -n name -h machine\n";
@@ -16,6 +19,10 @@ void	usage(const char *progname)
 	std::cerr << " localhost by default\n";
 }
 
+/** Turn the 2D argv array to a key , value pairs map
+* @param av the argv array from main()
+* @return map a string key and string value map
+*/
 std::map<std::string, std::string>	get_opts(char **av)
 {
 	std::map<std::string, std::string> map;
@@ -25,6 +32,10 @@ std::map<std::string, std::string>	get_opts(char **av)
 	return (map);
 }
 
+/** Check if all required flags are provided
+* @param opts the map of flags and their values
+* @return rt true if correct args, false otherwise
+*/
 bool	check_opts(std::map<std::string, std::string> opts)
 {
 	bool rt = opts.find("-p") != opts.end()
@@ -40,6 +51,10 @@ bool	check_opts(std::map<std::string, std::string> opts)
 	return (rt);
 }
 
+/** The zappy_ai main entry point, check the args and run
+* @param ac the number of av args
+* @param av the arguments like -[flag] [value]
+*/
 int	main(int ac, char **av)
 {
 	int rt = 84;

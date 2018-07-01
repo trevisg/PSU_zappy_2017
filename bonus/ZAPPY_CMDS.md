@@ -1,4 +1,5 @@
-# Zappy AIClient to Server protocol
+# AIClient to Server protocol (Custom format)
+---------
 
 |            Actions           |      Command     | Time limit |                    Response                   |
 | :--------------------------: | :--------------: | :--------: | :-------------------------------------------: |

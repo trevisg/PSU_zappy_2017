@@ -31,9 +31,15 @@ client:
 		cd client/ia_part && $(MAKE)
 		mv client/ia_part/zappy_ai .
 
+gui:
+		cd client/gui_part && $(MAKE)
+		mv client/gui_part/zappy_gui .
+
 zappy_server:	server
 
 zappy_ai:	client
+
+zappy_gui:	gui
 
 clean:
 		cd server && $(MAKE) clean

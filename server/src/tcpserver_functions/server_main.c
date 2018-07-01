@@ -30,7 +30,6 @@ static int	init_connection(t_serv *all, int *connected)
 		perror("initco: accept");
 	} else if (!(rt = set_clifd(all->conn_sock, all->epollfd, &all->ev))) {
 		fprintf(stdout, "\n./zappy_server: %s\n", okco);
-		dprintf(all->conn_sock, "> WELCOME\n");
 		*(connected) += 1;
 	}
 	return (rt);
@@ -83,7 +82,6 @@ static int	getactiveclients(t_serv *all)
 			memset(all->buf, 0, BUF_SIZE);
 			all->nread = read(clifd, all->buf, BUF_SIZE);
 			events_handler(all, clifd);
-			memset(all->buf, 0, BUF_SIZE);
 		}
 	}
 	return (0);

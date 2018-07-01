@@ -792,6 +792,10 @@ WARN_LOGFILE           =
 
 INPUT                  = server/src \
                         server/include \
+                        client/ia_part/src \
+                        client/ia_part/include \
+                        client/commons/src \
+                        client/commons/include \
                         bonus/README.md \
                         pkgs/deb/README.md \
                         bonus/ZAPPY_CMDS.md \
@@ -822,7 +826,9 @@ INPUT_ENCODING         = UTF-8
 
 FILE_PATTERNS          = *.c \
                          *.h \
-			 *.md
+                         *.cpp \
+                         *.hpp \
+			                   *.md
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.

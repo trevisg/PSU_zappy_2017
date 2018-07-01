@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['usage',['usage',['../usage_8c.html#a9a05fb05f758a87628212c4bfc50c182',1,'usage(char *progname):&#160;usage.c'],['../server_8h.html#a9a05fb05f758a87628212c4bfc50c182',1,'usage(char *progname):&#160;usage.c']]]
+  ['target_5fzone',['target_zone',['../ai__commands_8c.html#a97395690685d09c04898d15a13fa660f',1,'ai_commands.c']]],
+  ['trantorian',['Trantorian',['../classTrantorian.html#ae4e8db9fc4ec7620b533a057d1a67580',1,'Trantorian']]]
 ];

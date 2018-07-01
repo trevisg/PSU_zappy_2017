@@ -1,8 +1,8 @@
 <map id="ai_look" name="ai_look">
 <area shape="rect" id="node2" href="$ai__commands_8c.html#a0d6f6c6bda0511b5ba843efe66259d83" title="get_user" alt="" coords="125,107,197,133"/>
-<area shape="rect" id="node3" href="$ai__commands_8c.html#a64112a908e6823ce354a0f3d81e635d6" title="target_zone" alt="" coords="116,157,207,184"/>
+<area shape="rect" id="node3" href="$ai__commands_8c.html#a97395690685d09c04898d15a13fa660f" title="target_zone" alt="" coords="116,157,207,184"/>
 <area shape="rect" id="node4" href="$ai__commands_8c.html#ad10b85123124ffdcb3148e1e276e656b" title="looking_pos" alt="" coords="268,81,359,108"/>
-<area shape="rect" id="node9" href="$ai__commands_8c.html#a0a041cc06744f9e57b152c75ac4e4780" title="print_cell" alt="" coords="276,132,351,159"/>
+<area shape="rect" id="node9" href="$ai__commands_8c.html#adcff319be811577af30e4ebcda6f3696" title="print_cell" alt="" coords="276,132,351,159"/>
 <area shape="rect" id="node10" href="$ai__commands_8c.html#ad6cf2a21bd51c243d8fb804cf5d9b43d" title="is_tile_to_look" alt="" coords="261,183,366,209"/>
 <area shape="rect" id="node11" href="$ai__commands_8c.html#abf2a98dd46a7de8ec0ceb2b7717c95ba" title="send_tilecontent" alt="" coords="255,233,372,260"/>
 <area shape="rect" id="node5" href="$ai__commands_8c.html#ab2891a15870fc5e914717d9e6d582fb8" title="set_north" alt="" coords="421,5,497,32"/>
