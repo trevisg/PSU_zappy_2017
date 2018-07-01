@@ -8,6 +8,15 @@
 #include <unistd.h>
 #include "../../include/cmd_fcts.h"
 
+/** The `GET /mapsize` route implementation
+* @param args the unusued mapsize command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+* @note With **curl** request :
+* - open a shell, install `curl` and `jq` (json pretty printer)
+* - in another shell launch `./zappy_server` with required args
+* - in curl shell, launch `curl -s -X GET http://127.0.0.1:2222/mapsize | jq`
+*/
 void	*g_mapsize(char **args, int clifd, t_world *map)
 {
 	if (args || !args) {
@@ -18,6 +27,15 @@ void	*g_mapsize(char **args, int clifd, t_world *map)
 	return (map);
 }
 
+/** The `GET /teamnames` route implementation
+* @param args the unusued mapsize command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+* @note With **curl** request :
+* - open a shell, install `curl` and `jq` (json pretty printer)
+* - in another shell launch `./zappy_server` with required args
+* - in curl shell, launch `curl -s -X GET http://127.0.0.1:2222/teamnames | jq`
+*/
 void	*g_teams_names(char **args, int clifd, t_world *map)
 {
 	dprintf(clifd, "{\"teamnames\": [");
@@ -32,6 +50,10 @@ void	*g_teams_names(char **args, int clifd, t_world *map)
 	return (map);
 }
 
+/** Util function to send teams content
+* @param clifd the client socket for writing response
+* @param teams_members the teams linked list
+*/
 void	send_details(int clifd, t_userlist *teams_members)
 {
 	uint id = 0;
@@ -45,6 +67,15 @@ void	send_details(int clifd, t_userlist *teams_members)
 	}
 }
 
+/** The `POST /team_detail&team=` route implementation
+* @param args the requested team to look
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+* @note With **curl** request :
+* - open a shell, install `curl` and `jq` (json pretty printer)
+* - in another shell launch `./zappy_server` with required args
+* - in curl shell, launch `curl -s -X POST http://127.0.0.1:2222/team_detail&team=XX | jq`
+*/
 void	*g_team_detail(char **args, int clifd, t_world *map)
 {
 	uint i = get_size(args);
