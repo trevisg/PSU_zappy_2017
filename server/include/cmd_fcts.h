@@ -16,6 +16,7 @@
 	void		*ai_forward(char **args, int clifd, t_world *map);
 	void		*ai_left(char **args, int clifd, t_world *map);
 	void		*ai_right(char **args, int clifd, t_world *map);
+	void 		*ai_fork(char **args, int clifd, t_world *map);
 
 
 	/** see send_fcts/broadcast.c */
