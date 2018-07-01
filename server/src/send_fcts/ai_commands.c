@@ -154,10 +154,12 @@ int		**set_west(int **to_look, int playerx, int playery, int level)
 int		**looking_pos(int level, int playerx, int playery,
 		ORIENTATION o)
 {
-	int **to_look = malloc(3 * level);
+	int **to_look = malloc(sizeof(int *) * 3 * level);
 
+	memset(to_look, 0, 3 * level);
 	for (int i = 0; i != 3 * level; ++i) {
-		to_look[i] = malloc(level + 3);
+		to_look[i] = malloc(sizeof(int) * (level + 3));
+		memset(to_look[i], 0, level + 3);
 	}
 	switch (o) {
 		case N:
@@ -186,7 +188,7 @@ void		get_teleport(int **to_look, t_inhabitant *usr, int *msize)
 {
 	switch (usr->o) {
 		case N:
-		if ((to_look[0][Y] <= 0))
+		if ((to_look[0][Y] < 0))
 			usr->curr_pos[Y] = msize[X];
 		break;
 		case E:
@@ -194,11 +196,11 @@ void		get_teleport(int **to_look, t_inhabitant *usr, int *msize)
 			usr->curr_pos[X] = 0;
 		break;
 		case S:
-		if ((to_look[0][Y] >= 5))
+		if ((to_look[0][Y] > msize[Y]))
 			usr->curr_pos[Y] = 0;
 		break;
 		case W:
-		if ((to_look[0][X]) <= 0)
+		if ((to_look[0][X]) < 0)
 			usr->curr_pos[X] = msize[X];
 		break;
 	}
@@ -346,6 +348,18 @@ void			*ai_forward(char **args, int clifd, t_world *map)
 	} else {
 		get_teleport(to_look, usr, msize);
 	}
+	dprintf(clifd, "ok\n");
+	return (map);
+}
+
+/** The `Fork` method implementation
+* @param cmdargs the unusued Fork command arguments
+* @param clifd the unique client socket file descriptor
+* @param map the t_world::map for Trantor world
+*/
+void	*ai_fork(char **args, int clifd, t_world *map)
+{
+	printf("%s : \n", args[0]);
 	dprintf(clifd, "ok\n");
 	return (map);
 }
