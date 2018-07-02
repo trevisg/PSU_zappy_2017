@@ -20,6 +20,17 @@ GameWindow::GameWindow()
 	std::cerr << "Successfully connected to "
 	<< server_host << ":" << server_port << "\n" :
 	std::cerr << "Error connection to graph API\n";
+
+	if (!_font.loadFromFile("assets/fonts/elasis.ttf")) {
+		std::cerr << "Failed to load font\n";
+		exit(EXIT_FAILURE);
+	}
+	_titletext.setFont(_font);
+	_titletext.setCharacterSize(20);
+	_titletext.setFillColor(sf::Color::Red);
+	_titletext.setStyle(sf::Text::Bold | sf::Text::Underlined);
+	_titletext.setString("Trantor real-time Map");
+	_titletext.setPosition(800, 0);
 }
 
 void	GameWindow::_setgame_sound()
@@ -29,7 +40,7 @@ void	GameWindow::_setgame_sound()
 
 void	DrawTrantorian(sf::Vector2f pos, sf::Vector2f tile_size)
 {
-	sf::RectangleShape the_player(tile_size);
+	sf::RectangleShape	the_player(tile_size);
 	sf::Texture		player_texture;
 
 	if (!player_texture.loadFromFile("assets/textures/trantorian.png")) {
@@ -60,43 +71,81 @@ void 	DrawTile(sf::Vector2f pos, sf::Vector2f tile_size)
 	gamewindow.draw(the_tile);
 }
 
-void 	DrawBoard(int x_size, int y_size)
+bool 	GameWindow::_is_there_a_player_here(int y, int x)
+{
+	bool rt = false;
+	if (_team_details.size()) {
+		for (uint i = 1; i != _team_details.size(); ++i) {
+			if (std::stoi(_team_details[i]["x"]) == x
+			&& std::stoi(_team_details[i]["y"]) == y) {
+				rt = true;
+				break;
+			}
+		}
+	}
+	return(rt);
+}
+
+void 	GameWindow::_DrawBoard(int x_size, int y_size)
 {
 	sf::Vector2f pos;
 	sf::Vector2f tile_size =  sf::Vector2f(40, 40);
 
 	for (int i = 0; i < y_size; ++i) {
-		pos.y = (gamewindow.getSize().y / 2) - ((y_size * 40) / 2 - (i  * 40));
+		pos.y = (gamewindow.getSize().y / 2)
+		- ((y_size * 40) / 2 - (i  * 40));
 		for (int j = 0; j < x_size; ++j) {
-			pos.x = (gamewindow.getSize().x / 2) - ((x_size * 40) / 2  - (j * 40));
+			pos.x = (gamewindow.getSize().x / 2)
+			- ((x_size * 40) / 2  - (j * 40));
 			DrawTile(pos, tile_size);
-			if (!i && !j)
+			if (_is_there_a_player_here(i, j)) {
 				DrawTrantorian(pos, tile_size);
+			}
 		}
 
 	}
+
+}
+
+sf::Text	GameWindow::_init_text(std::string team_name)
+{
+	sf::Text team_text;
+	sf::Font font;
+
+	if (!font.loadFromFile("assets/fonts/elasis.ttf")) {
+		std::cerr << "Failed to load font\n";
+		exit(EXIT_FAILURE);
+	}
+	team_text.setFont(font);
+	team_text.setString(team_name);
+	team_text.setCharacterSize(20);
+	team_text.setFillColor(sf::Color::White);
+	return (team_text);
 
 }
 
 void	GameWindow::_set_team_names()
 {
-	if (!_teams_names.size()) {
-		_teams_names = _client.get_teamnames();
-		for (uint i = 0; i != _teams_names.size(); ++i) {
-			sf::String team = sf::String(_teams_names[i]);
-			sf::Text team_text;
-			sf::Font font;
-			font.loadFromFile("assets/fonts/elasis.ttf");
-			team_text.setFont(font);
-			team_text.setString(team);
-			team_text.setCharacterSize(10);
-			team_text.setFillColor(sf::Color::White);
-			team_text.setPosition(0,0 + (i + 5));
-			std::cerr << "Loading : " << _teams_names[i] << "\n";
-			_teams_text.emplace_back(team_text);
+	_teams_names = _client.get_teamnames();
+}
+
+void	GameWindow::_set_team_details()
+{
+	if (_teams_names.size()) {
+		_team_details = _client.get_team_details(_teams_names[0]);
+		std::cerr << "Received team "
+		<< _team_details[0]["teamname"] << " Informations\n";
+			std::cerr << _team_details.size() <<"\n";
+		for (uint i = 0; i != _team_details.size(); ++i) {
+			std::cerr << "Player N°" << i <<" :\n";
+			std::cerr << "Id " << _team_details[i]["id"] << "\n";
+			std::cerr << "X " << _team_details[i]["x"] << "\n";
+			std::cerr << "Y " << _team_details[i]["y"] << "\n";
+			std::cerr << "TTL " << _team_details[i]["ttl"] << "\n";
 		}
 	}
 }
+
 void	GameWindow::_event_handler(sf::Event event)
 {
 	if (event.type == sf::Event::Closed ||
@@ -107,6 +156,10 @@ void	GameWindow::_event_handler(sf::Event event)
 	event.key.code == sf::Keyboard::Up) {
 		std::cout << "Up key pressed\n";
 		_set_team_names();
+	} else if (event.type == sf::Event::KeyPressed &&
+	event.key.code == sf::Keyboard::Down) {
+		std::cout << "Down key pressed\n";
+		_set_team_details();
 	} else if (event.type == sf::Event::Resized) {
 		sf::FloatRect visibleArea(0, 0, event.size.width,
 						event.size.height);
@@ -123,6 +176,32 @@ void 	GameWindow::_set_bg()
 	_bg_sprite.setTexture(_bg_texture);
 }
 
+static void 	print_logs(std::vector<std::string> _teams_names)
+{
+	sf::Text text;
+	sf::Font font;
+
+	if (!font.loadFromFile("assets/fonts/elasis.ttf")) {
+		std::cerr << "Failed to load font\n";
+		exit(EXIT_FAILURE);
+	}
+	text.setFont(font);
+	text.setCharacterSize(20);
+	text.setFillColor(sf::Color::Red);
+	text.setStyle(sf::Text::Bold | sf::Text::Underlined);
+	text.setString("Teams :");
+	gamewindow.draw(text);
+	if (_teams_names.size()) {
+		for (uint i = 0; i != _teams_names.size(); ++i) {
+			text.setString(_teams_names[i]);
+			text.setCharacterSize(15);
+			text.setFillColor(sf::Color::White);
+			text.setPosition(20, 30 + (i * 30));
+			gamewindow.draw(text);
+		}
+	}
+}
+
 bool	GameWindow::_start_me(int x_mapsize, int y_mapsize)
 {
 	sf::Vector2u win_size(700, 800);
@@ -137,12 +216,9 @@ bool	GameWindow::_start_me(int x_mapsize, int y_mapsize)
 			_event_handler(event);
 		}
 		gamewindow.clear(sf::Color::Black);
-		DrawBoard(x_mapsize, y_mapsize);
-		if (_teams_text.size()) {
-			for (uint i = 0; i != _teams_text.size(); ++i) {
-				gamewindow.draw(_teams_text[i]);
-			}
-		}
+		gamewindow.draw(_titletext);
+		_DrawBoard(x_mapsize, y_mapsize);
+		print_logs(_teams_names);
 		gamewindow.display();
 	}
 	return (false);
