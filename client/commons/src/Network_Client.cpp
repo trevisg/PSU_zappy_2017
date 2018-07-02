@@ -38,6 +38,31 @@ bool	Network::connect_to(std::string server_host, std::string server_port)
 	return (rt >= 0 ? true : false);
 }
 
+std::map<std::string, std::string>	Network::get_map_size()
+{
+
+	std::map<std::string, std::string> map_size;
+	std::string req("GET /mapsize\n");
+
+	if (!connect_to("127.0.0.1", "2222")) {
+		map_size["error"] = "Connection error";
+	} else {
+		write(_client_socket, req.c_str(), req.size());
+		listen_up();
+		_queue.pop();
+		while (!_queue.empty()) {
+			if (_queue.front() != ",") {
+				std::string index = _queue.front();
+				_queue.pop();
+				std::string value = _queue.front();
+				map_size[index] = value;
+			}
+			_queue.pop();
+		}
+	}
+	return (map_size);
+}
+
 std::vector<std::string>	Network::get_teamnames()
 {
 
@@ -95,10 +120,10 @@ std::vector<std::map<std::string, std::string> >	Network::get_team_details(
 	return (team_details);
 }
 
-std::vector<std::string> Network::look()
+std::vector<std::string> Network::_look()
 {
 	std::vector<std::string> rt;
-	std::string req("Look\n");
+	std::string req("_look\n");
 
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
@@ -109,10 +134,10 @@ std::vector<std::string> Network::look()
 	return (rt);
 }
 
-std::map<std::string, std::string> Network::forward()
+std::map<std::string, std::string> Network::_forward()
 {
 	std::map<std::string, std::string> rt;
-	std::string req("Forward\n");
+	std::string req("_forward\n");
 
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
@@ -122,17 +147,17 @@ std::map<std::string, std::string> Network::forward()
 	return (rt);
 }
 
-std::vector<std::string>		Network::fork()
+std::vector<std::string>		Network::_fork()
 {
 	std::vector<std::string> res;
-	std::string req("Fork");
+	std::string req("_fork");
 
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	return (res);
 }
 
-std::map<std::string, std::string>	Network::get_map_dimension(
+std::map<std::string, std::string>	Network::_teams(
 					std::string team_name)
 {
 	std::map<std::string, std::string> pos;
