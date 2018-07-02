@@ -17,21 +17,20 @@ class	GameWindow
 {
 	public:
 		GameWindow();
-		void _set_bg();
 		void _setgame_sound();
 		void _set_team_names();
 		void _set_team_details();
+		sf::Vector2u  _set_map_size();
 		void _DrawBoard(int x_size, int y_size);
+		void _DrawTeams(std::vector<std::string> _teams_names);
 		sf::Text _init_text(std::string team_name);
 		void _event_handler(sf::Event ev);
 		bool _is_there_a_player_here(int y, int x);
-		bool _start_me(int x_mapsize, int y_mapsize);
+		bool _start_me();
 	private:
 		Network						_client;
 		sf::Font					_font;
 		sf::Text 					_titletext;
-		sf::Texture					_bg_texture;
-		sf::Sprite					_bg_sprite;
 		sf::Music					_gamemusic;
 		sf::SoundBuffer					_soundbuff;
 		std::vector<std::string>			_teams_names;

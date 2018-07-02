@@ -29,7 +29,7 @@ GameWindow::GameWindow()
 	_titletext.setCharacterSize(20);
 	_titletext.setFillColor(sf::Color::Red);
 	_titletext.setStyle(sf::Text::Bold | sf::Text::Underlined);
-	_titletext.setString("Trantor real-time Map");
+	_titletext.setString("Trantor Map");
 	_titletext.setPosition(800, 0);
 }
 
@@ -129,6 +129,21 @@ void	GameWindow::_set_team_names()
 	_teams_names = _client.get_teamnames();
 }
 
+sf::Vector2u 	GameWindow::_set_map_size()
+{
+	sf::Vector2u rt;
+	std::map<std::string, std::string> resp = _client.get_map_size();
+	if (resp.find("x") != resp.end()
+	&& resp.find("y") != resp.end()) {
+		rt.x = std::stoi(resp["x"]);
+		rt.y = std::stoi(resp["y"]);
+	} else {
+		rt.x = 0;
+		rt.y = 0;
+	}
+	return (rt);
+}
+
 void	GameWindow::_set_team_details()
 {
 	if (_teams_names.size()) {
@@ -136,13 +151,6 @@ void	GameWindow::_set_team_details()
 		std::cerr << "Received team "
 		<< _team_details[0]["teamname"] << " Informations\n";
 			std::cerr << _team_details.size() <<"\n";
-		for (uint i = 0; i != _team_details.size(); ++i) {
-			std::cerr << "Player N°" << i <<" :\n";
-			std::cerr << "Id " << _team_details[i]["id"] << "\n";
-			std::cerr << "X " << _team_details[i]["x"] << "\n";
-			std::cerr << "Y " << _team_details[i]["y"] << "\n";
-			std::cerr << "TTL " << _team_details[i]["ttl"] << "\n";
-		}
 	}
 }
 
@@ -167,16 +175,7 @@ void	GameWindow::_event_handler(sf::Event event)
 	}
 }
 
-void 	GameWindow::_set_bg()
-{
-	if (!_bg_texture.loadFromFile("assets/textures/trantor.jpg")) {
-		fprintf(stderr, "Error loadding background\n");
-	}
-	_bg_texture.setSmooth(true);
-	_bg_sprite.setTexture(_bg_texture);
-}
-
-static void 	print_logs(std::vector<std::string> _teams_names)
+void 	GameWindow::_DrawTeams(std::vector<std::string> _teams_names)
 {
 	sf::Text text;
 	sf::Font font;
@@ -186,23 +185,31 @@ static void 	print_logs(std::vector<std::string> _teams_names)
 		exit(EXIT_FAILURE);
 	}
 	text.setFont(font);
-	text.setCharacterSize(20);
+	text.setCharacterSize(30);
 	text.setFillColor(sf::Color::Red);
 	text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 	text.setString("Teams :");
 	gamewindow.draw(text);
-	if (_teams_names.size()) {
-		for (uint i = 0; i != _teams_names.size(); ++i) {
-			text.setString(_teams_names[i]);
-			text.setCharacterSize(15);
-			text.setFillColor(sf::Color::White);
-			text.setPosition(20, 30 + (i * 30));
-			gamewindow.draw(text);
-		}
+	text.setFillColor(sf::Color::White);
+	text.setString(_teams_names[0]);
+	text.setCharacterSize(20);
+	text.setPosition(20, 70);
+	gamewindow.draw(text);
+	text.setCharacterSize(15);
+	for (uint k = 1; k != _team_details.size(); ++k) {
+		text.setString("X : " + _team_details[k]["x"]);
+		text.setPosition((k * 100), 130);
+		gamewindow.draw(text);
+		text.setString("Y : " + _team_details[k]["y"]);
+		text.setPosition((k * 100), 230);
+		gamewindow.draw(text);
+		text.setString("$:" + _team_details[k]["ttl"]);
+		text.setPosition((k * 100), 330);
+		gamewindow.draw(text);
 	}
 }
 
-bool	GameWindow::_start_me(int x_mapsize, int y_mapsize)
+bool	GameWindow::_start_me()
 {
 	sf::Vector2u win_size(700, 800);
 	sf::VideoMode win_mode(win_size.x, win_size.y);
@@ -210,6 +217,7 @@ bool	GameWindow::_start_me(int x_mapsize, int y_mapsize)
 	gamewindow.create(win_mode, "PSU_zappy_2017");
 	gamewindow.setFramerateLimit(60);
 	gamewindow.setSize(win_size);
+	sf::Vector2u map_size = _set_map_size();
 	while (gamewindow.isOpen()) {
 		 sf::Event event;
 		while (gamewindow.pollEvent(event)) {
@@ -217,25 +225,23 @@ bool	GameWindow::_start_me(int x_mapsize, int y_mapsize)
 		}
 		gamewindow.clear(sf::Color::Black);
 		gamewindow.draw(_titletext);
-		_DrawBoard(x_mapsize, y_mapsize);
-		print_logs(_teams_names);
+		if ( map_size.x && map_size.y){
+			_DrawBoard(map_size.x, map_size.y);
+		}
+		if (_teams_names.size() && _team_details.size()) {
+			_DrawTeams(_teams_names);
+		}
 		gamewindow.display();
 	}
 	return (false);
 }
 
 #ifdef TESTGAME
-int main(int ac, char **av)
+int main(void)
 {
-	GameWindow 	gm;
-	int		x;
-	int		y;
+	GameWindow 	gw;
 
-	if (ac >= 2 && (x = atoi(av[1])) > 0 && (y = atoi(av[1])) > 0) {
-		gm._start_me(x, y);
-	} else {
-		fprintf(stderr, "Usage %s int x, int y\t(map size)\n", av[0]);
-	}
-	return (x < 1 ? 0 : 84);
+	gw._start_me();
+	return (0);
 }
 #endif
