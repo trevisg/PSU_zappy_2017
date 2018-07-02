@@ -1,7 +1,8 @@
 # **PSU_zappy_2017** \| [Releases](https://github.com/trevisg/PSU_zappy_2017/releases)
 
+[![Grade](https://img.shields.io/badge/Grade-18-green.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/PSU_zappy/Lobby)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-not anymore-red.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
+[![Maintenance](https://img.shields.io/badge/Maintained %3F-not anymore-red.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
 
          Our____
          |___  /
