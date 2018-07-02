@@ -1,15 +1,15 @@
 <map id="Trantorian::_do_fork" name="Trantorian::_do_fork">
-<area shape="rect" id="node2" href="$classTrantorian.html#a53a603062698c463de4c9cc26d10e680" title="Trantorian::check_co" alt="" coords="192,37,336,64"/>
-<area shape="rect" id="node4" href="$classNetwork.html#aefff677def151c6413c24bf7da98da5c" title="Network::fork" alt="" coords="213,95,315,121"/>
-<area shape="rect" id="node6" href="$classTrantorian.html#a50fffa9195c1480a1c97b71618e2b714" title="Trantorian::run" alt="" coords="211,157,317,184"/>
-<area shape="rect" id="node3" href="$classNetwork.html#a29f52c39e3d555c2a054aef3e4fe6de3" title="Network::connect_to" alt="" coords="390,5,533,32"/>
-<area shape="rect" id="node5" href="$classNetwork.html#a1e6b6d7471d1d875b6ca1b0a069eca16" title="Network::listen_up" alt="" coords="829,157,960,184"/>
-<area shape="rect" id="node7" href="$classTrantorian.html#a2e41b6dbf7ea3f2457532047af4d9024" title="Trantorian::_do_drop" alt="" coords="391,132,532,159"/>
-<area shape="rect" id="node10" href="$classTrantorian.html#a7a5b895e8dbd0ffa2155245aad303ad8" title="Trantorian::_do_search" alt="" coords="384,183,539,209"/>
-<area shape="rect" id="node12" href="$classTrantorian.html#a3b2b2cb5f9849dfa725b72e087e75b2e" title="Trantorian::_do_moove" alt="" coords="384,233,539,260"/>
-<area shape="rect" id="node14" href="$Trantorian_8cpp.html#ad76d0778e60d0dfa16e94f4e37ee23e1" title="print_state" alt="" coords="420,284,503,311"/>
-<area shape="rect" id="node8" href="$classNetwork.html#aee89bed7ee018171e54e18de75894632" title="Network::get_map_dimension" alt="" coords="587,107,781,133"/>
-<area shape="rect" id="node9" href="$Trantorian_8cpp.html#a1fa556aa008e7933105756950aa2c702" title="log_drop" alt="" coords="649,157,719,184"/>
-<area shape="rect" id="node11" href="$classNetwork.html#af04b207e3babc8cd5f74b6506ed7ba2f" title="Network::look" alt="" coords="633,208,735,235"/>
-<area shape="rect" id="node13" href="$classNetwork.html#a49a6e7709d1267d0cd566861232d3433" title="Network::forward" alt="" coords="623,259,745,285"/>
+<area shape="rect" id="node2" href="$classNetwork.html#a9c5353aa6824c2dd2ca2c3f95d13d9f0" title="Network::_fork" alt="" coords="210,7,318,34"/>
+<area shape="rect" id="node4" href="$classTrantorian.html#a53a603062698c463de4c9cc26d10e680" title="Trantorian::check_co" alt="" coords="192,65,336,91"/>
+<area shape="rect" id="node6" href="$classTrantorian.html#a50fffa9195c1480a1c97b71618e2b714" title="Trantorian::run" alt="" coords="211,141,317,167"/>
+<area shape="rect" id="node3" href="$classNetwork.html#a1e6b6d7471d1d875b6ca1b0a069eca16" title="Network::listen_up" alt="" coords="764,102,895,129"/>
+<area shape="rect" id="node5" href="$classNetwork.html#a29f52c39e3d555c2a054aef3e4fe6de3" title="Network::connect_to" alt="" coords="390,51,533,78"/>
+<area shape="rect" id="node7" href="$classTrantorian.html#a2e41b6dbf7ea3f2457532047af4d9024" title="Trantorian::_do_drop" alt="" coords="391,102,532,129"/>
+<area shape="rect" id="node10" href="$classTrantorian.html#a7a5b895e8dbd0ffa2155245aad303ad8" title="Trantorian::_do_search" alt="" coords="384,153,539,179"/>
+<area shape="rect" id="node12" href="$classTrantorian.html#a3b2b2cb5f9849dfa725b72e087e75b2e" title="Trantorian::_do_moove" alt="" coords="384,203,539,230"/>
+<area shape="rect" id="node14" href="$Trantorian_8cpp.html#ad76d0778e60d0dfa16e94f4e37ee23e1" title="print_state" alt="" coords="420,254,503,281"/>
+<area shape="rect" id="node8" href="$classNetwork.html#a516cabfb595bd569837ed5e8d6465aa7" title="Network::_teams" alt="" coords="590,51,713,78"/>
+<area shape="rect" id="node9" href="$Trantorian_8cpp.html#a1fa556aa008e7933105756950aa2c702" title="log_drop" alt="" coords="616,102,687,129"/>
+<area shape="rect" id="node11" href="$classNetwork.html#a20f05849a8ec4ad9ab87ec7966913327" title="Network::_look" alt="" coords="596,153,707,179"/>
+<area shape="rect" id="node13" href="$classNetwork.html#a37f20d1dc52eff9143455678143477d1" title="Network::_forward" alt="" coords="587,203,716,230"/>
 </map>

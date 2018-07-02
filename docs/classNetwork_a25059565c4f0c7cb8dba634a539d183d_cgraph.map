@@ -1,3 +1,4 @@
 <map id="Network::get_teamnames" name="Network::get_teamnames">
-<area shape="rect" id="node2" href="$classNetwork.html#a1e6b6d7471d1d875b6ca1b0a069eca16" title="Network::listen_up" alt="" coords="225,5,356,32"/>
+<area shape="rect" id="node2" href="$classNetwork.html#a29f52c39e3d555c2a054aef3e4fe6de3" title="Network::connect_to" alt="" coords="225,5,368,32"/>
+<area shape="rect" id="node3" href="$classNetwork.html#a1e6b6d7471d1d875b6ca1b0a069eca16" title="Network::listen_up" alt="" coords="231,56,362,83"/>
 </map>
