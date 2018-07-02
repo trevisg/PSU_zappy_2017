@@ -5,7 +5,6 @@ var searchData=
   ['find_5fplayer_5fby_5ffd',['find_player_by_fd',['../find__list_8c.html#a124ce3d51d705a4e9e1bab1cb2b8d29f',1,'find_player_by_fd(t_teams *teams, int clifd):&#160;find_list.c'],['../cmd__fcts_8h.html#a124ce3d51d705a4e9e1bab1cb2b8d29f',1,'find_player_by_fd(t_teams *teams, int clifd):&#160;find_list.c']]],
   ['food',['food',['../structt__ressources.html#a249bd245a92aadd34077ecd39c80f63a',1,'t_ressources::food()'],['../zappy__game_8h.html#a138e2c58077212f0d595756095aa9ebbabaad2be1abe0cffbc3a0bbf032a604c4',1,'FOOD():&#160;zappy_game.h']]],
   ['food_5fvalue',['FOOD_VALUE',['../zappy__game_8h.html#a0e9f750bdd8083829ec588c271e2093a',1,'zappy_game.h']]],
-  ['for',['for',['../egg_8c.html#a26b53ae08684c44e684f0556182c5862',1,'egg.c']]],
   ['fork',['FORK',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faeb5838b12f5849b4544c2d9d10dc6548',1,'server.h']]],
   ['forking',['FORKING',['../Trantorian_8hpp.html#a275a67132f10277ada3a0ee3d616b647a979331c99687927e3eee395173cc3fdd',1,'Trantorian.hpp']]],
   ['forward',['FORWARD',['../server_8h.html#abfa4cf7a25ca27eb109ef9065f30581faa26736999186daf8146f809e863712a1',1,'server.h']]],
