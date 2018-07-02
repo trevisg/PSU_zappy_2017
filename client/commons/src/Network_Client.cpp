@@ -40,23 +40,66 @@ bool	Network::connect_to(std::string server_host, std::string server_port)
 
 std::vector<std::string>	Network::get_teamnames()
 {
+
 	std::vector<std::string> teams;
 	std::string req("GET /teamnames\n");
-	write(_client_socket, req.c_str(), req.size());
-	listen_up();
-	while (!_queue.empty()) {
-		if (_queue.front() != "teamnames") {
-			teams.emplace_back(_queue.front());
+
+	if (!connect_to("127.0.0.1", "2222")) {
+		teams.emplace_back("Connection error");
+	} else {
+		write(_client_socket, req.c_str(), req.size());
+		listen_up();
+		while (!_queue.empty()) {
+			if (_queue.front() != "teamnames" && _queue.front() != ",") {
+				teams.emplace_back(_queue.front());
+			}
+			_queue.pop();
 		}
-		_queue.pop();
 	}
 	return (teams);
+}
+
+std::vector<std::map<std::string, std::string> >	Network::get_team_details(
+		std::string team
+						)
+{
+	std::vector<std::map<std::string, std::string> > team_details;
+	std::map<std::string, std::string>		player;
+	std::string req("POST /team_detail&team=" + team + "\n");
+
+	if (!connect_to("127.0.0.1", "2222")) {
+		std::map<std::string, std::string> err;
+		err["error"] = "Connection lost";
+		team_details.emplace_back(err);
+	} else {
+		write(_client_socket, req.c_str(), req.size());
+		listen_up();
+		std::map<std::string, std::string> team_name;
+		team_name["teamname"] = _queue.front();
+		team_details.emplace_back(team_name);
+		_queue.pop();
+		while (!_queue.empty()) {
+			if (_queue.front() != ",") {
+				std::string index = _queue.front();
+				_queue.pop();
+				std::string value = _queue.front();
+				player[index] = value;
+			}
+			if (player.size() == 4) {
+				team_details.emplace_back(player);
+				player.clear();
+			}
+			_queue.pop();
+		}
+	}
+	return (team_details);
 }
 
 std::vector<std::string> Network::look()
 {
 	std::vector<std::string> rt;
 	std::string req("Look\n");
+
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	while (!_queue.empty()) {
@@ -70,6 +113,7 @@ std::map<std::string, std::string> Network::forward()
 {
 	std::map<std::string, std::string> rt;
 	std::string req("Forward\n");
+
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	while (!_queue.empty()) {
@@ -82,6 +126,7 @@ std::vector<std::string>		Network::fork()
 {
 	std::vector<std::string> res;
 	std::string req("Fork");
+
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	return (res);
@@ -92,6 +137,7 @@ std::map<std::string, std::string>	Network::get_map_dimension(
 {
 	std::map<std::string, std::string> pos;
 	std::string req("Team " + team_name + "\n");
+
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
 	while (!_queue.empty()) {
@@ -118,7 +164,7 @@ bool	Network::listen_up()
 {
 	int r_size = 0;
 	std::string s;
-	std::regex r("[a-z0-9,\"]+");
+	std::regex r("[a-z0-9,.]+");
 
 	memset(_server_resp, 0, MAX_RESP);
 	while ((r_size = read(_client_socket, _server_resp, MAX_RESP)) > 0) {

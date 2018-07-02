@@ -36,6 +36,10 @@ class	Network {
 		std::map<std::string, std::string>	forward();
 		bool 					listen_up();
 		std::vector<std::string>		get_teamnames();
+		std::vector<std::map<std::string, std::string> >
+							get_team_details(
+			std::string team
+							);
 		std::string				get_lastbuffer();
 		bool					connect_to(
 			std::string server_host,
