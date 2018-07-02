@@ -71,3 +71,4 @@ client/gui_part/assets/sounds/menu/menu-select-01.wav filter=lfs diff=lfs merge=
 client/gui_part/assets/sounds filter=lfs diff=lfs merge=lfs -text
 client/gui_part/assets/musics filter=lfs diff=lfs merge=lfs -text
 client/gui_part/assets/textures/trantorian.png filter=lfs diff=lfs merge=lfs -text
+client/gui_part/assets/textures/moon.jpeg filter=lfs diff=lfs merge=lfs -text
