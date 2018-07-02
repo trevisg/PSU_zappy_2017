@@ -1,7 +1,7 @@
 # **PSU_zappy_2017** \| [Releases](https://github.com/trevisg/PSU_zappy_2017/releases)
 
 [![Build Status](https://travis-ci.org/trevisg/PSU_zappy_2017.svg?branch=master)](https://travis-ci.org/trevisg/PSU_zappy_2017) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/PSU_zappy/Lobby)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-not anymore-red.svg)](https://github.com/trevisg/PSU_zappy_2017/commits/master)
 
          Our____
          |___  /
@@ -21,13 +21,13 @@
 
 ## Usage :
 
--   `make zappy_server && make clean` to build
+-   `make && make clean` to build zappy_server and zappy_ai binaries
 
--   See required flags and arguments with `./zappy_server -h`
+-   See required flags and arguments with `./[bins] -h`
 
--   `./zappy_server -[flag] [options]` to run
+-   `./zappy_server -[flag] [options]` to run server
 
--   Connect your  **ia client**
+-    `./zappy_ai -[flag] [options]` to run ai
 
 -   Enjoy
 
