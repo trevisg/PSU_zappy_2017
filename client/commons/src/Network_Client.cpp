@@ -123,7 +123,7 @@ std::vector<std::map<std::string, std::string> >	Network::get_team_details(
 std::vector<std::string> Network::_look()
 {
 	std::vector<std::string> rt;
-	std::string req("_look\n");
+	std::string req("Look\n");
 
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
@@ -137,7 +137,7 @@ std::vector<std::string> Network::_look()
 std::map<std::string, std::string> Network::_forward()
 {
 	std::map<std::string, std::string> rt;
-	std::string req("_forward\n");
+	std::string req("Forward\n");
 
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
@@ -150,7 +150,7 @@ std::map<std::string, std::string> Network::_forward()
 std::vector<std::string>		Network::_fork()
 {
 	std::vector<std::string> res;
-	std::string req("_fork");
+	std::string req("Fork\n");
 
 	write(_client_socket, req.c_str(), req.size());
 	listen_up();
