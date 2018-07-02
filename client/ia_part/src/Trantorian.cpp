@@ -88,7 +88,7 @@ bool	Trantorian::_do_drop()
 	bool rt = false;
 	std::map<std::string, std::string> resp;
 
-	resp = _client.get_map_dimension(_team_name);
+	resp = _client._teams(_team_name);
 	if (resp.find("x") != resp.end()
 	&& resp.find("y") != resp.end()
 	&& resp.find("PLAYER_CREDIT") != resp.end()) {
@@ -109,9 +109,9 @@ bool	Trantorian::_do_drop()
 */
 void	Trantorian::_do_search(uint cnt)
 {
-	std::vector<std::string> res = _client.look();
+	std::vector<std::string> res = _client._look();
 	std::cerr << "state : " << "SEARCHING\n";
-	std::cerr << "send -->look \n";
+	std::cerr << "send -->_look \n";
 	std::cerr << "Receive :\n";
 	for (uint i = 0; i != res.size(); ++i) {
 		std::cerr << "[" << res[i] << "]\n";
@@ -123,7 +123,7 @@ void	Trantorian::_do_search(uint cnt)
 }
 
 /** The SEARCHING state method, send `Fork` command to server and if server
-* respond `ok`, call fork() and launch a new Trantorian teammate in the child
+* respond `ok`, call _fork() and launch a new Trantorian teammate in the child
 * process
 */
 void	Trantorian::_do_fork()
@@ -132,7 +132,7 @@ void	Trantorian::_do_fork()
 	std::vector<std::string> resp;
 
 	childs += 1;
-	resp = _client.fork();
+	resp = _client._fork();
 	if (fork() == 0) {
 		std::cerr << " Where in child n°" << childs << '\n';
 		Trantorian ia_player(_server_port, _server_host);
@@ -148,17 +148,17 @@ void	Trantorian::_do_moove()
 	std::map<std::string, std::string> resp;
 
 	std::cerr << "state : " << "MOOVING\n";
-	std::cerr << "Send Forward on trantor map \n";
+	std::cerr << "Send _forward on trantor map \n";
 	std::cerr << "Note : we're still on level [";
 	std::cerr << _level << "]\n";
-	resp = _client.forward();
-	std::cerr << "send -->Forward \n";
+	resp = _client._forward();
+	std::cerr << "send -->_forward \n";
 }
 
 /** The main AI event loop
 * @param team_name the new Trantorian team name
-* @note this stupid AI do only one thing, forward,
-* forward and forward again until death
+* @note this stupid AI do only one thing, _forward,
+* _forward and _forward again until death
 */
 bool	Trantorian::run(std::string team_name)
 {
