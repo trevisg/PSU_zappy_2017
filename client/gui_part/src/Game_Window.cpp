@@ -60,11 +60,13 @@ void	DrawTrantorian(sf::Vector2f pos, sf::Vector2f tile_size)
 void 	DrawTile(sf::Vector2f pos, sf::Vector2f tile_size)
 {
 	sf::RectangleShape the_tile(tile_size);
-
+	sf::Texture 	   tile_texture;
 	sf::Color outline(155,89,182 ,1);
-	sf::Color fillcolor(103,58,183);
+	// sf::Color fillcolor(103,58,183);
 
-	the_tile.setFillColor(fillcolor);
+	tile_texture.loadFromFile("assets/textures/moon.jpeg");
+	the_tile.setTexture(&tile_texture);
+	// the_tile.setFillColor(fillcolor);
 	the_tile.setOutlineThickness(3);
 	the_tile.setOutlineColor(sf::Color::Black);
 	the_tile.setPosition(pos);
