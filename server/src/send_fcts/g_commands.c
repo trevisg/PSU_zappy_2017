@@ -6,7 +6,7 @@
 */
 
 #include <unistd.h>
-#include "../../include/cmd_fcts.h"
+#include "cmd_fcts.h"
 
 /** The `GET /mapsize` route implementation
 * @param args the unusued mapsize command arguments

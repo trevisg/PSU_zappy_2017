@@ -6,7 +6,7 @@
 ** for commands settings see methodsXX.c files
 */
 
-#include "../../include/cmd_fcts.h"
+#include "cmd_fcts.h"
 
 /** The 2D array containing the handled commands strings for comparison  */
 const char *G_PROTOS[REF_NB] = {

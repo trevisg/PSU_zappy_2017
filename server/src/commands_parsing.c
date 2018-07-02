@@ -5,7 +5,7 @@
 ** Zappy server commands parsing functions source file
 */
 
-#include "../include/server.h"
+#include "server.h"
 #include <stdlib.h>
 
 /** Split the received buffer by the '\\r\\n' symbol to get multiple

@@ -5,7 +5,7 @@
 // Main Gui Menu Title methods
 //
 
-#include "../include/Menu_Title.hpp"
+#include "Menu_Title.hpp"
 
 /**
 *  @todo must write the below text instead of the present one:

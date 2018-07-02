@@ -5,7 +5,7 @@
 // Main Gui methods
 //
 
-#include "../include/Menu.hpp"
+#include "Menu.hpp"
 
 sf::RenderWindow menuwindow;
 

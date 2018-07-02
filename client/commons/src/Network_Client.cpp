@@ -5,7 +5,7 @@
 // Game window methods
 //
 
-#include "../include/Network_Client.hpp"
+#include "Network_Client.hpp"
 
 Network::Network() :  _server_port(2222), _server_host("127.0.0.1"),
 	_addr((const struct sockaddr *)&_client_address)

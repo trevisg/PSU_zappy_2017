@@ -5,7 +5,7 @@
 // Main Gui Menu methods
 //
 
-#include "../include/Menu.hpp"
+#include "Menu.hpp"
 #include <iostream>
 
 Menu::Menu()

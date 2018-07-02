@@ -7,7 +7,7 @@
 
 #ifndef GAME_MAP_HPP_
 
-// #include "../../include/map.hpp"
+// #include "../map.hpp"
 #include "Game_MapTile.hpp"
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>

@@ -5,7 +5,7 @@
 ** zappy_server stones / ressources declarations
 */
 
-#include "../../include/zappy_game.h"
+#include "zappy_game.h"
 
 /** The ITEMS base initialiasation, the other are just a memcpy of this */
 t_ressources	ITEMS = {

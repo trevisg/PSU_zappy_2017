@@ -12,7 +12,7 @@
 #include <signal.h>
 #include <string>
 #include <map>
-#include "../../commons/include/Network_Client.hpp"
+#include "Network_Client.hpp"
 
 /** The life a player */
 #define TTL 126

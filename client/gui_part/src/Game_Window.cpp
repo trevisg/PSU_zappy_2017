@@ -6,7 +6,7 @@
 //
 
 
-#include "../include/Game_Window.hpp"
+#include "Game_Window.hpp"
 #include <iostream>
 
 sf::RenderWindow gamewindow;

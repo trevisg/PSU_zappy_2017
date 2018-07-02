@@ -7,7 +7,7 @@
 
 #ifndef GAME_WINDOW_HPP_
 
-#include "../../commons/include/Network_Client.hpp"
+#include "Network_Client.hpp"
 #include <map>
 #include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>

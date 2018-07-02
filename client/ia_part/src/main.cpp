@@ -5,7 +5,7 @@
 // Communication between server and client
 //
 
-#include "../include/Trantorian.hpp"
+#include "Trantorian.hpp"
 
 /** Dummy print usage function
 * @param progname the programm name

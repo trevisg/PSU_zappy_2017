@@ -5,7 +5,7 @@
 // Main Gui Menu NewGame methods
 //
 
-#include "../include/Menu_NewGame.hpp"
+#include "Menu_NewGame.hpp"
 
 MenuNewGame::MenuNewGame(int xsize, int ysize)
 {

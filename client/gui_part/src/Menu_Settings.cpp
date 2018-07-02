@@ -5,7 +5,7 @@
 // Main Gui Menu Settings methods
 //
 
-#include "../include/Menu_Settings.hpp"
+#include "Menu_Settings.hpp"
 
 MenuSettings::MenuSettings(int xsize, int ysize)
 {

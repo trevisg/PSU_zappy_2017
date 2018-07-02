@@ -7,7 +7,7 @@
 
 #ifndef GAME_MAPTILE_HPP_
 
-// #include "../../include/tile.hpp"
+// #include "../tile.hpp"
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 

@@ -5,7 +5,7 @@
 // Nework client test
 //
 
-#include "../include/Network_Client.hpp"
+#include "Network_Client.hpp"
 
 int main(void)
 {

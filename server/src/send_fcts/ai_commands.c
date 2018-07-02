@@ -5,7 +5,7 @@
 ** zappy_server AI client to server commands
 */
 
-#include "../../include/cmd_fcts.h"
+#include "cmd_fcts.h"
 
 /** Chained list helper function to find a user in all t_teams by its clifd
 * @param clifd the message sender unique identifier

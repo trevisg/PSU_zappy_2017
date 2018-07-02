@@ -7,9 +7,9 @@
 
 #ifndef MENU_HPP_
 
-#include "../include/Menu_Title.hpp"
-#include "../include/Menu_NewGame.hpp"
-#include "../include/Menu_Settings.hpp"
+#include "Menu_Title.hpp"
+#include "Menu_NewGame.hpp"
+#include "Menu_Settings.hpp"
 #include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>

@@ -5,7 +5,7 @@
 // Main AI methods container methods
 //
 
-#include "../include/Trantorian.hpp"
+#include "Trantorian.hpp"
 
 /** The AI constructor
 * @param server_port the zappy_server port
